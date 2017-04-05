@@ -605,8 +605,11 @@ find_package( Cairo 1.12 REQUIRED )
 find_package( Pixman 0.30 REQUIRED )
 
 #
-# Find Boost headers, required.
-find_package( Boost 1.54.0 REQUIRED )
+# Find Boost library, required.
+#
+# Note: Prior to Boost 1.59, the Boost context library is not built when compiling on windows
+#       with GCC.  You must patch the Boost sources.
+find_package( Boost 1.54.0 REQUIRED context system )
 
 # Include MinGW resource compiler.
 include( MinGWResourceCompiler )

@@ -359,9 +359,12 @@ if( BUILD_GITHUB_PLUGIN )
     )
 endif()
 
+if( NOT MSVC )
+    set( system/libcontext.cpp )
+endif()
+
 set( COMMON_SRCS
     ${COMMON_SRCS}
-    system/libcontext.cpp
 
     view/view.cpp
     view/view_item.cpp

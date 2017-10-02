@@ -34,6 +34,7 @@
 #include <gal/opengl/vertex_item.h>
 #include <gal/opengl/utils.h>
 
+#include <algorithm>
 #include <list>
 #include <cassert>
 

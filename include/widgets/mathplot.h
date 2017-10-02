@@ -62,6 +62,7 @@
 #define WXDLLIMPEXP_DATA_MATHPLOT( type ) type
 #endif
 
+#include <algorithm>
 #include <vector>
 
 // #include <wx/wx.h>

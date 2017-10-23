@@ -81,8 +81,8 @@ void X3DIFACESET::init()
     coord = NULL;
 
     ccw = true;
-    creaseAngle = 0.733;    // approx 42 degrees; this is larger than VRML spec.
-    creaseLimit = 0.74317;  // cos( 0.733 )
+    creaseAngle = 0.733f;    // approx 42 degrees; this is larger than VRML spec.
+    creaseLimit = 0.74317f;  // cos( 0.733 )
     return;
 }
 
@@ -116,7 +116,7 @@ void X3DIFACESET::readFields( wxXmlNode* aNode )
             if( creaseAngle < 0.0f )
                 creaseAngle = 0.0f;
             else if( creaseAngle > M_PI * 0.34 )
-                creaseAngle = M_PI / 3.0;
+                creaseAngle = float(M_PI) / 3.0;
 
             creaseLimit = cosf( creaseAngle );
         }

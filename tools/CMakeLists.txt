@@ -2,7 +2,7 @@
 include_directories(
     ${PROJECT_SOURCE_DIR}/include
     ${PROJECT_SOURCE_DIR}/pcbnew
-    ${BOOST_INCLUDE}
+    ${Boost_INCLUDE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_BINARY_DIR}
     )
@@ -15,7 +15,6 @@ add_executable( container_test
 target_link_libraries( container_test
     common
     ${wxWidgets_LIBRARIES}
-    ${BOOST_INCLUDE}
     )
 
 add_executable( test-nm-biu-to-ascii-mm-round-tripping
@@ -33,7 +32,6 @@ add_executable( property_tree
     )
 target_link_libraries( property_tree
     ${wxWidgets_LIBRARIES}
-    ${BOOST_INCLUDE}
     )
 
 

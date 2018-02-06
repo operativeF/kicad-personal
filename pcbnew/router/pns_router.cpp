@@ -20,6 +20,7 @@
  */
 
 #include <cstdio>
+#include <make_unique.h>
 #include <vector>
 
 #include <view/view.h>
@@ -92,7 +93,7 @@ void ROUTER::SyncWorld()
 {
     ClearWorld();
 
-    m_world = std::unique_ptr<NODE>( new NODE );
+    m_world = std::make_unique<NODE>( );
     m_iface->SyncWorld( m_world.get() );
 
 }
@@ -187,19 +188,19 @@ bool ROUTER::StartRouting( const VECTOR2I& aP, ITEM* aStartItem, int aLayer )
     switch( m_mode )
     {
         case PNS_MODE_ROUTE_SINGLE:
-            m_placer.reset( new LINE_PLACER( this ) );
+            m_placer = std::make_unique<LINE_PLACER>( this );
             break;
         case PNS_MODE_ROUTE_DIFF_PAIR:
-            m_placer.reset( new DIFF_PAIR_PLACER( this ) );
+            m_placer = std::make_unique<DIFF_PAIR_PLACER>( this );
             break;
         case PNS_MODE_TUNE_SINGLE:
-            m_placer.reset( new MEANDER_PLACER( this ) );
+            m_placer = std::make_unique<MEANDER_PLACER>( this );
             break;
         case PNS_MODE_TUNE_DIFF_PAIR:
-            m_placer.reset( new DP_MEANDER_PLACER( this ) );
+            m_placer = std::make_unique<DP_MEANDER_PLACER>( this );
             break;
         case PNS_MODE_TUNE_DIFF_PAIR_SKEW:
-            m_placer.reset( new MEANDER_SKEW_PLACER( this ) );
+            m_placer = std::make_unique<MEANDER_SKEW_PLACER>( this );
             break;
 
         default:

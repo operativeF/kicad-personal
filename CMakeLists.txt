@@ -53,6 +53,10 @@ include( cotire )
 # there are less info in debug (but the file names and line numbers are available)
 option( BUILD_SMALL_DEBUG_FILES "In debug build: create smaller binaries." OFF )
 
+# Path to local vcpkg packages
+if( MSVC )
+	include( C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake )
+endif()
 
 #
 # KiCad build options should be added below.

@@ -25,38 +25,7 @@
 #define __UNITS_H
 
 #include <config.h>
-#include <cmath>
 #include <units_scales.h>
-
-#ifndef HAVE_CMATH_ASINH
-inline double asinh( double x )
-{
-    if( x==0.0 ) return sqrt( -1.0 );
-
-    return log( x+sqrt(x*x+1) );
-}
-#endif
-
-#ifndef HAVE_CMATH_ACOSH
-inline double acosh( double x )
-{
-    // must be x>=1, if not return Nan (Not a Number)
-    if( !(x>=1.0) ) return sqrt( -1.0 );
-
-    // return only the positive result (as sqrt does).
-    return log( x+sqrt(x*x-1.0) );
-}
-#endif
-
-#ifndef HAVE_CMATH_ATANH
-inline double atanh( double x )
-{
-    // must be x>-1, x<1, if not return Nan (Not a Number)
-    if( !(x>-1.0 && x<1.0) ) return sqrt( -1.0 );
-
-    return log( (1.0+x)/(1.0-x) ) / 2.0;
-}
-#endif
 
 #define MU0  12.566370614e-7          // magnetic constant
 #define C0   299792458.0              // speed of light in vacuum

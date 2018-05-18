@@ -30,6 +30,7 @@
 #ifndef WRLTYPES_H
 #define WRLTYPES_H
 
+#define GLM_FORCE_INLINE
 #define GLM_FORCE_RADIANS
 #include <glm/glm.hpp>
 

@@ -30,6 +30,7 @@
 #ifndef VRML1_NODE_H
 #define VRML1_NODE_H
 
+#define GLM_FORCE_INLINE
 #define GLM_FORCE_RADIANS
 
 #include <glm/gtc/matrix_transform.hpp>

@@ -27,6 +27,7 @@
  * @brief
  */
 
+#define GLM_FORCE_INLINE
 
 #include "cfrustum.h"
 

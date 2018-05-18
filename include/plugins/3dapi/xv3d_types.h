@@ -30,10 +30,11 @@
 #ifndef XV3D_TYPES_H
 #define XV3D_TYPES_H
 
+#define GLM_FORCE_INLINE
 #define GLM_FORCE_RADIANS
 
 // Disable SIMD detection
-#define GLM_FORCE_PURE
+//#define GLM_FORCE_PURE
 
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>

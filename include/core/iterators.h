@@ -28,14 +28,18 @@
 #include <iterator>
 
 template <class T>
-class DLIST_ITERATOR : public std::iterator<std::bidirectional_iterator_tag, T>
+class DLIST_ITERATOR
 {
 private:
     T m_obj;
 
-    using reference = typename DLIST_ITERATOR<T>::reference;
-
 public:
+    typedef std::bidirectional_iterator_tag iterator_category;
+	typedef T value_type;
+	typedef ptrdiff_t difference_type;
+	typedef T* pointer;
+	typedef T& reference;
+
     explicit DLIST_ITERATOR<T>( T obj ) :
         m_obj(obj) {}
 

@@ -34,7 +34,7 @@
 // First some utility classes and functions common to both strategies..
 
 /// Equality test for "const char*" type used in very specialized KEYWORD_MAP below
-struct iequal_to : std::binary_function< const char*, const char*, bool >
+struct iequal_to
 {
     bool operator()( const char* x, const char* y ) const
     {
@@ -78,7 +78,7 @@ struct fnv_1a
 
 
 /// Hash function for wxString, counterpart of std::string hash
-struct WXSTRING_HASH : std::unary_function<wxString, std::size_t>
+struct WXSTRING_HASH
 {
     std::size_t operator()( const wxString& aString ) const
     {

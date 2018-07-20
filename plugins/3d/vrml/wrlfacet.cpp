@@ -724,14 +724,13 @@ SGNODE* SHAPE::CalcShape( SGNODE* aParent, SGNODE* aColor, WRL1_ORDER aVertexOrd
     std::list< FACET* >::iterator eF = facets.end();
 
     int maxIdx = 0;
-    int tmi;
     float maxV = 0.0;
     float tV = 0.0;
 
     while( sF != eF )
     {
         tV = (*sF)->CalcFaceNormal();
-        tmi = (*sF)->GetMaxIndex();
+        int tmi = (*sF)->GetMaxIndex();
 
         if( tmi > maxIdx )
             maxIdx = tmi;

@@ -122,10 +122,9 @@ double Evaluate( AM_PARAM_EVAL_STACK& aExp )
     std::vector<double> values;     // the current list of values
     std::vector<OP_CODE> optype;    // the list of arith operators
 
-    double curr_value = 0.0;
     int extra_priority = 0;
 
-    for( unsigned ii = 0; ii < aExp.size(); ii++ )
+    for( size_t ii = 0; ii < aExp.size(); ii++ )
     {
         AM_PARAM_EVAL& prm = aExp[ii];
 
@@ -207,7 +206,7 @@ double Evaluate( AM_PARAM_EVAL_STACK& aExp )
 
     for( unsigned idx = 0; idx < values.size(); idx++ )
     {
-        curr_value = values[idx];
+        double curr_value = values[idx];
 
         switch( optype[idx].m_Optype )
         {

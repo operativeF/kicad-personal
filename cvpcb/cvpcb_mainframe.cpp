@@ -862,7 +862,6 @@ void CVPCB_MAINFRAME::BuildFOOTPRINTS_LISTBOX()
 void CVPCB_MAINFRAME::BuildCmpListBox()
 {
     wxString    msg;
-    COMPONENT*  component;
     wxFont      guiFont = wxSystemSettings::GetFont( wxSYS_DEFAULT_GUI_FONT );
 
     if( m_compListBox == NULL )
@@ -879,7 +878,7 @@ void CVPCB_MAINFRAME::BuildCmpListBox()
 
     for( unsigned i = 0;  i < m_netlist.GetCount();  i++ )
     {
-        component = m_netlist.GetComponent( i );
+        COMPONENT* component = m_netlist.GetComponent( i );
 
         msg.Printf( CMP_FORMAT, m_compListBox->GetCount() + 1,
                     GetChars( component->GetReference() ),

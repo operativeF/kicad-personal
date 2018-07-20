@@ -1119,7 +1119,6 @@ void SCH_SCREENS::ClearAnnotationOfNewSheetPaths( SCH_SHEET_LIST& aInitialSheetP
 int SCH_SCREENS::ReplaceDuplicateTimeStamps()
 {
     EDA_ITEMS items;
-    SCH_ITEM* item;
 
     for( size_t i = 0;  i < m_screens.size();  i++ )
         m_screens[i]->GetHierarchicalItems( items );
@@ -1133,7 +1132,7 @@ int SCH_SCREENS::ReplaceDuplicateTimeStamps()
 
     for( size_t ii = 0;  ii < items.size() - 1;  ii++ )
     {
-        item = (SCH_ITEM*)items[ii];
+        auto item = dynamic_cast<SCH_ITEM*>( items[ii] );
 
         SCH_ITEM* nextItem = (SCH_ITEM*)items[ii + 1];
 

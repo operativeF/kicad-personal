@@ -847,13 +847,11 @@ static void export_vrml_board( MODEL_VRML& aModel, BOARD* aPcb )
         wxMessageBox( msg );
     }
 
-    int seg;
-
     for( int cnt = 0; cnt < pcbOutlines.OutlineCount(); cnt++ )
     {
         const SHAPE_LINE_CHAIN& outline = pcbOutlines.COutline( cnt );
 
-        seg = aModel.m_board.NewContour();
+        int seg = aModel.m_board.NewContour();
 
         for( int j = 0; j < outline.PointCount(); j++ )
         {

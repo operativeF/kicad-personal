@@ -428,12 +428,11 @@ void LIB_PIN::SetPartNumber( int part )
 
     if( m_Unit == 0 )
     {
-        LIB_PIN* pin;
         LIB_PIN* tmp = GetParent()->GetNextPin();
 
-        while( tmp != NULL )
+        while( tmp != nullptr )
         {
-            pin = tmp;
+            LIB_PIN* pin = tmp;
             tmp = GetParent()->GetNextPin( pin );
 
             if( pin->m_Flags == 0 || pin == this

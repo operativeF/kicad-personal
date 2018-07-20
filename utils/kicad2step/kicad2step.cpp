@@ -289,10 +289,10 @@ int KICAD2MCAD::OnRun()
         if( m_useGridOrigin )
             pcb.UseGridOrigin( true );
 
-        bool res;
-
         try
         {
+            bool res;
+
             pcb.ComposePCB( m_includeVirtual );
 
         #ifdef SUPPORTS_IGES

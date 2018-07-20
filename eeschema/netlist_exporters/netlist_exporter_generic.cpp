@@ -213,7 +213,7 @@ XNODE* NETLIST_EXPORTER_GENERIC::makeComponents()
     // Output is xml, so there is no reason to remove spaces from the field values.
     // And XML element names need not be translated to various languages.
 
-    for( unsigned i = 0;  i < sheetList.size();  i++ )
+    for( size_t i = 0;  i < sheetList.size();  i++ )
     {
         for( EDA_ITEM* schItem = sheetList[i].LastDrawList();  schItem;  schItem = schItem->Next() )
         {
@@ -269,10 +269,7 @@ XNODE* NETLIST_EXPORTER_GENERIC::makeComponents()
 
 XNODE* NETLIST_EXPORTER_GENERIC::makeDesignHeader()
 {
-    SCH_SCREEN* screen;
     XNODE*     xdesign = node( "design" );
-    XNODE*     xtitleBlock;
-    XNODE*     xsheet;
     XNODE*     xcomment;
     wxString   sheetTxt;
     wxFileName sourceFileName;
@@ -290,11 +287,13 @@ XNODE* NETLIST_EXPORTER_GENERIC::makeDesignHeader()
     */
     SCH_SHEET_LIST sheetList( g_RootSheet );
 
-    for( unsigned i = 0;  i < sheetList.size();  i++ )
+    for( size_t i = 0;  i < sheetList.size();  i++ )
     {
-        screen = sheetList[i].LastScreen();
+        auto screen = sheetList[i].LastScreen();
 
-        xdesign->AddChild( xsheet = node( "sheet" ) );
+        XNODE* xsheet = node( "sheet" );
+
+        xdesign->AddChild( xsheet );
 
         // get the string representation of the sheet index number.
         // Note that sheet->GetIndex() is zero index base and we need to increment the
@@ -304,10 +303,11 @@ XNODE* NETLIST_EXPORTER_GENERIC::makeDesignHeader()
         xsheet->AddAttribute( "name", sheetList[i].PathHumanReadable() );
         xsheet->AddAttribute( "tstamps", sheetList[i].Path() );
 
-
         TITLE_BLOCK tb = screen->GetTitleBlock();
 
-        xsheet->AddChild( xtitleBlock = node( "title_block" ) );
+        XNODE* xtitleBlock = node( "title_block" );
+
+        xsheet->AddChild( xtitleBlock );
 
         xtitleBlock->AddChild( node( "title", tb.GetTitle() ) );
         xtitleBlock->AddChild( node( "company", tb.GetCompany() ) );

@@ -112,7 +112,6 @@ bool GERBER_FILE_IMAGE::LoadGerberFile( const wxString& aFullFileName )
 {
     int      G_command = 0;        // command number for G commands like G04
     int      D_commande = 0;       // command number for D commands like D02
-    char*    text;
 
     ClearMessageList( );
     ResetDefaultValues();
@@ -135,7 +134,7 @@ bool GERBER_FILE_IMAGE::LoadGerberFile( const wxString& aFullFileName )
             break;
 
         m_LineNum++;
-        text = StrPurge( lineBuffer );
+        char* text = StrPurge( lineBuffer );
 
         while( text && *text )
         {

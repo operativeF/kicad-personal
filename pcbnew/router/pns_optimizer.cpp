@@ -1146,16 +1146,15 @@ bool OPTIMIZER::mergeDpStep( DIFF_PAIR* aPair, bool aTryP, int step )
             SHAPE_LINE_CHAIN bypass = DIRECTION_45().BuildInitialTrace( s1.A, s2.B, dir1.IsDiagonal() );
             SHAPE_LINE_CHAIN newRef;
             SHAPE_LINE_CHAIN newCoup;
-            int64_t deltaCoupled = -1, deltaUni = -1;
 
             newRef = currentPath;
             newRef.Replace( s1.Index(), s2.Index(), bypass );
 
-            deltaUni = aPair->CoupledLength ( newRef, coupledPath ) - clenPre + budget;
+            int64_t deltaUni = aPair->CoupledLength ( newRef, coupledPath ) - clenPre + budget;
 
             if ( coupledBypass( m_world, aPair, aTryP, newRef, bypass, coupledPath, newCoup ) )
             {
-                deltaCoupled = aPair->CoupledLength( newRef, newCoup ) - clenPre + budget;
+                int64_t deltaCoupled = aPair->CoupledLength( newRef, newCoup ) - clenPre + budget;
 
                 if( deltaCoupled >= 0 )
                 {

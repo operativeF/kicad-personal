@@ -82,8 +82,7 @@ bool TRANSFORM::MapAngles( int* aAngle1, int* aAngle2 ) const
     wxCHECK_MSG( aAngle1 != NULL && aAngle2 != NULL, false,
                  wxT( "Cannot map NULL point angles." ) );
 
-    int    Angle, Delta;
-    double x, y, t;
+    int    Delta;
     bool   swap = false;
 
     Delta = *aAngle2 - *aAngle1;
@@ -93,9 +92,9 @@ bool TRANSFORM::MapAngles( int* aAngle1, int* aAngle2 ) const
         *aAngle2 += 1;
     }
 
-    x = cos( DECIDEG2RAD( *aAngle1 ) );
-    y = sin( DECIDEG2RAD( *aAngle1 ) );
-    t = x * x1 + y * y1;
+    auto x = cos( DECIDEG2RAD( *aAngle1 ) );
+    auto y = sin( DECIDEG2RAD( *aAngle1 ) );
+    auto t = x * x1 + y * y1;
     y = x * x2 + y * y2;
     x = t;
     *aAngle1 = KiROUND( RAD2DECIDEG( atan2( y, x ) ) );
@@ -114,7 +113,7 @@ bool TRANSFORM::MapAngles( int* aAngle1, int* aAngle2 ) const
 
     if( *aAngle2 - *aAngle1 > 1800 ) // Need to swap the two angles
     {
-        Angle   = (*aAngle1);
+        int Angle   = (*aAngle1);
         *aAngle1 = (*aAngle2);
         *aAngle2 = Angle;
 

@@ -77,9 +77,7 @@ LAYERS_MAP_DIALOG::LAYERS_MAP_DIALOG( GERBVIEW_FRAME* parent ) :
 
 void LAYERS_MAP_DIALOG::initDialog()
 {
-    wxStaticText* label;
     wxStaticText* text;
-    int           item_ID;
     wxString      msg;
     wxSize        goodSize;
 
@@ -157,9 +155,9 @@ void LAYERS_MAP_DIALOG::initDialog()
         // Provide a text string to identify the Gerber layer
         msg.Printf( _( "Layer %d" ), m_buttonTable[ii] + 1 );
 
-        label = new wxStaticText( this,
-                                  wxID_STATIC, msg, wxDefaultPosition,
-                                  wxDefaultSize, 0 );
+        auto label = new wxStaticText( this,
+                                       wxID_STATIC, msg, wxDefaultPosition,
+                                       wxDefaultSize, 0 );
         flexColumnBoxSizer->Add( label, 0, wxALIGN_CENTER_VERTICAL | wxALL, 5 );
 
         /* Add file name and extension without path. */
@@ -171,7 +169,7 @@ void LAYERS_MAP_DIALOG::initDialog()
                                  wxALIGN_CENTER_VERTICAL | wxALL, 5 );
 
         // Provide a button for this layer (which will invoke a child dialog box)
-        item_ID = ID_BUTTON_0 + ii;
+        int item_ID = ID_BUTTON_0 + ii;
         wxButton * Button = new wxButton( this,
                                           item_ID, wxT( "..." ),
                                           wxDefaultPosition, wxDefaultSize, wxBU_EXACTFIT );

@@ -1015,13 +1015,13 @@ std::pair<VECTOR2I, const SEG*> SCH_EAGLE_PLUGIN::findNearestLinePoint( const wx
     VECTOR2I nearestPoint;
     const SEG* nearestLine = nullptr;
 
-    float d, mindistance = std::numeric_limits<float>::max();
+    float mindistance = std::numeric_limits<float>::max();
 
     // Find the nearest start, middle or end of a line from the list of lines.
     for( const SEG& line : aLines )
     {
         auto testpoint = line.A;
-        d = sqrt( abs( ( (aPoint.x - testpoint.x) ^ 2 ) + ( (aPoint.y - testpoint.y) ^ 2 ) ) );
+        auto d = sqrt( abs( ( (aPoint.x - testpoint.x) ^ 2 ) + ( (aPoint.y - testpoint.y) ^ 2 ) ) );
 
         if( d < mindistance )
         {

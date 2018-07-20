@@ -246,19 +246,17 @@ wxString* PROJECT_TEMPLATE::GetTitle(void)
     /* Open HTML file and get the text between the title tags */
     if( title == wxEmptyString )
     {
-        int start = 0;
-        int finish = 0;
         bool done = false;
 
         while( input.IsOk() && !input.Eof() && !done )
         {
             wxString line = text.ReadLine();
 
-            start = line.Find( wxT( "<title>" ) );
+            int start = line.Find( wxT( "<title>" ) );
             if( start == wxNOT_FOUND )
                 start = line.Find( wxT( "<TITLE>" ) );
 
-            finish = line.Find( wxT( "</title>" ) );
+            int finish = line.Find( wxT( "</title>" ) );
             if( finish == wxNOT_FOUND )
                 finish = line.Find( wxT( "</TITLE>" ) );
 

@@ -274,7 +274,6 @@ void GERBVIEW_SELECTION_TOOL::toggleSelection( EDA_ITEM* aItem )
 
 bool GERBVIEW_SELECTION_TOOL::selectPoint( const VECTOR2I& aWhere, bool aOnDrag )
 {
-    EDA_ITEM* item = NULL;
     GERBER_COLLECTOR collector;
     EDA_ITEM* model = getModel<EDA_ITEM>();
 
@@ -315,7 +314,7 @@ bool GERBVIEW_SELECTION_TOOL::selectPoint( const VECTOR2I& aWhere, bool aOnDrag 
             if( aOnDrag )
                 Wait( TOOL_EVENT( TC_ANY, TA_MOUSE_UP, BUT_LEFT ) );
 
-            item = disambiguationMenu( &collector );
+            auto item = disambiguationMenu( &collector );
 
             if( item )
             {

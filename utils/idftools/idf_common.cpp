@@ -899,11 +899,10 @@ void IDF3::GetOutline( std::list<IDF_SEGMENT*>& aLines,
     std::list<IDF_SEGMENT*>::iterator idx   = bl++;       // iterator for the object with minX
 
     double minx = (*idx)->GetMinX();
-    double curx;
 
     while( bl != el )
     {
-        curx = (*bl)->GetMinX();
+        double curx = (*bl)->GetMinX();
 
         if( curx < minx )
         {
@@ -926,11 +925,10 @@ void IDF3::GetOutline( std::list<IDF_SEGMENT*>& aLines,
 
     // Assemble the loop
     bool complete = false;  // set if loop is complete
-    bool matched;           // set if a segment's end point was matched
 
     while( !complete )
     {
-        matched = false;
+        bool matched = false;
         bl  = aLines.begin();
         el  = aLines.end();
 

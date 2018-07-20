@@ -125,7 +125,6 @@ WIDGET_EESCHEMA_COLOR_CONFIG::WIDGET_EESCHEMA_COLOR_CONFIG( wxWindow* aParent, E
 
 void WIDGET_EESCHEMA_COLOR_CONFIG::CreateControls()
 {
-    wxStaticText*   label;
     int             buttonId = 1800;
 
     m_mainBoxSizer = new wxBoxSizer( wxHORIZONTAL );
@@ -144,7 +143,7 @@ void WIDGET_EESCHEMA_COLOR_CONFIG::CreateControls()
         columnBoxSizer->Add( rowBoxSizer, 0, wxGROW | wxLEFT | wxRIGHT | wxBOTTOM, 5 );
 
         // Add a text string to identify the column of color select buttons.
-        label = new wxStaticText( this, wxID_ANY, groups->m_Name );
+        auto label = new wxStaticText( this, wxID_ANY, groups->m_Name );
 
         // Make the column label font bold.
         wxFont font( label->GetFont() );

@@ -775,11 +775,12 @@ bool SGSHAPE::Prepare( const glm::dmat4* aTransform,
     SGPOINT* pCoords = NULL;
     pv->GetCoordsList( nCoords, pCoords );
 
-    size_t nColors = 0;
     SGCOLOR* pColors = NULL;
 
     if( pc )
     {
+        size_t nColors = 0;
+
         // check the vertex colors
         pc->GetColorList( nColors, pColors );
 

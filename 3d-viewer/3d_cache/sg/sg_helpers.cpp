@@ -426,14 +426,12 @@ bool S3D::CalcTriangleNormals( std::vector< SGPOINT > coords,
 
     std::map< int, std::list< glm::dvec3 > >vmap;
 
-    int p1, p2, p3;
-
     // create the map of indices to facet sets
     for( size_t i = 0; i < isize; )
     {
-        p1 = index[i++];
-        p2 = index[i++];
-        p3 = index[i++];
+        int p1 = index[i++];
+        int p2 = index[i++];
+        int p3 = index[i++];
 
         if( p1 < 0 || p1 >= (int)vsize || p2 < 0 || p2 >= (int)vsize ||
             p3 < 0 || p3 >= (int)vsize )

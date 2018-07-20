@@ -277,7 +277,7 @@ static void idf_export_module( BOARD* aPcb, MODULE* aModule,
     // }
 
     // Export pads
-    double  drill, x, y;
+    double  x, y;
     double  scale = aIDFBoard.GetUserScale();
     IDF3::KEY_PLATING kplate;
     std::string pintype;
@@ -289,7 +289,7 @@ static void idf_export_module( BOARD* aPcb, MODULE* aModule,
 
     for( auto pad : aModule->Pads() )
     {
-        drill = (double) pad->GetDrillSize().x * scale;
+        auto drill = (double) pad->GetDrillSize().x * scale;
         x     = pad->GetPosition().x * scale + dx;
         y     = -pad->GetPosition().y * scale + dy;
 

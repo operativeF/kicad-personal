@@ -138,7 +138,6 @@ static struct hotkey_name_descr hotkeyNameList[] =
 wxString KeyNameFromKeyCode( int aKeycode, bool* aIsFound )
 {
     wxString keyname, modifier, fullkeyname;
-    int      ii;
     bool     found = false;
 
     // Assume keycode of 0 is "unassigned"
@@ -160,7 +159,7 @@ wxString KeyNameFromKeyCode( int aKeycode, bool* aIsFound )
     }
     else
     {
-        for( ii = 0; ; ii++ )
+        for( int ii = 0; ; ii++ )
         {
             if( hotkeyNameList[ii].m_KeyCode == KEY_NON_FOUND ) // End of list
             {

@@ -799,17 +799,14 @@ SGNODE* WRL2FACESET::TranslateToSG( SGNODE* aParent )
 
     SHAPE   lShape;
     FACET*  fp = NULL;
-    size_t  iCoord;
-    int     idx;        // coordinate index
-    size_t  cidx = 0;   // color index
     SGCOLOR pc1;
 
     if( NULL == color )
     {
         // no per-vertex colors; we can save a few CPU cycles
-        for( iCoord = 0; iCoord < vsize; ++iCoord )
+        for( size_t iCoord = 0; iCoord < vsize; ++iCoord )
         {
-            idx = coordIndex[iCoord];
+            int idx = coordIndex[iCoord];
 
             if( idx < 0 )
             {
@@ -839,10 +836,11 @@ SGNODE* WRL2FACESET::TranslateToSG( SGNODE* aParent )
     {
         WRL2COLOR* cn = (WRL2COLOR*) color;
         WRLVEC3F tc;
+        size_t  cidx = 0;   // color index
 
-        for( iCoord = 0; iCoord < vsize; ++iCoord )
+        for( size_t iCoord = 0; iCoord < vsize; ++iCoord )
         {
-            idx = coordIndex[iCoord];
+            int idx = coordIndex[iCoord];
 
             if( idx < 0 )
             {

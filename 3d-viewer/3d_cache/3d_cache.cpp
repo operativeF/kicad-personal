@@ -85,15 +85,13 @@ static bool checkTag( const char* aTag, void* aPluginMgrPtr )
 
 static const wxString sha1ToWXString( const unsigned char* aSHA1Sum )
 {
-    unsigned char uc;
-    unsigned char tmp;
     char          sha1[41];
     int           j = 0;
 
     for( int i = 0; i < 20; ++i )
     {
-        uc = aSHA1Sum[i];
-        tmp = uc / 16;
+        unsigned int uc = aSHA1Sum[i];
+        unsigned int tmp = uc / 16;
 
         if( tmp > 9 )
             tmp += 87;

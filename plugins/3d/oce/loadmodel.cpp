@@ -369,11 +369,10 @@ void addItems( SGNODE* parent, std::vector< SGNODE* >* lp )
 
     std::vector< SGNODE* >::iterator sL = lp->begin();
     std::vector< SGNODE* >::iterator eL = lp->end();
-    SGNODE* item;
 
     while( sL != eL )
     {
-        item = *sL;
+        SGNODE* item = *sL;
 
         if( NULL == S3D::GetSGNodeParent( item ) )
             S3D::AddSGNodeChild( parent, item );

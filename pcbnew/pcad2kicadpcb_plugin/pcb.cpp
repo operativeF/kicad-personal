@@ -118,11 +118,9 @@ int PCB::GetNewTimestamp()
 
 int PCB::GetNetCode( wxString aNetName )
 {
-    PCB_NET* net;
-
     for( int i = 0; i < (int) m_pcbNetlist.GetCount(); i++ )
     {
-        net = m_pcbNetlist[i];
+        auto net = m_pcbNetlist[i];
 
         if( net->m_name == aNetName )
         {

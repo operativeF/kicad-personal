@@ -1451,7 +1451,6 @@ void VRML_LAYER::glEnd( void )
             double firstY = 0.0;
             double lastX = 0.0;
             double lastY = 0.0;
-            double curX, curY;
             double area = 0.0;
 
             if( vlist.size() > 0 )
@@ -1466,8 +1465,8 @@ void VRML_LAYER::glEnd( void )
             for( size_t i = 1; i < vlist.size(); ++i )
             {
                 loop->push_back( vlist[i]->o );
-                curX = vlist[i]->x;
-                curY = vlist[i]->y;
+                double curX = vlist[i]->x;
+                double curY = vlist[i]->y;
                 area += ( curX - lastX ) * ( curY + lastY );
                 lastX = curX;
                 lastY = curY;

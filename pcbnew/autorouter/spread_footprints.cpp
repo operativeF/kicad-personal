@@ -240,7 +240,6 @@ void PCB_EDIT_FRAME::SpreadFootprints( std::vector<MODULE*>* aFootprints,
     // Extract and place footprints by sheet
     std::vector <MODULE*> footprintListBySheet;
     std::vector <EDA_RECT> placementSheetAreas;
-    double subsurface;
     double placementsurface = 0.0;
 
     // put the placement area position on mouse cursor.
@@ -271,7 +270,7 @@ void PCB_EDIT_FRAME::SpreadFootprints( std::vector<MODULE*>* aFootprints,
     {
         int subareaIdx = 0;
         footprintListBySheet.clear();
-        subsurface = 0.0;
+        double subsurface = 0.0;
 
         for( unsigned ii = 0; ii < footprintList.size(); ii++ )
         {

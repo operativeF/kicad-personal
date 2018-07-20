@@ -164,7 +164,6 @@ void GENDRILL_WRITER_BASE::buildHolesList( DRILL_LAYER_PAIR aLayerPair,
     bool last_notplated_opt = false;
 
     DRILL_TOOL new_tool( 0, false );
-    unsigned   jj;
 
     for( unsigned ii = 0; ii < m_holeListBuffer.size(); ii++ )
     {
@@ -178,7 +177,7 @@ void GENDRILL_WRITER_BASE::buildHolesList( DRILL_LAYER_PAIR aLayerPair,
             last_notplated_opt = new_tool.m_Hole_NotPlated;
         }
 
-        jj = m_toolListBuffer.size();
+        auto jj = m_toolListBuffer.size();
 
         if( jj == 0 )
             continue;                                        // Should not occurs

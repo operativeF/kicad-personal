@@ -309,13 +309,11 @@ SGNODE* X3DIFACESET::TranslateToSG( SGNODE* aParent )
 
     SHAPE   lShape;
     FACET*  fp = NULL;
-    size_t  iCoord;
-    int     idx;        // coordinate index
 
     // no per-vertex colors; we can save a few CPU cycles
-    for( iCoord = 0; iCoord < vsize; ++iCoord )
+    for( size_t iCoord = 0; iCoord < vsize; ++iCoord )
     {
-        idx = coordIndex[iCoord];
+        int idx = coordIndex[iCoord];
 
         if( idx < 0 )
         {

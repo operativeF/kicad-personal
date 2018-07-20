@@ -44,7 +44,6 @@
 
 void CVPCB_MAINFRAME::SetNewPkg( const wxString& aFootprintName )
 {
-    COMPONENT* component;
     int        componentIndex;
 
     if( m_netlist.IsEmpty() )
@@ -62,7 +61,7 @@ void CVPCB_MAINFRAME::SetNewPkg( const wxString& aFootprintName )
     {
         // Get the component for the current iteration
         componentIndex = m_compListBox->GetFirstSelected();
-        component = m_netlist.GetComponent( componentIndex );
+        COMPONENT* component = m_netlist.GetComponent( componentIndex );
 
         if( component == NULL )
             return;

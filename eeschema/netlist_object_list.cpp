@@ -782,15 +782,13 @@ void NETLIST_OBJECT_LIST::labelConnect( NETLIST_OBJECT* aLabelRef )
 
 void NETLIST_OBJECT_LIST::setUnconnectedFlag()
 {
-    NETLIST_OBJECT* NetItemRef;
-    unsigned NetStart, NetEnd;
-    NET_CONNECTION_T StateFlag;
+    unsigned NetStart = 0;
+    unsigned NetEnd = 0;
+    NET_CONNECTION_T StateFlag = UNCONNECTED;
 
-    NetStart  = NetEnd = 0;
-    StateFlag = UNCONNECTED;
     for( unsigned ii = 0; ii < size(); ii++ )
     {
-        NetItemRef = GetItem( ii );
+        NETLIST_OBJECT* NetItemRef = GetItem( ii );
         if( NetItemRef->m_Type == NET_NOCONNECT && StateFlag != PAD_CONNECT )
             StateFlag = NOCONNECT_SYMBOL_PRESENT;
 

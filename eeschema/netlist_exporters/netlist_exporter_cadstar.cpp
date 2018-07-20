@@ -120,18 +120,18 @@ bool NETLIST_EXPORTER_CADSTAR::writeListOfNets( FILE* f )
     wxString InitNetDesc  = StartLine + wxT( "ADD_TER" );
     wxString StartNetDesc = StartLine + wxT( "TER" );
     wxString netcodeName, InitNetDescLine;
-    unsigned ii;
     int print_ter = 0;
-    int NetCode, lastNetCode = -1;
+    int lastNetCode = -1;
     SCH_COMPONENT* Cmp;
     wxString netName;
 
-    for( ii = 0; ii < m_masterList->size(); ii++ )
+    for( size_t ii = 0; ii < m_masterList->size(); ii++ )
     {
         NETLIST_OBJECT* nitem = m_masterList->GetItem( ii );
 
+        int NetCode = nitem->GetNet();
         // Get the NetName of the current net :
-        if( ( NetCode = nitem->GetNet() ) != lastNetCode )
+        if( NetCode != lastNetCode )
         {
             netName = nitem->GetNetName();
             netcodeName = wxT( "\"" );

@@ -215,8 +215,6 @@ void FOOTPRINT_SELECT_WIDGET::SetDefaultFootprint( wxString const& aFp )
 
 bool FOOTPRINT_SELECT_WIDGET::UpdateList()
 {
-    int n_items = 0;
-
     if( !m_fp_list || !m_finished_loading )
         return false;
 
@@ -240,6 +238,8 @@ bool FOOTPRINT_SELECT_WIDGET::UpdateList()
 
     if( !m_zero_filter )
     {
+        int n_items = 0;
+
         for( auto& fpinfo : m_fp_filter )
         {
             wxString display_name( fpinfo.GetLibNickname() + ":" + fpinfo.GetFootprintName() );

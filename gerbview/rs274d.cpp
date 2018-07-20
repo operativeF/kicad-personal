@@ -582,8 +582,6 @@ bool GERBER_FILE_IMAGE::Execute_DCODE_Command( char*& text, int D_commande )
 
     APERTURE_T        aperture = APT_CIRCLE;
     GERBER_DRAW_ITEM* gbritem;
-
-    int      dcode = 0;
     D_CODE*  tool  = NULL;
     wxString msg;
 
@@ -670,6 +668,8 @@ bool GERBER_FILE_IMAGE::Execute_DCODE_Command( char*& text, int D_commande )
     }
     else
     {
+        int      dcode = 0;
+
         switch( D_commande )
         {
         case 1:     // code D01 Draw line, exposure ON

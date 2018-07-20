@@ -247,7 +247,7 @@ void LIB_EDIT_FRAME::OnCloseWindow( wxCloseEvent& Event )
 double LIB_EDIT_FRAME::BestZoom()
 {
     LIB_PART*  part = GetCurPart();
-    double     defaultLibraryZoom = 7.33;
+    constexpr double defaultLibraryZoom = 7.33;
 
     if( !part )
     {

@@ -644,13 +644,12 @@ void PART_LIBS::LoadAllLibraries( PROJECT* aProject, bool aShowProgress )
 
     // add the special cache library.
     wxString cache_name = CacheName( aProject->GetProjectFullName() );
-    PART_LIB* cache_lib;
 
     if( !cache_name.IsEmpty() )
     {
         try
         {
-            cache_lib = AddLibrary( cache_name );
+            PART_LIB* cache_lib = AddLibrary( cache_name );
 
             if( cache_lib )
                 cache_lib->SetCache();

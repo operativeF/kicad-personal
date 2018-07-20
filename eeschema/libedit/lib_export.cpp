@@ -118,12 +118,12 @@ void LIB_EDIT_FRAME::ExportPart()
     fn = dlg.GetPath();
     fn.MakeAbsolute();
 
-    LIB_PART* old_part = NULL;
-
     SCH_PLUGIN::SCH_PLUGIN_RELEASER pi( SCH_IO_MGR::FindPlugin( SCH_IO_MGR::SCH_LEGACY ) );
 
     if( fn.FileExists() )
     {
+        LIB_PART* old_part = nullptr;
+
         try
         {
             LIB_ALIAS* alias = pi->LoadSymbol( fn.GetFullPath(), part->GetName() );

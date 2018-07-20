@@ -323,9 +323,6 @@ static bool getOutlineModel( VRML_LAYER& model, const std::list< IDF_OUTLINE* >*
     if( items->size() < 1 )
         return false;
 
-    int nvcont = 0;
-    int iseg   = 0;
-
     std::list< IDF_OUTLINE* >::const_iterator scont = items->begin();
     std::list< IDF_OUTLINE* >::const_iterator econt = items->end();
     std::list<IDF_SEGMENT*>::iterator sseg;
@@ -335,7 +332,7 @@ static bool getOutlineModel( VRML_LAYER& model, const std::list< IDF_OUTLINE* >*
 
     while( scont != econt )
     {
-        nvcont = model.NewContour();
+        int nvcont = model.NewContour();
 
         if( nvcont < 0 )
         {
@@ -368,7 +365,8 @@ static bool getOutlineModel( VRML_LAYER& model, const std::list< IDF_OUTLINE* >*
         sseg = (*scont)->begin();
         eseg = (*scont)->end();
 
-        iseg = 0;
+        int iseg = 0;
+
         while( sseg != eseg )
         {
             lseg = **sseg;
@@ -885,11 +883,9 @@ static bool makeOtherOutlines( IDF3_BOARD& brd, SGNODE* aParent )
 
     int nvcont;
 
-    OTHER_OUTLINE* pout;
-
     while( sc != ec )
     {
-        pout = sc->second;
+        OTHER_OUTLINE* pout = sc->second;
 
         if( std::abs( pout->GetThickness() ) < 0.001 )
         {

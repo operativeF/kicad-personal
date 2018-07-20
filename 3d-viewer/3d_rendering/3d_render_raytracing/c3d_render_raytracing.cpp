@@ -546,8 +546,6 @@ void C3D_RENDER_RAYTRACING::rt_trace_AA_packet( const SFVEC3F *aBgColorY,
             hitAA.m_tHit = std::numeric_limits<float>::infinity();
             hitAA.m_acc_node_info = 0;
 
-            bool hitted = false;
-
             const unsigned int idx0y1 = ( x + 0 ) + RAYPACKET_DIM * ( y + 1 );
             const unsigned int idx1y1 = ( x + 1 ) + RAYPACKET_DIM * ( y + 1 );
 
@@ -608,6 +606,8 @@ void C3D_RENDER_RAYTRACING::rt_trace_AA_packet( const SFVEC3F *aBgColorY,
                 // Try to intersect the different nodes
                 // It tests the possible combination of hitted or not hitted points
                 // This will try to get the best hit for this ray
+
+                bool hitted = false;
 
                 if( nodex0y0 != 0 )
                     hitted |= m_accelerator->Intersect( rayAA, hitAA, nodex0y0 );

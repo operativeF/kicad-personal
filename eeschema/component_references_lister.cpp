@@ -165,7 +165,6 @@ int SCH_REFERENCE_LIST::FindUnit( size_t aIndex, int aUnit )
 
 void SCH_REFERENCE_LIST::RemoveSubComponentsFromList()
 {
-    SCH_COMPONENT* libItem;
     wxString       oldName;
     wxString       currName;
 
@@ -176,7 +175,7 @@ void SCH_REFERENCE_LIST::RemoveSubComponentsFromList()
     for( unsigned ii = 0; ii < componentFlatList.size(); ii++ )
     {
 
-        libItem = componentFlatList[ii].m_RootCmp;
+        SCH_COMPONENT* libItem = componentFlatList[ii].m_RootCmp;
         if( libItem == NULL )
             continue;
 

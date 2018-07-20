@@ -80,11 +80,11 @@ bool S3D_RESOLVER::Set3DConfigDir( const wxString& aConfigDir )
         wxString subgroup( "EnvironmentVariables" );
         wxString entry;
         wxString val;
-        long idx = 0;
 
         if( cfg->HasGroup( subgroup ) )
         {
             cfg->SetPath( subgroup );
+            long idx = 0;
 
             while( cfg->GetNextEntry( entry, idx ) )
             {

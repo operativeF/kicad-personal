@@ -124,6 +124,7 @@ SCH_ITEM* SCH_EDIT_FRAME::FindComponentAndItem( const wxString& aReference,
     if( Component )
     {
         sheet = sheetWithComponentFound;
+        bool            centerAndRedraw = false;
 
         if( *sheet != *g_CurrentSheet )
         {

@@ -709,6 +709,8 @@ bool PANEL_FP_LIB_TABLE::TransferDataFromWindow()
 
     if( verifyTables() )
     {
+        int dialogRet = 0;
+
         if( *global_model() != *m_global )
         {
             m_parent->m_GlobalTableChanged = true;

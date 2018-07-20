@@ -915,7 +915,7 @@ static void CreateSignalsSection( FILE* aFile, BOARD* aPcb )
 
     for( unsigned ii = 0; ii < aPcb->GetNetCount(); ii++ )
     {
-        net = aPcb->FindNet( ii );
+        auto net = aPcb->FindNet( ii );
 
         if( net->GetNetname() == wxEmptyString ) // dummy netlist (no connection)
         {

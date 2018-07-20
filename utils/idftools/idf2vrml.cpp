@@ -404,9 +404,6 @@ bool PopulateVRML( VRML_LAYER& model, const std::list< IDF_OUTLINE* >* items, bo
     if( items->size() < 1 )
         return false;
 
-    int nvcont = 0;
-    int iseg   = 0;
-
     std::list< IDF_OUTLINE* >::const_iterator scont = items->begin();
     std::list< IDF_OUTLINE* >::const_iterator econt = items->end();
     std::list<IDF_SEGMENT*>::iterator sseg;
@@ -416,7 +413,7 @@ bool PopulateVRML( VRML_LAYER& model, const std::list< IDF_OUTLINE* >* items, bo
 
     while( scont != econt )
     {
-        nvcont = model.NewContour();
+        int nvcont = model.NewContour();
 
         if( nvcont < 0 )
         {
@@ -433,7 +430,7 @@ bool PopulateVRML( VRML_LAYER& model, const std::list< IDF_OUTLINE* >* items, bo
         sseg = (*scont)->begin();
         eseg = (*scont)->end();
 
-        iseg = 0;
+        int iseg = 0;
         while( sseg != eseg )
         {
             lseg = **sseg;
@@ -639,16 +636,13 @@ inline void TransformPoint( IDF_SEGMENT& seg, double frac, bool bottom,
     seg.center.x *= frac;
     seg.center.y *= frac;
 
-    double tsin = 0.0;
-    double tcos = 0.0;
-
     if( angle > MIN_ANG || angle < -MIN_ANG )
     {
         double ta = angle * M_PI / 180.0;
         double tx, ty;
 
-        tsin = sin( ta );
-        tcos = cos( ta );
+        double tsin = sin( ta );
+        double tcos = cos( ta );
 
         tx = seg.startPoint.x * tcos - seg.startPoint.y * tsin;
         ty = seg.startPoint.x * tsin + seg.startPoint.y * tcos;
@@ -909,11 +903,10 @@ bool MakeOtherOutlines( IDF3_BOARD& board, std::ostream& file )
 
     boost::ptr_map< const std::string, VRML_IDS> cmap;  // map colors by outline UID
     VRML_IDS* vcp;
-    OTHER_OUTLINE* pout;
 
     while( sc != ec )
     {
-        pout = sc->second;
+        OTHER_OUTLINE* pout = sc->second;
 
         if( pout->GetThickness() < 0.00000001 && nozeroheights )
         {

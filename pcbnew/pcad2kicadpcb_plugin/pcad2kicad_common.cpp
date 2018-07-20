@@ -113,7 +113,6 @@ double StrToDoublePrecisionUnits( const wxString& aStr, char aAxe, const wxStrin
 {
     wxString    ls;
     double      i;
-    char        u;
 
     ls = aStr;
     ls.Trim( true );
@@ -121,7 +120,7 @@ double StrToDoublePrecisionUnits( const wxString& aStr, char aAxe, const wxStrin
 
     if( ls.Len() > 0 )
     {
-        u = ls[ls.Len() - 1];
+        char u = ls[ls.Len() - 1];
 
         while( ls.Len() > 0
                && !( ls[ls.Len() - 1] == wxT( '.' )

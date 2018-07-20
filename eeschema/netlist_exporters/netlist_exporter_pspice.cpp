@@ -200,7 +200,6 @@ wxString NETLIST_EXPORTER_PSPICE::GetSpiceFieldDefVal( SPICE_FIELD aField,
     {
         const wxString refName = aComponent->GetField( REFERENCE )->GetText();
         return refName.GetChar( 0 );
-        break;
     }
 
     case SF_MODEL:
@@ -234,12 +233,10 @@ wxString NETLIST_EXPORTER_PSPICE::GetSpiceFieldDefVal( SPICE_FIELD aField,
         }
 
         return value;
-        break;
     }
 
     case SF_ENABLED:
         return wxString( "Y" );
-        break;
 
     case SF_NODE_SEQUENCE:
     {
@@ -256,13 +253,11 @@ wxString NETLIST_EXPORTER_PSPICE::GetSpiceFieldDefVal( SPICE_FIELD aField,
         nodeSeq.Trim();
 
         return nodeSeq;
-        break;
     }
 
     case SF_LIB_FILE:
         // There is no default Spice library
         return wxEmptyString;
-        break;
 
     default:
         wxASSERT_MSG( false, "Missing default value definition for a Spice field" );

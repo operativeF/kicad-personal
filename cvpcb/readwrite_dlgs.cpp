@@ -127,7 +127,7 @@ void CVPCB_MAINFRAME::SetNewPkg( const wxString& aFootprintName, int aIndex )
 /// @return int - 0 on success, 1 on not found, 2 on ambiguous i.e. multiple matches
 static int guessNickname( FP_LIB_TABLE* aTbl, LIB_ID* aFootprintId )
 {
-    if( aFootprintId->GetLibNickname().size() )
+    if( !aFootprintId->GetLibNickname().empty() )
         return 0;
 
     wxString    nick;
@@ -154,7 +154,7 @@ static int guessNickname( FP_LIB_TABLE* aTbl, LIB_ID* aFootprintId )
         }
     }
 
-    if( nick.size() )
+    if( !nick.empty() )
     {
         aFootprintId->SetLibNickname( nick );
         return 0;
@@ -263,7 +263,7 @@ bool CVPCB_MAINFRAME::ReadNetListAndFpFiles( const std::string& aNetlist )
                 return false;
             }
 
-            if( msg.size() )
+            if( !msg.empty() )
             {
                 HTML_MESSAGE_BOX dlg( this, wxEmptyString );
 

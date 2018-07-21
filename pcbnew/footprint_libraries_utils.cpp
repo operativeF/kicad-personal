@@ -259,7 +259,7 @@ MODULE* FOOTPRINT_EDIT_FRAME::Import_Module( const wxString& aName )
 
     wxFileName fn;
 
-    if( aName != wxT("") )
+    if( !aName.empty() )
         fn = aName;
     else
         fn = getFootprintFilenameFromUser( this, lastOpenedPathForLoading );

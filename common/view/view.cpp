@@ -849,7 +849,7 @@ struct VIEW::changeItemsDepth
 
 int VIEW::GetTopLayer() const
 {
-    if( m_topLayers.size() == 0 )
+    if( m_topLayers.empty() )
         return 0;
 
     return *m_topLayers.begin();

@@ -205,12 +205,12 @@ LINE_READER* DSNLEXER::PopReader()
 {
     LINE_READER*    ret = 0;
 
-    if( readerStack.size() )
+    if( !readerStack.empty() )
     {
         ret = reader;
         readerStack.pop_back();
 
-        if( readerStack.size() )
+        if( !readerStack.empty() )
         {
             reader = readerStack.back();
             start  = reader->Line();

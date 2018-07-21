@@ -115,7 +115,7 @@ void Scan( PTREE* aTree, DSNLEXER* aLexer )
 
 inline bool isAtom( CPTREE& aTree )
 {
-    return aTree.size()==0 && aTree.data().size()==0;
+    return aTree.empty() && aTree.data().empty();
 }
 
 
@@ -177,16 +177,16 @@ static void formatNode( OUTPUTFORMATTER* out, int aNestLevel, int aCtl,
         int ctl = CTL_OMIT_NL;
 
         // aTree is list and its first child is a list
-        if( aTree.size() && !isAtom( aTree.begin()->second ) && !aTree.data().size() )
+        if( !aTree.empty() && !isAtom( aTree.begin()->second ) && aTree.data().empty() )
             ctl = 0;
 
         out->Print( aNestLevel, "(%s%s", out->Quotes( aKey ).c_str(), ctl & CTL_OMIT_NL ? "" : "\n" );
 
-        if( aTree.data().size() )       // sexpr format does not use data()
+        if( !aTree.data().empty() )       // sexpr format does not use data()
         {
             out->Print( 0, " %s%s",
                 out->Quotes( aTree.data() ).c_str(),
-                aTree.size() ? "\n" : ""
+                !aTree.empty() ? "\n" : ""
                 );
         }
 
@@ -204,7 +204,7 @@ static void formatNode( OUTPUTFORMATTER* out, int aNestLevel, int aCtl,
 
 void Format( OUTPUTFORMATTER* out, int aNestLevel, int aCtl, CPTREE& aTree )
 {
-    if( aTree.size() == 1 && !aTree.data().size() )
+    if( aTree.size() == 1 && aTree.data().empty() )
     {
         // The topmost node is basically only a container for the document root.
         // It anchors the paths which traverse the tree deeper.

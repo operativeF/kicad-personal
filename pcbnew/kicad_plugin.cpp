@@ -1415,7 +1415,7 @@ void PCB_IO::format( D_PAD* aPad, int aNestLevel ) const
     if( aPad->GetThermalGap() != 0 )
         StrPrintf( &output, " (thermal_gap %s)", FormatInternalUnits( aPad->GetThermalGap() ).c_str() );
 
-    if( output.size() )
+    if( !output.empty() )
     {
         m_out->Print( 0, "\n" );
         m_out->Print( aNestLevel+1, "%s", output.c_str()+1 );   // +1 skips 1st space on 1st element

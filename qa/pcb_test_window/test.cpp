@@ -24,7 +24,7 @@ wxFrame* CreateMainFrame( const std::string& aFileName )
 {
     auto frame = new OED_TEST_FRAME( nullptr, wxT( "Outline Editor Test" ) );
 
-    if( aFileName != "" )
+    if( !aFileName.empty() )
     {
         frame->LoadAndDisplayBoard( aFileName );
     }

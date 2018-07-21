@@ -198,7 +198,7 @@ void FOOTPRINT_SELECT_WIDGET::FilterByPinCount( int aPinCount )
 void FOOTPRINT_SELECT_WIDGET::FilterByFootprintFilters(
         wxArrayString const& aFilters, bool aZeroFilters )
 {
-    if( aZeroFilters && aFilters.size() == 0 )
+    if( aZeroFilters && aFilters.empty() )
         m_zero_filter = true;
     else
         m_zero_filter = false;

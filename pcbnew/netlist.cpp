@@ -152,7 +152,7 @@ void PCB_EDIT_FRAME::LoadFootprints( NETLIST& aNetlist, REPORTER& aReporter )
 #if ALLOW_PARTIAL_FPID
         // The FPID is ok as long as there is a footprint portion coming
         // from eeschema.
-        if( !component->GetFPID().GetLibItemName().size() )
+        if( component->GetFPID().GetLibItemName().empty() )
 #else
         if( component->GetFPID().empty() )
 #endif
@@ -197,7 +197,7 @@ void PCB_EDIT_FRAME::LoadFootprints( NETLIST& aNetlist, REPORTER& aReporter )
 #if ALLOW_PARTIAL_FPID
             // The LIB_ID is ok as long as there is a footprint portion coming
             // the library if it's needed.  Nickname can be blank.
-            if( !component->GetFPID().GetLibItemName().size() )
+            if( component->GetFPID().GetLibItemName().empty() )
 #else
             if( !component->GetFPID().IsValid() )
 #endif

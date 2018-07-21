@@ -3562,10 +3562,10 @@ int PADSTACK::Compare( PADSTACK* lhs, PADSTACK* rhs )
 {
     // printf( "PADSTACK::Compare( %p, %p)\n", lhs, rhs );
 
-    if( !lhs->hash.size() )
+    if( lhs->hash.empty() )
         lhs->hash = lhs->makeHash();
 
-    if( !rhs->hash.size() )
+    if( rhs->hash.empty() )
         rhs->hash = rhs->makeHash();
 
     int result = lhs->hash.compare( rhs->hash );
@@ -3584,10 +3584,10 @@ int PADSTACK::Compare( PADSTACK* lhs, PADSTACK* rhs )
 
 int IMAGE::Compare( IMAGE* lhs, IMAGE* rhs )
 {
-    if( !lhs->hash.size() )
+    if( lhs->hash.empty() )
         lhs->hash = lhs->makeHash();
 
-    if( !rhs->hash.size() )
+    if( rhs->hash.empty() )
         rhs->hash = rhs->makeHash();
 
     int result = lhs->hash.compare( rhs->hash );
@@ -3717,7 +3717,7 @@ void PLACE::Format( OUTPUTFORMATTER* out, int nestLevel )
         space = "";
     }
 
-    if( logical_part.size() )
+    if( !logical_part.empty() )
     {
         quote = out->GetQuoteChar( logical_part.c_str() );
         out->Print( 0, "%s(logical_part %s%s%s)", space,
@@ -3752,7 +3752,7 @@ void PLACE::Format( OUTPUTFORMATTER* out, int nestLevel )
         if( region )
             region->Format( out, nestLevel+1 );
 
-        if( part_number.size() )
+        if( !part_number.empty() )
         {
             quote = out->GetQuoteChar( part_number.c_str() );
             out->Print( nestLevel+1, "(PN %s%s%s)\n",
@@ -3767,7 +3767,7 @@ void PLACE::Format( OUTPUTFORMATTER* out, int nestLevel )
             space = "";
         }
 
-        if( part_number.size() )
+        if( !part_number.empty() )
         {
             quote = out->GetQuoteChar( part_number.c_str() );
             out->Print( 0, "%s(PN %s%s%s)", space,

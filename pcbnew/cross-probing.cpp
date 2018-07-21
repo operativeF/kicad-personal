@@ -304,7 +304,7 @@ void PCB_EDIT_FRAME::SendMessageToEESCHEMA( BOARD_ITEM* aSyncItem )
 {
     std::string packet = FormatProbeItem( aSyncItem );
 
-    if( packet.size() )
+    if( !packet.empty() )
     {
         if( Kiface().IsSingle() )
             SendCommand( MSG_TO_SCH, packet.c_str() );
@@ -323,7 +323,7 @@ void PCB_EDIT_FRAME::SendCrossProbeNetName( const wxString& aNetName )
 {
     std::string packet = StrPrintf( "$NET: \"%s\"", TO_UTF8( aNetName ) );
 
-    if( packet.size() )
+    if( !packet.empty() )
     {
         if( Kiface().IsSingle() )
             SendCommand( MSG_TO_SCH, packet.c_str() );

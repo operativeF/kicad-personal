@@ -238,7 +238,7 @@ UTF8 LIB_ID::Format() const
 {
     UTF8    ret;
 
-    if( nickname.size() )
+    if( !nickname.empty() )
     {
         ret += nickname;
         ret += ':';
@@ -246,7 +246,7 @@ UTF8 LIB_ID::Format() const
 
     ret += item_name;
 
-    if( revision.size() )
+    if( !revision.empty() )
     {
         ret += '/';
         ret += revision;
@@ -260,7 +260,7 @@ UTF8 LIB_ID::GetLibItemNameAndRev() const
 {
     UTF8 ret;
 
-    if( revision.size() )
+    if( !revision.empty() )
     {
         ret += '/';
         ret += revision;
@@ -275,7 +275,7 @@ UTF8 LIB_ID::Format( const UTF8& aLogicalLib, const UTF8& aLibItemName, const UT
     UTF8    ret;
     int     offset;
 
-    if( aLogicalLib.size() )
+    if( !aLogicalLib.empty() )
     {
         offset = okLogical( aLogicalLib );
 
@@ -292,7 +292,7 @@ UTF8 LIB_ID::Format( const UTF8& aLogicalLib, const UTF8& aLibItemName, const UT
 
     ret += aLibItemName;    // TODO: Add validity test.
 
-    if( aRevision.size() )
+    if( !aRevision.empty() )
     {
         offset = okRevision( aRevision );
 

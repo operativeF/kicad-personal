@@ -181,7 +181,7 @@ bool DIALOG_SHIM::Show( bool show )
     bool        ret;
     const char* hash_key;
 
-    if( m_hash_key.size() )
+    if( !m_hash_key.empty() )
     {
         // a special case like EDA_LIST_DIALOG, which has multiple uses.
         hash_key = m_hash_key.c_str();

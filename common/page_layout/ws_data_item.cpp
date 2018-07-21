@@ -469,7 +469,7 @@ const DPOINT WS_DATA_ITEM_POLYGONS::GetCornerPosition( unsigned aIdx, int aRepea
 
 void WS_DATA_ITEM_POLYGONS::SetBoundingBox()
 {
-    if( m_Corners.size() == 0 )
+    if( m_Corners.empty() )
     {
         m_minCoord.x = m_maxCoord.x = 0.0;
         m_minCoord.y = m_maxCoord.y = 0.0;

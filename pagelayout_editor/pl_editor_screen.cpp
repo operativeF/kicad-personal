@@ -112,7 +112,7 @@ void PL_EDITOR_SCREEN::ClearUndoORRedoList( UNDO_REDO_CONTAINER& aList, int aIte
 
     for( unsigned ii = 0; ii < icnt; ii++ )
     {
-        if( aList.m_CommandsList.size() == 0 )
+        if( aList.m_CommandsList.empty() )
             break;
 
         PICKED_ITEMS_LIST* curr_cmd = aList.m_CommandsList[0];

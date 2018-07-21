@@ -132,7 +132,7 @@ void FOOTPRINT_CHOICE::OnDrawItem( wxDC& aDC, wxRect const& aRect, int aItem, in
 
 wxCoord FOOTPRINT_CHOICE::OnMeasureItem( size_t aItem ) const
 {
-    if( SafeGetString( aItem ) == "" )
+    if( SafeGetString( aItem ).empty() )
         return 11;
     else
         return wxOwnerDrawnComboBox::OnMeasureItem( aItem );
@@ -141,7 +141,7 @@ wxCoord FOOTPRINT_CHOICE::OnMeasureItem( size_t aItem ) const
 
 wxCoord FOOTPRINT_CHOICE::OnMeasureItemWidth( size_t aItem ) const
 {
-    if( SafeGetString( aItem ) == "" )
+    if( SafeGetString( aItem ).empty() )
         return GetTextRect().GetWidth() - 2;
     else
         return wxOwnerDrawnComboBox::OnMeasureItemWidth( aItem );
@@ -159,7 +159,7 @@ void FOOTPRINT_CHOICE::TryVetoMouse( wxMouseEvent& aEvent )
 {
     int item = GetVListBoxComboPopup()->VirtualHitTest( aEvent.GetPosition().y );
 
-    if( SafeGetString( item ) != "" )
+    if( !SafeGetString( item ).empty() )
         aEvent.Skip();
 }
 
@@ -199,7 +199,7 @@ void FOOTPRINT_CHOICE::TryVetoSelect( wxCommandEvent& aEvent, bool aInner )
     {
         wxString text = SafeGetString( sel );
 
-        if( text == "" )
+        if( text.empty() )
             SetSelectionEither( aInner, m_last_selection );
         else
         {

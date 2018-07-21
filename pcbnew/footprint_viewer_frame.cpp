@@ -192,7 +192,7 @@ FOOTPRINT_VIEWER_FRAME::FOOTPRINT_VIEWER_FRAME( KIWAY* aKiway, wxWindow* aParent
     UpdateTitle();
 
     // If a footprint was previously loaded, reload it
-    if( getCurNickname().size() && getCurFootprintName().size() )
+    if( !getCurNickname().empty() && !getCurFootprintName().empty() )
     {
         LIB_ID id;
 

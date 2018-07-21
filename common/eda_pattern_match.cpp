@@ -225,7 +225,7 @@ bool EDA_PATTERN_MATCH_RELATIONAL::SetPattern( const wxString& aPattern )
     else
         return false;
 
-    if( val == "" )
+    if( val.empty() )
     {
         // Matching on empty values keeps the match list from going empty when
         // the user types the relational operator character, which helps prevent

@@ -57,7 +57,7 @@ ITEM_PICKER PICKED_ITEMS_LIST::PopItem()
 {
     ITEM_PICKER item;
 
-    if( m_ItemsList.size() != 0 )
+    if( !m_ItemsList.empty() )
     {
         item = m_ItemsList.back();
         m_ItemsList.pop_back();
@@ -293,7 +293,7 @@ void UNDO_REDO_CONTAINER::PushCommand( PICKED_ITEMS_LIST* aItem )
 
 PICKED_ITEMS_LIST* UNDO_REDO_CONTAINER::PopCommand()
 {
-    if( m_CommandsList.size() != 0 )
+    if( !m_CommandsList.empty() )
     {
         PICKED_ITEMS_LIST* item = m_CommandsList.back();
         m_CommandsList.pop_back();

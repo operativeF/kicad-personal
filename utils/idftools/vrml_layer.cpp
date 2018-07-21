@@ -353,7 +353,7 @@ bool VRML_LAYER::AddVertex( int aContourID, double aXpos, double aYpos )
 
     VERTEX_3D* v2 = NULL;
 
-    if( contours[aContourID]->size() > 0 )
+    if( !contours[aContourID]->empty() )
         v2 = vertices[ contours[aContourID]->back() ];
 
     vertices.push_back( vertex );
@@ -767,7 +767,7 @@ bool VRML_LAYER::Tesselate( VRML_LAYER* holes, bool aHolesOnly )
         gluTessProperty( tess, GLU_TESS_WINDING_RULE, GLU_TESS_WINDING_POSITIVE );
 
 
-    if( contours.size() < 1 || vertices.size() < 3 )
+    if( contours.empty() || vertices.size() < 3 )
     {
         error = "Tesselate(): not enough vertices";
         return false;
@@ -920,7 +920,7 @@ bool VRML_LAYER::Tesselate( VRML_LAYER* holes, bool aHolesOnly )
 bool VRML_LAYER::pushOutline( VRML_LAYER* holes )
 {
     // traverse the outline list to push all used vertices
-    if( outline.size() < 1 )
+    if( outline.empty() )
     {
         error = "pushOutline() failed: no vertices to push";
         return false;
@@ -1454,7 +1454,7 @@ void VRML_LAYER::glEnd( void )
             double curX, curY;
             double area = 0.0;
 
-            if( vlist.size() > 0 )
+            if( !vlist.empty() )
             {
                 loop->push_back( vlist[0]->o );
                 firstX = vlist[0]->x;

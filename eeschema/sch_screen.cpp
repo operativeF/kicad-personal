@@ -1006,7 +1006,7 @@ SCH_SCREEN* SCH_SCREENS::GetFirst()
 {
     m_index = 0;
 
-    if( m_screens.size() > 0 )
+    if( !m_screens.empty() )
         return m_screens[0];
 
     return NULL;

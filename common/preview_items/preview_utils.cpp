@@ -63,7 +63,7 @@ static wxString formatPreviewDimension( double aVal, EDA_UNITS_T aUnits )
 
     const wxString symbol = GetAbbreviatedUnitsLabel( aUnits, false );
 
-    if( symbol.size() )
+    if( !symbol.empty() )
         str << " " << symbol;
 
     return str;
@@ -75,7 +75,7 @@ wxString KIGFX::PREVIEW::DimensionLabel( const wxString& prefix,
 {
     wxString str;
 
-    if( prefix.size() )
+    if( !prefix.empty() )
         str << prefix << ": ";
 
     str << formatPreviewDimension( aVal, aUnits );

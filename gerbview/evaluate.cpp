@@ -161,7 +161,7 @@ double Evaluate( AM_PARAM_EVAL_STACK& aExp )
                 double op2 = values.back();
                 values.pop_back();
 
-                if( values.size() )
+                if( !values.empty() )
                 {
                     op1 = values.back();
                     values.pop_back();

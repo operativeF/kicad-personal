@@ -67,7 +67,7 @@ bool GERBVIEW_FRAME::Read_GERBER_File( const wxString& GERBER_FullFileName )
     images->AddGbrImage( gerber, layer );
 
     // Display errors list
-    if( gerber->GetMessages().size() > 0 )
+    if( !gerber->GetMessages().empty() )
     {
         HTML_MESSAGE_BOX dlg( this, _("Errors") );
         dlg.ListSet(gerber->GetMessages());

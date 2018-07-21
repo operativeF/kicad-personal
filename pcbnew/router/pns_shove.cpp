@@ -890,7 +890,7 @@ bool SHOVE::pushLine( const LINE& aL, bool aKeepCurrentOnTop )
     if( !aL.IsLinkedChecked() && aL.SegmentCount() != 0 )
         return false;
 
-    if( aKeepCurrentOnTop && m_lineStack.size() > 0)
+    if( aKeepCurrentOnTop && !m_lineStack.empty())
     {
         m_lineStack.insert( m_lineStack.begin() + m_lineStack.size() - 1, aL );
     }

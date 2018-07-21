@@ -272,7 +272,7 @@ BOARD* EAGLE_PLUGIN::Load( const wxString& aFileName, BOARD* aAppendToMe,  const
         }
 
         // should be empty, else missing m_xpath->pop()
-        wxASSERT( m_xpath->Contents().size() == 0 );
+        wxASSERT( m_xpath->Contents().empty() );
     }
     // Catch all exceptions thrown from the parser.
     catch( const XML_PARSER_ERROR &exc )
@@ -925,14 +925,14 @@ void EAGLE_PLUGIN::loadElements( wxXmlNode* aElements )
         m->SetPosition( wxPoint( kicad_x( e.x ), kicad_y( e.y ) ) );
 
         // Is >NAME field set in package layout ?
-        if( m->GetReference().size() == 0 )
+        if( m->GetReference().empty() )
         {
             m->Reference().SetVisible( false ); // No so no show
             refanceNamePresetInPackageLayout = false;
         }
 
         // Is >VALUE field set in package layout
-        if( m->GetValue().size() == 0 )
+        if( m->GetValue().empty() )
         {
             m->Value().SetVisible( false );     // No so no show
             valueNamePresetInPackageLayout = false;

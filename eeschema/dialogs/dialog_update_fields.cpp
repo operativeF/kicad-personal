@@ -92,7 +92,7 @@ bool DIALOG_UPDATE_FIELDS::TransferDataFromWindow()
 
 bool DIALOG_UPDATE_FIELDS::TransferDataToWindow()
 {
-    if( !wxDialog::TransferDataToWindow() || !m_components.size() )
+    if( !wxDialog::TransferDataToWindow() || m_components.empty() )
         return false;
 
     // Collect all user field names from library parts of components that are going to be updated

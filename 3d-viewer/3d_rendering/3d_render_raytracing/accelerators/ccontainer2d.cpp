@@ -319,7 +319,7 @@ void CBVHCONTAINER2D::recursiveBuild_MIDDLE_SPLIT( BVH_CONTAINER_NODE_2D *aNodeP
 {
     wxASSERT( aNodeParent != NULL );
     wxASSERT( aNodeParent->m_BBox.IsInitialized() == true );
-    wxASSERT( aNodeParent->m_LeafList.size() > 0 );
+    wxASSERT( !aNodeParent->m_LeafList.empty() );
 
     if( aNodeParent->m_LeafList.size() > BVH_CONTAINER2D_MAX_OBJ_PER_LEAF )
     {
@@ -367,8 +367,8 @@ void CBVHCONTAINER2D::recursiveBuild_MIDDLE_SPLIT( BVH_CONTAINER_NODE_2D *aNodeP
             i++;
         }
 
-        wxASSERT( leftNode->m_LeafList.size() > 0 );
-        wxASSERT( rightNode->m_LeafList.size() > 0 );
+        wxASSERT( !leftNode->m_LeafList.empty() );
+        wxASSERT( !rightNode->m_LeafList.empty() );
         wxASSERT( ( leftNode->m_LeafList.size() + rightNode->m_LeafList.size() ) ==
                   aNodeParent->m_LeafList.size() );
 

@@ -401,7 +401,7 @@ bool PopulateVRML( VRML_LAYER& model, const std::list< IDF_OUTLINE* >* items, bo
                    double dX, double dY, double angle )
 {
     // empty outlines are not unusual so we fail quietly
-    if( items->size() < 1 )
+    if( items->empty() )
         return false;
 
     int nvcont = 0;

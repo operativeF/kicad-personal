@@ -2659,7 +2659,7 @@ void Clipper::InsertLocalMinimaIntoAEL( const cInt botY )
 
         // if any output polygons share an edge, they'll need joining later ...
         if( Op1 && IsHorizontal( *rb )
-            && m_GhostJoins.size() > 0 && (rb->WindDelta != 0) )
+            && !m_GhostJoins.empty() && (rb->WindDelta != 0) )
         {
             for( JoinList::size_type i = 0; i < m_GhostJoins.size(); ++i )
             {
@@ -3478,7 +3478,7 @@ void Clipper::ProcessHorizontal( TEdge* horzEdge )
     MaximaList::const_iterator maxIt;
     MaximaList::const_reverse_iterator maxRit;
 
-    if( m_Maxima.size() > 0 )
+    if( !m_Maxima.empty() )
     {
         // get the first maxima in range (X) ...
         if( dir == dLeftToRight )
@@ -3515,7 +3515,7 @@ void Clipper::ProcessHorizontal( TEdge* horzEdge )
             // this code block inserts extra coords into horizontal edges (in output
             // polygons) whereever maxima touch these horizontal edges. This helps
             // 'simplifying' polygons (ie if the Simplify property is set).
-            if( m_Maxima.size() > 0 )
+            if( !m_Maxima.empty() )
             {
                 if( dir == dLeftToRight )
                 {
@@ -5056,7 +5056,7 @@ void ClipperOffset::Execute( Paths& solution, double delta )
         clpr.ReverseSolution( true );
         clpr.Execute( ctUnion, solution, pftNegative, pftNegative );
 
-        if( solution.size() > 0 )
+        if( !solution.empty() )
             solution.erase( solution.begin() );
     }
 }

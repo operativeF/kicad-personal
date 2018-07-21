@@ -171,15 +171,15 @@ void NETLIST_EXPORTER_GENERIC::addComponentFields( XNODE* xcomp, SCH_COMPONENT* 
     }
 
     // Do not output field values blank in netlist:
-    if( fields.value.size() )
+    if( !fields.value.empty() )
         xcomp->AddChild( node( "value", fields.value ) );
     else    // value field always written in netlist
         xcomp->AddChild( node( "value", "~" ) );
 
-    if( fields.footprint.size() )
+    if( !fields.footprint.empty() )
         xcomp->AddChild( node( "footprint", fields.footprint ) );
 
-    if( fields.datasheet.size() )
+    if( !fields.datasheet.empty() )
         xcomp->AddChild( node( "datasheet", fields.datasheet ) );
 
     if( fields.f.size() )

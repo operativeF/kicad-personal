@@ -266,7 +266,7 @@ wxDataViewItem LIB_TREE_MODEL_ADAPTER::FindItem( const LIB_ID& aLibId )
             continue;
 
         // if part name is not specified, return the library node
-        if( aLibId.GetLibItemName() == "" )
+        if( aLibId.GetLibItemName().empty() )
             return ToItem( lib.get() );
 
         for( auto& alias: lib->Children )

@@ -230,7 +230,7 @@ bool AM_PARAM::ReadParam( char*& aText  )
         case '-':
         case '+':
             // Test if this is an operator between 2 params, or the sign of a value
-            if( m_paramStack.size() > 0 && !m_paramStack.back().IsOperator() )
+            if( !m_paramStack.empty() && !m_paramStack.back().IsOperator() )
             {   // Seems an operator
                 PushOperator( *aText == '+' ? ADD : SUB );
                 aText++;

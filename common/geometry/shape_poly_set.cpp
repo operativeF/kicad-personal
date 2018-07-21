@@ -238,7 +238,7 @@ void SHAPE_POLY_SET::InsertVertex( int aGlobalIndex, VECTOR2I aNewVertex )
 
 int SHAPE_POLY_SET::VertexCount( int aOutline, int aHole  ) const
 {
-    if( m_polys.size() == 0 ) // Empty poly set
+    if( m_polys.empty() ) // Empty poly set
         return 0;
 
     if( aOutline < 0 ) // Use last outline
@@ -970,7 +970,7 @@ void SHAPE_POLY_SET::unfractureSingle( SHAPE_POLY_SET::POLYGON& aPoly )
 
     POLYGON result;
 
-    while( queue.size() )
+    while( !queue.empty() )
     {
         auto    e_first = (*queue.begin() );
         auto    e = e_first;

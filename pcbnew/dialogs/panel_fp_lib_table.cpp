@@ -519,7 +519,7 @@ void PANEL_FP_LIB_TABLE::deleteRowHandler( wxCommandEvent& event )
     }
 
     // Use the row having the grid cursor only if we have no candidate:
-    if( selectedRows.size() == 0 && m_cur_grid->GetGridCursorRow() >= 0 )
+    if( selectedRows.empty() && m_cur_grid->GetGridCursorRow() >= 0 )
         selectedRows.Add( m_cur_grid->GetGridCursorRow() );
 
     if( selectedRows.size() == 0 )

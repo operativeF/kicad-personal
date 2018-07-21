@@ -149,7 +149,7 @@ public:
             string  name  = TO_UTF8( m_grid->GetCellValue( row, 0 ).Trim( false ).Trim() );
             UTF8    value = m_grid->GetCellValue( row, 1 ).Trim( false ).Trim();
 
-            if( name.size() )
+            if( !name.empty() )
             {
                 props[name] = value;
             }

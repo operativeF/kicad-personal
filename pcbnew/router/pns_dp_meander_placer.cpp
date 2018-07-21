@@ -183,7 +183,7 @@ bool DP_MEANDER_PLACER::Move( const VECTOR2I& aP, ITEM* aEndItem )
 
     tuned.CoupledSegmentPairs( coupledSegments );
 
-    if( coupledSegments.size() == 0 )
+    if( coupledSegments.empty() )
         return false;
 
     //Router()->DisplayDebugLine( tuned.CP(), 5, 20000 );

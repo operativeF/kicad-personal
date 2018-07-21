@@ -409,7 +409,7 @@ int io_benchmark_func( int argc, char* argv[] )
 
     for( auto& bmark : benchmarkList )
     {
-        if( bench.size() && !bench.Contains( bmark.triggerChar ) )
+        if( !bench.empty() && !bench.Contains( bmark.triggerChar ) )
             continue;
 
         BENCH_REPORT report = executeBenchMark( bmark, reps, inFile );

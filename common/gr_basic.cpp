@@ -988,7 +988,7 @@ void ClipAndDrawPoly( EDA_RECT* aClipBox, wxDC* aDC, wxPoint aPoints[], int n )
         clippedPolygon.push_back( wxPoint( KiROUND( cit->X ), KiROUND( cit->Y ) ) );
     }
 
-    if( clippedPolygon.size() )
+    if( !clippedPolygon.empty() )
         aDC->DrawPolygon( clippedPolygon.size(), &clippedPolygon[0] );
 }
 

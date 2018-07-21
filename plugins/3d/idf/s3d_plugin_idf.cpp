@@ -320,7 +320,7 @@ SCENEGRAPH* Load( char const* aFileName )
 static bool getOutlineModel( VRML_LAYER& model, const std::list< IDF_OUTLINE* >* items )
 {
     // empty outlines are not unusual so we fail quietly
-    if( items->size() < 1 )
+    if( items->empty() )
         return false;
 
     std::list< IDF_OUTLINE* >::const_iterator scont = items->begin();

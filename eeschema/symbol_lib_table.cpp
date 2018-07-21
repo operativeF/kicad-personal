@@ -442,7 +442,7 @@ LIB_ALIAS* SYMBOL_LIB_TABLE::LoadSymbolWithOptionalNickname( const LIB_ID& aLibI
     wxString   nickname = aLibId.GetLibNickname();
     wxString   name     = aLibId.GetLibItemName();
 
-    if( nickname.size() )
+    if( !nickname.empty() )
     {
         return LoadSymbol( nickname, name );
     }

@@ -206,7 +206,7 @@ void BOARD_OUTLINE::readOutlines( std::istream& aBoardFile, IDF3::IDF_VERSION aI
 
             aBoardFile.seekg( pos );
 
-            if( outlines.size() > 0 )
+            if( !outlines.empty() )
             {
                 if( npts > 0 && !closed )
                 {

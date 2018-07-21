@@ -448,7 +448,7 @@ void LIB_TABLE::Save( const wxString& aFileName ) const
 
 PROPERTIES* LIB_TABLE::ParseOptions( const std::string& aOptionsList )
 {
-    if( aOptionsList.size() )
+    if( !aOptionsList.empty() )
     {
         const char* cp  = &aOptionsList[0];
         const char* end = cp + aOptionsList.size();
@@ -483,7 +483,7 @@ PROPERTIES* LIB_TABLE::ParseOptions( const std::string& aOptionsList )
             }
 
             // stash the pair
-            if( pair.size() )
+            if( !pair.empty() )
             {
                 // first equals sign separates 'name' and 'value'.
                 size_t  eqNdx = pair.find( '=' );

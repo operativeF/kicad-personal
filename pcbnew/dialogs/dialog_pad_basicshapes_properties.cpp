@@ -390,7 +390,7 @@ void DIALOG_PAD_PRIMITIVE_POLY_PROPS::OnButtonAdd( wxCommandEvent& event )
 
     if( m_gridCornersList->GetNumberRows() == 0 )
         row = 0;
-    else if( selections.size() > 0 )
+    else if( !selections.empty() )
         row = selections[ selections.size() - 1 ] + 1;
     else
         row = m_gridCornersList->GetGridCursorRow() + 1;
@@ -426,10 +426,10 @@ void DIALOG_PAD_PRIMITIVE_POLY_PROPS::OnButtonDelete( wxCommandEvent& event )
     if( m_gridCornersList->GetNumberRows() == 0 )
         return;
 
-    if( selections.size() == 0 && m_gridCornersList->GetGridCursorRow() >= 0 )
+    if( selections.empty() && m_gridCornersList->GetGridCursorRow() >= 0 )
         selections.push_back( m_gridCornersList->GetGridCursorRow() );
 
-    if( selections.size() == 0 )
+    if( selections.empty() )
     {
         wxMessageBox( _( "Select a corner to delete." ) );
         return;

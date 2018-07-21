@@ -575,7 +575,7 @@ bool TREE_PROJECT_FRAME::AddItemToTreeProject( const wxString& aName,
         {
             wxString ext = GetFileExt( (TreeFileType) i );
 
-            if( ext == wxT( "" ) )
+            if( ext.empty() )
                 continue;
 
             reg.Compile( wxString::FromAscii( "^.*\\" ) + ext +

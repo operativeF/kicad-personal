@@ -148,7 +148,7 @@ void GITHUB_PLUGIN::FootprintEnumerate( wxArrayString& aFootprintNames,
 
     MYSET   unique;
 
-    if( m_pretty_dir.size() )
+    if( !m_pretty_dir.empty() )
     {
         wxArrayString locals;
 
@@ -190,7 +190,7 @@ MODULE* GITHUB_PLUGIN::FootprintLoad( const wxString& aLibraryPath,
     // clear or set to valid the variable m_pretty_dir
     cacheLib( aLibraryPath, aProperties );
 
-    if( m_pretty_dir.size() )
+    if( !m_pretty_dir.empty() )
     {
         // API has FootprintLoad() *not* throwing an exception if footprint not found.
         MODULE* local = PCB_IO::FootprintLoad( m_pretty_dir, aFootprintName, aProperties );
@@ -244,7 +244,7 @@ MODULE* GITHUB_PLUGIN::FootprintLoad( const wxString& aLibraryPath,
 
 bool GITHUB_PLUGIN::IsFootprintLibWritable( const wxString& aLibraryPath )
 {
-    if( m_pretty_dir.size() )
+    if( !m_pretty_dir.empty() )
         return PCB_IO::IsFootprintLibWritable( m_pretty_dir );
     else
         return false;
@@ -324,7 +324,7 @@ void GITHUB_PLUGIN::FootprintLibCreate( const wxString& aLibraryPath, const PROP
     // set m_pretty_dir to either empty or something in aProperties
     cacheLib( aLibraryPath, aProperties );
 
-    if( m_pretty_dir.size() )
+    if( !m_pretty_dir.empty() )
     {
         PCB_IO::FootprintLibCreate( m_pretty_dir, aProperties );
     }
@@ -340,7 +340,7 @@ bool GITHUB_PLUGIN::FootprintLibDelete( const wxString& aLibraryPath, const PROP
     // set m_pretty_dir to either empty or something in aProperties
     cacheLib( aLibraryPath, aProperties );
 
-    if( m_pretty_dir.size() )
+    if( !m_pretty_dir.empty() )
     {
         return PCB_IO::FootprintLibDelete( m_pretty_dir, aProperties );
     }

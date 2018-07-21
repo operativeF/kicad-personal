@@ -319,7 +319,7 @@ static void setLibNickname( MODULE* aModule,
         wxASSERT( aFootprintName == fpid.GetLibItemName().wx_str() );
 
         // and clearing nickname
-        wxASSERT( !fpid.GetLibNickname().size() );
+        wxASSERT( fpid.GetLibNickname().empty() );
 
         fpid.SetLibNickname( aNickname );
     }
@@ -429,7 +429,7 @@ MODULE* FP_LIB_TABLE::FootprintLoadWithOptionalNickname( const LIB_ID& aFootprin
     wxString   nickname = aFootprintId.GetLibNickname();
     wxString   fpname   = aFootprintId.GetLibItemName();
 
-    if( nickname.size() )
+    if( !nickname.empty() )
     {
         return FootprintLoad( nickname, fpname );
     }

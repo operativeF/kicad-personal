@@ -185,7 +185,7 @@ static DRAWSEGMENT* findPoint( const wxPoint& aPoint, std::vector< DRAWSEGMENT* 
 bool ConvertOutlineToPolygon( std::vector<DRAWSEGMENT*>& aSegList, SHAPE_POLY_SET& aPolygons,
                               wxString* aErrorText, unsigned int aTolerance, wxPoint* aErrorLocation )
 {
-    if( aSegList.size() == 0 )
+    if( aSegList.empty() )
         return true;
 
     wxString msg;
@@ -497,7 +497,7 @@ bool ConvertOutlineToPolygon( std::vector<DRAWSEGMENT*>& aSegList, SHAPE_POLY_SE
         }
     }
 
-    while( segList.size() )
+    while( !segList.empty() )
     {
         // emit a signal layers keepout for every interior polygon left...
         int hole = aPolygons.NewHole();

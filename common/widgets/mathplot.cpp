@@ -1057,7 +1057,7 @@ void mpScaleY::getVisibleDataRange( mpWindow& w, double& minV, double& maxV )
 
 void mpScaleY::computeSlaveTicks( mpWindow& w )
 {
-    if( m_masterScale->m_tickValues.size() == 0 )
+    if( m_masterScale->m_tickValues.empty() )
         return;
 
     m_tickValues.clear();
@@ -2498,7 +2498,7 @@ bool mpWindow::DelLayer( mpLayer* layer,
 
 void mpWindow::DelAllLayers( bool alsoDeleteObject, bool refreshDisplay )
 {
-    while( m_layers.size()>0 )
+    while( !m_layers.empty() )
     {
         // Also delete the object?
         if( alsoDeleteObject )
@@ -3366,7 +3366,7 @@ void mpFXYVector::SetData( const std::vector<double>& xs, const std::vector<doub
     // printf("FXYVector::setData %d %d\n", xs.size(), ys.size());
 
     // Update internal variables for the bounding box.
-    if( xs.size()>0 )
+    if( !xs.empty() )
     {
         m_minX  = xs[0];
         m_maxX  = xs[0];
@@ -3842,7 +3842,7 @@ void mpPolygon::setPoints( const std::vector<double>& points_xs,
         m_shape_xs  = points_xs;
         m_shape_ys  = points_ys;
 
-        if( closedShape && points_xs.size() )
+        if( closedShape && !points_xs.empty() )
         {
             m_shape_xs.push_back( points_xs[0] );
             m_shape_ys.push_back( points_ys[0] );

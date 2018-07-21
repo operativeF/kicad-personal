@@ -794,7 +794,7 @@ void C3D_RENDER_RAYTRACING::reload( REPORTER *aStatusTextReporter )
         {
             boardBBox.Scale( 3.0f );
 
-            if( m_object_container.GetList().size() > 0 )
+            if( !m_object_container.GetList().empty() )
             {
                 CBBOX containerBBox = m_object_container.GetBBox();
 

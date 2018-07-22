@@ -339,7 +339,7 @@ bool WRL2SHAPE::Read( WRLPROC& proc, WRL2BASE* aTopNode )
 
         proc.GetFilePosData( line, column );
 
-        if( !glob.compare( "appearance" ) )
+        if( glob == "appearance" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {
@@ -355,7 +355,7 @@ bool WRL2SHAPE::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "geometry" ) )
+        else if( glob == "geometry" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {

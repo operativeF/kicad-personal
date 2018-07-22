@@ -98,7 +98,7 @@ SGNODE* SGCOORDS::FindNode(const char *aNodeName, const SGNODE *aCaller)
     if( NULL == aNodeName || 0 == aNodeName[0] )
         return NULL;
 
-    if( !m_Name.compare( aNodeName ) )
+    if( m_Name == aNodeName )
         return this;
 
     return NULL;

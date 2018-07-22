@@ -329,7 +329,7 @@ WRL2NODE* WRL2NODE::FindNode( const std::string& aNodeName, const WRL2NODE *aCal
     if( aNodeName.empty() )
         return NULL;
 
-    if( !m_Name.compare( aNodeName ) )
+    if( m_Name == aNodeName )
         return this;
 
     std::list< WRL2NODE* >::iterator sLA = m_Children.begin();

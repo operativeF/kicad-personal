@@ -358,7 +358,7 @@ bool WRL1BASE::ReadNode( WRLPROC& proc, WRL1NODE* aParent, WRL1NODE** aNode )
     // the names encountered at this point should be one of the
     // built-in node names or one of:
     // DEF, USE
-    if( !glob.compare( "USE" ) )
+    if( glob == "USE" )
     {
         if( !implementUse( proc, aParent, aNode ) )
         {
@@ -377,7 +377,7 @@ bool WRL1BASE::ReadNode( WRLPROC& proc, WRL1NODE* aParent, WRL1NODE** aNode )
         return true;
     }
 
-    if( !glob.compare( "DEF" ) )
+    if( glob == "DEF" )
     {
         if( !implementDef( proc, aParent, aNode ) )
         {

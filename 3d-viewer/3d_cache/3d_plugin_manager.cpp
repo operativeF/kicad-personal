@@ -571,7 +571,7 @@ bool S3D_PLUGIN_MANAGER::CheckTag( const char* aTag )
         // must also match
         if( !ptag.compare( 0, pname.size(), pname ) )
         {
-            if( ptag.compare( tname ) )
+            if( ptag != tname )
                 return false;
 
             return true;

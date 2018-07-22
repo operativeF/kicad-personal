@@ -78,14 +78,14 @@ int main( int argc, char **argv )
     string line;
 
     line.clear();
-    while( line.compare( "mm" ) && line.compare( "in" ) )
+    while( ( line != "mm" ) && ( line != "in" ) )
     {
         cout << "* Units (mm,in): ";
         line.clear();
         std::getline( cin, line );
     }
 
-    if( line.compare( "mm" ) )
+    if( line != "mm" )
         inch = true;
 
     ok = false;
@@ -167,12 +167,12 @@ int main( int argc, char **argv )
             line.clear();
             std::getline( cin, line );
 
-            if( !line.compare( "Y" ) || !line.compare( "y" ) )
+            if( ( line == "Y" ) || ( line == "y" ) )
             {
                 leaded = true;
                 ok = true;
             }
-            else if( !line.compare( "N" ) || !line.compare( "n" ) )
+            else if( ( line == "N" ) || ( line == "n" ) )
             {
                 leaded = false;
                 ok = true;

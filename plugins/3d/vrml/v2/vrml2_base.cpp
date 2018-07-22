@@ -422,7 +422,7 @@ bool WRL2BASE::ReadNode( WRLPROC& proc, WRL2NODE* aParent, WRL2NODE** aNode )
     // assumed to be defined via PROTO/EXTERNPROTO and deleted according to
     // a typical pattern.
 
-    if( !glob.compare( "USE" ) )
+    if( glob == "USE" )
     {
         if( !implementUse( proc, aParent, aNode ) )
         {
@@ -441,7 +441,7 @@ bool WRL2BASE::ReadNode( WRLPROC& proc, WRL2NODE* aParent, WRL2NODE** aNode )
         return true;
     }
 
-    if( !glob.compare( "DEF" ) )
+    if( glob == "DEF" )
     {
         if( !implementDef( proc, aParent, aNode ) )
         {
@@ -461,7 +461,7 @@ bool WRL2BASE::ReadNode( WRLPROC& proc, WRL2NODE* aParent, WRL2NODE** aNode )
     }
 
     // pattern to skip:  PROTO name list
-    if( !glob.compare( "PROTO" ) )
+    if( glob == "PROTO" )
     {
         if( !proc.ReadName( glob ) || !proc.DiscardList() )
         {
@@ -481,7 +481,7 @@ bool WRL2BASE::ReadNode( WRLPROC& proc, WRL2NODE* aParent, WRL2NODE** aNode )
     }
 
     // pattern to skip:  EXTERNPROTO name1 name2 list
-    if( !glob.compare( "EXTERNPROTO" ) )
+    if( glob == "EXTERNPROTO" )
     {
         if( !proc.ReadName( glob ) || !proc.ReadName( glob ) || !proc.DiscardList() )
         {
@@ -501,7 +501,7 @@ bool WRL2BASE::ReadNode( WRLPROC& proc, WRL2NODE* aParent, WRL2NODE** aNode )
     }
 
     // pattern to skip:  ROUTE glob1 glob2 glob3
-    if( !glob.compare( "ROUTE" ) )
+    if( glob == "ROUTE" )
     {
         if( !proc.ReadGlob( glob ) || !proc.ReadGlob( glob ) || !proc.ReadGlob( glob ) )
         {

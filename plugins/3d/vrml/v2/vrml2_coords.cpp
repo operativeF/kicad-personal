@@ -168,7 +168,7 @@ bool WRL2COORDS::Read( WRLPROC& proc, WRL2BASE* aTopNode )
     proc.GetFilePosData( line, column );
 
     // expecting 'point'
-    if( !glob.compare( "point" ) )
+    if( glob == "point" )
     {
         if( !proc.ReadMFVec3f( points ) )
         {

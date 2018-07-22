@@ -256,13 +256,13 @@ static void idf_export_module( BOARD* aPcb, MODULE* aModule,
     // Reference Designator
     std::string crefdes = TO_UTF8( aModule->GetReference() );
 
-    if( crefdes.empty() || !crefdes.compare( "~" ) )
+    if( crefdes.empty() || ( crefdes == "~" ) )
     {
         std::string cvalue = TO_UTF8( aModule->GetValue() );
 
         // if both the RefDes and Value are empty or set to '~' the board owns the part,
         // otherwise associated parts of the module must be marked NOREFDES.
-        if( cvalue.empty() || !cvalue.compare( "~" ) )
+        if( cvalue.empty() || ( cvalue == "~" ) )
             crefdes = "BOARD";
         else
             crefdes = "NOREFDES";
@@ -305,7 +305,7 @@ static void idf_export_module( BOARD* aPcb, MODULE* aModule,
             // hole type
             tstr = TO_UTF8( pad->GetName() );
 
-            if( tstr.empty() || !tstr.compare( "0" ) || !tstr.compare( "~" )
+            if( tstr.empty() || ( tstr == "0" ) || ( tstr == "~" )
                 || ( kplate == IDF3::NPTH )
                 ||( pad->GetDrillShape() == PAD_DRILL_SHAPE_OBLONG ) )
                 pintype = "MTG";
@@ -403,7 +403,7 @@ static void idf_export_module( BOARD* aPcb, MODULE* aModule,
             // when writing out the placement data due to conflicting
             // placement and layer specifications; to work around this we
             // create a (hopefully) unique refdes for our exported part.
-            if( refdes.empty() || !refdes.compare( "~" ) )
+            if( refdes.empty() || ( refdes == "~" ) )
                 refdes = aIDFBoard.GetNewRefDes();
         }
 

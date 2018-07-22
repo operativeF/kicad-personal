@@ -174,7 +174,7 @@ bool WRL1MATBINDING::Read( WRLPROC& proc, WRL1BASE* aTopNode )
             return false;
         }
 
-        if( glob.compare( "value" ) )
+        if( glob != "value" )
         {
             #if defined( DEBUG_VRML1 ) && ( DEBUG_VRML1 > 1 )
             do {
@@ -216,35 +216,35 @@ bool WRL1MATBINDING::Read( WRLPROC& proc, WRL1BASE* aTopNode )
 
         proc.GetFilePosData( line, column );
 
-        if( !glob.compare( "DEFAULT" ) )
+        if( glob == "DEFAULT" )
         {
             m_binding = BIND_DEFAULT;
         }
-        else if( !glob.compare( "OVERALL" ) )
+        else if( glob == "OVERALL" )
         {
             m_binding = BIND_OVERALL;
         }
-        else if( !glob.compare( "PER_PART" ) )
+        else if( glob == "PER_PART" )
         {
             m_binding = BIND_PER_PART;
         }
-        else if( !glob.compare( "PER_PART_INDEXED" ) )
+        else if( glob == "PER_PART_INDEXED" )
         {
             m_binding = BIND_PER_PART_INDEXED;
         }
-        else if( !glob.compare( "PER_FACE" ) )
+        else if( glob == "PER_FACE" )
         {
             m_binding = BIND_PER_FACE;
         }
-        else if( !glob.compare( "PER_FACE_INDEXED" ) )
+        else if( glob == "PER_FACE_INDEXED" )
         {
             m_binding = BIND_PER_FACE_INDEXED;
         }
-        else if( !glob.compare( "PER_VERTEX" ) )
+        else if( glob == "PER_VERTEX" )
         {
             m_binding = BIND_PER_VERTEX;
         }
-        else if( !glob.compare( "PER_VERTEX_INDEXED" ) )
+        else if( glob == "PER_VERTEX_INDEXED" )
         {
             m_binding = BIND_PER_VERTEX_INDEXED;
         }

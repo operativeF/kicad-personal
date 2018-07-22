@@ -168,7 +168,7 @@ bool WRL2NORMS::Read( WRLPROC& proc, WRL2BASE* aTopNode )
     proc.GetFilePosData( line, column );
 
     // expecting 'vector'
-    if( !glob.compare( "vector" ) )
+    if( glob == "vector" )
     {
         if( !proc.ReadMFVec3f( vectors ) )
         {

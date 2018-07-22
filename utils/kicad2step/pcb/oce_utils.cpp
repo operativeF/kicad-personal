@@ -356,7 +356,7 @@ bool PCBMODEL::AddOutlineSegment( KICADCURVE* aCurve )
                     m_minx = dx;
                     m_mincurve = --(m_curves.end());
                 }
-            } while( 0 );
+            } while( false );
 
             break;
 
@@ -412,7 +412,7 @@ bool PCBMODEL::AddOutlineSegment( KICADCURVE* aCurve )
                     m_mincurve = --(m_curves.end());
                 }
 
-            } while( 0 );
+            } while( false );
 
             break;
 
@@ -426,7 +426,7 @@ bool PCBMODEL::AddOutlineSegment( KICADCURVE* aCurve )
 #endif /* __WXDEBUG */
                 ostr << "  * unsupported curve type: '" << aCurve->m_form << "'\n";
                 wxLogMessage( "%s", ostr.str().c_str() );
-            } while( 0 );
+            } while( false );
 
             return false;
     }

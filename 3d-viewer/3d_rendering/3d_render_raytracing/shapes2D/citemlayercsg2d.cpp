@@ -115,7 +115,7 @@ bool CITEMLAYERCSG2D::Intersect( const RAYSEG2D &aSegRay,
 
     if( m_objectB )
     {
-        while(1)
+        while(true)
         {
             bool wasInsideSubVol = false;
 

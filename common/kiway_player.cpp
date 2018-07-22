@@ -47,7 +47,7 @@ KIWAY_PLAYER::KIWAY_PLAYER( KIWAY* aKiway, wxWindow* aParent, FRAME_T aFrameType
     m_modal( false ),
     m_modal_loop( 0 ), m_modal_resultant_parent( 0 )
 {
-    m_modal_ret_val = 0;
+    m_modal_ret_val = false;
 }
 
 

@@ -406,7 +406,7 @@ SGNODE* S3D::ReadCache( const char* aFileName, void* aPluginMgr,
             return NULL;
         }
 
-    } while( 0 );
+    } while( false );
 
     // from SG_VERSION_TAG 2, read the PluginInfo string and check that it matches
     // version tag; if it's not the expected tag then we fail to read the file
@@ -447,7 +447,7 @@ SGNODE* S3D::ReadCache( const char* aFileName, void* aPluginMgr,
             return NULL;
         }
 
-    } while( 0 );
+    } while( false );
 
     bool rval = np->ReadCache( file, NULL );
     CLOSE_STREAM( file );

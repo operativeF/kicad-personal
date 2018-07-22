@@ -62,7 +62,7 @@ bool FindLineSegmentIntersection( double a, double b, int xi, int yi, int xf, in
             {
                 *x1 = a;
                 *y1 = c + d * a;
-                return 1;
+                return true;
             }
             else
             {
@@ -113,7 +113,7 @@ bool FindLineSegmentIntersection( double a, double b, int xi, int yi, int xf, in
         yy  = a + b * xx;
 
         if( (yy>=yi && yy>yf) || (yy<=yi && yy<yf) )
-            return 0;
+            return false;
     }
 
     *x1 = xx;

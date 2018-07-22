@@ -1004,7 +1004,7 @@ struct JsonParser final
             if( ch == '}' )
                 return data;
 
-            while( 1 )
+            while( true )
             {
                 if( ch != '"' )
                     return fail( "expected '\"' in object, got " + esc( ch ) );
@@ -1046,7 +1046,7 @@ struct JsonParser final
             if( ch == ']' )
                 return data;
 
-            while( 1 )
+            while( true )
             {
                 i--;
                 data.push_back( parse_json( depth + 1 ) );

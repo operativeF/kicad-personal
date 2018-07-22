@@ -453,7 +453,7 @@ bool WildCompareString( const wxString& pattern, const wxString& string_to_tst,
         if( *wild == '*' )
         {
             if( !*++wild )
-                return 1;
+                return true;
             mp = wild;
             cp = string + 1;
         }

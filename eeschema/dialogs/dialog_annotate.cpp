@@ -150,11 +150,11 @@ void DIALOG_ANNOTATE::InitValues()
     {
     default:
     case 0:
-        m_rbSortBy_X_Position->SetValue( 1 );
+        m_rbSortBy_X_Position->SetValue( true );
         break;
 
     case 1:
-        m_rbSortBy_Y_Position->SetValue( 1 );
+        m_rbSortBy_Y_Position->SetValue( true );
         break;
     }
 
@@ -163,15 +163,15 @@ void DIALOG_ANNOTATE::InitValues()
     {
     default:
     case 0:
-        m_rbFirstFree->SetValue( 1 );
+        m_rbFirstFree->SetValue( true );
         break;
 
     case 1:
-        m_rbSheetX100->SetValue( 100 );
+        m_rbSheetX100->SetValue( true );
         break;
 
     case 2:
-        m_rbSheetX1000->SetValue( 1000 );
+        m_rbSheetX1000->SetValue( true );
         break;
     }
     m_textNumberAfter->SetValue( wxT( "0" ) );

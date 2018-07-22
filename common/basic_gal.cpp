@@ -70,7 +70,7 @@ void BASIC_GAL::DrawPolyline( const std::deque<VECTOR2D>& aPointList )
         if( isFillEnabled )
         {
             GRPoly( m_isClipped ? &m_clipBox : NULL, m_DC, polyline_corners.size(),
-                    &polyline_corners[0], 0, GetLineWidth(), m_Color, m_Color );
+                    &polyline_corners[0], false, GetLineWidth(), m_Color, m_Color );
         }
         else
         {

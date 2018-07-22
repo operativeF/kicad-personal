@@ -1214,7 +1214,7 @@ SGNODE* WRL2BASE::TranslateToSG( SGNODE* aParent )
                 else
                     wrapper.Destroy();
 
-            } while( 0 );
+            } while( false );
 
             break;
 

@@ -909,7 +909,7 @@ static void export_round_padstack( MODEL_VRML& aModel, BOARD* pcb,
     if( aModel.m_plainPCB )
         return;
 
-    while( 1 )
+    while( true )
     {
         if( layer == B_Cu )
         {

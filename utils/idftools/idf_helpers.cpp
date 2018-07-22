@@ -235,7 +235,7 @@ bool IDF3::WriteLayersText( std::ostream& aBoardFile, IDF3::IDF_LAYER aLayer )
                 ostr << "invalid IDF layer: " << aLayer;
 
                 throw( IDF_ERROR( __FILE__, __FUNCTION__, __LINE__, ostr.str() ) );
-            } while( 0 );
+            } while( false );
 
             break;
     }

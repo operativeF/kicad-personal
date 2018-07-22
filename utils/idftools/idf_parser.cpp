@@ -176,7 +176,7 @@ bool IDF3_COMP_OUTLINE_DATA::checkOwnership( int aSourceLine, const char* aSourc
         ostr << "while outline owner is " << GetPlacementString( placement ) << "\n";
         errormsg = ostr.str();
 
-    } while( 0 );
+    } while( false );
 
     return false;
 }
@@ -919,7 +919,7 @@ bool IDF3_COMPONENT::checkOwnership( int aSourceLine, const char* aSourceFunc )
                 errormsg = ostr.str();
 
                 return false;
-            } while( 0 );
+            } while( false );
 
             break;
     }
@@ -1250,7 +1250,7 @@ bool IDF3_COMPONENT::SetPosition( double aXpos, double aYpos, double aAngle, IDF
                 errormsg = ostr.str();
 
                 return false;
-            } while( 0 );
+            } while( false );
             break;
     }
 
@@ -1410,7 +1410,7 @@ bool IDF3_BOARD::checkComponentOwnership( int aSourceLine, const char* aSourceFu
         ostr << "while outline owner is " << GetPlacementString( place ) << "\n";
         errormsg = ostr.str();
 
-    } while( 0 );
+    } while( false );
 
     return false;
 }
@@ -1455,7 +1455,7 @@ bool IDF3_BOARD::setUnit( IDF3::IDF_UNIT aUnit, bool convert )
             errormsg = ostr.str();
 
             return false;
-        } while( 0 );
+        } while( false );
 
         break;
     }
@@ -1476,7 +1476,7 @@ bool IDF3_BOARD::setUnit( IDF3::IDF_UNIT aUnit, bool convert )
             ++its;
         }
 
-    } while( 0 );
+    } while( false );
 
     do
     {
@@ -1489,7 +1489,7 @@ bool IDF3_BOARD::setUnit( IDF3::IDF_UNIT aUnit, bool convert )
             ++its;
         }
 
-    } while( 0 );
+    } while( false );
 
     do
     {
@@ -1502,7 +1502,7 @@ bool IDF3_BOARD::setUnit( IDF3::IDF_UNIT aUnit, bool convert )
             ++its;
         }
 
-    } while( 0 );
+    } while( false );
 
     do
     {
@@ -1515,7 +1515,7 @@ bool IDF3_BOARD::setUnit( IDF3::IDF_UNIT aUnit, bool convert )
             ++its;
         }
 
-    } while( 0 );
+    } while( false );
 
     do
     {
@@ -1528,7 +1528,7 @@ bool IDF3_BOARD::setUnit( IDF3::IDF_UNIT aUnit, bool convert )
             ++its;
         }
 
-    } while( 0 );
+    } while( false );
 
     do
     {
@@ -1541,7 +1541,7 @@ bool IDF3_BOARD::setUnit( IDF3::IDF_UNIT aUnit, bool convert )
             ++its;
         }
 
-    } while( 0 );
+    } while( false );
 
     do
     {
@@ -1554,7 +1554,7 @@ bool IDF3_BOARD::setUnit( IDF3::IDF_UNIT aUnit, bool convert )
             ++its;
         }
 
-    } while( 0 );
+    } while( false );
 
     //iterate through all owned IDF3_COMP_OUTLINE objects and
     // set to the same unit IF convert = true
@@ -2935,7 +2935,7 @@ void IDF3_BOARD::writeBoardFile( const std::string& aFileName )
                 ++its;
             }
 
-        } while( 0 );
+        } while( false );
 
         // ROUTE outlines
         do
@@ -2949,7 +2949,7 @@ void IDF3_BOARD::writeBoardFile( const std::string& aFileName )
                 ++its;
             }
 
-        } while( 0 );
+        } while( false );
 
         // PLACEMENT outlines
         do
@@ -2963,7 +2963,7 @@ void IDF3_BOARD::writeBoardFile( const std::string& aFileName )
                 ++its;
             }
 
-        } while( 0 );
+        } while( false );
 
         // ROUTE KEEPOUT outlines
         do
@@ -2977,7 +2977,7 @@ void IDF3_BOARD::writeBoardFile( const std::string& aFileName )
                 ++its;
             }
 
-        } while( 0 );
+        } while( false );
 
         // VIA KEEPOUT outlines
         do
@@ -2991,7 +2991,7 @@ void IDF3_BOARD::writeBoardFile( const std::string& aFileName )
                 ++its;
             }
 
-        } while( 0 );
+        } while( false );
 
         // PLACE KEEPOUT outlines
         do
@@ -3005,7 +3005,7 @@ void IDF3_BOARD::writeBoardFile( const std::string& aFileName )
                 ++its;
             }
 
-        } while( 0 );
+        } while( false );
 
         // PLACEMENT GROUP outlines
         do
@@ -3019,7 +3019,7 @@ void IDF3_BOARD::writeBoardFile( const std::string& aFileName )
                 ++its;
             }
 
-        } while( 0 );
+        } while( false );
 
         // Drilled holes
         do
@@ -3054,7 +3054,7 @@ void IDF3_BOARD::writeBoardFile( const std::string& aFileName )
             }
 
             brd << ".END_DRILLED_HOLES\n\n";
-        } while( 0 );
+        } while( false );
 
         // Notes
         if( !notes.empty() )
@@ -4154,7 +4154,7 @@ void IDF3_BOARD::Clear( void )
         }
 
         board_drills.clear();
-    } while(0);
+    } while(false);
 
 
     // delete components
@@ -4170,7 +4170,7 @@ void IDF3_BOARD::Clear( void )
         }
 
         components.clear();
-    } while(0);
+    } while(false);
 
 
     // delete component outlines
@@ -4186,7 +4186,7 @@ void IDF3_BOARD::Clear( void )
         }
 
         compOutlines.clear();
-    } while(0);
+    } while(false);
 
 
     // delete OTHER outlines
@@ -4202,7 +4202,7 @@ void IDF3_BOARD::Clear( void )
         }
 
         olnOther.clear();
-    } while(0);
+    } while(false);
 
 
     // delete ROUTE outlines
@@ -4218,7 +4218,7 @@ void IDF3_BOARD::Clear( void )
         }
 
         olnRoute.clear();
-    } while(0);
+    } while(false);
 
 
     // delete PLACE outlines
@@ -4234,7 +4234,7 @@ void IDF3_BOARD::Clear( void )
         }
 
         olnPlace.clear();
-    } while(0);
+    } while(false);
 
 
     // delete ROUTE KEEPOUT outlines
@@ -4250,7 +4250,7 @@ void IDF3_BOARD::Clear( void )
         }
 
         olnRouteKeepout.clear();
-    } while(0);
+    } while(false);
 
 
     // delete VIA KEEPOUT outlines
@@ -4266,7 +4266,7 @@ void IDF3_BOARD::Clear( void )
         }
 
         olnViaKeepout.clear();
-    } while(0);
+    } while(false);
 
 
     // delete PLACEMENT KEEPOUT outlines
@@ -4282,7 +4282,7 @@ void IDF3_BOARD::Clear( void )
         }
 
         olnPlaceKeepout.clear();
-    } while(0);
+    } while(false);
 
 
     // delete PLACEMENT GROUP outlines
@@ -4298,7 +4298,7 @@ void IDF3_BOARD::Clear( void )
         }
 
         olnGroup.clear();
-    } while(0);
+    } while(false);
 
     boardName.clear();
     olnBoard.setThickness( thickness );

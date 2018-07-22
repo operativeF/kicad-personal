@@ -968,7 +968,7 @@ wxTreeItemId TREE_PROJECT_FRAME::findSubdirTreeItem( const wxString& aSubDir )
 
     wxTreeItemId kid = m_TreeProject->GetFirstChild( root_id, cookie );
 
-    while( 1 )
+    while( true )
     {
         if( ! kid.IsOk() )
         {

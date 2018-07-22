@@ -88,7 +88,7 @@ bool AM_PRIMITIVE::IsAMPrimitiveExposureOn( const GERBER_DRAW_ITEM* aParent ) co
     case AMP_EOF:
     case AMP_UNKNOWN:
     default:
-        return 1;       // All have no exposure parameter and are always 0N return true
+        return true;       // All have no exposure parameter and are always 0N return true
         break;
     }
 }

@@ -371,7 +371,7 @@ bool GERBER_FILE_IMAGE::ExecuteRS274XCommand( int aCommand, char* aBuff,
         break;
 
     case MIRROR_IMAGE:      // command %MIA0B0*%, %MIA0B1*%, %MIA1B0*%, %MIA1B1*%
-        m_MirrorA = m_MirrorB = 0;
+        m_MirrorA = m_MirrorB = false;
         while( *aText && *aText != '*' )
         {
             switch( *aText )

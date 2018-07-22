@@ -239,7 +239,7 @@ void SCENEGRAPH::ReNameNodes( void )
             ++sL;
         }
 
-    } while(0);
+    } while(false);
 
     // rename all transforms
     do
@@ -253,7 +253,7 @@ void SCENEGRAPH::ReNameNodes( void )
             ++sL;
         }
 
-    } while(0);
+    } while(false);
 
     return;
 }
@@ -790,7 +790,7 @@ bool SCENEGRAPH::Prepare( const glm::dmat4* aTransform,
             ++sL;
         }
 
-    } while(0);
+    } while(false);
 
     // prepare all transforms
     do
@@ -813,7 +813,7 @@ bool SCENEGRAPH::Prepare( const glm::dmat4* aTransform,
             ++sL;
         }
 
-    } while(0);
+    } while(false);
 
     return ok;
 }

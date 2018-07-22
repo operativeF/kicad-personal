@@ -506,7 +506,7 @@ void PARAM_CFG_LIBNAME_LIST::ReadParam( wxConfigBase* aConfig ) const
     wxString       libname, id_lib;
     wxArrayString* libname_list = m_Pt_param;
 
-    while( 1 )
+    while( true )
     {
         id_lib = m_Ident;
         id_lib << indexlib;

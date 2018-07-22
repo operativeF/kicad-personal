@@ -422,7 +422,7 @@ bool WIZARD_3DSHAPE_LIBS_DOWNLOADER::downloadOneLib( const wxString& aLibURL,
     {
         GITHUB_GETLIBLIST getter( aLibURL );
         success = getter.Get3DshapesLibsList( &fileslist, filter3dshapesfiles );
-    } while( 0 );
+    } while( false );
 
     if( !success )
         return false;

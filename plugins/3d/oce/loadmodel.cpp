@@ -811,7 +811,7 @@ bool processFace( const TopoDS_Face& face, DATA& data, SGNODE* parent,
                 || data.m_color->GetColor( L, XCAFDoc_ColorSurf, lcolor ) )
                 color = &lcolor;
         }
-    } while( 0 );
+    } while( false );
 
     SGNODE* ocolor = data.GetColor( color );
 

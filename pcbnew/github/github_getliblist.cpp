@@ -118,7 +118,7 @@ bool GITHUB_GETLIBLIST::GetFootprintLibraryList( wxArrayString& aList )
     int items_count_per_page = 0;
     std::string& json_image = GetBuffer();
 
-    while( 1 )
+    while( true )
     {
         bool success = remoteGetJSON( fullURLCommand, &errorMsg );
 

@@ -608,7 +608,7 @@ bool SGFACESET::WriteCache( std::ostream& aFile, SGNODE* parentNode )
     int i;
 
     for( i = 0; i < NITEMS; ++i )
-        items[i] = 0;
+        items[i] = false;
 
     i = 0;
     if( NULL != m_Coords )

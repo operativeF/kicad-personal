@@ -2093,7 +2093,7 @@ void C3D_RENDER_RAYTRACING::initialize_block_positions()
 
     unsigned int i = 0;
 
-    while(1)
+    while(true)
     {
         const unsigned int mX = DecodeMorton2X(i);
         const unsigned int mY = DecodeMorton2Y(i);

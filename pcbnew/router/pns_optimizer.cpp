@@ -436,7 +436,7 @@ bool OPTIMIZER::mergeObtuse( LINE* aLine )
 
     SHAPE_LINE_CHAIN current_path( line );
 
-    while( 1 )
+    while( true )
     {
         iter++;
         int n_segs = current_path.SegmentCount();
@@ -528,7 +528,7 @@ bool OPTIMIZER::mergeFull( LINE* aLine )
 
     SHAPE_LINE_CHAIN current_path( line );
 
-    while( 1 )
+    while( true )
     {
         int n_segs = current_path.SegmentCount();
         int max_step = n_segs - 2;
@@ -1187,7 +1187,7 @@ bool OPTIMIZER::mergeDpSegments( DIFF_PAIR* aPair )
     int step_p = aPair->CP().SegmentCount() - 2;
     int step_n = aPair->CN().SegmentCount() - 2;
 
-    while( 1 )
+    while( true )
     {
         int n_segs_p = aPair->CP().SegmentCount();
         int n_segs_n = aPair->CN().SegmentCount();

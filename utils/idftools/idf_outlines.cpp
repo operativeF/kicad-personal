@@ -120,7 +120,7 @@ static bool CheckOwnership( int aSourceLine, const char* aSourceFunc,
         ostr << "* outline type: " << GetOutlineTypeString( aOutlineType );
         aErrorString = ostr.str();
 
-    } while( 0 );
+    } while( false );
 
     return false;
 }
@@ -262,7 +262,7 @@ void BOARD_OUTLINE::readOutlines( std::istream& aBoardFile, IDF3::IDF_VERSION aI
 
                 throw( IDF_ERROR( __FILE__, __FUNCTION__, __LINE__, ostr.str() ) );
 
-            } while( 0 );
+            } while( false );
         }
 
         if( tmp != loopidx )
@@ -1595,7 +1595,7 @@ bool OTHER_OUTLINE::SetSide( IDF3::IDF_LAYER aSide )
                 ostr << "* BUG: invalid side (" << aSide << "); must be one of TOP/BOTTOM\n";
                 ostr << "* outline type: " << GetOutlineTypeString( outlineType );
                 errormsg = ostr.str();
-            } while( 0 );
+            } while( false );
 
             side = LYR_INVALID;
             return false;
@@ -1909,7 +1909,7 @@ void OTHER_OUTLINE::writeData( std::ostream& aBoardFile )
                     ostr << "\n* invalid OTHER_OUTLINE side (neither top nor bottom): ";
                     ostr << side;
                     throw( IDF_ERROR( __FILE__, __FUNCTION__, __LINE__, ostr.str() ) );
-                } while( 0 );
+                } while( false );
 
                 break;
         }
@@ -2273,7 +2273,7 @@ bool PLACE_OUTLINE::SetSide( IDF3::IDF_LAYER aSide )
                 errormsg = ostr.str();
 
                 return false;
-            } while( 0 );
+            } while( false );
 
             break;
     }
@@ -2307,7 +2307,7 @@ bool PLACE_OUTLINE::SetMaxHeight( double aHeight )
             errormsg = ostr.str();
 
             return false;
-        } while( 0 );
+        } while( false );
     }
 
     thickness = aHeight;
@@ -2591,7 +2591,7 @@ void PLACE_OUTLINE::writeData( std::ostream& aBoardFile )
                 ostr << "\n* invalid PLACE_OUTLINE/KEEPOUT side (";
                 ostr << side << "); must be one of TOP/BOTTOM/BOTH";
                 throw( IDF_ERROR( __FILE__, __FUNCTION__, __LINE__, ostr.str() ) );
-            } while( 0 );
+            } while( false );
 
             break;
     }
@@ -2709,7 +2709,7 @@ bool GROUP_OUTLINE::SetSide( IDF3::IDF_LAYER aSide )
                 errormsg = ostr.str();
 
                 return false;
-            } while( 0 );
+            } while( false );
 
             break;
     }
@@ -2931,7 +2931,7 @@ void GROUP_OUTLINE::writeData( std::ostream& aBoardFile )
                 ostr << side;
 
                 throw( IDF_ERROR( __FILE__, __FUNCTION__, __LINE__, ostr.str() ) );
-            } while( 0 );
+            } while( false );
 
             break;
     }
@@ -3460,7 +3460,7 @@ bool IDF3_COMP_OUTLINE::SetComponentClass( IDF3::COMP_TYPE aCompClass )
                 errormsg = ostr.str();
 
                 return false;
-            } while( 0 );
+            } while( false );
 
             break;
     }

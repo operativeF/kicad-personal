@@ -275,7 +275,7 @@ S3D::SGTYPES S3D::ReadTag( std::istream& aFile, std::string& aName )
 
     for( int i = 0; i < S3D::SGTYPE_END; ++i )
     {
-        if( !name.compare( S3D::GetNodeTypeName( types[i] ) ) )
+        if( name == S3D::GetNodeTypeName( types[i] ) )
             return types[i];
     }
 

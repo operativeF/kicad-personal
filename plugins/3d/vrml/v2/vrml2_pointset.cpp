@@ -334,7 +334,7 @@ bool WRL2POINTSET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
 
         proc.GetFilePosData( line, column );
 
-        if( !glob.compare( "color" ) )
+        if( glob == "color" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {
@@ -350,7 +350,7 @@ bool WRL2POINTSET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "coord" ) )
+        else if( glob == "coord" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {

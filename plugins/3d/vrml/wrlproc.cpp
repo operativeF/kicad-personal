@@ -729,13 +729,13 @@ bool WRLPROC::ReadSFBool( bool& aSFBool )
     if( !ReadGlob( tmp ) )
         return false;
 
-    if( !tmp.compare( "0" ) )
+    if( tmp == "0" )
         aSFBool = false;
-    else if( !tmp.compare( "1" ) )
+    else if( tmp == "1" )
         aSFBool = true;
-    else if( !tmp.compare( "TRUE" ) )
+    else if( tmp == "TRUE" )
         aSFBool = true;
-    else if( !tmp.compare( "FALSE" ) )
+    else if( tmp == "FALSE" )
         aSFBool = false;
     else
     {

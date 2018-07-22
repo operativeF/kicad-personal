@@ -3,7 +3,7 @@
 #include <boost/ptr_container/ptr_vector.hpp>
 #include <deque>
 #include <dlist.h>
-#include <time.h>
+#include <ctime>
 #include <common.h>
 
 #define TEST_NODES      100000000

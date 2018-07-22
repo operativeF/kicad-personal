@@ -168,7 +168,7 @@ bool WRL2COLOR::Read( WRLPROC& proc, WRL2BASE* aTopNode )
     proc.GetFilePosData( line, column );
 
     // expecting 'color'
-    if( !glob.compare( "color" ) )
+    if( glob == "color" )
     {
         if( !proc.ReadMFVec3f( colors ) )
         {

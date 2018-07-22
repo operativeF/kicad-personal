@@ -138,7 +138,7 @@ bool IDF3::CompareToken( const char* aTokenString, const std::string& aInputStri
     for( i = 0; i < j; ++i )
         bigToken[i] = std::toupper( bigToken[i] );
 
-    if( !bigToken.compare( aTokenString ) )
+    if( bigToken == aTokenString )
         return true;
 
     return false;

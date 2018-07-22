@@ -93,26 +93,26 @@ int main( int argc, char **argv )
     string line;
 
     line.clear();
-    while( line.compare( "mm" ) && line.compare( "in" ) )
+    while( ( line != "mm" ) && ( line != "in" ) )
     {
         cout << "* Units (mm,in): ";
         line.clear();
         std::getline( cin, line );
     }
 
-    if( line.compare( "mm" ) )
+    if( ( line != "mm" ) )
         inch = true;
 
     line.clear();
-    while( line.compare( "H" ) && line.compare( "h" )
-        && line.compare( "V" ) && line.compare( "v" ) )
+    while( ( line != "H" ) && ( line != "h" )
+        && ( line != "V" ) && ( line != "v" ) )
     {
         cout << "* Orientation (H,V): ";
         line.clear();
         std::getline( cin, line );
     }
 
-    if( line.compare( "H" ) && line.compare( "h" ) )
+    if( ( line != "H" ) && ( line != "h" ) )
         orientation = 'v';
     else
         orientation = 'h';
@@ -126,12 +126,12 @@ int main( int argc, char **argv )
         line.clear();
         std::getline( cin, line );
 
-        if( !line.compare( "x" ) || !line.compare( "X" ) )
+        if( !( line != "x" ) || !( line != "X" ) )
         {
             axial = true;
             ok = true;
         }
-        else if( !line.compare( "r" ) || !line.compare( "R" ) )
+        else if( !( line != "r" ) || !( line != "R" ) )
         {
             axial = false;
             ok = true;
@@ -267,12 +267,12 @@ void make_vcyl( bool inch, bool axial, double dia, double length,
         line.clear();
         std::getline( cin, line );
 
-        if( !line.compare( "l" ) || !line.compare( "L" ) )
+        if( !( line != "l" ) || !( line != "L" ) )
         {
             left = true;
             ok   = true;
         }
-        else if( !line.compare( "r" ) || !line.compare( "R" ) )
+        else if( !( line != "r" ) || !( line != "R" ) )
             ok = true;
     }
 

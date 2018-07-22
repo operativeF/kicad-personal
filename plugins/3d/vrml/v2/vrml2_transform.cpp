@@ -196,7 +196,7 @@ bool WRL2TRANSFORM::Read( WRLPROC& proc, WRL2BASE* aTopNode )
 
         proc.GetFilePosData( line, column );
 
-        if( !glob.compare( "center" ) )
+        if( glob == "center" )
         {
             if( !proc.ReadSFVec3f( center ) )
             {
@@ -220,7 +220,7 @@ bool WRL2TRANSFORM::Read( WRLPROC& proc, WRL2BASE* aTopNode )
             center.y *= 2.54;
             center.z *= 2.54;
         }
-        else if( !glob.compare( "rotation" ) )
+        else if( glob == "rotation" )
         {
             if( !proc.ReadSFRotation( rotation ) )
             {
@@ -239,7 +239,7 @@ bool WRL2TRANSFORM::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "scale" ) )
+        else if( glob == "scale" )
         {
             if( !proc.ReadSFVec3f( scale ) )
             {
@@ -258,7 +258,7 @@ bool WRL2TRANSFORM::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "scaleOrientation" ) )
+        else if( glob == "scaleOrientation" )
         {
             if( !proc.ReadSFRotation( scaleOrientation ) )
             {
@@ -277,7 +277,7 @@ bool WRL2TRANSFORM::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "translation" ) )
+        else if( glob == "translation" )
         {
             if( !proc.ReadSFVec3f( translation ) )
             {
@@ -301,7 +301,7 @@ bool WRL2TRANSFORM::Read( WRLPROC& proc, WRL2BASE* aTopNode )
             translation.y *= 2.54;
             translation.z *= 2.54;
         }
-        else if( !glob.compare( "children" ) )
+        else if( glob == "children" )
         {
             if( !readChildren( proc, aTopNode ) )
                 return false;

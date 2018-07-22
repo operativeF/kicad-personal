@@ -168,7 +168,7 @@ bool WRL2SWITCH::Read( WRLPROC& proc, WRL2BASE* aTopNode )
 
         proc.GetFilePosData( line, column );
 
-        if( !glob.compare( "whichChoice" ) )
+        if( glob == "whichChoice" )
         {
             if( !proc.ReadSFInt( whichChoice ) )
             {
@@ -187,7 +187,7 @@ bool WRL2SWITCH::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "choice" ) )
+        else if( glob == "choice" )
         {
             if( !readChildren( proc, aTopNode ) )
                 return false;

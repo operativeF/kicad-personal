@@ -183,7 +183,7 @@ bool WRL1SHAPEHINTS::Read( WRLPROC& proc, WRL1BASE* aTopNode )
         // faceType
         // creaseAngle
 
-        if( !glob.compare( "vertexOrdering" ) )
+        if( glob == "vertexOrdering" )
         {
             if( !proc.ReadName( glob ) )
             {
@@ -199,11 +199,11 @@ bool WRL1SHAPEHINTS::Read( WRLPROC& proc, WRL1BASE* aTopNode )
                 return false;
             }
 
-            if( !glob.compare( "UNKNOWN_ORDERING" ) )
+            if( glob == "UNKNOWN_ORDERING" )
                 m_order = ORD_UNKNOWN;
-            else if( !glob.compare( "CLOCKWISE" ) )
+            else if( glob == "CLOCKWISE" )
                 m_order = ORD_CLOCKWISE;
-            else if( !glob.compare( "COUNTERCLOCKWISE" ) )
+            else if( glob == "COUNTERCLOCKWISE" )
                 m_order = ORD_CCW;
             else
             {
@@ -221,7 +221,7 @@ bool WRL1SHAPEHINTS::Read( WRLPROC& proc, WRL1BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "shapeType" ) )
+        else if( glob == "shapeType" )
         {
             if( !proc.ReadName( glob ) )
             {
@@ -241,7 +241,7 @@ bool WRL1SHAPEHINTS::Read( WRLPROC& proc, WRL1BASE* aTopNode )
             // UNKNOWN_SHAPE_TYPE
             // SOLID
         }
-        else if( !glob.compare( "faceType" ) )
+        else if( glob == "faceType" )
         {
             if( !proc.ReadName( glob ) )
             {
@@ -261,7 +261,7 @@ bool WRL1SHAPEHINTS::Read( WRLPROC& proc, WRL1BASE* aTopNode )
             // UNKNOWN_FACE_TYPE
             // CONVEX
         }
-        else if( !glob.compare( "creaseAngle" ) )
+        else if( glob == "creaseAngle" )
         {
             float tmp;
 

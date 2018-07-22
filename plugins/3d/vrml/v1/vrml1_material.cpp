@@ -212,7 +212,7 @@ bool WRL1MATERIAL::Read( WRLPROC& proc, WRL1BASE* aTopNode )
 
         proc.GetFilePosData( line, column );
 
-        if( !glob.compare( "specularColor" ) )
+        if( glob == "specularColor" )
         {
             if( !proc.ReadMFVec3f( specularColor ) )
             {
@@ -231,7 +231,7 @@ bool WRL1MATERIAL::Read( WRLPROC& proc, WRL1BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "diffuseColor" ) )
+        else if( glob == "diffuseColor" )
         {
             if( !proc.ReadMFVec3f( diffuseColor ) )
             {
@@ -250,7 +250,7 @@ bool WRL1MATERIAL::Read( WRLPROC& proc, WRL1BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "emissiveColor" ) )
+        else if( glob == "emissiveColor" )
         {
             if( !proc.ReadMFVec3f( emissiveColor ) )
             {
@@ -269,7 +269,7 @@ bool WRL1MATERIAL::Read( WRLPROC& proc, WRL1BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "shininess" ) )
+        else if( glob == "shininess" )
         {
             if( !proc.ReadMFFloat( shininess ) )
             {
@@ -288,7 +288,7 @@ bool WRL1MATERIAL::Read( WRLPROC& proc, WRL1BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "transparency" ) )
+        else if( glob == "transparency" )
         {
             if( !proc.ReadMFFloat( transparency ) )
             {
@@ -307,7 +307,7 @@ bool WRL1MATERIAL::Read( WRLPROC& proc, WRL1BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "ambientColor" ) )
+        else if( glob == "ambientColor" )
         {
             if( !proc.ReadMFVec3f( ambientColor ) )
             {

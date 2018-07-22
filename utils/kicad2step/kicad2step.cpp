@@ -177,12 +177,12 @@ bool KICAD2MCAD::OnCmdLineParsed( wxCmdLineParser& parser )
             std::string tunit;
             istr >> tunit;
 
-            if( !tunit.compare( "in" ) || !tunit.compare( "inch" ) )
+            if( ( tunit == "in" ) || ( tunit == "inch" ) )
             {
                 m_xOrigin *= 25.4;
                 m_yOrigin *= 25.4;
             }
-            else if( tunit.compare( "mm" ) )
+            else if( tunit != "mm" )
             {
                 parser.Usage();
                 return false;
@@ -208,11 +208,11 @@ bool KICAD2MCAD::OnCmdLineParsed( wxCmdLineParser& parser )
             std::string tunit;
             istr >> tunit;
 
-            if( !tunit.compare( "in" ) || !tunit.compare( "inch" ) )
+            if( ( tunit == "in" ) || ( tunit == "inch" ) )
             {
                 m_minDistance *= 25.4;
             }
-            else if( tunit.compare( "mm" ) )
+            else if( tunit != "mm" )
             {
                 parser.Usage();
                 return false;

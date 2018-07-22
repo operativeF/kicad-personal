@@ -142,7 +142,7 @@ bool WRL2BOX::Read( WRLPROC& proc, WRL2BASE* aTopNode )
     proc.GetFilePosData( line, column );
 
     // expecting 'size'
-    if( !glob.compare( "size" ) )
+    if( glob == "size" )
     {
         if( !proc.ReadSFVec3f( size ) )
         {

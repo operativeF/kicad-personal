@@ -341,7 +341,7 @@ bool WRL2LINESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
 
         proc.GetFilePosData( line, column );
 
-        if( !glob.compare( "colorPerVertex" ) )
+        if( glob == "colorPerVertex" )
         {
             if( !proc.ReadSFBool( colorPerVertex ) )
             {
@@ -360,7 +360,7 @@ bool WRL2LINESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "colorIndex" ) )
+        else if( glob == "colorIndex" )
         {
             if( !proc.ReadMFInt( colorIndex ) )
             {
@@ -379,7 +379,7 @@ bool WRL2LINESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "coordIndex" ) )
+        else if( glob == "coordIndex" )
         {
             if( !proc.ReadMFInt( coordIndex ) )
             {
@@ -398,7 +398,7 @@ bool WRL2LINESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "color" ) )
+        else if( glob == "color" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {
@@ -414,7 +414,7 @@ bool WRL2LINESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "coord" ) )
+        else if( glob == "coord" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {

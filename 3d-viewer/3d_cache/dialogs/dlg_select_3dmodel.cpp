@@ -255,7 +255,7 @@ void DLG_SELECT_3DMODEL::updateDirChoiceList( void )
 
     while( sL != eL )
     {
-        if( !sL->m_pathexp.empty() && sL->m_pathexp.compare( prjDir ) )
+        if( !sL->m_pathexp.empty() && sL->m_pathexp != prjDir )
             cl.insert( sL->m_pathexp );
 
         ++sL;

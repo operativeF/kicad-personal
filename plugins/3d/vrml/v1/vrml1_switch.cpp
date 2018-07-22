@@ -160,7 +160,7 @@ bool WRL1SWITCH::Read( WRLPROC& proc, WRL1BASE* aTopNode )
                 return false;
             }
 
-            if( !glob.compare( "whichChild" ) )
+            if( glob == "whichChild" )
             {
                 if( !proc.ReadSFInt( whichChild ) )
                 {

@@ -160,7 +160,7 @@ int main( int argc, char **argv )
 
     DXF2IDF dxf;
 
-    dxf.ReadDxf( dname.c_str() );
+    dxf.ReadDxf( dname );
 
     FILE* fp = fopen( line.c_str(), "w" );
 

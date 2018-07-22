@@ -89,7 +89,7 @@ void KICAD_CURL_EASY::Perform()
     if( res != CURLE_OK )
     {
         std::string msg = "curl_easy_perform()=";
-        msg += (int)res; msg += " "; msg += GetErrorText( res ).c_str();
+        msg += (int)res; msg += " "; msg += GetErrorText( res );
         THROW_IO_ERROR( msg );
     }
 }

@@ -805,7 +805,7 @@ bool PCBMODEL::CreatePCB()
     }
 
     // subtract cutouts (if any)
-    for( auto i : m_cutouts )
+    for( const auto& i : m_cutouts )
         board = BRepAlgoAPI_Cut( board, i );
 
     // push the board to the data structure
@@ -992,7 +992,7 @@ bool PCBMODEL::getModelLabel( const std::string aFileName, TDF_Label& aLabel )
 
                 //TODO - Other alternative formats?
 
-                for( auto alt : alts )
+                for( const auto& alt : alts )
                 {
                     wxFileName altFile( basePath, baseName + "." + alt );
 

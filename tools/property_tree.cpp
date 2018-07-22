@@ -27,7 +27,7 @@
 // It can convert XML to sexpressions or beautify s-expressions in non-specctra mode.
 
 
-#include <assert.h>
+#include <cassert>
 #include <ptree.h>
 #include <richio.h>
 #include <dsnlexer.h>

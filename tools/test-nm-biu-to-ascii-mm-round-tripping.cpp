@@ -10,13 +10,13 @@
 */
 
 
-#include <limits.h>
-#include <stdio.h>
+#include <climits>
+#include <cstdio>
 #include <cmath>
 #include <string>
-#include <string.h>
-#include <stdlib.h>
-#include <stdint.h>
+#include <cstring>
+#include <cstdlib>
+#include <cstdint>
 
 
 static inline int KiROUND( double v )

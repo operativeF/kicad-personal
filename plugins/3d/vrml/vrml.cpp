@@ -31,7 +31,7 @@
  *  #VRML V2.0 utf8
  */
 
-#include <locale.h>
+#include <clocale>
 #include <wx/log.h>
 #include <wx/filename.h>
 #include "richio.h"

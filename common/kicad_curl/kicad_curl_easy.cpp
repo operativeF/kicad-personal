@@ -27,7 +27,7 @@
 
 #include <cstddef>
 #include <exception>
-#include <stdarg.h>
+#include <cstdarg>
 #include <sstream>
 #include <ki_exception.h>   // THROW_IO_ERROR
 

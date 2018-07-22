@@ -1212,7 +1212,7 @@ int D_PAD::Compare( const D_PAD* padref, const D_PAD* padcmp )
     // these strings are not typically constructed, since we don't get here often.
     std::string s1 = padref->m_layerMask.to_string();
     std::string s2 = padcmp->m_layerMask.to_string();
-    return s1.compare( s2 );
+    return s1 != s2;
 #endif
 }
 

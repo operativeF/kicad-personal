@@ -765,7 +765,7 @@ void IDF3_COMP_OUTLINE_DATA::writePlaceData( std::ostream& aBoardFile,
 
     std::string arefdes = aRefDes;
 
-    if( arefdes.empty() || !arefdes.compare( "~" )
+    if( arefdes.empty() || ( arefdes == "~" )
         || ( arefdes.size() >= 8 && CompareToken( "NOREFDES", arefdes.substr(0, 8) ) ) )
         arefdes = "NOREFDES";
 
@@ -1016,7 +1016,7 @@ IDF_DRILL_DATA* IDF3_COMPONENT::AddDrill( IDF_DRILL_DATA* aDrilledHole )
         return NULL;
     }
 
-    if( refdes.compare( aDrilledHole->GetDrillRefDes() ) )
+    if( refdes != aDrilledHole->GetDrillRefDes() )
     {
         ERROR_IDF;
         cerr << "\n* BUG: pushing an incorrect REFDES ('" << aDrilledHole->GetDrillRefDes();
@@ -1737,9 +1737,9 @@ void IDF3_BOARD::readBrdHeader( std::istream& aBoardFile, IDF3::FILE_STATE& aBoa
                           "invalid IDF file\n"
                           "* Violation of specification: IDF Version must not be in quotes" ) );
 
-    if( !token.compare( "3.0" ) || !token.compare( "3." ) || !token.compare( "3" ) )
+    if( ( token == "3.0" ) || ( token == "3." ) || ( token == "3" ) )
         idfVer = IDF_V3;
-    else if( !token.compare( "2.0" ) || !token.compare( "2." ) || !token.compare( "2" ) )
+    else if( ( token == "2.0" ) || ( token == "2." ) || ( token == "2" ) )
         idfVer = IDF_V2;
     else
     {
@@ -2598,9 +2598,9 @@ void IDF3_BOARD::readLibHeader( std::istream& aLibFile, IDF3::FILE_STATE& aLibSt
                           "invalid IDF library file\n"
                           "* Violation of specification: IDF Version must not be in quotes" ) );
 
-    if( !token.compare( "3.0" ) || !token.compare( "3." ) || !token.compare( "3" ) )
+    if( ( token == "3.0" ) || ( token == "3." ) || ( token == "3" ) )
         idfVer = IDF_V3;
-    else if( !token.compare( "2.0" ) || !token.compare( "2." ) || !token.compare( "2" ) )
+    else if( ( token == "2.0" ) || ( token == "2." ) || ( token == "2" ) )
         idfVer = IDF_V2;
     else
     {
@@ -4033,7 +4033,7 @@ IDF3_COMP_OUTLINE* IDF3_BOARD::GetComponentOutline( const wxString& aFullFileNam
 
     while( ufls != ufle )
     {
-        if( ! ufls->second.compare( uid ) )
+        if( ufls->second == uid )
         {
             oldfname = ufls->first;
             break;

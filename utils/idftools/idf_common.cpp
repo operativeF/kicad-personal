@@ -343,15 +343,15 @@ IDF_DRILL_DATA::IDF_DRILL_DATA( double aDrillDia, double aPosX, double aPosY,
     y = aPosY;
     plating = aPlating;
 
-    if( !aRefDes.compare( "BOARD" ) )
+    if( aRefDes == "BOARD" )
     {
         kref = BOARD;
     }
-    else if( aRefDes.empty() || !aRefDes.compare( "NOREFDES" ) )
+    else if( aRefDes.empty() || ( aRefDes == "NOREFDES" ) )
     {
         kref = NOREFDES;
     }
-    else if( !aRefDes.compare( "PANEL" ) )
+    else if( aRefDes == "PANEL" )
     {
         kref = PANEL;
     }
@@ -361,19 +361,19 @@ IDF_DRILL_DATA::IDF_DRILL_DATA( double aDrillDia, double aPosX, double aPosY,
         refdes = aRefDes;
     }
 
-    if( !aHoleType.compare( "PIN" ) )
+    if( aHoleType == "PIN" )
     {
         khole = PIN;
     }
-    else if( !aHoleType.compare( "VIA" ) )
+    else if( aHoleType == "VIA" )
     {
         khole = VIA;
     }
-    else if( aHoleType.empty() || !aHoleType.compare( "MTG" ) )
+    else if( aHoleType.empty() || ( aHoleType == "MTG" ) )
     {
         khole = MTG;
     }
-    else if( !aHoleType.compare( "TOOL" ) )
+    else if( aHoleType == "TOOL" )
     {
         khole = TOOL;
     }

@@ -71,15 +71,15 @@ int main( int argc, char **argv )
     dname = line;
 
     line.clear();
-    while( line.compare( "mm" ) && line.compare( "in" )
-        && line.compare( "MM" ) && line.compare( "IN" ) )
+    while( ( line != "mm" ) && ( line != "in" )
+        && ( line != "MM" ) && ( line != "IN" ) )
     {
         cout << "* Units (mm,in): ";
         line.clear();
         std::getline( cin, line );
     }
 
-    if( line.compare( "mm" ) && line.compare( "MM" ) )
+    if( ( line != "mm" ) && ( line != "MM" ) )
         inch = true;
 
     line.clear();

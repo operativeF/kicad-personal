@@ -141,7 +141,7 @@ bool WRL2INLINE::Read( WRLPROC& proc, WRL2BASE* aTopNode )
         proc.GetFilePosData( line, column );
 
         // expecting one of 'url', 'bboxCenter', 'bboxSize'
-        if( !glob.compare( "url" ) )
+        if( glob == "url" )
         {
             if( !proc.ReadMFString( url ) )
             {
@@ -160,7 +160,7 @@ bool WRL2INLINE::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "bboxCenter" ) )
+        else if( glob == "bboxCenter" )
         {
             if( !proc.ReadSFVec3f( bboxCenter ) )
             {
@@ -179,7 +179,7 @@ bool WRL2INLINE::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "bboxSize" ) )
+        else if( glob == "bboxSize" )
         {
             if( !proc.ReadSFVec3f( bboxSize ) )
             {

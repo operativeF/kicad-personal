@@ -174,7 +174,7 @@ bool WRL1FACESET::Read( WRLPROC& proc, WRL1BASE* aTopNode )
 
         proc.GetFilePosData( line, column );
 
-        if( !glob.compare( "coordIndex" ) )
+        if( glob == "coordIndex" )
         {
             if( !proc.ReadMFInt( coordIndex ) )
             {
@@ -193,7 +193,7 @@ bool WRL1FACESET::Read( WRLPROC& proc, WRL1BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "materialIndex" ) )
+        else if( glob == "materialIndex" )
         {
             if( !proc.ReadMFInt( matIndex ) )
             {
@@ -212,7 +212,7 @@ bool WRL1FACESET::Read( WRLPROC& proc, WRL1BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "normalIndex" ) )
+        else if( glob == "normalIndex" )
         {
             if( !proc.ReadMFInt( normIndex ) )
             {
@@ -231,7 +231,7 @@ bool WRL1FACESET::Read( WRLPROC& proc, WRL1BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "textureCoordIndex" ) )
+        else if( glob == "textureCoordIndex" )
         {
             if( !proc.ReadMFInt( texIndex ) )
             {

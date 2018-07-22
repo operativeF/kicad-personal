@@ -400,7 +400,7 @@ SGNODE* S3D::ReadCache( const char* aFileName, void* aPluginMgr,
             file.get( schar );
         }
 
-        if( name.compare( SG_VERSION_TAG ) )
+        if( name != SG_VERSION_TAG )
         {
             CLOSE_STREAM( file );
             return NULL;

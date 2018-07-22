@@ -463,7 +463,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
 
         proc.GetFilePosData( line, column );
 
-        if( !glob.compare( "ccw" ) )
+        if( glob == "ccw" )
         {
             if( !proc.ReadSFBool( ccw ) )
             {
@@ -482,7 +482,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "colorPerVertex" ) )
+        else if( glob == "colorPerVertex" )
         {
             if( !proc.ReadSFBool( colorPerVertex ) )
             {
@@ -501,7 +501,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "convex" ) )
+        else if( glob == "convex" )
         {
             if( !proc.ReadSFBool( convex ) )
             {
@@ -520,7 +520,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "normalPerVertex" ) )
+        else if( glob == "normalPerVertex" )
         {
             if( !proc.ReadSFBool( normalPerVertex ) )
             {
@@ -539,7 +539,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "solid" ) )
+        else if( glob == "solid" )
         {
             if( !proc.ReadSFBool( solid ) )
             {
@@ -558,7 +558,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "creaseAngle" ) )
+        else if( glob == "creaseAngle" )
         {
             if( !proc.ReadSFFloat( creaseAngle ) )
             {
@@ -584,7 +584,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
 
             creaseLimit = cosf( creaseAngle );
         }
-        else if( !glob.compare( "colorIndex" ) )
+        else if( glob == "colorIndex" )
         {
             if( !proc.ReadMFInt( colorIndex ) )
             {
@@ -603,7 +603,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "coordIndex" ) )
+        else if( glob == "coordIndex" )
         {
             if( !proc.ReadMFInt( coordIndex ) )
             {
@@ -622,7 +622,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "normalIndex" ) )
+        else if( glob == "normalIndex" )
         {
             if( !proc.ReadMFInt( normalIndex ) )
             {
@@ -641,7 +641,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "color" ) )
+        else if( glob == "color" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {
@@ -657,7 +657,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "coord" ) )
+        else if( glob == "coord" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {
@@ -673,7 +673,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "normal" ) )
+        else if( glob == "normal" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {
@@ -689,7 +689,7 @@ bool WRL2FACESET::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "texCoord" ) )
+        else if( glob == "texCoord" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {

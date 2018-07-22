@@ -853,7 +853,7 @@ VRML_IDS* GetColor( boost::ptr_map<const std::string, VRML_IDS>& cmap, int& inde
     {
         VRML_IDS* id = new VRML_IDS;
 
-        if( !uid.compare( "NOGEOM_NOPART" ) )
+        if( uid == "NOGEOM_NOPART" )
             id->colorIndex = 1;
         else
             id->colorIndex = index++;

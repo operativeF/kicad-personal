@@ -369,7 +369,7 @@ bool WRL2APPEARANCE::Read( WRLPROC& proc, WRL2BASE* aTopNode )
 
         proc.GetFilePosData( line, column );
 
-        if( !glob.compare( "material" ) )
+        if( glob == "material" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {
@@ -385,7 +385,7 @@ bool WRL2APPEARANCE::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "texture" ) )
+        else if( glob == "texture" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {
@@ -401,7 +401,7 @@ bool WRL2APPEARANCE::Read( WRLPROC& proc, WRL2BASE* aTopNode )
                 return false;
             }
         }
-        else if( !glob.compare( "textureTransform" ) )
+        else if( glob == "textureTransform" )
         {
             if( !aTopNode->ReadNode( proc, this, NULL ) )
             {

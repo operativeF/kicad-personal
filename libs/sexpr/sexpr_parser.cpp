@@ -21,7 +21,7 @@
 #include <cctype>
 #include <iterator>
 #include <stdexcept>
-#include <stdlib.h>     /* strtod */
+#include <cstdlib>     /* strtod */
 
 #include <fstream>
 #include <streambuf>

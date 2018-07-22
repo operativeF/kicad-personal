@@ -59,9 +59,9 @@
 
 
 #include <cmath>
-#include <stdio.h>
-#include <string.h>
-#include <errno.h>
+#include <cstdio>
+#include <cstring>
+#include <cerrno>
 #include <wx/ffile.h>
 #include <wx/string.h>
 #include <legacy_plugin.h>   // implement this here

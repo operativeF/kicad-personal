@@ -20,7 +20,7 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <ctype.h>
+#include <cctype>
 #include <algorithm>
 #include <boost/algorithm/string/join.hpp>
 

@@ -27,7 +27,7 @@
  * @brief Pcbnew s-expression file format parser implementation.
  */
 
-#include <errno.h>
+#include <cerrno>
 #include <common.h>
 #include <confirm.h>
 #include <macros.h>

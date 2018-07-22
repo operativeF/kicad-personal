@@ -3,8 +3,8 @@
 #include <vector>
 
 #include <cmath>
-#include <float.h>
-#include <limits.h>
+#include <cfloat>
+#include <climits>
 #include <common.h>
 #include <cstdlib>      // for abs function on ints
 #include <algorithm>

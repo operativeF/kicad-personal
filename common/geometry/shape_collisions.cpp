@@ -23,7 +23,7 @@
  */
 
 #include <math/vector2d.h>
-#include <math.h>
+#include <cmath>
 
 #include <geometry/shape.h>
 #include <geometry/shape_arc.h>

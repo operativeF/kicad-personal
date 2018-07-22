@@ -71,7 +71,7 @@
 #include <vector>
 #include <boost/range/algorithm/partition.hpp>
 #include <boost/range/algorithm/nth_element.hpp>
-#include <stdlib.h>
+#include <cstdlib>
 
 #include <stack>
 #include <wx/debug.h>

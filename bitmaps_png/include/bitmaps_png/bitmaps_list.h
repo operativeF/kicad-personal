@@ -25,7 +25,7 @@
 #ifndef BITMAPS_PNG_BITMAPS_LIST__H
 #define BITMAPS_PNG_BITMAPS_LIST__H
 
-#include <bitmaps_png/bitmap_def.h>
+#include "bitmap_def.h"
 
 // may eventually generate this file automatically.
 EXTERN_BITMAP( about_xpm )

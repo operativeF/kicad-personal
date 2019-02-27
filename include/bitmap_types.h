@@ -38,7 +38,7 @@ class wxAuiToolBar;
 #include <config.h>
 #include <wx/gdicmn.h>  // wxBitmapType
 
-#include <bitmaps_png/bitmap_def.h>
+#include "../bitmaps_png/include/bitmaps_png/bitmap_def.h"
 
 /**
  * Construct a wxBitmap from a memory record, held in a BITMAP_DEF.

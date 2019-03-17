@@ -40,7 +40,6 @@ class LOGGER
 {
 public:
     LOGGER();
-    ~LOGGER();
 
     void Save( const std::string& aFilename );
     void Clear();

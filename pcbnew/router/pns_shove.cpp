@@ -99,11 +99,6 @@ SHOVE::SHOVE( NODE* aWorld, ROUTER* aRouter ) :
 }
 
 
-SHOVE::~SHOVE()
-{
-}
-
-
 LINE SHOVE::assembleLine( const SEGMENT* aSeg, int* aIndex )
 {
     return m_currentNode->AssembleLine( const_cast<SEGMENT*>( aSeg ), aIndex, true );

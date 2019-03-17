@@ -89,8 +89,6 @@ public:
         m_hasVia = false;
     }
 
-    ~LINE();
-
     static inline bool ClassOf( const ITEM* aItem )
     {
         return aItem && LINE_T == aItem->Kind();

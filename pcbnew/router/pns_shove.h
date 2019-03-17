@@ -57,7 +57,6 @@ public:
     };
 
     SHOVE( NODE* aWorld, ROUTER* aRouter );
-    ~SHOVE();
 
     virtual LOGGER* Logger() override
     {

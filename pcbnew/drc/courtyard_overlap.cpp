@@ -59,6 +59,8 @@ bool DRC_COURTYARD_OVERLAP::RunDRC( BOARD& aBoard ) const
 
     // Detects missing (or malformed) footprint courtyard,
     // and for footprint with courtyard, courtyards overlap.
+
+    // @TODO: Why should we try to detect malformed courtyards here?
     wxString msg;
     bool     success = true;
 

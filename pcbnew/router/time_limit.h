@@ -30,7 +30,6 @@ class TIME_LIMIT
 {
 public:
     TIME_LIMIT( int aMilliseconds = 0 );
-    ~TIME_LIMIT();
 
     bool Expired() const;
     void Restart();

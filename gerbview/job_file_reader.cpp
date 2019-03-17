@@ -80,8 +80,6 @@ public:
         m_reporter = aReporter;
     }
 
-    ~GERBER_JOBFILE_READER() {}
-
     bool ReadGerberJobFile();       /// read a .gbrjob file
     wxArrayString& GetGerberFiles() { return m_GerberFiles; }
 

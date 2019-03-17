@@ -45,7 +45,6 @@ class PCBNEW_CONTROL : public PCB_TOOL_BASE
 {
 public:
     PCBNEW_CONTROL();
-    ~PCBNEW_CONTROL();
 
     /// @copydoc TOOL_INTERACTIVE::Reset()
     void Reset( RESET_REASON aReason ) override;

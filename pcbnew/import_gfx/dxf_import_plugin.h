@@ -139,7 +139,6 @@ private:
 
 public:
     DXF_IMPORT_PLUGIN();
-    ~DXF_IMPORT_PLUGIN();
 
     const wxString GetName() const override
     {

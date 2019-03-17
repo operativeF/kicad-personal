@@ -61,11 +61,6 @@ SCH_FIELD::SCH_FIELD( const wxPoint& aPos, int aFieldId, SCH_COMPONENT* aParent,
 }
 
 
-SCH_FIELD::~SCH_FIELD()
-{
-}
-
-
 EDA_ITEM* SCH_FIELD::Clone() const
 {
     return new SCH_FIELD( *this );

@@ -40,7 +40,6 @@ class CVPCB_CONTROL : public TOOL_INTERACTIVE
 {
 public:
     CVPCB_CONTROL();
-    ~CVPCB_CONTROL() { }
 
     /// @copydoc TOOL_INTERACTIVE::Reset()
     void Reset( RESET_REASON aReason ) override;

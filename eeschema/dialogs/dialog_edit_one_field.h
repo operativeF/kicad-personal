@@ -117,8 +117,6 @@ public:
     DIALOG_LIB_EDIT_ONE_FIELD( SCH_BASE_FRAME* aParent, const wxString& aTitle,
                                const LIB_FIELD* aField );
 
-    ~DIALOG_LIB_EDIT_ONE_FIELD() {}
-
     void UpdateField( LIB_FIELD* aField )
     {
         aField->SetText( m_text );
@@ -144,8 +142,6 @@ class DIALOG_SCH_EDIT_ONE_FIELD : public DIALOG_EDIT_ONE_FIELD
 public:
     DIALOG_SCH_EDIT_ONE_FIELD( SCH_BASE_FRAME* aParent, const wxString& aTitle,
                                const SCH_FIELD* aField );
-
-    ~DIALOG_SCH_EDIT_ONE_FIELD() {}
 
     void UpdateField( SCH_FIELD* aField, SCH_SHEET_PATH* aSheetPath );
 };

@@ -64,7 +64,6 @@ private:
 
 public:
     DIALOG_CONFIG_EQUFILES( CVPCB_MAINFRAME* parent );
-    ~DIALOG_CONFIG_EQUFILES() {};
 };
 
 #endif      // _DIALOG_CONFIG_EQUFILES_H_

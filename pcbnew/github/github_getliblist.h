@@ -83,7 +83,6 @@ public:
     // -----</API>---------------------------------------------------------
 
     GITHUB_GETLIBLIST( const wxString& aRepoURL );
-    ~GITHUB_GETLIBLIST() {}
 
 protected:
 

@@ -46,8 +46,8 @@ private:
     int    m_buttonTable[int(GERBER_DRAWLAYERS_COUNT)+1];       // Indexes buttons to Gerber layers
     wxStaticText* m_layersList[int(GERBER_DRAWLAYERS_COUNT)+1]; // Indexes text strings to buttons
 
-public: LAYERS_MAP_DIALOG( GERBVIEW_FRAME* parent );
-    ~LAYERS_MAP_DIALOG() {};
+public: 
+    LAYERS_MAP_DIALOG( GERBVIEW_FRAME* parent );
 
     LAYER_NUM * GetLayersLookUpTable() { return m_layersLookUpTable; }
     static int GetCopperLayersCount() { return m_exportBoardCopperLayersCount; }

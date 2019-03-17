@@ -46,11 +46,6 @@ LIBRARY_LISTBOX::LIBRARY_LISTBOX( CVPCB_MAINFRAME* parent, wxWindowID id,
 }
 
 
-LIBRARY_LISTBOX::~LIBRARY_LISTBOX()
-{
-}
-
-
 int LIBRARY_LISTBOX::GetCount()
 {
     return m_libraryList.Count();

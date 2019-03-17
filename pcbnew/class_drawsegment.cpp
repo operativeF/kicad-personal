@@ -50,12 +50,6 @@ DRAWSEGMENT::DRAWSEGMENT( BOARD_ITEM* aParent, KICAD_T idtype ) :
     m_Width = Millimeter2iu( DEFAULT_LINE_WIDTH );
 }
 
-
-DRAWSEGMENT::~DRAWSEGMENT()
-{
-}
-
-
 void DRAWSEGMENT::SetPosition( const wxPoint& aPos )
 {
     m_Start = aPos;

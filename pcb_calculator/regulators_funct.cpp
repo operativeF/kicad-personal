@@ -42,8 +42,6 @@ public:
         UpdateDialog();
     }
 
-    ~DIALOG_EDITOR_DATA() {};
-
     // Event called functions:
     void OnOKClick( wxCommandEvent& event ) override;
 

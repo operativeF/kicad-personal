@@ -59,11 +59,6 @@ namespace UTIL {
         }
 
 
-        OBSERVABLE_BASE::IMPL::~IMPL()
-        {
-        }
-
-
         void OBSERVABLE_BASE::IMPL::enter_iteration()
         {
             ++iteration_count_;

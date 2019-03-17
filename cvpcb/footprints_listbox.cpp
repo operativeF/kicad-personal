@@ -46,11 +46,6 @@ FOOTPRINTS_LISTBOX::FOOTPRINTS_LISTBOX( CVPCB_MAINFRAME* parent,
 }
 
 
-FOOTPRINTS_LISTBOX::~FOOTPRINTS_LISTBOX()
-{
-}
-
-
 int FOOTPRINTS_LISTBOX::GetCount()
 {
     return m_footprintList.Count();

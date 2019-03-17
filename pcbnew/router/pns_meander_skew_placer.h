@@ -40,7 +40,6 @@ class MEANDER_SKEW_PLACER : public MEANDER_PLACER
 {
 public:
     MEANDER_SKEW_PLACER( ROUTER* aRouter );
-    ~MEANDER_SKEW_PLACER();
 
     /// @copydoc PLACEMENT_ALGO::Start()
     bool Start( const VECTOR2I& aP, ITEM* aStartItem ) override;

@@ -69,11 +69,6 @@ GRID_HELPER::GRID_HELPER( PCB_BASE_FRAME* aFrame ) :
 }
 
 
-GRID_HELPER::~GRID_HELPER()
-{
-}
-
-
 void GRID_HELPER::SetGrid( int aSize )
 {
     assert( false );

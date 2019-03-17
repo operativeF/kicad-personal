@@ -29,7 +29,6 @@ class ZOOM_TOOL : public TOOL_INTERACTIVE
 {
 public:
     ZOOM_TOOL();
-    ~ZOOM_TOOL();
 
     /// @copydoc TOOL_BASE::Reset()
     void Reset( RESET_REASON aReason ) override;

@@ -40,7 +40,6 @@ class MODULE_EDITOR_TOOLS : public PCB_TOOL_BASE
 {
 public:
     MODULE_EDITOR_TOOLS();
-    ~MODULE_EDITOR_TOOLS() override;
 
     /// @copydoc TOOL_INTERACTIVE::Reset()
     void Reset( RESET_REASON aReason ) override;

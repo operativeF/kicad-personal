@@ -55,8 +55,6 @@ public:
         m_cornerCost( aB.m_cornerCost )
     {}
 
-    ~COST_ESTIMATOR() {};
-
     static int CornerCost( const SEG& aA, const SEG& aB );
     static int CornerCost( const SHAPE_LINE_CHAIN& aLine );
     static int CornerCost( const LINE& aLine );
@@ -99,7 +97,6 @@ public:
     };
 
     OPTIMIZER( NODE* aWorld );
-    ~OPTIMIZER();
 
     ///> a quick shortcut to optmize a line without creating and setting up an optimizer
     static bool Optimize( LINE* aLine, int aEffortLevel, NODE* aWorld);

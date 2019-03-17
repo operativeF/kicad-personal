@@ -86,8 +86,6 @@ public:
      */
     NETCLASS( const wxString& aName );
 
-    ~NETCLASS();
-
     wxString GetClass() const
     {
         return wxT( "NETCLASS" );
@@ -233,7 +231,6 @@ private:
 
 public:
     NETCLASSES();
-    ~NETCLASSES();
 
     /**
      * Function Clear

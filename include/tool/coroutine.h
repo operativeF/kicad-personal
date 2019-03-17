@@ -204,10 +204,6 @@ public:
     {
     }
 
-    ~COROUTINE()
-    {
-    }
-
 public:
     /**
      * Function KiYield()

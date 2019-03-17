@@ -70,11 +70,6 @@ DRAWING_TOOL::DRAWING_TOOL() :
 }
 
 
-DRAWING_TOOL::~DRAWING_TOOL()
-{
-}
-
-
 bool DRAWING_TOOL::Init()
 {
     auto activeToolFunctor = [ this ] ( const SELECTION& aSel ) {

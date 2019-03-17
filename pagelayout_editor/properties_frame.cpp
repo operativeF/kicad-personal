@@ -46,11 +46,6 @@ PROPERTIES_FRAME::PROPERTIES_FRAME( PL_EDITOR_FRAME* aParent ):
 }
 
 
-PROPERTIES_FRAME::~PROPERTIES_FRAME()
-{
-}
-
-
 void PROPERTIES_FRAME::OnPageChanged( wxNotebookEvent& event )
 {
     if( event.GetSelection() == 0 )

@@ -63,11 +63,6 @@ LIB_FIELD::LIB_FIELD( int aID, wxString& aName ) :
 }
 
 
-LIB_FIELD::~LIB_FIELD()
-{
-}
-
-
 LIB_FIELD& LIB_FIELD::operator=( const LIB_FIELD& field )
 {
     m_id = field.m_id;

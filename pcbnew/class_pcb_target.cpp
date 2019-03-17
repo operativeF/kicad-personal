@@ -64,11 +64,6 @@ PCB_TARGET::PCB_TARGET( BOARD_ITEM* aParent, int aShape, PCB_LAYER_ID aLayer,
 }
 
 
-PCB_TARGET::~PCB_TARGET()
-{
-}
-
-
 /* Print PCB_TARGET object: 2 segments + 1 circle
  * The circle radius is half the radius of the target
  * 2 lines have length the diameter of the target

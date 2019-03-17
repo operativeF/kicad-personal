@@ -52,11 +52,6 @@ CBBOX::CBBOX( const SFVEC3F &aPbMin, const SFVEC3F &aPbMax )
 }
 
 
-CBBOX::~CBBOX()
-{
-}
-
-
 void CBBOX::Set( const SFVEC3F &aPoint )
 {
     m_min = aPoint;

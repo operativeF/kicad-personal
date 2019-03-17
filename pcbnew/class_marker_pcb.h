@@ -72,8 +72,6 @@ public:
                 const wxString& aText, const wxPoint& aPos,
                 const wxString& bText = wxEmptyString, const wxPoint& bPos = wxPoint() );
 
-    ~MARKER_PCB();
-
     static inline bool ClassOf( const EDA_ITEM* aItem )
     {
         return aItem && PCB_MARKER_T == aItem->Type();

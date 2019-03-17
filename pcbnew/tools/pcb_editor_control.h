@@ -43,7 +43,6 @@ class PCB_EDITOR_CONTROL : public wxEvtHandler, public PCB_TOOL_BASE
 {
 public:
     PCB_EDITOR_CONTROL();
-    ~PCB_EDITOR_CONTROL();
 
     /// @copydoc TOOL_INTERACTIVE::Reset()
     void Reset( RESET_REASON aReason ) override;

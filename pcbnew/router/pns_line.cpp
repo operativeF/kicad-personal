@@ -50,11 +50,6 @@ LINE::LINE( const LINE& aOther ) :
 }
 
 
-LINE::~LINE()
-{
-}
-
-
 LINE& LINE::operator=( const LINE& aOther )
 {
     m_line = aOther.m_line;

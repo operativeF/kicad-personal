@@ -70,11 +70,6 @@ DXF_IMPORT_PLUGIN::DXF_IMPORT_PLUGIN() : DL_CreationAdapter()
 }
 
 
-DXF_IMPORT_PLUGIN::~DXF_IMPORT_PLUGIN()
-{
-}
-
-
 bool DXF_IMPORT_PLUGIN::Load( const wxString& aFileName )
 {
     return ImportDxfFile( aFileName );

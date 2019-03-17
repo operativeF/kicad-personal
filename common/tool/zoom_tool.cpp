@@ -35,9 +35,6 @@ ZOOM_TOOL::ZOOM_TOOL() :
 }
 
 
-ZOOM_TOOL::~ZOOM_TOOL() {}
-
-
 void ZOOM_TOOL::Reset( RESET_REASON aReason )
 {
     m_frame = getEditFrame<EDA_DRAW_FRAME>();

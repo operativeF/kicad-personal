@@ -130,10 +130,6 @@ PAD_TOOL::PAD_TOOL() :
 {}
 
 
-PAD_TOOL::~PAD_TOOL()
-{}
-
-
 void PAD_TOOL::Reset( RESET_REASON aReason )
 {
     m_padCopied = false;

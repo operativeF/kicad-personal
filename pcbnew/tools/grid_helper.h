@@ -41,7 +41,6 @@ class GRID_HELPER {
 public:
 
     GRID_HELPER( PCB_BASE_FRAME* aFrame );
-    ~GRID_HELPER();
 
     void SetGrid( int aSize );
     void SetOrigin( const VECTOR2I& aOrigin );

@@ -48,8 +48,6 @@ public:
         m_viaType( VIA_THROUGH )
     {};
 
-    ~SIZES_SETTINGS() {};
-
     void Init( BOARD* aBoard, ITEM* aStartItem = NULL, int aNet = -1 );
     void ImportCurrent( BOARD_DESIGN_SETTINGS& aSettings );
 

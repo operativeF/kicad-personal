@@ -50,7 +50,6 @@ class DRAWING_TOOL : public PCB_TOOL_BASE
 {
 public:
     DRAWING_TOOL();
-    ~DRAWING_TOOL();
 
     /// @copydoc TOOL_INTERACTIVE::Init()
     bool Init() override;

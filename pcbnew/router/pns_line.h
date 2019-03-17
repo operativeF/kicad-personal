@@ -105,8 +105,6 @@ public:
         m_rank = aVia.Rank();
     }
 
-    ~LINE();
-
     static inline bool ClassOf( const ITEM* aItem )
     {
         return aItem && LINE_T == aItem->Kind();

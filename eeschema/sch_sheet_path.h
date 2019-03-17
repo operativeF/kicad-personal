@@ -394,8 +394,6 @@ public:
      */
     SCH_SHEET_LIST( SCH_SHEET* aSheet = NULL );
 
-    ~SCH_SHEET_LIST() {}
-
     /**
      * Function GetSheetByPath
      * returns a sheet matching the path name in \a aPath.

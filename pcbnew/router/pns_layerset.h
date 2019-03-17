@@ -56,8 +56,6 @@ public:
         m_end( aB.m_end )
     {}
 
-    ~LAYER_RANGE() {};
-
     LAYER_RANGE& operator=( const LAYER_RANGE& aB )
     {
         m_start = aB.m_start;

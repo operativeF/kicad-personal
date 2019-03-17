@@ -32,10 +32,6 @@ TIME_LIMIT::TIME_LIMIT( int aMilliseconds ) :
 }
 
 
-TIME_LIMIT::~TIME_LIMIT()
-{}
-
-
 bool TIME_LIMIT::Expired() const
 {
     return ( wxGetLocalTimeMillis().GetValue() - m_startTics ) >= m_limitMs;

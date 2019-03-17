@@ -399,11 +399,6 @@ CN_CLUSTER::CN_CLUSTER()
 }
 
 
-CN_CLUSTER::~CN_CLUSTER()
-{
-}
-
-
 wxString CN_CLUSTER::OriginNetName() const
 {
     if( !m_originPad || !m_originPad->Valid() )

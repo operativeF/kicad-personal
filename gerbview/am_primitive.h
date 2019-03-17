@@ -104,8 +104,6 @@ public: AM_PRIMITIVE( bool aGerbMetric, AM_PRIMITIVE_ID aId = AMP_UNKNOWN )
     }
 
 
-    ~AM_PRIMITIVE() {}
-
     /**
      * Function IsAMPrimitiveExposureOn
      * @return true if the first parameter is not 0 (it can be only 0 or 1).

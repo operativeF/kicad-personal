@@ -80,19 +80,9 @@ void NETCLASS::SetParams( const NETCLASS& aDefaults )
 }
 
 
-NETCLASS::~NETCLASS()
-{
-}
-
-
 NETCLASSES::NETCLASSES()
 {
     m_default = std::make_shared<NETCLASS>( NETCLASS::Default );
-}
-
-
-NETCLASSES::~NETCLASSES()
-{
 }
 
 

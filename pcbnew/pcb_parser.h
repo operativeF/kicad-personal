@@ -320,8 +320,6 @@ public:
         init();
     }
 
-    // ~PCB_PARSER() {}
-
     /**
      * Function SetLineReader
      * sets @a aLineReader into the parser, and returns the previous one, if any.

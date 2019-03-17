@@ -38,7 +38,6 @@ class MICROWAVE_TOOL : public PCB_TOOL_BASE
 {
 public:
     MICROWAVE_TOOL();
-    ~MICROWAVE_TOOL();
 
     ///> React to model/view changes
     void Reset( RESET_REASON aReason ) override;

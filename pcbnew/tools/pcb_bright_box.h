@@ -35,7 +35,6 @@ class PCB_BRIGHT_BOX : public BRIGHT_BOX
 {
 public:
     PCB_BRIGHT_BOX();
-    ~PCB_BRIGHT_BOX() {}
 
     void ViewDraw( int aLayer, KIGFX::VIEW* aView ) const override;
 

@@ -69,11 +69,6 @@ TEXTE_MODULE::TEXTE_MODULE( MODULE* parent, TEXT_TYPE text_type ) :
 }
 
 
-TEXTE_MODULE::~TEXTE_MODULE()
-{
-}
-
-
 void TEXTE_MODULE::SetTextAngle( double aAngle )
 {
     EDA_TEXT::SetTextAngle( NormalizeAngle360Min( aAngle ) );

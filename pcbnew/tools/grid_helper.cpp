@@ -69,11 +69,6 @@ GRID_HELPER::GRID_HELPER( PCB_BASE_FRAME* aFrame ) :
 }
 
 
-GRID_HELPER::~GRID_HELPER()
-{
-}
-
-
 VECTOR2I GRID_HELPER::GetGrid() const
 {
     PCB_SCREEN* screen = m_frame->GetScreen();

@@ -53,11 +53,6 @@ DIMENSION::DIMENSION( BOARD_ITEM* aParent ) :
 }
 
 
-DIMENSION::~DIMENSION()
-{
-}
-
-
 void DIMENSION::SetPosition( const wxPoint& aPos )
 {
     m_Text.SetTextPos( aPos );

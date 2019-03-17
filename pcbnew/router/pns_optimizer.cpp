@@ -133,11 +133,6 @@ OPTIMIZER::OPTIMIZER( NODE* aWorld ) :
 }
 
 
-OPTIMIZER::~OPTIMIZER()
-{
-}
-
-
 struct OPTIMIZER::CACHE_VISITOR
 {
     CACHE_VISITOR( const ITEM* aOurItem, NODE* aNode, int aMask ) :
@@ -233,9 +228,6 @@ void OPTIMIZER::ClearCache( bool aStaticOnly  )
 class LINE_RESTRICTIONS
 {
     public:
-        LINE_RESTRICTIONS() {};
-        ~LINE_RESTRICTIONS() {};
-
         void Build( NODE* aWorld, LINE* aOriginLine, const SHAPE_LINE_CHAIN& aLine, const BOX2I& aRestrictedArea, bool aRestrictedAreaEnable );
         bool Check ( int aVertex1, int aVertex2, const SHAPE_LINE_CHAIN& aReplacement );
         void Dump();

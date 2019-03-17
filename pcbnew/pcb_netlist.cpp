@@ -26,6 +26,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
  */
 
+#include <algorithm>
 
 #include <macros.h>
 #include <refdes_utils.h>
@@ -63,10 +64,13 @@ COMPONENT_NET COMPONENT::m_emptyNet;
 
 const COMPONENT_NET& COMPONENT::GetNet( const wxString& aPinName )
 {
-    for( unsigned i = 0;  i < m_nets.size();  i++ )
+    auto net = std::find_if(m_nets.begin(), m_nets.end(), [&aPinName](auto& aNet){
+        return aNet.GetPinName() == aPinName;
+    });
+
+    if(net != m_nets.end())
     {
-        if( m_nets[i].GetPinName() == aPinName )
-            return m_nets[i];
+        return *net;
     }
 
     return m_emptyNet;
@@ -160,18 +164,16 @@ COMPONENT* NETLIST::GetComponentByReference( const wxString& aReference )
 
 COMPONENT* NETLIST::GetComponentByTimeStamp( const wxString& aTimeStamp )
 {
-    COMPONENT* component = NULL;
+    auto comp = std::find_if(m_components.begin(), m_components.end(), [&aTimeStamp](auto& aComp){
+        return aComp.GetTimeStamp() == aTimeStamp;
+    });
 
-    for( unsigned i = 0;  i < m_components.size();  i++ )
+    if(comp != m_components.end())
     {
-        if( m_components[i].GetTimeStamp() == aTimeStamp )
-        {
-            component = &m_components[i];
-            break;
-        }
+        return &(*comp);
     }
 
-    return component;
+    return nullptr;
 }
 
 
@@ -209,24 +211,17 @@ void NETLIST::SortByReference()
 
 bool NETLIST::AnyFootprintsLinked() const
 {
-    for( unsigned i = 0;  i < m_components.size();  i++ )
-    {
-        if( !m_components[i].GetFPID().empty() )
-            return true;
-    }
-
-    return false;
+    return std::any_of(m_components.begin(), m_components.end(),[](auto& aComp){
+        return !aComp.GetFPID().empty();
+    });
 }
 
 
 bool NETLIST::AllFootprintsLinked() const
 {
-    for( unsigned i = 0;  i < m_components.size();  i++ )
-    {
-        if( m_components[i].GetFPID().empty() )
-            return false;
-    }
 
-    return true;
+    return std::none_of(m_components.begin(), m_components.end(), [](auto& aComp){
+        return aComp.GetFPID().empty();
+    });
 }
 

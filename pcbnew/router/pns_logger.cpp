@@ -40,11 +40,6 @@ LOGGER::LOGGER( )
 }
 
 
-LOGGER::~LOGGER()
-{
-}
-
-
 void LOGGER::Clear()
 {
     m_theLog.str( std::string() );

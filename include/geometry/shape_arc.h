@@ -52,8 +52,6 @@ public:
         m_width = aOther.m_width;
     }
 
-    ~SHAPE_ARC() {}
-
     SHAPE* Clone() const override
     {
         return new SHAPE_ARC( *this );

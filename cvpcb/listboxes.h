@@ -49,8 +49,6 @@ public:
                         const wxPoint& aLocation, const wxSize& aSize,
                         long aStyle = 0 );
 
-    ~ITEMS_LISTBOX_BASE();
-
     /**
      * @return the index of the selected item in lists allowing only one item selected
      * and the index of the first selected item in lists allowing many selection
@@ -106,7 +104,6 @@ public:
 
     FOOTPRINTS_LISTBOX( CVPCB_MAINFRAME* parent, wxWindowID id,
                         const wxPoint& loc, const wxSize& size );
-    ~FOOTPRINTS_LISTBOX();
 
     int      GetCount();
     void     SetSelection( int index, bool State = true );
@@ -157,7 +154,6 @@ class LIBRARY_LISTBOX : public ITEMS_LISTBOX_BASE
 public:
     LIBRARY_LISTBOX( CVPCB_MAINFRAME* parent, wxWindowID id,
                      const wxPoint& loc, const wxSize& size );
-    ~LIBRARY_LISTBOX();
 
     int      GetCount();
     void     SetSelection( int index, bool State = true );
@@ -203,8 +199,6 @@ public:
 
     COMPONENTS_LISTBOX( CVPCB_MAINFRAME* parent, wxWindowID id,
                         const wxPoint& loc, const wxSize& size );
-
-    ~COMPONENTS_LISTBOX();
 
     void     Clear();
     int      GetCount();

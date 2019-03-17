@@ -100,10 +100,9 @@ public:
     typedef wxObjectDataPtr<LIB_TREE_MODEL_ADAPTER> PTR;
 
     /**
-     * Destructor. Do NOT delete this class manually; it is reference-counted
+     * Do NOT delete this class manually; it is reference-counted
      * by wxObject.
      */
-    ~LIB_TREE_MODEL_ADAPTER();
 
     /**
      * This enum allows a selective filtering of components to list

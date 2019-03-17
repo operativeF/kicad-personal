@@ -55,8 +55,6 @@ public:
         m_forceCw = false;
     }
 
-    ~WALKAROUND() {};
-
     enum WALKAROUND_STATUS
     {
         IN_PROGRESS = 0,

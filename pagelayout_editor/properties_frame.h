@@ -44,7 +44,6 @@ class PROPERTIES_FRAME : public PANEL_PROPERTIES_BASE
 
 public:
     PROPERTIES_FRAME( PL_EDITOR_FRAME* aParent );
-    ~PROPERTIES_FRAME();
 
     // Event functions
     void OnPageChanged( wxNotebookEvent& event ) override;

@@ -35,7 +35,7 @@ class PCBNEW_PICKER_TOOL : public PCB_TOOL_BASE
 {
 public:
     PCBNEW_PICKER_TOOL();
-    ~PCBNEW_PICKER_TOOL() override { }
+    ~PCBNEW_PICKER_TOOL() override {}
 
     ///> Event handler types.
     typedef std::function<bool(const VECTOR2D&)> CLICK_HANDLER;

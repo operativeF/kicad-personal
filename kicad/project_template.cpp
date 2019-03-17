@@ -99,12 +99,6 @@ wxString PROJECT_TEMPLATE::GetPrjDirName()
 }
 
 
-PROJECT_TEMPLATE::~PROJECT_TEMPLATE()
-{
-
-}
-
-
 wxFileName PROJECT_TEMPLATE::GetHtmlFile()
 {
     return m_metaHtmlFile;

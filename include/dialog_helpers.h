@@ -74,8 +74,6 @@ public:
                      void* aCallBackFunctionData = NULL,
                      bool aSortList = false, bool aShowHeaders = true );
 
-    // ~EDA_LIST_DIALOG() {}
-
     void     SetFilterHint( const wxString& aHint );
     void     SetListLabel( const wxString& aLabel );
     void     SetOKLabel( const wxString& aLabel );

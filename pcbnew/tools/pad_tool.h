@@ -38,7 +38,6 @@ class PAD_TOOL : public PCB_TOOL_BASE
 {
 public:
     PAD_TOOL();
-    ~PAD_TOOL();
 
     ///> React to model/view changes
     void Reset( RESET_REASON aReason ) override;

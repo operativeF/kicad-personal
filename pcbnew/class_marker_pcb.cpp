@@ -70,11 +70,6 @@ MARKER_PCB::MARKER_PCB( int aErrorCode, const wxPoint& aMarkerPos,
 }
 
 
-/* destructor */
-MARKER_PCB::~MARKER_PCB()
-{
-}
-
 /* tests to see if this object is on the given layer.
  * DRC markers are not really on a copper layer, but
  * MARKER_PCB::IsOnCopperLayer return true if aLayer is a cooper layer,

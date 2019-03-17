@@ -44,11 +44,6 @@ ITEMS_LISTBOX_BASE::ITEMS_LISTBOX_BASE( CVPCB_MAINFRAME* aParent, wxWindowID aId
 }
 
 
-ITEMS_LISTBOX_BASE::~ITEMS_LISTBOX_BASE()
-{
-}
-
-
 void ITEMS_LISTBOX_BASE::UpdateWidth( int aLine )
 {
     // Less than zero: recalculate width of all items.

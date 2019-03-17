@@ -151,9 +151,7 @@ public: EXCELLON_IMAGE( int layer ) :
         m_SlotOn = false;
         m_RouteModeOn = false;
     }
-
-
-    ~EXCELLON_IMAGE() {};
+    
 
     virtual void ResetDefaultValues() override
     {

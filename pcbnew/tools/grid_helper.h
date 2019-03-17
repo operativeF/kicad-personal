@@ -38,7 +38,6 @@ class GRID_HELPER {
 public:
 
     GRID_HELPER( PCB_BASE_FRAME* aFrame );
-    ~GRID_HELPER();
 
     VECTOR2I GetGrid() const;
     VECTOR2I GetOrigin() const;

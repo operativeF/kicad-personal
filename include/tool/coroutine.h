@@ -151,12 +151,12 @@ public:
         m_stacksize = ADVANCED_CFG::GetCfg().m_coroutineStackSize;
     }
 
+#ifdef KICAD_USE_VALGRIND
     ~COROUTINE()
     {
-#ifdef KICAD_USE_VALGRIND
         VALGRIND_STACK_DEREGISTER( valgrind_stack );
-#endif
     }
+#endif
 
 public:
     /**

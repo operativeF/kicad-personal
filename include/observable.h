@@ -58,7 +58,6 @@ namespace UTIL {
                 IMPL( OBSERVABLE_BASE* owned_by = nullptr );
                 bool is_shared() const;
                 void set_shared();
-                ~IMPL();
 
                 void add_observer( void* observer );
                 void remove_observer( void* observer );

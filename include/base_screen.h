@@ -140,7 +140,6 @@ public:
 
 public:
     BASE_SCREEN( KICAD_T aType = SCREEN_T );
-    ~BASE_SCREEN() override { }
 
     void InitDataPoints( const wxSize& aPageSizeInternalUnits );
 

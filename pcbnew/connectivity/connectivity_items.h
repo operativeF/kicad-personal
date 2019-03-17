@@ -492,7 +492,6 @@ private:
 
 public:
     CN_CLUSTER();
-    ~CN_CLUSTER();
 
     bool HasValidNet() const
     {

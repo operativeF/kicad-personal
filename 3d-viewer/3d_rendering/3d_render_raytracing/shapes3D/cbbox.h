@@ -63,9 +63,6 @@ public:
      */
     CBBOX( const SFVEC3F &aPbMin, const SFVEC3F &aPbMax );
 
-    ~CBBOX();
-
-
     /**
      * Function Set
      * Set bounding box with new parameters

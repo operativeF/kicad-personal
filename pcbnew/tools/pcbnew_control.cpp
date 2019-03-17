@@ -73,11 +73,6 @@ PCBNEW_CONTROL::PCBNEW_CONTROL() :
 }
 
 
-PCBNEW_CONTROL::~PCBNEW_CONTROL()
-{
-}
-
-
 void PCBNEW_CONTROL::Reset( RESET_REASON aReason )
 {
     m_frame = getEditFrame<PCB_BASE_FRAME>();

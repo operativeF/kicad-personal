@@ -161,11 +161,6 @@ public:
     PROJECT_TEMPLATE( const wxString& aPath );
 
     /**
-     * Non-virtual destructor (so no derived classes)
-     */
-    ~PROJECT_TEMPLATE();
-
-    /**
      * Get the dir name of the project template (i.e. the name of the last folder containing
      * the template files)
      *

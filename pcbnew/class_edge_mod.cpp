@@ -61,11 +61,6 @@ EDGE_MODULE::EDGE_MODULE( MODULE* parent, STROKE_T aShape ) :
 }
 
 
-EDGE_MODULE::~EDGE_MODULE()
-{
-}
-
-
 void EDGE_MODULE::SetLocalCoord()
 {
     MODULE* module = (MODULE*) m_Parent;

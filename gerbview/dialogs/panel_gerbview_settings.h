@@ -36,7 +36,6 @@ private:
 
 public:
     PANEL_GERBVIEW_SETTINGS( GERBVIEW_FRAME* aFrame, wxWindow* aWindow );
-    ~PANEL_GERBVIEW_SETTINGS() {};
 
 private:
     bool TransferDataToWindow() override;

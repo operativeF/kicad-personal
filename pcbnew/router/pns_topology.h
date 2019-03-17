@@ -44,8 +44,6 @@ public:
     TOPOLOGY( NODE* aNode ):
         m_world( aNode ) {};
 
-    ~TOPOLOGY() {};
-
     bool SimplifyLine( LINE *aLine );
     ITEM* NearestUnconnectedItem( JOINT* aStart, int* aAnchor = NULL, int aKindMask = ITEM::ANY_T );
     bool LeadingRatLine( const LINE* aTrack, SHAPE_LINE_CHAIN& aRatLine );

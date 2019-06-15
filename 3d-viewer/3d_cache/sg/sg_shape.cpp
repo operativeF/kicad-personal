@@ -26,6 +26,13 @@
 #include <sstream>
 #include <wx/log.h>
 
+#define GLM_FORCE_INLINE
+
+#define GLM_FORCE_RADIANS
+
+#include <glm/vec4.hpp>
+#include <glm/mat4x4.hpp>
+
 #include "3d_cache/sg/sg_shape.h"
 #include "3d_cache/sg/sg_faceset.h"
 #include "3d_cache/sg/sg_appearance.h"

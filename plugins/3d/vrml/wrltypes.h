@@ -32,7 +32,10 @@
 
 #define GLM_FORCE_INLINE
 #define GLM_FORCE_RADIANS
-#include <glm/glm.hpp>
+
+#include <glm/vec2.hpp>
+#include <glm/vec3.hpp>
+#include <glm/vec4.hpp>
 
 // log mask for wxLogTrace
 #define MASK_VRML "PLUGIN_VRML"
@@ -182,8 +185,8 @@ enum WRL2NODES
 };
 
 
-typedef glm::vec2 WRLVEC2F;
-typedef glm::vec3 WRLVEC3F;
-typedef glm::vec4 WRLROTATION;
+using WRLVEC2F      = glm::vec2;
+using WRLVEC3F      = glm::vec3;
+using WRLROTATION   = glm::vec4;
 
 #endif  // WRLTYPES_H

@@ -38,6 +38,7 @@
 #include <wx/dcclient.h>
 #include <base_units.h>
 #include <gl_context_mgr.h>
+#include <glm/gtc/type_ptr.hpp>
 
 /**
   * Scale convertion from 3d model units to pcb units

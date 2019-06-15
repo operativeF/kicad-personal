@@ -36,6 +36,8 @@
 #include <class_module.h>
 #include <3d_math.h>
 
+#include <glm/gtc/type_ptr.hpp>
+
 #include <base_units.h>
 
 /**

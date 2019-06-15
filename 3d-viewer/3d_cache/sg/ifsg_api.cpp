@@ -24,6 +24,14 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+
+#define GLM_FORCE_INLINE
+
+#define GLM_FORCE_RADIANS
+
+#include <glm/geometric.hpp>
+#include <glm/vec3.hpp>
+
 #include <wx/filename.h>
 #include <wx/log.h>
 #include "plugins/3dapi/ifsg_api.h"

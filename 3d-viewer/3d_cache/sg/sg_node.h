@@ -35,7 +35,6 @@
 #include <list>
 #include <vector>
 #include <map>
-#include <glm/glm.hpp>
 
 #include "plugins/3dapi/c3dmodel.h"
 #include "plugins/3dapi/sg_base.h"

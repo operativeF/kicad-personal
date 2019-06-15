@@ -29,6 +29,13 @@
 #include <utility>
 #include <wx/log.h>
 
+#define GLM_FORCE_INLINE
+
+#define GLM_FORCE_RADIANS
+
+#include <glm/vec3.hpp>
+#include <glm/geometric.hpp>
+
 #include "3d_cache/sg/sg_helpers.h"
 #include "3d_cache/sg/sg_node.h"
 

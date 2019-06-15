@@ -31,8 +31,6 @@
 #ifndef MODULE_H_
 #define MODULE_H_
 
-#include <deque>
-
 #include <board_item_container.h>
 #include <class_board_item.h>
 #include <collectors.h>

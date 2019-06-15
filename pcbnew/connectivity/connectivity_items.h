@@ -38,10 +38,8 @@
 #include <geometry/poly_grid_partition.h>
 
 #include <memory>
-#include <algorithm>
 #include <functional>
 #include <vector>
-#include <deque>
 #include <intrusive_list.h>
 
 #include <connectivity/connectivity_rtree.h>

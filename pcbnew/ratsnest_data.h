@@ -33,9 +33,9 @@
 #include <core/typeinfo.h>
 #include <math/box2.h>
 
-#include <deque>
-#include <unordered_set>
-#include <unordered_map>
+#include <list>
+#include <memory>
+#include <vector>
 
 #include <ttl/halfedge/hetriang.h>
 #include <ttl/halfedge/hetraits.h>

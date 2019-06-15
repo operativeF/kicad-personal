@@ -25,6 +25,7 @@
 #ifndef PCB_TOOL_BASE_H
 #define PCB_TOOL_BASE_H
 
+#include <memory>
 #include <string>
 
 #include <tool/tool_event.h>
@@ -35,7 +36,6 @@
 #include <pcb_view.h>
 #include <pcb_draw_panel_gal.h>
 
-#include <functional>
 #include <tool/tool_menu.h>
 
 /**

@@ -22,7 +22,9 @@
 #ifndef __ROUTER_PREVIEW_ITEM_H
 #define __ROUTER_PREVIEW_ITEM_H
 
+#if defined(DEBUG)
 #include <cstdio>
+#endif
 
 #include <view/view.h>
 #include <view/view_item.h>

@@ -34,8 +34,9 @@
 #define GLM_FORCE_INLINE
 
 #define GLM_FORCE_RADIANS
+#include <glm/mat4x4.hpp>
+#include <glm/vec3.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include <glm/glm.hpp>
 #include <gal/opengl/vertex_common.h>
 #include <gal/color4d.h>
 #include <stack>

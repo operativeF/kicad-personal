@@ -29,6 +29,7 @@
 
 #include "../common_ogl/openGL_includes.h"
 #include "../common_ogl/ogl_utils.h"
+#include <glm/gtc/type_ptr.hpp>
 #include "eda_3d_canvas.h"
 
 

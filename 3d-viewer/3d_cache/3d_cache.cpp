@@ -22,10 +22,6 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
  */
 
-#define GLM_FORCE_INLINE
-
-#define GLM_FORCE_RADIANS
-
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -44,9 +40,6 @@
 #else
 #include <boost/uuid/sha1.hpp>
 #endif
-
-#include <glm/glm.hpp>
-#include <glm/ext.hpp>
 
 #include "common.h"
 #include "3d_cache.h"

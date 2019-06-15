@@ -31,6 +31,8 @@
 
 #include <cmath>
 
+#include <glm/glm.hpp>
+
 using namespace KIGFX;
 
 

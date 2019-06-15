@@ -25,7 +25,8 @@
 #define GLM_FORCE_INLINE
 #define GLM_FORCE_RADIANS
 
-#include <glm/glm.hpp>
+#include <glm/vec3.hpp>
+#include <glm/geometric.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <cmath>
 

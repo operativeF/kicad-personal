@@ -36,20 +36,22 @@
 // Disable SIMD detection
 //#define GLM_FORCE_PURE
 
-#include <glm/glm.hpp>
-#include <glm/ext.hpp>
+#include <glm/vec2.hpp>
+#include <glm/vec3.hpp>
+#include <glm/vec4.hpp>
+#include <glm/gtc/type_precision.hpp>
 
-typedef glm::uvec2      SFVEC2UI;
-typedef glm::ivec2      SFVEC2I;
-typedef glm::u64vec2    SFVEC2UI64;
-typedef glm::i64vec2    SFVEC2I64;
-typedef glm::vec2       SFVEC2F;
-typedef glm::dvec2      SFVEC2D;
-typedef glm::vec3       SFVEC3F;
-typedef glm::dvec3      SFVEC3D;
-typedef glm::vec4       SFVEC4F;
-typedef glm::uvec3      SFVEC3UI;
-typedef glm::dvec3      SFVEC3D;
+using SFVEC2UI      = glm::uvec2;
+using SFVEC2I       = glm::ivec2;
+using SFVEC2UI64    = glm::u64vec2;
+using SFVEC2I64     = glm::i64vec2;
+using SFVEC2F       = glm::vec2;
+using SFVEC2D       = glm::dvec2;
+using SFVEC3F       = glm::vec3;
+using SFVEC3D       = glm::dvec3;
+using SFVEC4F       = glm::vec4;
+using SFVEC3UI      = glm::uvec3;
+using SFVEC3D       = glm::dvec3;
 
 #define CLASS_ALIGNMENT 16
 

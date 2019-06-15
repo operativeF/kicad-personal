@@ -662,32 +662,7 @@ void NETLIST_OBJECT_LIST::TestforNonOrphanLabel( unsigned aNetItemRef, unsigned 
 // A helper struct to compare NETLIST_OBJECT items by sheetpath and label texts
 // for a std::set<NETLIST_OBJECT*> container
 // the full text is "sheetpath+label" for local labels and "label" for global labels
-struct compare_labels
-{
-    bool operator() ( const NETLIST_OBJECT* lab1, const NETLIST_OBJECT* lab2 )
-    {
-        wxString str1 = lab1->m_SheetPath.Path() + lab1->m_Label;
-        wxString str2 = lab2->m_SheetPath.Path() + lab2->m_Label;
 
-        return str1.Cmp( str2 ) < 0;
-    }
-};
-
-struct compare_label_names
-{
-    bool operator() ( const NETLIST_OBJECT* lab1, const NETLIST_OBJECT* lab2 )
-    {
-        return lab1->m_Label.Cmp( lab2->m_Label ) < 0;
-    }
-};
-
-struct compare_paths
-{
-    bool operator() ( const NETLIST_OBJECT* lab1, const NETLIST_OBJECT* lab2 )
-    {
-        return lab1->m_SheetPath.Path().Cmp( lab2->m_SheetPath.Path() ) < 0;
-    }
-};
 
 // Helper functions to build the warning messages about Similar Labels:
 static int countIndenticalLabels( std::vector<NETLIST_OBJECT*>& aList, NETLIST_OBJECT* aRef );
@@ -702,7 +677,15 @@ void NETLIST_OBJECT_LIST::TestforSimilarLabels()
     // list of all labels (used the better item to build diag messages)
     std::vector<NETLIST_OBJECT*> fullLabelList;
     // list of all labels , each label appears only once (used to to detect similar labels)
-    std::set<NETLIST_OBJECT*, compare_labels> uniqueLabelList;
+
+	auto compare_labels = []( const NETLIST_OBJECT* lab1, const NETLIST_OBJECT* lab2 ) {
+        wxString str1 = lab1->m_SheetPath.Path() + lab1->m_Label;
+        wxString str2 = lab2->m_SheetPath.Path() + lab2->m_Label;
+
+        return str1.Cmp( str2 ) < 0;
+    };
+
+    std::set<NETLIST_OBJECT*, decltype( compare_labels )> uniqueLabelList;
     wxString msg;
 
     // Build a list of differents labels. If inside a given sheet there are
@@ -734,8 +717,13 @@ void NETLIST_OBJECT_LIST::TestforSimilarLabels()
         }
     }
 
+    auto compare_label_names = []( const NETLIST_OBJECT* lab1, const NETLIST_OBJECT* lab2 ) {
+        return lab1->m_Label.Cmp( lab2->m_Label ) < 0;
+    };
+
     // build global labels and compare
-    std::set<NETLIST_OBJECT*, compare_label_names> loc_labelList;
+    std::set<NETLIST_OBJECT*, decltype( compare_label_names )> loc_labelList;
+    std::set<NETLIST_OBJECT*>::const_iterator it;
 
     for( auto it = uniqueLabelList.begin(); it != uniqueLabelList.end(); ++it )
     {
@@ -764,8 +752,12 @@ void NETLIST_OBJECT_LIST::TestforSimilarLabels()
         }
     }
 
+	auto compare_paths = []( const NETLIST_OBJECT* lab1, const NETLIST_OBJECT* lab2 ) {
+        return lab1->m_SheetPath.Path().Cmp( lab2->m_SheetPath.Path() ) < 0;
+    };
+
     // Build paths list
-    std::set<NETLIST_OBJECT*, compare_paths> pathsList;
+    std::set<NETLIST_OBJECT*, decltype( compare_paths )> pathsList;
 
     for( auto it = uniqueLabelList.begin(); it != uniqueLabelList.end(); ++it )
         pathsList.insert( *it );

@@ -95,33 +95,33 @@ public:
      * returns the full path and name of the project.  This is the same as the
      * name of the *.pro file and will always be an absolute path.
      */
-    VTBL_ENTRY const wxString GetProjectFullName() const;
+    VTBL_ENTRY wxString GetProjectFullName() const;
 
     /**
      * Function GetProjectPath
      * returns the full path of the project.  This is the path
      * of the *.pro file and will always be an absolute path, ending by a dir separator.
      */
-    VTBL_ENTRY const wxString GetProjectPath() const;
+    VTBL_ENTRY wxString GetProjectPath() const;
 
     /**
      * Function GetProjectName
      * returns the short name of the project. This is the file name without
      * extension or path.
      */
-    VTBL_ENTRY const wxString GetProjectName() const;
+    VTBL_ENTRY wxString GetProjectName() const;
 
     /**
      * Function FootprintLibTblName
      * returns the path and filename of this project's fp-lib-table,
      * i.e. the project specific one, not the global one.
      */
-    VTBL_ENTRY const wxString FootprintLibTblName() const;
+    VTBL_ENTRY wxString FootprintLibTblName() const;
 
     /**
      * Return the path and file name of this projects symbol library table.
      */
-    VTBL_ENTRY const wxString SymbolLibTableName() const;
+    VTBL_ENTRY wxString SymbolLibTableName() const;
 
     /**
      * Function ConfigSave
@@ -250,7 +250,7 @@ public:
      * be an absolute path and filename.  This intends to overcome the now missing
      * chdir() into the project directory.
      */
-    VTBL_ENTRY const wxString AbsolutePath( const wxString& aFileName ) const;
+    VTBL_ENTRY wxString AbsolutePath( const wxString& aFileName ) const;
 
     /**
      * Return the table of footprint libraries. Requires an active Kiway as
@@ -324,7 +324,7 @@ private:
     /**
      * Return the full path and file name of the project specific library table \a aLibTableName..
      */
-    const wxString libTableName( const wxString& aLibTableName ) const;
+    wxString libTableName( const wxString& aLibTableName ) const;
 
     wxFileName      m_project_name;         ///< \<fullpath\>/\<basename\>.pro
     wxString        m_pro_date_and_time;

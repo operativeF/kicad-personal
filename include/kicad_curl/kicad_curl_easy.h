@@ -115,7 +115,7 @@ public:
      * @param aCode is CURL error code
      * @return const std::string - the corresponding error string for the given code
      */
-    const std::string GetErrorText( int aCode );
+    std::string GetErrorText( int aCode );
 
     /**
      * Function GetBuffer

@@ -65,13 +65,13 @@ public:
     NODE* CurrentNode( bool aLoopsRemoved = false ) const override;
 
     /// @copydoc PLACEMENT_ALGO::Traces()
-    const ITEM_SET Traces() override;
+    ITEM_SET Traces() override;
 
     /// @copydoc PLACEMENT_ALGO::CurrentEnd()
     const VECTOR2I& CurrentEnd() const override;
 
     /// @copydoc PLACEMENT_ALGO::CurrentNets()
-    const std::vector<int> CurrentNets() const override
+    std::vector<int> CurrentNets() const override
     {
         return std::vector<int> (1, m_originLine.Net() );
     }
@@ -80,7 +80,7 @@ public:
     int CurrentLayer() const override;
 
     /// @copydoc MEANDER_PLACER_BASE::TuningInfo()
-    virtual const wxString TuningInfo( EDA_UNITS_T aUnits ) const override;
+    virtual wxString TuningInfo( EDA_UNITS_T aUnits ) const override;
 
     /// @copydoc MEANDER_PLACER_BASE::TuningStatus()
     virtual TUNING_STATUS TuningStatus() const override;

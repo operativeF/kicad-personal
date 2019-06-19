@@ -120,7 +120,7 @@ wxPoint SCH_PIN::GetTransformedPosition() const
 }
 
 
-const EDA_RECT SCH_PIN::GetBoundingBox() const
+EDA_RECT SCH_PIN::GetBoundingBox() const
 {
     TRANSFORM t = GetParentComponent()->GetTransform();
     EDA_RECT  r = m_libPin->GetBoundingBox();

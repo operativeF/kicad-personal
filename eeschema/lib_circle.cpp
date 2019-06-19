@@ -213,7 +213,7 @@ void LIB_CIRCLE::print( wxDC* aDC, const wxPoint& aOffset, void* aData,
 }
 
 
-const EDA_RECT LIB_CIRCLE::GetBoundingBox() const
+EDA_RECT LIB_CIRCLE::GetBoundingBox() const
 {
     EDA_RECT rect;
     int radius = GetRadius();

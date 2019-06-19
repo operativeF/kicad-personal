@@ -455,7 +455,7 @@ MODULE* FP_LIB_TABLE::FootprintLoadWithOptionalNickname( const LIB_ID& aFootprin
 }
 
 
-const wxString FP_LIB_TABLE::GlobalPathEnvVariableName()
+wxString FP_LIB_TABLE::GlobalPathEnvVariableName()
 {
     return  "KISYSMOD";
 }

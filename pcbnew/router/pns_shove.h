@@ -80,7 +80,7 @@ public:
 
     NODE* CurrentNode();
 
-    const LINE NewHead() const;
+    LINE NewHead() const;
 
     void SetInitialLine( LINE& aInitial );
 

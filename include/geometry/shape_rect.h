@@ -70,7 +70,7 @@ public:
     }
 
     /// @copydoc SHAPE::BBox()
-    const BOX2I BBox( int aClearance = 0 ) const override
+    BOX2I BBox( int aClearance = 0 ) const override
     {
         BOX2I bbox( VECTOR2I( m_p0.x - aClearance,  m_p0.y - aClearance ),
                     VECTOR2I( m_w + 2 * aClearance, m_h + 2 * aClearance ) );

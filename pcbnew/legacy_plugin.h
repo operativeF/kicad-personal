@@ -70,12 +70,12 @@ public:
 
     //-----<PLUGIN API>---------------------------------------------------------
 
-    const wxString PluginName() const override
+    wxString PluginName() const override
     {
         return wxT( "KiCad-Legacy" );
     }
 
-    const wxString GetFileExtension() const override
+    wxString GetFileExtension() const override
     {
         return wxT( "brd" );
     }

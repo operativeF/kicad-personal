@@ -173,13 +173,13 @@ public:
 
     unsigned int GetPadCount( int aNet = -1 ) const;
 
-    const std::vector<TRACK*> GetConnectedTracks( const BOARD_CONNECTED_ITEM* aItem ) const;
+    std::vector<TRACK*> GetConnectedTracks( const BOARD_CONNECTED_ITEM* aItem ) const;
 
-    const std::vector<D_PAD*> GetConnectedPads( const BOARD_CONNECTED_ITEM* aItem ) const;
+    std::vector<D_PAD*> GetConnectedPads( const BOARD_CONNECTED_ITEM* aItem ) const;
 
-    const void GetConnectedPads( const BOARD_CONNECTED_ITEM* aItem, std::set<D_PAD*>* pads ) const;
+    void GetConnectedPads( const BOARD_CONNECTED_ITEM* aItem, std::set<D_PAD*>* pads ) const;
 
-    const std::vector<BOARD_CONNECTED_ITEM*> GetConnectedItems( const BOARD_CONNECTED_ITEM* aItem, const VECTOR2I& aAnchor, KICAD_T aTypes[] );
+    std::vector<BOARD_CONNECTED_ITEM*> GetConnectedItems( const BOARD_CONNECTED_ITEM* aItem, const VECTOR2I& aAnchor, KICAD_T aTypes[] );
 
     void GetUnconnectedEdges( std::vector<CN_EDGE>& aEdges ) const;
 
@@ -213,7 +213,7 @@ public:
      * @param aItem is the reference item to find other connected items.
      * @param aTypes allows one to filter by item types.
      */
-    const std::vector<BOARD_CONNECTED_ITEM*> GetConnectedItems( const BOARD_CONNECTED_ITEM* aItem,
+    std::vector<BOARD_CONNECTED_ITEM*> GetConnectedItems( const BOARD_CONNECTED_ITEM* aItem,
             const KICAD_T aTypes[], bool aIgnoreNetcodes = false ) const;
 
     /**
@@ -222,10 +222,10 @@ public:
      * @param aNetCode is the net code.
      * @param aTypes allows one to filter by item types.
      */
-    const std::vector<BOARD_CONNECTED_ITEM*> GetNetItems( int aNetCode,
+    std::vector<BOARD_CONNECTED_ITEM*> GetNetItems( int aNetCode,
             const KICAD_T aTypes[] ) const;
 
-    const std::vector<VECTOR2I> NearestUnconnectedTargets( const BOARD_CONNECTED_ITEM* aRef,
+    std::vector<VECTOR2I> NearestUnconnectedTargets( const BOARD_CONNECTED_ITEM* aRef,
             const VECTOR2I& aPos,
             int aMaxCount = -1 );
 
@@ -245,7 +245,7 @@ public:
     void SetProgressReporter( PROGRESS_REPORTER* aReporter );
 
 #ifndef SWIG
-    const std::vector<CN_EDGE> GetRatsnestForComponent( MODULE* aComponent, bool aSkipInternalConnections = false );
+    std::vector<CN_EDGE> GetRatsnestForComponent( MODULE* aComponent, bool aSkipInternalConnections = false );
 #endif
 
 private:

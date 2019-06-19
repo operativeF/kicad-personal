@@ -197,13 +197,13 @@ void KICAD_MANAGER_FRAME::SetProjectFileName( const wxString& aFullProjectProFil
 }
 
 
-const wxString KICAD_MANAGER_FRAME::GetProjectFileName()
+wxString KICAD_MANAGER_FRAME::GetProjectFileName()
 {
     return  Prj().GetProjectFullName();
 }
 
 
-const wxString KICAD_MANAGER_FRAME::SchFileName()
+wxString KICAD_MANAGER_FRAME::SchFileName()
 {
    wxFileName   fn( GetProjectFileName() );
 
@@ -212,7 +212,7 @@ const wxString KICAD_MANAGER_FRAME::SchFileName()
 }
 
 
-const wxString KICAD_MANAGER_FRAME::PcbFileName()
+wxString KICAD_MANAGER_FRAME::PcbFileName()
 {
    wxFileName   fn( GetProjectFileName() );
 
@@ -221,7 +221,7 @@ const wxString KICAD_MANAGER_FRAME::PcbFileName()
 }
 
 
-const wxString KICAD_MANAGER_FRAME::PcbLegacyFileName()
+wxString KICAD_MANAGER_FRAME::PcbLegacyFileName()
 {
    wxFileName   fn( GetProjectFileName() );
 

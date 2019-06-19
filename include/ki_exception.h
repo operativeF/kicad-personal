@@ -100,10 +100,10 @@ public:
     void init( const wxString& aProblem, const char* aThrowersFile,
         const char* aThrowersFunction, int aThrowersLineNumber );
 
-    virtual const wxString Problem() const;         ///< what was the problem?
-    virtual const wxString Where() const;           ///< where did the Problem() occur?
+    virtual wxString Problem() const;         ///< what was the problem?
+    virtual wxString Where() const;           ///< where did the Problem() occur?
 
-    virtual const wxString What() const;            ///< A composite of Problem() and Where()
+    virtual wxString What() const;            ///< A composite of Problem() and Where()
 
     virtual ~IO_ERROR() throw () {}
 

@@ -71,7 +71,7 @@ public:
     }
 
     /// @copydoc SHAPE::BBox()
-    const BOX2I BBox( int aClearance = 0 ) const override
+    BOX2I BBox( int aClearance = 0 ) const override
     {
         return m_points.BBox( aClearance );
     }

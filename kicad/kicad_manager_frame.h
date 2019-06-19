@@ -149,12 +149,12 @@ public:
     void InstallPreferences( PAGED_DIALOG* aParent, PANEL_HOTKEYS_EDITOR* aHotkeysPanel ) override;
 
     void SetProjectFileName( const wxString& aFullProjectProFileName );
-    const wxString GetProjectFileName();
+    wxString GetProjectFileName();
 
     // read only accessors
-    const wxString SchFileName();
-    const wxString PcbFileName();
-    const wxString PcbLegacyFileName();
+    wxString SchFileName();
+    wxString PcbFileName();
+    wxString PcbLegacyFileName();
 
     void ReCreateTreePrj();
 

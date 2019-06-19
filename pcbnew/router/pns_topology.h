@@ -48,12 +48,12 @@ public:
     ITEM* NearestUnconnectedItem( JOINT* aStart, int* aAnchor = NULL, int aKindMask = ITEM::ANY_T );
     bool LeadingRatLine( const LINE* aTrack, SHAPE_LINE_CHAIN& aRatLine );
 
-    const JOINT_SET ConnectedJoints( JOINT* aStart );
-    const ITEM_SET ConnectedItems( JOINT* aStart, int aKindMask = ITEM::ANY_T );
-    const ITEM_SET ConnectedItems( ITEM* aStart, int aKindMask = ITEM::ANY_T );
+    JOINT_SET ConnectedJoints( JOINT* aStart );
+    ITEM_SET ConnectedItems( JOINT* aStart, int aKindMask = ITEM::ANY_T );
+    ITEM_SET ConnectedItems( ITEM* aStart, int aKindMask = ITEM::ANY_T );
     int64_t ShortestConnectionLength( ITEM* aFrom, ITEM* aTo );
 
-    const ITEM_SET AssembleTrivialPath( ITEM* aStart );
+    ITEM_SET AssembleTrivialPath( ITEM* aStart );
     const DIFF_PAIR AssembleDiffPair( SEGMENT* aStart );
 
     int DpCoupledNet( int aNet );
@@ -61,7 +61,7 @@ public:
     const LINE DpCoupledLine( LINE* aLine );
     bool AssembleDiffPair( ITEM* aStart, DIFF_PAIR& aPair );
 
-    const std::set<ITEM*> AssembleCluster( ITEM* aStart, int aLayer );
+    std::set<ITEM*> AssembleCluster( ITEM* aStart, int aLayer );
 
 private:
     bool followTrivialPath( LINE* aLine, bool aLeft, ITEM_SET& aSet, std::set<ITEM*>& aVisited );

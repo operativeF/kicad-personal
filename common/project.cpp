@@ -93,37 +93,37 @@ void PROJECT::SetProjectFullName( const wxString& aFullPathAndName )
 }
 
 
-const wxString PROJECT::GetProjectFullName() const
+wxString PROJECT::GetProjectFullName() const
 {
     return m_project_name.GetFullPath();
 }
 
 
-const wxString PROJECT::GetProjectPath() const
+wxString PROJECT::GetProjectPath() const
 {
     return m_project_name.GetPathWithSep();
 }
 
 
-const wxString PROJECT::GetProjectName() const
+wxString PROJECT::GetProjectName() const
 {
     return m_project_name.GetName();
 }
 
 
-const wxString PROJECT::SymbolLibTableName() const
+wxString PROJECT::SymbolLibTableName() const
 {
     return libTableName( "sym-lib-table" );
 }
 
 
-const wxString PROJECT::FootprintLibTblName() const
+wxString PROJECT::FootprintLibTblName() const
 {
     return libTableName( "fp-lib-table" );
 }
 
 
-const wxString PROJECT::libTableName( const wxString& aLibTableName ) const
+wxString PROJECT::libTableName( const wxString& aLibTableName ) const
 {
     wxFileName  fn = GetProjectFullName();
     wxString    path = fn.GetPath();
@@ -382,7 +382,7 @@ bool PROJECT::ConfigLoad( const SEARCH_STACK& aSList, const wxString&  aGroupNam
 }
 
 
-const wxString PROJECT::AbsolutePath( const wxString& aFileName ) const
+wxString PROJECT::AbsolutePath( const wxString& aFileName ) const
 {
     wxFileName fn = aFileName;
 

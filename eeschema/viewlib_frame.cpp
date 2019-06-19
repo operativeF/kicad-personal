@@ -735,7 +735,7 @@ void LIB_VIEW_FRAME::SetFilter( const SCHLIB_FILTER* aFilter )
 }
 
 
-const BOX2I LIB_VIEW_FRAME::GetDocumentExtents() const
+BOX2I LIB_VIEW_FRAME::GetDocumentExtents() const
 {
     LIB_ALIAS*  alias = GetSelectedAlias();
     LIB_PART*   part = alias ? alias->GetPart() : nullptr;

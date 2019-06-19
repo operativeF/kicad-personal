@@ -52,7 +52,7 @@ public:
     POLYGON_ITEM();
 
     ///> Gets the bounding box of the polygon
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
 
 
     /**

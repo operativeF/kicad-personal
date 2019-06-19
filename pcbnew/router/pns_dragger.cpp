@@ -362,7 +362,7 @@ NODE* DRAGGER::CurrentNode() const
 }
 
 
-const ITEM_SET DRAGGER::Traces()
+ITEM_SET DRAGGER::Traces()
 {
     return m_draggedItems;
 }

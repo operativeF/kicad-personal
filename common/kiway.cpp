@@ -92,7 +92,7 @@ void KIWAY::SetTop( wxFrame* aTop )
 }
 
 
-const wxString KIWAY::dso_search_path( FACE_T aFaceId )
+wxString KIWAY::dso_search_path( FACE_T aFaceId )
 {
     const char*   name;
 

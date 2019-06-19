@@ -8,7 +8,7 @@
 
 #include <layers_id_colors_and_visibility.h>
 
-const VECTOR2D xform2( const MATRIX3x3D& minv, const VECTOR2D& p )
+VECTOR2D xform2( const MATRIX3x3D& minv, const VECTOR2D& p )
 {
     auto t = minv * p;
     return VECTOR2D((float)t.x, (float)t.y);
@@ -70,7 +70,7 @@ public:
     virtual void Show( int nestLevel, std::ostream& os ) const override {}
 #endif
 
-    const BOX2I ViewBBox() const override
+    BOX2I ViewBBox() const override
     {
         BOX2I bb;
         bb.SetMaximum();

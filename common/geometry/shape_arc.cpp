@@ -138,7 +138,7 @@ bool SHAPE_ARC::ConstructFromCenterAndAngles( VECTOR2I aCenter, double aRadius, 
 #endif
 
 
-const VECTOR2I SHAPE_ARC::GetP1() const
+VECTOR2I SHAPE_ARC::GetP1() const
 {
     VECTOR2D rvec = m_p0 - m_pc;
     auto ca = m_centralAngle * M_PI / 180.0;
@@ -151,7 +151,7 @@ const VECTOR2I SHAPE_ARC::GetP1() const
 }
 
 
-const BOX2I SHAPE_ARC::BBox( int aClearance ) const
+BOX2I SHAPE_ARC::BBox( int aClearance ) const
 {
     BOX2I bbox;
     std::vector<VECTOR2I> points;
@@ -237,7 +237,7 @@ int SHAPE_ARC::GetRadius() const
     return (m_p0 - m_pc).EuclideanNorm();
 }
 
-const SHAPE_LINE_CHAIN SHAPE_ARC::ConvertToPolyline( double aAccuracy ) const
+SHAPE_LINE_CHAIN SHAPE_ARC::ConvertToPolyline( double aAccuracy ) const
 {
     SHAPE_LINE_CHAIN rv;
     double r = GetRadius();

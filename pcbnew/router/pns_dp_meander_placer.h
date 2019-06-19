@@ -80,7 +80,7 @@ public:
      */
     bool FixRoute( const VECTOR2I& aP, ITEM* aEndItem, bool aForceFinish = false ) override;
 
-    const LINE Trace() const;
+    LINE Trace() const;
 
     /**
      * Function CurrentNode()
@@ -89,18 +89,18 @@ public:
      */
     NODE* CurrentNode( bool aLoopsRemoved = false ) const override;
 
-    const ITEM_SET Traces() override;
+    ITEM_SET Traces() override;
 
     const VECTOR2I& CurrentEnd() const override;
 
     /// @copydoc PLACEMENT_ALGO::CurrentNets()
-    const std::vector<int> CurrentNets() const override;
+    std::vector<int> CurrentNets() const override;
 
     int CurrentLayer() const override;
 
     int totalLength();
 
-    const wxString TuningInfo( EDA_UNITS_T aUnits ) const override;
+    wxString TuningInfo( EDA_UNITS_T aUnits ) const override;
     TUNING_STATUS TuningStatus() const override;
 
     bool CheckFit( MEANDER_SHAPE* aShape ) override;
@@ -114,7 +114,7 @@ private:
 //    void addMeander ( PNS_MEANDER *aM );
 //    void addCorner ( const VECTOR2I& aP );
 
-    const SEG baselineSegment( const DIFF_PAIR::COUPLED_SEGMENTS& aCoupledSegs );
+    SEG baselineSegment( const DIFF_PAIR::COUPLED_SEGMENTS& aCoupledSegs );
     bool pairOrientation( const DIFF_PAIR::COUPLED_SEGMENTS& aPair );
     
     void setWorld( NODE* aWorld );

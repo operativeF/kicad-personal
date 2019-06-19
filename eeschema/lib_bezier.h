@@ -58,7 +58,7 @@ public:
     void AddPoint( const wxPoint& aPoint ) { m_BezierPoints.push_back( aPoint ); }
 
     void Offset( const wxPoint& aOffset ) override;
-    const wxPoint GetOffset() const;
+    wxPoint GetOffset() const;
 
     /**
      * @return the number of corners
@@ -70,7 +70,7 @@ public:
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override;
     bool HitTest( const EDA_RECT& aRect, bool aContained, int aAccuracy = 0 ) const override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     bool Inside( EDA_RECT& aRect ) const override;
 

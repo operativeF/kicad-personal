@@ -119,12 +119,12 @@ class EAGLE_PLUGIN : public PLUGIN
 public:
 
     //-----<PUBLIC PLUGIN API>--------------------------------------------------
-    const wxString PluginName() const override;
+    wxString PluginName() const override;
 
     BOARD* Load( const wxString& aFileName, BOARD* aAppendToMe,
                  const PROPERTIES* aProperties = NULL ) override;
 
-    const wxString GetFileExtension() const override;
+    wxString GetFileExtension() const override;
 
     void FootprintEnumerate( wxArrayString& aFootprintNames, const wxString& aLibraryPath,
                              const PROPERTIES* aProperties = NULL) override;

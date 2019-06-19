@@ -43,7 +43,7 @@ ARC_ASSISTANT::ARC_ASSISTANT( const ARC_GEOM_MANAGER& aManager, EDA_UNITS_T aUni
 }
 
 
-const BOX2I ARC_ASSISTANT::ViewBBox() const
+BOX2I ARC_ASSISTANT::ViewBBox() const
 {
     BOX2I tmp;
 

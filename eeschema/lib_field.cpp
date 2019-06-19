@@ -308,7 +308,7 @@ wxString LIB_FIELD::GetFullText( int unit ) const
 }
 
 
-const EDA_RECT LIB_FIELD::GetBoundingBox() const
+EDA_RECT LIB_FIELD::GetBoundingBox() const
 {
     /* Y coordinates for LIB_ITEMS are bottom to top, so we must invert the Y position when
      * calling GetTextBox() that works using top to bottom Y axis orientation.

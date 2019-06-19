@@ -32,7 +32,7 @@ class GERBVIEW_SELECTION : public SELECTION
 public:
     VECTOR2I GetCenter() const override;
 
-    const BOX2I ViewBBox() const override;
+    BOX2I ViewBBox() const override;
 };
 
 #endif  //  GERBVIEW_SELECTION_H

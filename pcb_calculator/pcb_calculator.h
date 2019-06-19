@@ -92,7 +92,7 @@ private:
     /**
      * @return the full filename of the selected pcb_calculator data file
      */
-    const wxString GetDataFilename();
+    wxString GetDataFilename();
 
     /**
      * Initialize the full filename of the selected pcb_calculator data file

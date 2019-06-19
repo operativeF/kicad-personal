@@ -1013,7 +1013,7 @@ public:
 
     void SetScreen( BASE_SCREEN* aScreen ) override;
 
-    const BOX2I GetDocumentExtents() const override;
+    BOX2I GetDocumentExtents() const override;
 
     void FixupJunctions();
 

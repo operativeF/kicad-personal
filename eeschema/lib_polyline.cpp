@@ -285,7 +285,7 @@ bool LIB_POLYLINE::HitTest( const EDA_RECT& aRect, bool aContained, int aAccurac
 }
 
 
-const EDA_RECT LIB_POLYLINE::GetBoundingBox() const
+EDA_RECT LIB_POLYLINE::GetBoundingBox() const
 {
     EDA_RECT rect;
     int      xmin, xmax, ymin, ymax;

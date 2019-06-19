@@ -41,7 +41,7 @@ public:
 
     ARC_ASSISTANT( const ARC_GEOM_MANAGER& aManager, EDA_UNITS_T aUnits );
 
-    const BOX2I ViewBBox() const override;
+    BOX2I ViewBBox() const override;
 
     /**
      * Draw the assistance (with reference to the contstruction manager

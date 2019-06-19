@@ -291,7 +291,7 @@ void VIEW_OVERLAY::Clear()
 }
 
 
-const BOX2I VIEW_OVERLAY::ViewBBox() const
+BOX2I VIEW_OVERLAY::ViewBBox() const
 {
     BOX2I maxBox;
 

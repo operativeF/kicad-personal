@@ -324,7 +324,7 @@ void LIB_ARC::print( wxDC* aDC, const wxPoint& aOffset, void* aData, const TRANS
 }
 
 
-const EDA_RECT LIB_ARC::GetBoundingBox() const
+EDA_RECT LIB_ARC::GetBoundingBox() const
 {
     int      minX, minY, maxX, maxY, angleStart, angleEnd;
     EDA_RECT rect;

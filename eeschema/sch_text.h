@@ -146,7 +146,7 @@ public:
 
     void SwapData( SCH_ITEM* aItem ) override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     int GetPenSize() const override;
 
@@ -217,7 +217,7 @@ public:
 
     bool IsType( const KICAD_T aScanTypes[] ) override ;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     bool IsConnectable() const override { return true; }
 
@@ -258,7 +258,7 @@ public:
 
     wxPoint GetSchematicTextOffset() const override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     void CreateGraphicShape( std::vector <wxPoint>& aPoints, const wxPoint& aPos ) override;
 
@@ -303,7 +303,7 @@ public:
 
     void CreateGraphicShape( std::vector <wxPoint>& aPoints, const wxPoint& Pos ) override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     bool IsConnectable() const override { return true; }
 

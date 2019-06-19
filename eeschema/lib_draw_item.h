@@ -193,7 +193,7 @@ public:
     /**
      * @return the boundary box for this, in library coordinates
      */
-    const EDA_RECT GetBoundingBox() const override { return EDA_ITEM::GetBoundingBox(); }
+    EDA_RECT GetBoundingBox() const override { return EDA_ITEM::GetBoundingBox(); }
 
     /**
      * Display basic info (type, part and convert) about the current item in message panel.

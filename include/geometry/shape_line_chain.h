@@ -294,7 +294,7 @@ public:
     }
 
     /// @copydoc SHAPE::BBox()
-    const BOX2I BBox( int aClearance = 0 ) const override
+    BOX2I BBox( int aClearance = 0 ) const override
     {
         BOX2I bbox;
         bbox.Compute( m_points );
@@ -345,7 +345,7 @@ public:
      * Reverses point order in the line chain.
      * @return line chain with reversed point order (original A-B-C-D: returned D-C-B-A)
      */
-    const SHAPE_LINE_CHAIN Reverse() const;
+    SHAPE_LINE_CHAIN Reverse() const;
 
     /**
      * Function Length()
@@ -501,7 +501,7 @@ public:
      * @param aEndIndex end of the point range to be returned (inclusive)
      * @return cut line chain.
      */
-    const SHAPE_LINE_CHAIN Slice( int aStartIndex, int aEndIndex = -1 ) const;
+    SHAPE_LINE_CHAIN Slice( int aStartIndex, int aEndIndex = -1 ) const;
 
     struct compareOriginDistance
     {
@@ -597,7 +597,7 @@ public:
      * Checks if the line chain is self-intersecting.
      * @return (optional) first found self-intersection point.
      */
-    const OPT<INTERSECTION> SelfIntersecting() const;
+    OPT<INTERSECTION> SelfIntersecting() const;
 
     /**
      * Function Simplify()
@@ -626,7 +626,7 @@ public:
      * Finds a point on the line chain that is closest to point aP.
      * @return the nearest point.
      */
-    const VECTOR2I NearestPoint( const VECTOR2I& aP ) const;
+    VECTOR2I NearestPoint( const VECTOR2I& aP ) const;
 
     /**
      * Function NearestPoint()
@@ -637,10 +637,10 @@ public:
      * @param dist reference receiving the distance to the nearest point.
      * @return the nearest point.
      */
-    const VECTOR2I NearestPoint( const SEG& aSeg, int& dist ) const;
+    VECTOR2I NearestPoint( const SEG& aSeg, int& dist ) const;
 
     /// @copydoc SHAPE::Format()
-    const std::string Format() const override;
+    std::string Format() const override;
 
     /// @copydoc SHAPE::Parse()
     bool Parse( std::stringstream& aStream ) override;
@@ -680,7 +680,7 @@ public:
         return false;
     }
 
-    const VECTOR2I PointAlong( int aPathLength ) const;
+    VECTOR2I PointAlong( int aPathLength ) const;
 
     double Area() const;
 

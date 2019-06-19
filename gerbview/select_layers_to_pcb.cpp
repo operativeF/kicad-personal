@@ -37,7 +37,7 @@
 #include <select_layers_to_pcb.h>
 
 // Imported function
-extern const wxString GetPCBDefaultLayerName( LAYER_NUM aLayerNumber );
+extern wxString GetPCBDefaultLayerName( LAYER_NUM aLayerNumber );
 
 enum swap_layer_id {
     ID_LAYERS_MAP_DIALOG = ID_GERBER_END_LIST,

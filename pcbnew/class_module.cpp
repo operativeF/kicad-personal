@@ -424,7 +424,7 @@ EDA_RECT MODULE::GetFootprintRect() const
 }
 
 
-const EDA_RECT MODULE::GetBoundingBox() const
+EDA_RECT MODULE::GetBoundingBox() const
 {
     EDA_RECT area = GetFootprintRect();
 
@@ -937,7 +937,7 @@ unsigned int MODULE::ViewGetLOD( int aLayer, KIGFX::VIEW* aView ) const
 }
 
 
-const BOX2I MODULE::ViewBBox() const
+BOX2I MODULE::ViewBBox() const
 {
     EDA_RECT area = GetFootprintRect();
 

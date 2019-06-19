@@ -127,7 +127,7 @@ void CCAMERA::updateRotationMatrix()
 }
 
 
-const glm::mat4 CCAMERA::GetRotationMatrix() const
+glm::mat4 CCAMERA::GetRotationMatrix() const
 {
     return m_rotationMatrix * m_rotationMatrixAux;
 }

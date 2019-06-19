@@ -120,7 +120,7 @@ public:
 
     int GetLineSize() const { return m_size; }
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     /**
      * Function GetLength

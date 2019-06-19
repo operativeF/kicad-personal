@@ -181,12 +181,12 @@ public:
     /**
      * Return the point in this rect that is closest to the provided point
      */
-    const wxPoint ClosestPointTo( const wxPoint& aPoint ) const;
+    wxPoint ClosestPointTo( const wxPoint& aPoint ) const;
 
     /**
      * Return the point in this rect that is farthest from the provided point
      */
-    const wxPoint FarthestPointTo( const wxPoint& aPoint ) const;
+    wxPoint FarthestPointTo( const wxPoint& aPoint ) const;
 
     /**
      * Function IntersectsCircle
@@ -284,7 +284,7 @@ public:
      * useful to calculate bounding box of rotated items, when
      * rotation if not k*90 degrees
      */
-    const EDA_RECT GetBoundingBoxRotated( wxPoint aRotCenter, double aAngle );
+    EDA_RECT GetBoundingBoxRotated( wxPoint aRotCenter, double aAngle );
 };
 
 

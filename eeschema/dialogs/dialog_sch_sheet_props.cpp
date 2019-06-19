@@ -122,7 +122,7 @@ bool DIALOG_SCH_SHEET_PROPS::TransferDataFromWindow()
 }
 
 
-const wxString DIALOG_SCH_SHEET_PROPS::GetFileName()
+wxString DIALOG_SCH_SHEET_PROPS::GetFileName()
 {
     // Filenames are stored using unix notation
     wxString fname = m_textFileName->GetValue();

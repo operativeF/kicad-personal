@@ -388,7 +388,7 @@ public:
 private:
 
     /// Get the [path &] name of the DSO holding the requested FACE_T.
-    const wxString dso_search_path( FACE_T aFaceId );
+    wxString dso_search_path( FACE_T aFaceId );
 
 #if 0
     /// hooked into m_top in SetTop(), marks child frame as closed.

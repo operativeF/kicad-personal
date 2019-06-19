@@ -58,7 +58,7 @@ void WS_PROXY_VIEW_ITEM::SetTitleBlock( const TITLE_BLOCK* aTitleBlock )
 }
 
 
-const BOX2I WS_PROXY_VIEW_ITEM::ViewBBox() const
+BOX2I WS_PROXY_VIEW_ITEM::ViewBBox() const
 {
     BOX2I bbox;
 

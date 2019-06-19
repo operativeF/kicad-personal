@@ -81,7 +81,7 @@ void SCH_JUNCTION::ViewGetLayers( int aLayers[], int& aCount ) const
 }
 
 
-const EDA_RECT SCH_JUNCTION::GetBoundingBox() const
+EDA_RECT SCH_JUNCTION::GetBoundingBox() const
 {
     EDA_RECT rect;
 

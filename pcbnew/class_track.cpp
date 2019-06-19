@@ -190,7 +190,7 @@ STATUS_FLAGS TRACK::IsPointOnEnds( const wxPoint& point, int min_dist ) const
 }
 
 
-const EDA_RECT TRACK::GetBoundingBox() const
+EDA_RECT TRACK::GetBoundingBox() const
 {
     // end of track is round, this is its radius, rounded up
     int radius = ( m_Width + 1 ) / 2;
@@ -500,7 +500,7 @@ unsigned int TRACK::ViewGetLOD( int aLayer, KIGFX::VIEW* aView ) const
 }
 
 
-const BOX2I TRACK::ViewBBox() const
+BOX2I TRACK::ViewBBox() const
 {
     BOX2I bbox = GetBoundingBox();
     bbox.Inflate( 2 * GetClearance() );

@@ -170,7 +170,7 @@ public:
      * @return the brd layer pair identifier: n,m for drill files
      * (files with m_Prms.Item( 1 ) = "Plated" or "NotPlated")
      */
-    const wxString GetDrillLayerPair();
+    wxString GetDrillLayerPair();
 
     /**
      * @return the Layer Pair type for drill files

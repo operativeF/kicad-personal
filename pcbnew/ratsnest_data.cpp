@@ -55,7 +55,7 @@ static bool sortWeight( const CN_EDGE& aEdge1, const CN_EDGE& aEdge2 )
 }
 
 
-static const std::vector<CN_EDGE> kruskalMST( std::list<CN_EDGE>& aEdges,
+static std::vector<CN_EDGE> kruskalMST( std::list<CN_EDGE>& aEdges,
         std::vector<CN_ANCHOR_PTR>& aNodes )
 {
     unsigned int    nodeNumber = aNodes.size();
@@ -201,7 +201,7 @@ public:
         m_allNodes.push_back( aNode );
     }
 
-    const std::list<CN_EDGE> Triangulate()
+    std::list<CN_EDGE> Triangulate()
     {
         std::list<CN_EDGE> mstEdges;
         std::list<hed::EDGE_PTR> triangEdges;

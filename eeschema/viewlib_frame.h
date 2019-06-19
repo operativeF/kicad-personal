@@ -141,7 +141,7 @@ public:
     LIB_PART* GetSelectedSymbol() const;
     LIB_ALIAS* GetSelectedAlias() const;
 
-    const BOX2I GetDocumentExtents() const override;
+    BOX2I GetDocumentExtents() const override;
 
     void SyncToolbars() override;
 

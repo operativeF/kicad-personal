@@ -85,7 +85,7 @@ void SELECTION_AREA::SetSubtractive( bool aSubtractive )
 }
 
 
-const BOX2I SELECTION_AREA::ViewBBox() const
+BOX2I SELECTION_AREA::ViewBBox() const
 {
     BOX2I tmp;
 

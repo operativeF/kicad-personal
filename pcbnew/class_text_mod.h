@@ -69,7 +69,7 @@ public:
         return aItem && PCB_MODULE_TEXT_T == aItem->Type();
     }
 
-    virtual const wxPoint GetPosition() const override
+    virtual wxPoint GetPosition() const override
     {
         return EDA_TEXT::GetTextPos();
     }
@@ -161,7 +161,7 @@ public:
     double GetDrawRotationRadians() const { return GetDrawRotation() * M_PI/1800; }
 
     // Virtual function
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     ///> Set absolute coordinates.
     void SetDrawCoord();
@@ -208,7 +208,7 @@ public:
 
     virtual wxString GetShownText() const override;
 
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
 
     virtual void ViewGetLayers( int aLayers[], int& aCount ) const override;
 

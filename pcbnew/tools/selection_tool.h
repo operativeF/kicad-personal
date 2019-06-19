@@ -339,7 +339,7 @@ private:
      */
     int UpdateMenu( const TOOL_EVENT& aEvent );
 
-    const GENERAL_COLLECTORS_GUIDE getCollectorsGuide() const;
+    GENERAL_COLLECTORS_GUIDE getCollectorsGuide() const;
 
 private:
     PCB_BASE_FRAME*  m_frame;     // Pointer to the parent frame

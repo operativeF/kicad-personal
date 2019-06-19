@@ -192,7 +192,7 @@ public:
      * Function GetExtent
      * @return SFVEC3F - max-min
      */
-    const SFVEC3F GetExtent() const;
+    SFVEC3F GetExtent() const;
 
     /**
      * Function Min

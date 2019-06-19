@@ -49,7 +49,7 @@ ORIGIN_VIEWITEM* ORIGIN_VIEWITEM::Clone() const
 }
 
 
-const BOX2I ORIGIN_VIEWITEM::ViewBBox() const
+BOX2I ORIGIN_VIEWITEM::ViewBBox() const
 {
     BOX2I bbox;
     bbox.SetMaximum();

@@ -91,7 +91,7 @@ public:
         PrintMarker( aDC, aOffset );
     }
 
-    const wxPoint GetPosition() const override { return m_Pos; }
+    wxPoint GetPosition() const override { return m_Pos; }
     void SetPosition( const wxPoint& aPos ) override { m_Pos = aPos; }
 
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override
@@ -107,9 +107,9 @@ public:
 
     BITMAP_DEF GetMenuImage() const override;
 
-    const BOX2I ViewBBox() const override;
+    BOX2I ViewBBox() const override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     void ViewGetLayers( int aLayers[], int& aCount ) const override;
 

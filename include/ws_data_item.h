@@ -154,10 +154,10 @@ public:
     void SetPage1Option( PAGE_OPTION aChoice ) { m_pageOption = aChoice; }
 
     // Coordinate handling
-    const wxPoint GetStartPosUi( int ii = 0 ) const;
-    const wxPoint GetEndPosUi( int ii = 0 ) const;
-    const DPOINT GetStartPos( int ii = 0 ) const;
-    const DPOINT GetEndPos( int ii = 0 ) const;
+    wxPoint GetStartPosUi( int ii = 0 ) const;
+    wxPoint GetEndPosUi( int ii = 0 ) const;
+    DPOINT GetStartPos( int ii = 0 ) const;
+    DPOINT GetEndPos( int ii = 0 ) const;
 
     virtual int GetPenSizeUi();
 
@@ -208,7 +208,7 @@ public:
      */
     virtual bool IsInsidePage( int ii ) const;
 
-    const wxString GetClassName() const;
+    wxString GetClassName() const;
 };
 
 
@@ -278,13 +278,13 @@ public:
      * @return the coordinate (in mm) of the corner aIdx,
      * for the repeated item aRepeat
      */
-    const DPOINT GetCornerPosition( unsigned aIdx, int aRepeat = 0 ) const;
+    DPOINT GetCornerPosition( unsigned aIdx, int aRepeat = 0 ) const;
 
     /**
      * @return the coordinate (in draw/plot units) of the corner aIdx,
      * for the repeated item aRepeat
      */
-    const wxPoint GetCornerPositionUi( unsigned aIdx, int aRepeat = 0 ) const;
+    wxPoint GetCornerPositionUi( unsigned aIdx, int aRepeat = 0 ) const;
 
     /**
      * calculate the bounding box of the set  polygons

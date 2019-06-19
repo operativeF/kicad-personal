@@ -227,7 +227,7 @@ static void build_via_testpoints( BOARD *aPcb,
 }
 
 /* Add a new netname to the d356 canonicalized list */
-static const wxString intern_new_d356_netname( const wxString &aNetname,
+static wxString intern_new_d356_netname( const wxString &aNetname,
         std::map<wxString, wxString> &aMap, std::set<wxString> &aSet )
 {
     wxString canon;

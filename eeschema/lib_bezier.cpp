@@ -105,7 +105,7 @@ void LIB_BEZIER::MoveTo( const wxPoint& aPosition )
     Offset( aPosition - m_PolyPoints[ 0 ] );
 }
 
-const wxPoint LIB_BEZIER::GetOffset() const
+wxPoint LIB_BEZIER::GetOffset() const
 {
     if ( !m_PolyPoints.size() )
         return wxPoint(0, 0);
@@ -303,7 +303,7 @@ bool LIB_BEZIER::HitTest( const EDA_RECT& aRect, bool aContained, int aAccuracy 
 }
 
 
-const EDA_RECT LIB_BEZIER::GetBoundingBox() const
+EDA_RECT LIB_BEZIER::GetBoundingBox() const
 {
     EDA_RECT rect;
     int      xmin, xmax, ymin, ymax;

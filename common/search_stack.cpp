@@ -156,7 +156,7 @@ void SEARCH_STACK::AddPaths( const wxString& aPaths, int aIndex )
 
 #if 1       // this function is too convoluted for words.
 
-const wxString SEARCH_STACK::LastVisitedPath( const wxString& aSubPathToSearch )
+wxString SEARCH_STACK::LastVisitedPath( const wxString& aSubPathToSearch )
 {
     wxString path;
 

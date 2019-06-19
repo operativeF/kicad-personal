@@ -83,7 +83,7 @@ public:
 
     // Derived types must define GetBoundingBox() as a minimum, and can then override the
     // two HitTest() functions if they need something more specific.
-    const EDA_RECT GetBoundingBox() const override = 0;
+    EDA_RECT GetBoundingBox() const override = 0;
 
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override
     {
@@ -127,7 +127,7 @@ public:
     const wxPoint GetPosition() const override { return GetStart(); }
     void SetPosition( wxPoint aPos ) override { SetStart( aPos ); }
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override;
 
     void PrintWsItem( wxDC* aDC, const wxPoint& aOffset, COLOR4D aColor ) override;
@@ -169,7 +169,7 @@ public:
     const wxPoint GetPosition() const override { return m_pos; }
     void SetPosition( wxPoint aPos ) override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override;
     bool HitTest( const EDA_RECT& aRect, bool aContained, int aAccuracy = 0 ) const override;
 
@@ -213,7 +213,7 @@ public:
 
     void PrintWsItem( wxDC* aDC, const wxPoint& aOffset, COLOR4D aColor ) override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override;
 
     wxString GetSelectMenuText( EDA_UNITS_T aUnits ) const override;
@@ -257,7 +257,7 @@ public:
 
     void PrintWsItem( wxDC* aDC, const wxPoint& aOffset, COLOR4D aColor ) override { /* do nothing */ }
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override { return false; }
 
     wxString GetSelectMenuText( EDA_UNITS_T aUnits ) const override;
@@ -300,7 +300,7 @@ public:
     const wxPoint GetPosition() const override { return GetTextPos(); }
     void SetPosition( wxPoint aPos ) override { SetTextPos( aPos ); }
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override;
     bool HitTest( const EDA_RECT& aRect, bool aContained, int aAccuracy = 0 ) const override;
 
@@ -334,7 +334,7 @@ public:
 
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override;
     bool HitTest( const EDA_RECT& aRect, bool aContained, int aAccuracy = 0 ) const override;
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     wxString GetSelectMenuText( EDA_UNITS_T aUnits ) const override;
 

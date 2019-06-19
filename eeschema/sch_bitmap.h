@@ -88,7 +88,7 @@ public:
      */
     wxSize GetSize() const;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     void SwapData( SCH_ITEM* aItem ) override;
 

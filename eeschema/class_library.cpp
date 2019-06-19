@@ -543,7 +543,7 @@ void PART_LIBS::LibNamesAndPaths( PROJECT* aProject, bool doSave,
 }
 
 
-const wxString PART_LIBS::CacheName( const wxString& aFullProjectFilename )
+wxString PART_LIBS::CacheName( const wxString& aFullProjectFilename )
 {
     wxFileName  name = aFullProjectFilename;
 

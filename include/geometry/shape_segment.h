@@ -45,7 +45,7 @@ public:
         return new SHAPE_SEGMENT( m_seg, m_width );
     }
 
-    const BOX2I BBox( int aClearance = 0 ) const override
+    BOX2I BBox( int aClearance = 0 ) const override
     {
         return BOX2I( m_seg.A, m_seg.B - m_seg.A ).Inflate( aClearance + ( m_width + 1 ) / 2 );
     }

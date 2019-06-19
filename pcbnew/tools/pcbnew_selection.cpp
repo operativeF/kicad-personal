@@ -91,7 +91,7 @@ EDA_ITEM* PCBNEW_SELECTION::GetTopLeftItem( bool onlyModules ) const
 }
 
 
-const KIGFX::VIEW_GROUP::ITEMS PCBNEW_SELECTION::updateDrawList() const
+KIGFX::VIEW_GROUP::ITEMS PCBNEW_SELECTION::updateDrawList() const
 {
     std::vector<VIEW_ITEM*> items;
 

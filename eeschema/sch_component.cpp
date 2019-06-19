@@ -607,7 +607,7 @@ wxString SCH_COMPONENT::GetPath( const SCH_SHEET_PATH* sheet ) const
 }
 
 
-const wxString SCH_COMPONENT::GetRef( const SCH_SHEET_PATH* sheet )
+wxString SCH_COMPONENT::GetRef( const SCH_SHEET_PATH* sheet )
 {
     wxString          path = GetPath( sheet );
     wxString          h_path;
@@ -1349,7 +1349,7 @@ EDA_RECT SCH_COMPONENT::GetBodyBoundingBox() const
 }
 
 
-const EDA_RECT SCH_COMPONENT::GetBoundingBox() const
+EDA_RECT SCH_COMPONENT::GetBoundingBox() const
 {
     EDA_RECT bbox = GetBodyBoundingBox();
 

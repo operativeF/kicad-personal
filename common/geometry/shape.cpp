@@ -32,7 +32,7 @@ bool SHAPE::Parse( std::stringstream& aStream )
 }
 
 
-const std::string SHAPE::Format() const
+std::string SHAPE::Format() const
 {
     assert( false );
     return std::string( "" );

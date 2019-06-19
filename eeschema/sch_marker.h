@@ -55,7 +55,7 @@ public:
         (void) aPlotter;
     }
 
-    EDA_RECT const GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     // Geometric transforms (used in block operations):
 

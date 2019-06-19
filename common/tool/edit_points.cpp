@@ -204,7 +204,7 @@ EDIT_LINE* EDIT_POINTS::Next( const EDIT_LINE& aLine )
 }
 
 
-const BOX2I EDIT_POINTS::ViewBBox() const
+BOX2I EDIT_POINTS::ViewBBox() const
 {
     BOX2I box;
     bool empty = true;

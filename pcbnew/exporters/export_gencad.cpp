@@ -234,7 +234,7 @@ static int GencadOffsetX, GencadOffsetY;
 static std::map<MODULE*, int> componentShapes;
 static std::map<int, wxString> shapeNames;
 
-static const wxString getShapeName( MODULE* aModule )
+static wxString getShapeName( MODULE* aModule )
 {
     static const wxString invalid( "invalid" );
 

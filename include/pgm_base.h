@@ -219,7 +219,7 @@ public:
      * @return  Returns the full path of the editor, or an empty string if no editor was
      *          chosen.
      */
-    VTBL_ENTRY const wxString AskUserForPreferredEditor(
+    VTBL_ENTRY wxString AskUserForPreferredEditor(
                                         const wxString& aDefaultEditor = wxEmptyString );
 
     VTBL_ENTRY bool IsKicadEnvVariableDefined() const               { return !m_kicad_env.IsEmpty(); }

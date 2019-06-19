@@ -173,7 +173,7 @@ public:
      *
      * @return Event information.
      */
-    const std::string Format() const;
+    std::string Format() const;
 
     TOOL_EVENT( TOOL_EVENT_CATEGORY aCategory = TC_NONE, TOOL_ACTIONS aAction = TA_NONE,
                 TOOL_ACTION_SCOPE aScope = AS_GLOBAL, void* aParameter = nullptr ) :
@@ -566,7 +566,7 @@ public:
      *
      * @return Event information.
      */
-    const std::string Format() const;
+    std::string Format() const;
 
     OPT<const TOOL_EVENT&> Matches( const TOOL_EVENT& aEvent ) const
     {

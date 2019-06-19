@@ -455,7 +455,7 @@ wxString KIwxExpandEnvVars(const wxString& str)
 }
 
 
-const wxString ExpandEnvVarSubstitutions( const wxString& aString )
+wxString ExpandEnvVarSubstitutions( const wxString& aString )
 {
     // wxGetenv( wchar_t* ) is not re-entrant on linux.
     // Put a lock on multithreaded use of wxGetenv( wchar_t* ), called from wxEpandEnvVars(),
@@ -468,7 +468,7 @@ const wxString ExpandEnvVarSubstitutions( const wxString& aString )
 }
 
 
-const wxString ResolveUriByEnvVars( const wxString& aUri )
+wxString ResolveUriByEnvVars( const wxString& aUri )
 {
     // URL-like URI: return as is.
     wxURL url( aUri );

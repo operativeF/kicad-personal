@@ -62,7 +62,7 @@ public:
 
     void GetEndPoints( std::vector< DANGLING_END_ITEM >& aItemList ) override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     // Geometric transforms (used in block operations):
 

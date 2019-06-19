@@ -885,7 +885,7 @@ class SHAPE_POLY_SET : public SHAPE
         int NormalizeAreaOutlines();
 
         /// @copydoc SHAPE::Format()
-        const std::string Format() const override;
+        std::string Format() const override;
 
         /// @copydoc SHAPE::Parse()
         bool Parse( std::stringstream& aStream ) override;
@@ -907,7 +907,7 @@ class SHAPE_POLY_SET : public SHAPE
             return true;
         }
 
-        const BOX2I BBox( int aClearance = 0 ) const override;
+        BOX2I BBox( int aClearance = 0 ) const override;
 
         /**
          * Function PointOnEdge()

@@ -169,7 +169,7 @@ bool ZONE_CONTAINER::UnFill()
 }
 
 
-const wxPoint ZONE_CONTAINER::GetPosition() const
+wxPoint ZONE_CONTAINER::GetPosition() const
 {
     return (wxPoint) GetCornerPosition( 0 );
 }
@@ -460,7 +460,7 @@ void ZONE_CONTAINER::PrintFilledArea( PCB_BASE_FRAME* aFrame, wxDC* DC, const wx
 }
 
 
-const EDA_RECT ZONE_CONTAINER::GetBoundingBox() const
+EDA_RECT ZONE_CONTAINER::GetBoundingBox() const
 {
     const int PRELOAD = 0x7FFFFFFF;     // Biggest integer (32 bits)
 

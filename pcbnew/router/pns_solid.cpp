@@ -32,7 +32,7 @@
 
 namespace PNS {
 
-const SHAPE_LINE_CHAIN SOLID::Hull( int aClearance, int aWalkaroundThickness ) const
+SHAPE_LINE_CHAIN SOLID::Hull( int aClearance, int aWalkaroundThickness ) const
 {
     int cl = aClearance + ( aWalkaroundThickness + 1 )/ 2;
 

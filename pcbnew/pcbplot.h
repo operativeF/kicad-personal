@@ -255,7 +255,7 @@ void BuildPlotFileName( wxFileName*     aFilename,
  * used by Protel, and still sometimes in use (although the
  * official Gerber Ext is now .gbr)
  */
-const wxString GetGerberProtelExtension( LAYER_NUM aLayer );
+wxString GetGerberProtelExtension( LAYER_NUM aLayer );
 
 /**
  * Function GetGerberFileFunctionAttribute
@@ -266,7 +266,7 @@ const wxString GetGerberProtelExtension( LAYER_NUM aLayer );
  * @param aLayer = the layer number to create the attribute for
  * @return The attribute, as a text string
  */
-const wxString GetGerberFileFunctionAttribute( const BOARD *aBoard, LAYER_NUM aLayer );
+wxString GetGerberFileFunctionAttribute( const BOARD *aBoard, LAYER_NUM aLayer );
 
 /**
  * Calculates some X2 attributes, as defined in the

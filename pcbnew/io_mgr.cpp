@@ -74,7 +74,7 @@ void IO_MGR::PluginRelease( PLUGIN* aPlugin )
 }
 
 
-const wxString IO_MGR::ShowType( PCB_FILE_T aType )
+wxString IO_MGR::ShowType( PCB_FILE_T aType )
 {
     const auto& plugins = PLUGIN_REGISTRY::Instance()->AllPlugins();
 
@@ -106,7 +106,7 @@ IO_MGR::PCB_FILE_T IO_MGR::EnumFromStr( const wxString& aType )
 }
 
 
-const wxString IO_MGR::GetFileExtension( PCB_FILE_T aFileType )
+wxString IO_MGR::GetFileExtension( PCB_FILE_T aFileType )
 {
     wxString ext = wxEmptyString;
     PLUGIN* plugin = PluginFind( aFileType );

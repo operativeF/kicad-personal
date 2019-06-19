@@ -96,7 +96,7 @@ SEG::ecoord SEG::SquaredDistance( const SEG& aSeg ) const
 }
 
 
-const VECTOR2I SEG::NearestPoint( const SEG& aSeg ) const
+VECTOR2I SEG::NearestPoint( const SEG& aSeg ) const
 {
     if( auto p = Intersect( aSeg ) )
         return *p;

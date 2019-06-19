@@ -58,10 +58,10 @@ public:
     }
 
     const VECTOR2I& GetP0() const { return m_p0; }
-    const VECTOR2I GetP1() const;
+    VECTOR2I GetP1() const;
     const VECTOR2I& GetCenter() const { return m_pc; }
 
-    const BOX2I BBox( int aClearance = 0 ) const override;
+    BOX2I BBox( int aClearance = 0 ) const override;
 
     bool Collide( const SEG& aSeg, int aClearance = 0 ) const override;
     bool Collide( const VECTOR2I& aP, int aClearance = 0 ) const override;
@@ -120,7 +120,7 @@ public:
      *
      * @return a SHAPE_LINE_CHAIN
      */
-    const SHAPE_LINE_CHAIN ConvertToPolyline( double aAccuracy = 500.0 ) const;
+    SHAPE_LINE_CHAIN ConvertToPolyline( double aAccuracy = 500.0 ) const;
 
 private:
 

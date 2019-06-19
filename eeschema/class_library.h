@@ -241,7 +241,7 @@ public:
      *
      * @param aFullProjectFilename - the *.pro filename with absolute path.
      */
-    static const wxString CacheName( const wxString& aFullProjectFilename );
+    static wxString CacheName( const wxString& aFullProjectFilename );
 
     /**
      * Find a part library by \a aName.

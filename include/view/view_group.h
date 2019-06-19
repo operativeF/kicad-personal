@@ -86,7 +86,7 @@ public:
      *
      * @return The current bounding box
      */
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
 
     /**
      * Function ViewDraw()
@@ -125,7 +125,7 @@ public:
 
 protected:
 
-    virtual const ITEMS updateDrawList() const;
+    virtual ITEMS updateDrawList() const;
 
     /// Layer on which the group is drawn
     int m_layer;

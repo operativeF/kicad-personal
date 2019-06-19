@@ -104,7 +104,7 @@ public:
     // a LIB_ALIAS does not really have a bounding box.
     // But because it is derived from EDA_ITEM, returns a dummy bounding box
     // to avoid useless messages in debug mode
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     /**
      * Returns a default bounding box for the alias.  This will be set to the full
@@ -114,7 +114,7 @@ public:
      * element being drawn (e.g. in the symbol browser)
      * @return a maximum size view bounding box
      */
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
 
     /**
      * Get the shared LIB_PART.
@@ -281,7 +281,7 @@ public:
     const LIB_ID& GetLibId() const { return m_libId; }
     void SetLibId( const LIB_ID& aLibId ) { m_libId = aLibId; }
 
-    const wxString GetLibraryName();
+    wxString GetLibraryName();
 
     PART_LIB* GetLib()              { return m_library; }
     void SetLib( PART_LIB* aLibrary ) { m_library = aLibrary; }
@@ -338,7 +338,7 @@ public:
      *  if aConvert == 0 Convert is non used
      *  Invisible fields are not taken in account
      **/
-    const EDA_RECT GetUnitBoundingBox( int aUnit, int aConvert ) const;
+    EDA_RECT GetUnitBoundingBox( int aUnit, int aConvert ) const;
 
     /**
      * Get the symbol bounding box excluding fields.
@@ -350,9 +350,9 @@ public:
      *  if aConvert == 0 Convert is non used
      *  Fields are not taken in account
      **/
-    const EDA_RECT GetBodyBoundingBox( int aUnit, int aConvert ) const;
+    EDA_RECT GetBodyBoundingBox( int aUnit, int aConvert ) const;
 
-    const EDA_RECT GetBoundingBox() const override
+    EDA_RECT GetBoundingBox() const override
     {
         return GetUnitBoundingBox( 0, 0 );
     }

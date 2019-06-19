@@ -114,7 +114,7 @@ public:
      * @param aNameOnly = false (default) to add the layer number (for layers manager)
      * or true to return only the name without layer name (status bar)
      */
-    const wxString GetDisplayName( int aIdx, bool aNameOnly = false );
+    wxString GetDisplayName( int aIdx, bool aNameOnly = false );
 
     /**
      * Sort loaded images by Z order priority, if they have the X2 FileFormat info

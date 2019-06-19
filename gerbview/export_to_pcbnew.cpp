@@ -44,7 +44,7 @@
 
 
 // Imported function
-extern const wxString GetPCBDefaultLayerName( LAYER_NUM aLayerNumber );
+extern wxString GetPCBDefaultLayerName( LAYER_NUM aLayerNumber );
 
 
 /* A helper class to export a Gerber set of files to Pcbnew

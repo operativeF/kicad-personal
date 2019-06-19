@@ -111,7 +111,7 @@ public:
         m_seg.SetSeg( SEG (tmp.B , tmp.A ) );
     }
 
-    const SHAPE_LINE_CHAIN Hull( int aClearance, int aWalkaroundThickness ) const override;
+    SHAPE_LINE_CHAIN Hull( int aClearance, int aWalkaroundThickness ) const override;
 
     virtual VECTOR2I Anchor( int n ) const override
     {

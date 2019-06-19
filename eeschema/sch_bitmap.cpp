@@ -102,7 +102,7 @@ void SCH_BITMAP::SwapData( SCH_ITEM* aItem )
 }
 
 
-const EDA_RECT SCH_BITMAP::GetBoundingBox() const
+EDA_RECT SCH_BITMAP::GetBoundingBox() const
 {
     EDA_RECT rect = m_image->GetBoundingBox();
 

@@ -67,7 +67,7 @@ public:
     /**
      * Return the type of symbol library table represented by this row.
      */
-    const wxString GetType() const override         { return SCH_IO_MGR::ShowType( type ); }
+    wxString GetType() const override         { return SCH_IO_MGR::ShowType( type ); }
 
     /**
      * Change the schematic plugin type represented by this row.
@@ -304,7 +304,7 @@ public:
      * particular environment variable is that it is set automatically by KiCad on
      * program start up, <b>if</b> it is not set already in the environment.
      */
-    static const wxString GlobalPathEnvVariableName();
+    static wxString GlobalPathEnvVariableName();
 
     static SYMBOL_LIB_TABLE& GetGlobalLibTable();
 

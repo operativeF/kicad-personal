@@ -156,7 +156,7 @@ public:
     void SetOrthoMode( bool aEnable );
 
     int GetCurrentLayer() const;
-    const std::vector<int> GetCurrentNets() const;
+    std::vector<int> GetCurrentNets() const;
 
     void DumpLog();
 
@@ -167,7 +167,7 @@ public:
 
     bool IsPlacingVia() const;
 
-    const ITEM_SET   QueryHoverItems( const VECTOR2I& aP );
+    ITEM_SET   QueryHoverItems( const VECTOR2I& aP );
     const VECTOR2I      SnapToItem( ITEM* aItem, VECTOR2I aP, bool& aSplitsSegment );
 
     bool StartDragging( const VECTOR2I& aP, ITEM* aItem, int aDragMode = DM_ANY );

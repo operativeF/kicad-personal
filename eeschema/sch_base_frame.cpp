@@ -123,7 +123,7 @@ void SCH_BASE_FRAME::SetScreen(  BASE_SCREEN* aScreen )
 }
 
 
-const wxString SCH_BASE_FRAME::GetZoomLevelIndicator() const
+wxString SCH_BASE_FRAME::GetZoomLevelIndicator() const
 {
     return EDA_DRAW_FRAME::GetZoomLevelIndicator();
 }
@@ -141,7 +141,7 @@ const PAGE_INFO& SCH_BASE_FRAME::GetPageSettings () const
 }
 
 
-const wxSize SCH_BASE_FRAME::GetPageSizeIU() const
+wxSize SCH_BASE_FRAME::GetPageSizeIU() const
 {
     // GetSizeIU is compile time dependent:
     return GetScreen()->GetPageSettings().GetSizeIU();

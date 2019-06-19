@@ -132,14 +132,14 @@ public:
      */
     EDA_RECT    GetBoardBoundingBox( bool aBoardEdgesOnly = false ) const;
 
-    const BOX2I GetDocumentExtents() const override
+    BOX2I GetDocumentExtents() const override
     {
         return GetBoardBoundingBox( false );
     }
 
     virtual void SetPageSettings( const PAGE_INFO& aPageSettings ) override;
     const PAGE_INFO& GetPageSettings() const override;
-    const wxSize GetPageSizeIU() const override;
+    wxSize GetPageSizeIU() const override;
 
     const wxPoint& GetAuxOrigin() const override;
     void SetAuxOrigin( const wxPoint& aPoint ) override;
@@ -218,7 +218,7 @@ public:
      * level indicator in dialogs.
      * Virtual from the base class
      */
-    const wxString GetZoomLevelIndicator() const override;
+    wxString GetZoomLevelIndicator() const override;
 
     /**
      * Shows the 3D view frame.

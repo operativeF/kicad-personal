@@ -49,7 +49,7 @@ RATSNEST_VIEWITEM::RATSNEST_VIEWITEM(  std::shared_ptr<CONNECTIVITY_DATA> aData 
 }
 
 
-const BOX2I RATSNEST_VIEWITEM::ViewBBox() const
+BOX2I RATSNEST_VIEWITEM::ViewBBox() const
 {
     // Make it always visible
     BOX2I bbox;

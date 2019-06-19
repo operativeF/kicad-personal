@@ -89,7 +89,7 @@ public:
     /**
      * Return a brief name for a plugin, given aFileType enum.
      */
-    static const wxString ShowType( SCH_FILE_T aFileType );
+    static wxString ShowType( SCH_FILE_T aFileType );
 
     /**
      * Return the #SCH_FILE_T from the corresponding plugin type name: "kicad", "legacy", etc.
@@ -103,7 +103,7 @@ public:
      *
      * @return the file extension for \a aFileType or an empty string if \a aFileType is invalid.
      */
-    static const wxString GetFileExtension( SCH_FILE_T aFileType );
+    static wxString GetFileExtension( SCH_FILE_T aFileType );
 
     /**
      * Return a plugin type given a footprint library's libPath.
@@ -194,12 +194,12 @@ public:
     /**
      * Returns a brief hard coded name for this SCH_PLUGIN.
      */
-    virtual const wxString GetName() const = 0;
+    virtual wxString GetName() const = 0;
 
     /**
      * Returns the file extension for the #SCH_PLUGIN.
      */
-    virtual const wxString GetFileExtension() const = 0;
+    virtual wxString GetFileExtension() const = 0;
 
     /**
      * Return the modification hash from the library cache.

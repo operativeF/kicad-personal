@@ -46,7 +46,7 @@ VECTOR2I GERBVIEW_SELECTION::GetCenter() const
 }
 
 
-const BOX2I GERBVIEW_SELECTION::ViewBBox() const
+BOX2I GERBVIEW_SELECTION::ViewBBox() const
 {
     EDA_RECT eda_bbox;
 

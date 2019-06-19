@@ -121,13 +121,13 @@ public:
     bool Matches( wxFindReplaceData& aSearchData, void* aAuxData ) override;
 
     /* Cannot use a default parameter here as it will not be compatible with the virtual. */
-    const EDA_RECT GetBoundingBox() const override { return GetBoundingBox( false ); }
+    EDA_RECT GetBoundingBox() const override { return GetBoundingBox( false ); }
 
     /**
      * @param aIncludeInvisibles - if false, do not include labels for invisible pins
      *      in the calculation.
      */
-    const EDA_RECT GetBoundingBox( bool aIncludeInvisibles ) const;
+    EDA_RECT GetBoundingBox( bool aIncludeInvisibles ) const;
 
     /**
      * @return The pin end position for a component in the normal orientation.
@@ -233,7 +233,7 @@ public:
      * @param aType is the electrical type (see enum ELECTRICAL_PINTYPE )
      * @return The electrical name for a pin type (see enun MsgPinElectricType for names).
      */
-    static const wxString GetCanonicalElectricalTypeName( ELECTRICAL_PINTYPE aType );
+    static wxString GetCanonicalElectricalTypeName( ELECTRICAL_PINTYPE aType );
 
     /**
      * return a string giving the electrical type of the pin.

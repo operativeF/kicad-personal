@@ -113,7 +113,7 @@ public:
      *
      * Returns all routed/tuned traces.
      */
-    virtual const ITEM_SET Traces() = 0;
+    virtual ITEM_SET Traces() = 0;
 
     /**
      * Function CurrentEnd()
@@ -128,7 +128,7 @@ public:
      *
      * Returns the net code(s) of currently routed track(s).
      */
-    virtual const std::vector<int> CurrentNets() const = 0;
+    virtual std::vector<int> CurrentNets() const = 0;
 
     /**
      * Function CurrentLayer()

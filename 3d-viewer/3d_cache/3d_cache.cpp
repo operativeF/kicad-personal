@@ -76,7 +76,7 @@ static bool checkTag( const char* aTag, void* aPluginMgrPtr )
 }
 
 
-static const wxString sha1ToWXString( const unsigned char* aSHA1Sum )
+static wxString sha1ToWXString( const unsigned char* aSHA1Sum )
 {
     unsigned char uc;
     unsigned char tmp;
@@ -124,7 +124,7 @@ public:
     ~S3D_CACHE_ENTRY();
 
     void SetSHA1( const unsigned char* aSHA1Sum );
-    const wxString GetCacheBaseName( void );
+    wxString GetCacheBaseName( void );
 
     wxDateTime    modTime;      // file modification time
     unsigned char sha1sum[20];
@@ -167,7 +167,7 @@ void S3D_CACHE_ENTRY::SetSHA1( const unsigned char* aSHA1Sum )
 }
 
 
-const wxString S3D_CACHE_ENTRY::GetCacheBaseName( void )
+wxString S3D_CACHE_ENTRY::GetCacheBaseName( void )
 {
     if( m_CacheBaseName.empty() )
         m_CacheBaseName = sha1ToWXString( sha1sum );

@@ -133,7 +133,7 @@ void MARKER_PCB::ViewGetLayers( int aLayers[], int& aCount ) const
     aLayers[0] = LAYER_DRC;
 }
 
-const EDA_RECT MARKER_PCB::GetBoundingBox() const
+EDA_RECT MARKER_PCB::GetBoundingBox() const
 {
     EDA_RECT bbox = m_ShapeBoundingBox;
 
@@ -146,7 +146,7 @@ const EDA_RECT MARKER_PCB::GetBoundingBox() const
 }
 
 
-const BOX2I MARKER_PCB::ViewBBox() const
+BOX2I MARKER_PCB::ViewBBox() const
 {
     EDA_RECT bbox = GetBoundingBox();
     return BOX2I( bbox.GetOrigin(), VECTOR2I( bbox.GetWidth(), bbox.GetHeight() ) );

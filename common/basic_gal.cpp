@@ -44,7 +44,7 @@ KIGFX::GAL_DISPLAY_OPTIONS basic_displayOptions;
 // the basic GAL doesn't get an external display option object
 BASIC_GAL basic_gal( basic_displayOptions );
 
-const VECTOR2D BASIC_GAL::transform( const VECTOR2D& aPoint ) const
+VECTOR2D BASIC_GAL::transform( const VECTOR2D& aPoint ) const
 {
     VECTOR2D point = aPoint + m_transform.m_moveOffset - m_transform.m_rotCenter;
     point = point.Rotate( m_transform.m_rotAngle ) + m_transform.m_rotCenter;

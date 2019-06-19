@@ -31,7 +31,7 @@
 using namespace TFIELD_T;
 
 
-const wxString TEMPLATE_FIELDNAME::GetDefaultFieldName( int aFieldNdx )
+wxString TEMPLATE_FIELDNAME::GetDefaultFieldName( int aFieldNdx )
 {
     static void* locale = nullptr;
     static wxString referenceDefault;

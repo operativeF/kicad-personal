@@ -67,7 +67,7 @@ EDA_ITEM* SCH_FIELD::Clone() const
 }
 
 
-const wxString SCH_FIELD::GetFullyQualifiedText() const
+wxString SCH_FIELD::GetFullyQualifiedText() const
 {
     wxString text = m_Text;
 
@@ -187,7 +187,7 @@ void SCH_FIELD::SwapData( SCH_ITEM* aItem )
 }
 
 
-const EDA_RECT SCH_FIELD::GetBoundingBox() const
+EDA_RECT SCH_FIELD::GetBoundingBox() const
 {
     SCH_COMPONENT* parentComponent = (SCH_COMPONENT*) m_Parent;
     int linewidth = GetThickness() == 0 ? GetDefaultLineThickness() : GetThickness();

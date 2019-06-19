@@ -938,7 +938,7 @@ const PAGE_INFO& GERBVIEW_FRAME::GetPageSettings() const
 }
 
 
-const wxSize GERBVIEW_FRAME::GetPageSizeIU() const
+wxSize GERBVIEW_FRAME::GetPageSizeIU() const
 {
     // this function is only needed because EDA_DRAW_FRAME is not compiled
     // with either -DPCBNEW or -DEESCHEMA, so the virtual is used to route
@@ -1098,7 +1098,7 @@ void GERBVIEW_FRAME::UpdateStatusBar()
 }
 
 
-const wxString GERBVIEW_FRAME::GetZoomLevelIndicator() const
+wxString GERBVIEW_FRAME::GetZoomLevelIndicator() const
 {
     return EDA_DRAW_FRAME::GetZoomLevelIndicator();
 }

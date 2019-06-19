@@ -71,7 +71,7 @@ bool VIA::PushoutForce( NODE* aNode, const VECTOR2I& aDirection, VECTOR2I& aForc
 }
 
 
-const SHAPE_LINE_CHAIN VIA::Hull( int aClearance, int aWalkaroundThickness ) const
+SHAPE_LINE_CHAIN VIA::Hull( int aClearance, int aWalkaroundThickness ) const
 {
     int cl = ( aClearance + aWalkaroundThickness / 2 );
 

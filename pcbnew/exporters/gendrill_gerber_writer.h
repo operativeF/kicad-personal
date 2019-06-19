@@ -99,7 +99,7 @@ private:
      * @param aMerge_PTH_NPTH = true to generate the filename of a file which containd both
      * NPH and NPTH holes
      */
-    virtual const wxString getDrillFileName( DRILL_LAYER_PAIR aPair, bool aNPTH,
+    virtual wxString getDrillFileName( DRILL_LAYER_PAIR aPair, bool aNPTH,
                                              bool aMerge_PTH_NPTH ) const override;
 };
 

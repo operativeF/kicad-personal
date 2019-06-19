@@ -96,7 +96,7 @@ class CCAMERA
      *  Get the rotation matrix to be applied in a transformation camera
      *  @return the rotation matrix of the camera
      */
-    const glm::mat4 GetRotationMatrix() const;
+    glm::mat4 GetRotationMatrix() const;
 
     const glm::mat4 &GetViewMatrix() const;
     const glm::mat4 &GetViewMatrix_Inv() const;

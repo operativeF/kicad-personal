@@ -83,7 +83,7 @@ private:
      * @return a good report filename  (with .rpt extension) (a full filename)
      * from m_CreateRptCtrl
      */
-    const wxString makeValidFileNameReport();
+    wxString makeValidFileNameReport();
 
     void InitValues( );
 

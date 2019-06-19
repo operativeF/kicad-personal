@@ -90,7 +90,7 @@ void ROUTING_SETTINGS::Load( const TOOL_SETTINGS& aSettings )
 }
 
 
-const DIRECTION_45 ROUTING_SETTINGS::InitialDirection() const
+DIRECTION_45 ROUTING_SETTINGS::InitialDirection() const
 {
     if( m_startDiagonal )
         return DIRECTION_45( DIRECTION_45::NE );

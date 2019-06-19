@@ -168,7 +168,7 @@ private:
         return m_padStacks.back();
     }
 
-    const std::string formatPadShape( HYPERLYNX_PAD_STACK& aStack )
+    std::string formatPadShape( HYPERLYNX_PAD_STACK& aStack )
     {
         int  shapeId = 0;
         char buf[1024];
@@ -212,7 +212,7 @@ private:
 
     void writeSinglePadStack( HYPERLYNX_PAD_STACK& aStack );
 
-    const std::vector<BOARD_ITEM*> collectNetObjects( int netcode );
+    std::vector<BOARD_ITEM*> collectNetObjects( int netcode );
 
     std::vector<HYPERLYNX_PAD_STACK*>           m_padStacks;
     std::map<BOARD_ITEM*, HYPERLYNX_PAD_STACK*> m_padMap;
@@ -491,7 +491,7 @@ bool HYPERLYNX_EXPORTER::writeNetObjects( const std::vector<BOARD_ITEM*>& aObjec
 }
 
 
-const std::vector<BOARD_ITEM*> HYPERLYNX_EXPORTER::collectNetObjects( int netcode )
+std::vector<BOARD_ITEM*> HYPERLYNX_EXPORTER::collectNetObjects( int netcode )
 {
     std::vector<BOARD_ITEM*> rv;
 

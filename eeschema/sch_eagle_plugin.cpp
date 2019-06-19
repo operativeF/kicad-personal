@@ -353,13 +353,13 @@ SCH_EAGLE_PLUGIN::~SCH_EAGLE_PLUGIN()
 }
 
 
-const wxString SCH_EAGLE_PLUGIN::GetName() const
+wxString SCH_EAGLE_PLUGIN::GetName() const
 {
     return "EAGLE";
 }
 
 
-const wxString SCH_EAGLE_PLUGIN::GetFileExtension() const
+wxString SCH_EAGLE_PLUGIN::GetFileExtension() const
 {
     return "sch";
 }

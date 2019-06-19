@@ -109,7 +109,7 @@ public:
      * @param aClearance defines how far from the body of the item the hull should be,
      * @param aWalkaroundThickness is the width of the line that walks around this hull.
      */
-    virtual const SHAPE_LINE_CHAIN Hull( int aClearance = 0, int aWalkaroundThickness = 0 ) const
+    virtual SHAPE_LINE_CHAIN Hull( int aClearance = 0, int aWalkaroundThickness = 0 ) const
     {
         return SHAPE_LINE_CHAIN();
     }
@@ -139,7 +139,7 @@ public:
      *
      * Returns the kind of the item, as string
      */
-    const std::string KindStr() const;
+    std::string KindStr() const;
 
     /**
      * Function SetParent()

@@ -76,7 +76,7 @@ void DIFF_PAIR_PLACER::setWorld( NODE* aWorld )
     m_world = aWorld;
 }
 
-const VIA DIFF_PAIR_PLACER::makeVia( const VECTOR2I& aP, int aNet )
+VIA DIFF_PAIR_PLACER::makeVia( const VECTOR2I& aP, int aNet )
 {
     const LAYER_RANGE layers( m_sizes.GetLayerTop(), m_sizes.GetLayerBottom() );
 
@@ -349,7 +349,7 @@ bool DIFF_PAIR_PLACER::rhShoveOnly( const VECTOR2I& aP )
 }
 
 
-const ITEM_SET DIFF_PAIR_PLACER::Traces()
+ITEM_SET DIFF_PAIR_PLACER::Traces()
 {
       ITEM_SET t;
 
@@ -835,7 +835,7 @@ void DIFF_PAIR_PLACER::updateLeadingRatLine()
 }
 
 
-const std::vector<int> DIFF_PAIR_PLACER::CurrentNets() const
+std::vector<int> DIFF_PAIR_PLACER::CurrentNets() const
 {
     std::vector<int> rv;
     rv.push_back( m_netP );

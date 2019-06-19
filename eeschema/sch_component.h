@@ -330,7 +330,7 @@ public:
      */
     void ClearAllHighlightFlags();
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     /**
      * Return a bounding box for the symbol body but not the fields.
@@ -499,7 +499,7 @@ public:
      *
      * @return the reference for the sheet.
      */
-    const wxString GetRef( const SCH_SHEET_PATH* aSheet );
+    wxString GetRef( const SCH_SHEET_PATH* aSheet );
 
     /**
      * Set the reference for the given sheet path for this symbol.

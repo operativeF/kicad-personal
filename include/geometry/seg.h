@@ -158,7 +158,7 @@ public:
       * Computes a point on the segment (this) that is closest to any point on aSeg.
       * @return the nearest point
       */
-    const VECTOR2I NearestPoint( const SEG &aSeg ) const;
+    VECTOR2I NearestPoint( const SEG &aSeg ) const;
 
     /**
      * Function Intersect()

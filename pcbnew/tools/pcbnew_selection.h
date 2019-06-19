@@ -32,7 +32,7 @@ class PCBNEW_SELECTION : public SELECTION
 public:
     EDA_ITEM* GetTopLeftItem( bool onlyModules = false ) const override;
     
-    const KIGFX::VIEW_GROUP::ITEMS updateDrawList() const override;
+    KIGFX::VIEW_GROUP::ITEMS updateDrawList() const override;
 };
 
 #endif  //  PCBNEW_SELECTION_H

@@ -70,7 +70,7 @@ void TREEPROJECT_ITEM::SetState( int state )
 }
 
 
-const wxString TREEPROJECT_ITEM::GetDir() const
+wxString TREEPROJECT_ITEM::GetDir() const
 {
     if( TREE_DIRECTORY == m_Type )
         return GetFileName();

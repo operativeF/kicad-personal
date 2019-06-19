@@ -51,7 +51,7 @@ public:
     {
     }
 
-    const wxString GetType() const override
+    wxString GetType() const override
     {
         return m_type;
     }

@@ -375,7 +375,7 @@ ROUTER *TOOL_BASE::Router() const
 }
 
 
-const VECTOR2I TOOL_BASE::snapToItem( bool aEnabled, ITEM* aItem, VECTOR2I aP)
+VECTOR2I TOOL_BASE::snapToItem( bool aEnabled, ITEM* aItem, VECTOR2I aP)
 {
     VECTOR2I anchor;
 

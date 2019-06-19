@@ -58,7 +58,7 @@ bool TOPOLOGY::SimplifyLine( LINE* aLine )
 }
 
 
-const TOPOLOGY::JOINT_SET TOPOLOGY::ConnectedJoints( JOINT* aStart )
+TOPOLOGY::JOINT_SET TOPOLOGY::ConnectedJoints( JOINT* aStart )
 {
     std::deque<JOINT*> searchQueue;
     JOINT_SET processed;
@@ -235,7 +235,7 @@ bool TOPOLOGY::followTrivialPath( LINE* aLine, bool aLeft, ITEM_SET& aSet, std::
 }
 
 
-const ITEM_SET TOPOLOGY::AssembleTrivialPath( ITEM* aStart )
+ITEM_SET TOPOLOGY::AssembleTrivialPath( ITEM* aStart )
 {
     ITEM_SET path;
     std::set<ITEM*> visited;
@@ -270,13 +270,13 @@ const ITEM_SET TOPOLOGY::AssembleTrivialPath( ITEM* aStart )
 }
 
 
-const ITEM_SET TOPOLOGY::ConnectedItems( JOINT* aStart, int aKindMask )
+ITEM_SET TOPOLOGY::ConnectedItems( JOINT* aStart, int aKindMask )
 {
     return ITEM_SET();
 }
 
 
-const ITEM_SET TOPOLOGY::ConnectedItems( ITEM* aStart, int aKindMask )
+ITEM_SET TOPOLOGY::ConnectedItems( ITEM* aStart, int aKindMask )
 {
     return ITEM_SET();
 }
@@ -357,7 +357,7 @@ bool TOPOLOGY::AssembleDiffPair( ITEM* aStart, DIFF_PAIR& aPair )
     return true;
 }
 
-const std::set<ITEM*> TOPOLOGY::AssembleCluster( ITEM* aStart, int aLayer )
+std::set<ITEM*> TOPOLOGY::AssembleCluster( ITEM* aStart, int aLayer )
 {
     std::set<ITEM*> visited;
     std::deque<ITEM*> pending;

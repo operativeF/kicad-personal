@@ -224,7 +224,7 @@ void D_PAD::SetRoundRectCornerRadius( double aRadius )
 }
 
 
-const EDA_RECT D_PAD::GetBoundingBox() const
+EDA_RECT D_PAD::GetBoundingBox() const
 {
     EDA_RECT area;
     wxPoint quadrant1, quadrant2, quadrant3, quadrant4;
@@ -1428,7 +1428,7 @@ unsigned int D_PAD::ViewGetLOD( int aLayer, KIGFX::VIEW* aView ) const
 }
 
 
-const BOX2I D_PAD::ViewBBox() const
+BOX2I D_PAD::ViewBBox() const
 {
     // Bounding box includes soldermask too
     int solderMaskMargin       = GetSolderMaskMargin();

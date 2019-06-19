@@ -51,7 +51,7 @@ DP_MEANDER_PLACER::~DP_MEANDER_PLACER()
 }
 
 
-const LINE DP_MEANDER_PLACER::Trace() const
+LINE DP_MEANDER_PLACER::Trace() const
 {
     return m_currentTraceP;
 }
@@ -141,7 +141,7 @@ int DP_MEANDER_PLACER::origPathLength() const
 }
 
 
-const SEG DP_MEANDER_PLACER::baselineSegment( const DIFF_PAIR::COUPLED_SEGMENTS& aCoupledSegs )
+SEG DP_MEANDER_PLACER::baselineSegment( const DIFF_PAIR::COUPLED_SEGMENTS& aCoupledSegs )
 {
     const VECTOR2I a( ( aCoupledSegs.coupledP.A + aCoupledSegs.coupledN.A ) / 2 );
     const VECTOR2I b( ( aCoupledSegs.coupledP.B + aCoupledSegs.coupledN.B ) / 2 );
@@ -332,7 +332,7 @@ bool DP_MEANDER_PLACER::CheckFit( MEANDER_SHAPE* aShape )
 }
 
 
-const ITEM_SET DP_MEANDER_PLACER::Traces()
+ITEM_SET DP_MEANDER_PLACER::Traces()
 {
     m_currentTraceP = LINE( m_originPair.PLine(), m_finalShapeP );
     m_currentTraceN = LINE( m_originPair.NLine(), m_finalShapeN );
@@ -358,7 +358,7 @@ int DP_MEANDER_PLACER::CurrentLayer() const
 }
 
 
-const wxString DP_MEANDER_PLACER::TuningInfo( EDA_UNITS_T aUnits ) const
+wxString DP_MEANDER_PLACER::TuningInfo( EDA_UNITS_T aUnits ) const
 {
     wxString status;
 
@@ -393,7 +393,7 @@ DP_MEANDER_PLACER::TUNING_STATUS DP_MEANDER_PLACER::TuningStatus() const
     return m_lastStatus;
 }
 
-const std::vector<int> DP_MEANDER_PLACER::CurrentNets() const
+std::vector<int> DP_MEANDER_PLACER::CurrentNets() const
 {
     std::vector<int> rv;
     rv.push_back( m_originPair.NetP() );

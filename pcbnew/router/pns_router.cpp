@@ -116,7 +116,7 @@ bool ROUTER::RoutingInProgress() const
 }
 
 
-const ITEM_SET ROUTER::QueryHoverItems( const VECTOR2I& aP )
+ITEM_SET ROUTER::QueryHoverItems( const VECTOR2I& aP )
 {
     if( m_state == IDLE || m_placer == nullptr )
         return m_world->HitTest( aP );
@@ -457,7 +457,7 @@ void ROUTER::ToggleViaPlacement()
 }
 
 
-const std::vector<int> ROUTER::GetCurrentNets() const
+std::vector<int> ROUTER::GetCurrentNets() const
 {
     if( m_placer )
         return m_placer->CurrentNets();

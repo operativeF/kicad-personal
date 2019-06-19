@@ -37,7 +37,7 @@
 #include <wx/filehistory.h>
 #include <search_stack.h>
 #include <wx/gdicmn.h>
-#include <bitmaps_png/bitmap_def.h>
+#include "../bitmaps_png/include/bitmaps_png/bitmap_def.h"
 
 
 ///@{

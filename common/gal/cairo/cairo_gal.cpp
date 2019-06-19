@@ -99,7 +99,7 @@ void CAIRO_GAL_BASE::updateWorldScreenMatrix()
 }
 
 
-const VECTOR2D CAIRO_GAL_BASE::xform( double x, double y )
+VECTOR2D CAIRO_GAL_BASE::xform( double x, double y )
 {
     VECTOR2D rv;
 
@@ -109,13 +109,13 @@ const VECTOR2D CAIRO_GAL_BASE::xform( double x, double y )
 }
 
 
-const VECTOR2D CAIRO_GAL_BASE::xform( const VECTOR2D& aP )
+VECTOR2D CAIRO_GAL_BASE::xform( const VECTOR2D& aP )
 {
     return xform( aP.x, aP.y );
 }
 
 
-const double CAIRO_GAL_BASE::angle_xform( const double aAngle )
+double CAIRO_GAL_BASE::angle_xform( const double aAngle )
 {
     // calculate rotation angle due to the rotation transform
     // and if flipped on X axis.
@@ -161,7 +161,7 @@ void CAIRO_GAL_BASE::arc_angles_xform_and_normalize( double& aStartAngle, double
 }
 
 
-const double CAIRO_GAL_BASE::xform( double x )
+double CAIRO_GAL_BASE::xform( double x )
 {
     double dx = currentWorld2Screen.xx * x;
     double dy = currentWorld2Screen.yx * x;
@@ -175,7 +175,7 @@ static double roundp( double x )
 }
 
 
-const VECTOR2D CAIRO_GAL_BASE::roundp( const VECTOR2D& v )
+VECTOR2D CAIRO_GAL_BASE::roundp( const VECTOR2D& v )
 {
     if( lineWidthIsOdd && isStrokeEnabled )
         return VECTOR2D( ::roundp( v.x ), ::roundp( v.y ) );

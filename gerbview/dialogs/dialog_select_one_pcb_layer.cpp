@@ -36,7 +36,7 @@
 #define LAST_COPPER_LAYER 31
 
 // Exported function
-const wxString GetPCBDefaultLayerName( int aLayerId );
+wxString GetPCBDefaultLayerName( int aLayerId );
 
 
 enum layer_sel_id {
@@ -207,7 +207,7 @@ void SELECT_LAYER_DIALOG::OnCancelClick( wxCommandEvent& event )
 // This function is a duplicate of
 // const wxChar* LSET::Name( PCB_LAYER_ID aLayerId )
 // However it avoids a dependency to Pcbnew code.
-const wxString GetPCBDefaultLayerName( int aLayerId )
+wxString GetPCBDefaultLayerName( int aLayerId )
 {
     const wxChar* txt;
 

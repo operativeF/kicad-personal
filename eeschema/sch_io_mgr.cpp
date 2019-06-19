@@ -73,7 +73,7 @@ void SCH_IO_MGR::ReleasePlugin( SCH_PLUGIN* aPlugin )
 }
 
 
-const wxString SCH_IO_MGR::ShowType( SCH_FILE_T aType )
+wxString SCH_IO_MGR::ShowType( SCH_FILE_T aType )
 {
     // keep this function in sync with EnumFromStr() relative to the
     // text spellings.  If you change the spellings, you will obsolete
@@ -110,7 +110,7 @@ SCH_IO_MGR::SCH_FILE_T SCH_IO_MGR::EnumFromStr( const wxString& aType )
 }
 
 
-const wxString SCH_IO_MGR::GetFileExtension( SCH_FILE_T aFileType )
+wxString SCH_IO_MGR::GetFileExtension( SCH_FILE_T aFileType )
 {
     wxString ext = wxEmptyString;
     SCH_PLUGIN* plugin = FindPlugin( aFileType );

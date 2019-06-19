@@ -78,7 +78,7 @@ public:
     /**
      * @return a wxPoint, position of the first point of the outline
      */
-    const wxPoint GetPosition() const override;
+    wxPoint GetPosition() const override;
     void SetPosition( const wxPoint& aPos ) override {}
 
     /**
@@ -122,7 +122,7 @@ public:
     /** Function GetBoundingBox (virtual)
      * @return an EDA_RECT that is the bounding box of the zone outline
      */
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     int GetClearance( BOARD_CONNECTED_ITEM* aItem = NULL ) const override;
 

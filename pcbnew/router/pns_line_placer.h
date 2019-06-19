@@ -118,14 +118,14 @@ public:
      *
      * Returns the complete routed line.
      */
-    const LINE Trace() const;
+    LINE Trace() const;
 
     /**
      * Function Traces()
      *
      * Returns the complete routed line, as a single-member ITEM_SET.
      */
-    const ITEM_SET Traces() override;
+    ITEM_SET Traces() override;
 
     /**
      * Function CurrentEnd()
@@ -143,7 +143,7 @@ public:
      *
      * Returns the net code of currently routed track.
      */
-    const std::vector<int> CurrentNets() const override
+    std::vector<int> CurrentNets() const override
     {
         return std::vector<int>( 1, m_currentNet );
     }
@@ -335,7 +335,7 @@ private:
      */
     void routeStep( const VECTOR2I& aP );
 
-    const LINE reduceToNearestObstacle( const LINE& aOriginalLine );
+    LINE reduceToNearestObstacle( const LINE& aOriginalLine );
 
     bool rhStopAtNearestObstacle( const VECTOR2I& aP, LINE& aNewHead );
 
@@ -349,7 +349,7 @@ private:
     ///> route step, mark obstacles mode
     bool rhMarkObstacles( const VECTOR2I& aP, LINE& aNewHead );
 
-    const VIA makeVia( const VECTOR2I& aP );
+    VIA makeVia( const VECTOR2I& aP );
 
     bool buildInitialLine( const VECTOR2I& aP, LINE& aHead, bool aInvertPosture = false );
 

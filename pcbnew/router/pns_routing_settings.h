@@ -125,7 +125,7 @@ public:
 
     void SetFreeAngleMode( bool aEnable ) { m_freeAngleMode = aEnable; }
 
-    const DIRECTION_45 InitialDirection() const;
+    DIRECTION_45 InitialDirection() const;
 
     int ShoveIterationLimit() const;
     TIME_LIMIT ShoveTimeLimit() const;

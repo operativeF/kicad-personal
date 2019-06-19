@@ -68,12 +68,12 @@ public:
     SCH_LEGACY_PLUGIN();
     virtual ~SCH_LEGACY_PLUGIN();
 
-    const wxString GetName() const override
+    wxString GetName() const override
     {
         return wxT( "Eeschema-Legacy" );
     }
 
-    const wxString GetFileExtension() const override
+    wxString GetFileExtension() const override
     {
         return wxT( "sch" );
     }

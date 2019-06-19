@@ -205,7 +205,7 @@ RULER_ITEM::RULER_ITEM( const TWO_POINT_GEOMETRY_MANAGER& aGeomMgr, EDA_UNITS_T 
 {}
 
 
-const BOX2I RULER_ITEM::ViewBBox() const
+BOX2I RULER_ITEM::ViewBBox() const
 {
     BOX2I tmp;
 

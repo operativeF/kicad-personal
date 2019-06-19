@@ -37,7 +37,7 @@ struct FlagString
 };
 
 
-static const std::string flag2string( int aFlag, const FlagString* aExps )
+static std::string flag2string( int aFlag, const FlagString* aExps )
 {
     std::string rv;
 
@@ -66,7 +66,7 @@ bool TOOL_EVENT::IsAction( const TOOL_ACTION* aAction ) const
 }
 
 
-const std::string TOOL_EVENT::Format() const
+std::string TOOL_EVENT::Format() const
 {
     std::string ev;
 
@@ -160,7 +160,7 @@ const std::string TOOL_EVENT::Format() const
 }
 
 
-const std::string TOOL_EVENT_LIST::Format() const
+std::string TOOL_EVENT_LIST::Format() const
 {
     std::string s;
 

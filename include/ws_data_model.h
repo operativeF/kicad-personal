@@ -197,7 +197,7 @@ public:
      * @param aFullFileName = the full filename, which can be a relative
      * @param aProjectPath = the curr project absolute path (can be empty)
      */
-    static const wxString MakeShortFileName( const wxString& aFullFileName,
+    static wxString MakeShortFileName( const wxString& aFullFileName,
                                              const wxString& aProjectPath );
 
     /**
@@ -211,7 +211,7 @@ public:
      * relative to kicad.pro (in template)
      * If aShortFileName is absolute return aShortFileName
      */
-    static const wxString MakeFullFileName( const wxString& aShortFileName,
+    static wxString MakeFullFileName( const wxString& aShortFileName,
                                             const wxString& aProjectPath );
 };
 

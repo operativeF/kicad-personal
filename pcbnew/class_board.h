@@ -259,7 +259,7 @@ public:
         return m_ZoneDescriptorList;
     }
 
-    const std::vector<BOARD_CONNECTED_ITEM*> AllConnectedItems();
+    std::vector<BOARD_CONNECTED_ITEM*> AllConnectedItems();
 
     /// zone contour currently in progress
     ZONE_CONTAINER*             m_CurrentZoneContour;
@@ -267,7 +267,7 @@ public:
     BOARD();
     ~BOARD();
 
-    const wxPoint GetPosition() const override;
+    wxPoint GetPosition() const override;
     void SetPosition( const wxPoint& aPos ) override;
 
     bool IsEmpty() const
@@ -628,7 +628,7 @@ public:
      * @return PCB_LAYER_ID -   the layer id, which for copper layers may
      *                      be custom, else standard.
      */
-    const PCB_LAYER_ID GetLayerID( const wxString& aLayerName ) const;
+    PCB_LAYER_ID GetLayerID( const wxString& aLayerName ) const;
 
     /**
      * Function GetLayerName
@@ -640,7 +640,7 @@ public:
      * @return wxString -   the layer name, which for copper layers may
      *                      be custom, else standard.
      */
-    const wxString GetLayerName( PCB_LAYER_ID aLayer ) const;
+    wxString GetLayerName( PCB_LAYER_ID aLayer ) const;
 
     /**
      * Function SetLayerName
@@ -732,7 +732,7 @@ public:
      * ownership of the respective PADs.
      * @return D_PADS - a full list of pads
      */
-    const std::vector<D_PAD*> GetPads();
+    std::vector<D_PAD*> GetPads();
 
     void BuildListOfNets()
     {
@@ -797,7 +797,7 @@ public:
      */
     EDA_RECT ComputeBoundingBox( bool aBoardEdgesOnly = false ) const;
 
-    const EDA_RECT GetBoundingBox() const override
+    EDA_RECT GetBoundingBox() const override
     {
         return ComputeBoundingBox( false );
     }

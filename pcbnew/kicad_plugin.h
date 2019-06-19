@@ -101,12 +101,12 @@ public:
 
     //-----<PLUGIN API>---------------------------------------------------------
 
-    const wxString PluginName() const override
+    wxString PluginName() const override
     {
         return wxT( "KiCad" );
     }
 
-    const wxString GetFileExtension() const override
+    wxString GetFileExtension() const override
     {
         // Would have used wildcards_and_files_ext.cpp's KiCadPcbFileExtension,
         // but to be pure, a plugin should not assume that it will always be linked

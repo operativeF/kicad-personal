@@ -48,7 +48,7 @@ public:
     bool TransferDataToWindow() override;
     bool TransferDataFromWindow() override;
 
-    const wxString GetFileName();
+    wxString GetFileName();
     wxString GetSheetName() { return m_textSheetName->GetValue(); }
     int GetFileNameTextSize() { return m_filenameTextSize.GetValue(); }
     int GetSheetNameTextSize() { return m_sheetnameTextSize.GetValue(); }

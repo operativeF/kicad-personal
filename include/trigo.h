@@ -105,7 +105,7 @@ void RotatePoint( double *pX, double *pY, double cx, double cy, double angle );
  * @param aEnd The ending point of the circle (equivalent to aStart)
  * @return The center of the circle
  */
-const VECTOR2I GetArcCenter( const VECTOR2I& aStart, const VECTOR2I& aMid, const VECTOR2I& aEnd );
+VECTOR2I GetArcCenter( const VECTOR2I& aStart, const VECTOR2I& aMid, const VECTOR2I& aEnd );
 
 /* Return the arc tangent of 0.1 degrees coord vector dx, dy
  * between -1800 and 1800

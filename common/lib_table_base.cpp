@@ -65,7 +65,7 @@ void LIB_TABLE_ROW::SetFullURI( const wxString& aFullURI )
 }
 
 
-const wxString LIB_TABLE_ROW::GetFullURI( bool aSubstituted ) const
+wxString LIB_TABLE_ROW::GetFullURI( bool aSubstituted ) const
 {
     if( aSubstituted )
     {
@@ -249,7 +249,7 @@ bool LIB_TABLE::IsEmpty( bool aIncludeFallback )
 }
 
 
-const wxString LIB_TABLE::GetDescription( const wxString& aNickname )
+wxString LIB_TABLE::GetDescription( const wxString& aNickname )
 {
     // use "no exception" form of find row:
     const LIB_TABLE_ROW* row = findRow( aNickname );
@@ -545,7 +545,7 @@ UTF8 LIB_TABLE::FormatOptions( const PROPERTIES* aProperties )
 }
 
 
-const wxString LIB_TABLE::ExpandSubstitutions( const wxString& aString )
+wxString LIB_TABLE::ExpandSubstitutions( const wxString& aString )
 {
     return ExpandEnvVarSubstitutions( aString );
 }

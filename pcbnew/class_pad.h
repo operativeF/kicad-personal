@@ -212,7 +212,7 @@ public:
     void SetShape( PAD_SHAPE_T aShape )         { m_padShape = aShape; m_boundingRadius = -1; }
 
     void SetPosition( const wxPoint& aPos ) override { m_Pos = aPos; }
-    const wxPoint GetPosition() const override { return m_Pos; }
+    wxPoint GetPosition() const override { return m_Pos; }
 
     /**
      * Function GetAnchorPadShape
@@ -705,7 +705,7 @@ public:
     }
 
     // Virtual function:
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     ///> Set absolute coordinates.
     void SetDrawCoord();
@@ -776,7 +776,7 @@ public:
 
     virtual unsigned int ViewGetLOD( int aLayer, KIGFX::VIEW* aView ) const override;
 
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
 
     /**
      * Function CopyNetlistSettings

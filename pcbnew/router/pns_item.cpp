@@ -60,7 +60,7 @@ bool ITEM::Collide( const ITEM* aOther, int aClearance, bool aNeedMTV,
 }
 
 
-const std::string ITEM::KindStr() const
+std::string ITEM::KindStr() const
 {
     switch( m_kind )
     {

@@ -98,7 +98,7 @@ public:
      * returns the bounding box of the item covering all its layers.
      * @return BOX2I - the current bounding box
      */
-    virtual const BOX2I ViewBBox() const = 0;
+    virtual BOX2I ViewBBox() const = 0;
 
     /**
      * Function ViewDraw()

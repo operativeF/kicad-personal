@@ -108,13 +108,13 @@ public:
 
     void SetPageSettings(const PAGE_INFO&) override;
     const PAGE_INFO& GetPageSettings () const override;
-    const wxSize GetPageSizeIU() const override;
+    wxSize GetPageSizeIU() const override;
 
     /**
      * Function GetZoomLevelIndicator
      * returns a human readable value which can be displayed in dialogs.
      */
-    const wxString GetZoomLevelIndicator() const override;
+    wxString GetZoomLevelIndicator() const override;
 
     PL_DRAW_PANEL_GAL* GetCanvas() const override;
 
@@ -177,7 +177,7 @@ public:
     const PL_EDITOR_LAYOUT& GetPageLayout() const { return m_pageLayout; }
     PL_EDITOR_LAYOUT& GetPageLayout() { return m_pageLayout; }
 
-    const BOX2I GetDocumentExtents() const override;
+    BOX2I GetDocumentExtents() const override;
 
     /**
      * Page layout editor can show the title block using a page number 1 or another number.

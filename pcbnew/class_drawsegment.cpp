@@ -56,7 +56,7 @@ void DRAWSEGMENT::SetPosition( const wxPoint& aPos )
 }
 
 
-const wxPoint DRAWSEGMENT::GetPosition() const
+wxPoint DRAWSEGMENT::GetPosition() const
 {
     if( m_Shape == S_POLYGON )
         return (wxPoint) m_Poly.CVertex( 0 );
@@ -213,7 +213,7 @@ void DRAWSEGMENT::RebuildBezierToSegmentsPointsList( int aMinSegLen )
 }
 
 
-const wxPoint DRAWSEGMENT::GetCenter() const
+wxPoint DRAWSEGMENT::GetCenter() const
 {
     wxPoint c;
 
@@ -245,7 +245,7 @@ const wxPoint DRAWSEGMENT::GetCenter() const
 }
 
 
-const wxPoint DRAWSEGMENT::GetArcEnd() const
+wxPoint DRAWSEGMENT::GetArcEnd() const
 {
     wxPoint endPoint( m_End );         // start of arc
 
@@ -267,7 +267,7 @@ const wxPoint DRAWSEGMENT::GetArcEnd() const
 }
 
 
-const wxPoint DRAWSEGMENT::GetArcMid() const
+wxPoint DRAWSEGMENT::GetArcMid() const
 {
     wxPoint endPoint( m_End );
 
@@ -498,7 +498,7 @@ void DRAWSEGMENT::GetMsgPanelInfo( EDA_UNITS_T aUnits, std::vector< MSG_PANEL_IT
 }
 
 
-const EDA_RECT DRAWSEGMENT::GetBoundingBox() const
+EDA_RECT DRAWSEGMENT::GetBoundingBox() const
 {
     EDA_RECT bbox;
 
@@ -823,7 +823,7 @@ EDA_ITEM* DRAWSEGMENT::Clone() const
 }
 
 
-const BOX2I DRAWSEGMENT::ViewBBox() const
+BOX2I DRAWSEGMENT::ViewBBox() const
 {
     // For arcs - do not include the center point in the bounding box,
     // it is redundant for displaying an arc
@@ -926,7 +926,7 @@ void DRAWSEGMENT::SetPolyPoints( const std::vector<wxPoint>& aPoints )
 }
 
 
-const std::vector<wxPoint> DRAWSEGMENT::BuildPolyPointsList() const
+std::vector<wxPoint> DRAWSEGMENT::BuildPolyPointsList() const
 {
     std::vector<wxPoint> rv;
 

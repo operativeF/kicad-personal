@@ -75,7 +75,7 @@ public:
     wxPoint GetPosition() const override { return m_position; }
     void SetPosition( const wxPoint& aPosition ) override { m_position = aPosition; }
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override;
 
     bool IsDangling() const override { return m_isDangling; }

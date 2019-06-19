@@ -53,7 +53,7 @@ public:
 
 protected:
     bool checkSnap( ITEM* aItem );
-    const VECTOR2I snapToItem( bool aEnabled, ITEM* aItem, VECTOR2I aP);
+    VECTOR2I snapToItem( bool aEnabled, ITEM* aItem, VECTOR2I aP);
     virtual ITEM* pickSingleItem( const VECTOR2I& aWhere, int aNet = -1, int aLayer = -1,
                                   bool aIgnorePads = false, const std::vector<ITEM*> aAvoidItems = {} );
     virtual void highlightNet( bool aEnabled, int aNetcode = -1 );

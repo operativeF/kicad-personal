@@ -750,7 +750,7 @@ void LIB_EDIT_FRAME::HardRedraw()
 }
 
 
-const BOX2I LIB_EDIT_FRAME::GetDocumentExtents() const
+BOX2I LIB_EDIT_FRAME::GetDocumentExtents() const
 {
     LIB_PART*  part = GetCurPart();
 

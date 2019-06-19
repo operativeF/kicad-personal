@@ -351,7 +351,7 @@ public:
      * system.
      * It is OK to overestimate the size by a few counts.
      */
-    virtual const EDA_RECT GetBoundingBox() const;
+    virtual EDA_RECT GetBoundingBox() const;
 
     /**
      * Function Clone
@@ -547,7 +547,7 @@ public:
      */
     EDA_ITEM& operator=( const EDA_ITEM& aItem );
 
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
 
     virtual void ViewGetLayers( int aLayers[], int& aCount ) const override;
 

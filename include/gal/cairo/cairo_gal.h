@@ -220,15 +220,15 @@ public:
 
 protected:
     // Geometric transforms according to the currentWorld2Screen transform matrix:
-    const double xform( double x );             // scale
-    const VECTOR2D xform( double x, double y ); // rotation, scale and offset
-    const VECTOR2D xform( const VECTOR2D& aP ); // rotation, scale and offset
+    double xform( double x );             // scale
+    VECTOR2D xform( double x, double y ); // rotation, scale and offset
+    VECTOR2D xform( const VECTOR2D& aP ); // rotation, scale and offset
 
     /** Transform according to the rotation from currentWorld2Screen transform matrix:
      * @param aAngle is the angle in radians to transform
      * @return the modified angle
      */
-    const double angle_xform( const double aAngle );
+    double angle_xform( const double aAngle );
 
     /** Transform according to the rotation from currentWorld2Screen transform matrix
      * for the start angle and the end angle of an arc
@@ -337,7 +337,7 @@ protected:
 
     void syncLineWidth( bool aForceWidth = false, double aWidth = 0.0 );
     void updateWorldScreenMatrix();
-    const VECTOR2D roundp( const VECTOR2D& v );
+    VECTOR2D roundp( const VECTOR2D& v );
 
 
     /// Format used to store pixels

@@ -97,7 +97,7 @@ public:
 
     void SetPageSettings( const PAGE_INFO& aPageSettings ) override;
     const PAGE_INFO& GetPageSettings() const override;
-    const wxSize GetPageSizeIU() const override;
+    wxSize GetPageSizeIU() const override;
 
     const wxPoint& GetAuxOrigin() const override;
     void SetAuxOrigin( const wxPoint& aPoint ) override;
@@ -128,7 +128,7 @@ public:
     ///> @copydoc EDA_DRAW_FRAME::SetGridColor()
     virtual void SetGridColor( COLOR4D aColor ) override;
 
-    const BOX2I GetDocumentExtents() const override
+    BOX2I GetDocumentExtents() const override
     {
         wxASSERT( m_gerberLayout );
         return m_gerberLayout->ViewBBox();
@@ -233,7 +233,7 @@ public:
      * level indicator in dialogs.
      * Virtual from the base class
      */
-    const wxString GetZoomLevelIndicator() const override;
+    wxString GetZoomLevelIndicator() const override;
 
     /**
      * Function GetDisplayMode

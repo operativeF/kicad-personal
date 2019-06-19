@@ -330,7 +330,7 @@ void PCB_CALCULATOR_FRAME::OnPaintTranslinePanel( wxPaintEvent& event )
 /* returns the full filename of the selected pcb_calculator data file
  * the extention file is forced
  */
-const wxString PCB_CALCULATOR_FRAME::GetDataFilename()
+wxString PCB_CALCULATOR_FRAME::GetDataFilename()
 {
     if( m_regulators_fileNameCtrl->GetValue().IsEmpty() )
         return wxEmptyString;

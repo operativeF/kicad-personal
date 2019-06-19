@@ -35,7 +35,7 @@ int CN_ITEM::AnchorCount() const
 }
 
 
-const VECTOR2I CN_ITEM::GetAnchor( int n ) const
+VECTOR2I CN_ITEM::GetAnchor( int n ) const
 {
     if( !m_valid )
         return VECTOR2I();
@@ -97,7 +97,7 @@ int CN_ZONE::AnchorCount() const
 }
 
 
-const VECTOR2I CN_ZONE::GetAnchor( int n ) const
+VECTOR2I CN_ZONE::GetAnchor( int n ) const
 {
     if( !Valid() )
         return VECTOR2I();
@@ -179,7 +179,7 @@ CN_ITEM* CN_LIST::Add( D_PAD* pad )
      return item;
  }
 
- const std::vector<CN_ITEM*> CN_LIST::Add( ZONE_CONTAINER* zone )
+ std::vector<CN_ITEM*> CN_LIST::Add( ZONE_CONTAINER* zone )
  {
      const auto& polys = zone->GetFilledPolysList();
 

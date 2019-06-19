@@ -156,7 +156,7 @@ public:
     SHAPE_POLY_SET GetBoundingPoly() const;
 
     // Virtual function
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     PADS& Pads()
     {
@@ -183,7 +183,7 @@ public:
 
     void SetPosition( const wxPoint& aPos ) override;
 
-    const wxPoint GetPosition() const override { return m_Pos; }
+    wxPoint GetPosition() const override { return m_Pos; }
 
     void SetOrientation( double newangle );
 
@@ -577,7 +577,7 @@ public:
 
     virtual unsigned int ViewGetLOD( int aLayer, KIGFX::VIEW* aView ) const override;
 
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
 
     /**
      * Function CopyNetlistSettings

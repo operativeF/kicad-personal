@@ -53,7 +53,7 @@ public:
 
     void ViewGetLayers( int aLayers[], int& aCount ) const override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     void Print( wxDC* aDC, const wxPoint& aOffset ) override;
 

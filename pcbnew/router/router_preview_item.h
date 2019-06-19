@@ -101,7 +101,7 @@ public:
         return wxT( "ROUTER_PREVIEW_ITEM" );
     }
 
-    const BOX2I ViewBBox() const override;
+    BOX2I ViewBBox() const override;
 
     virtual void ViewDraw( int aLayer, KIGFX::VIEW* aView ) const override;
 
@@ -114,8 +114,8 @@ public:
     void drawLineChain( const SHAPE_LINE_CHAIN& aL, KIGFX::GAL* aGal ) const;
 
 private:
-    const KIGFX::COLOR4D assignColor( int aStyle ) const;
-    const KIGFX::COLOR4D getLayerColor( int aLayer ) const;
+    KIGFX::COLOR4D assignColor( int aStyle ) const;
+    KIGFX::COLOR4D getLayerColor( int aLayer ) const;
 
     KIGFX::VIEW* m_view;
 

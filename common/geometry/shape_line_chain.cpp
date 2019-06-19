@@ -89,7 +89,7 @@ bool SHAPE_LINE_CHAIN::Collide( const SEG& aSeg, int aClearance ) const
 }
 
 
-const SHAPE_LINE_CHAIN SHAPE_LINE_CHAIN::Reverse() const
+SHAPE_LINE_CHAIN SHAPE_LINE_CHAIN::Reverse() const
 {
     SHAPE_LINE_CHAIN a( *this );
 
@@ -226,7 +226,7 @@ int SHAPE_LINE_CHAIN::FindSegment( const VECTOR2I& aP ) const
 }
 
 
-const SHAPE_LINE_CHAIN SHAPE_LINE_CHAIN::Slice( int aStartIndex, int aEndIndex ) const
+SHAPE_LINE_CHAIN SHAPE_LINE_CHAIN::Slice( int aStartIndex, int aEndIndex ) const
 {
     SHAPE_LINE_CHAIN rv;
 
@@ -450,7 +450,7 @@ bool SHAPE_LINE_CHAIN::CheckClearance( const VECTOR2I& aP, const int aDist) cons
 }
 
 
-const OPT<SHAPE_LINE_CHAIN::INTERSECTION> SHAPE_LINE_CHAIN::SelfIntersecting() const
+OPT<SHAPE_LINE_CHAIN::INTERSECTION> SHAPE_LINE_CHAIN::SelfIntersecting() const
 {
     for( int s1 = 0; s1 < SegmentCount(); s1++ )
     {
@@ -567,7 +567,7 @@ SHAPE_LINE_CHAIN& SHAPE_LINE_CHAIN::Simplify()
 }
 
 
-const VECTOR2I SHAPE_LINE_CHAIN::NearestPoint( const VECTOR2I& aP ) const
+VECTOR2I SHAPE_LINE_CHAIN::NearestPoint( const VECTOR2I& aP ) const
 {
     int min_d = INT_MAX;
     int nearest = 0;
@@ -587,7 +587,7 @@ const VECTOR2I SHAPE_LINE_CHAIN::NearestPoint( const VECTOR2I& aP ) const
 }
 
 
-const VECTOR2I SHAPE_LINE_CHAIN::NearestPoint( const SEG& aSeg, int& dist ) const
+VECTOR2I SHAPE_LINE_CHAIN::NearestPoint( const SEG& aSeg, int& dist ) const
 {
     int nearest = 0;
 
@@ -607,7 +607,7 @@ const VECTOR2I SHAPE_LINE_CHAIN::NearestPoint( const SEG& aSeg, int& dist ) cons
 }
 
 
-const std::string SHAPE_LINE_CHAIN::Format() const
+std::string SHAPE_LINE_CHAIN::Format() const
 {
     std::stringstream ss;
 
@@ -673,7 +673,7 @@ bool SHAPE_LINE_CHAIN::Parse( std::stringstream& aStream )
 }
 
 
-const VECTOR2I SHAPE_LINE_CHAIN::PointAlong( int aPathLength ) const
+VECTOR2I SHAPE_LINE_CHAIN::PointAlong( int aPathLength ) const
 {
     int total = 0;
 

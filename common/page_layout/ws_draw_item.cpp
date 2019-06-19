@@ -161,7 +161,7 @@ void WS_DRAW_ITEM_TEXT::PrintWsItem( wxDC* aDC, const wxPoint& aOffset, COLOR4D 
 }
 
 
-const EDA_RECT WS_DRAW_ITEM_TEXT::GetBoundingBox() const
+EDA_RECT WS_DRAW_ITEM_TEXT::GetBoundingBox() const
 {
     return EDA_TEXT::GetTextBox( -1 );
 }
@@ -220,7 +220,7 @@ void WS_DRAW_ITEM_POLYPOLYGONS::SetPosition( wxPoint aPos )
 }
 
 
-const EDA_RECT WS_DRAW_ITEM_POLYPOLYGONS::GetBoundingBox() const
+EDA_RECT WS_DRAW_ITEM_POLYPOLYGONS::GetBoundingBox() const
 {
     EDA_RECT rect;
     BOX2I box = m_Polygons.BBox();
@@ -296,7 +296,7 @@ void WS_DRAW_ITEM_RECT::PrintWsItem( wxDC* aDC, const wxPoint& aOffset, COLOR4D 
 }
 
 
-const EDA_RECT WS_DRAW_ITEM_RECT::GetBoundingBox() const
+EDA_RECT WS_DRAW_ITEM_RECT::GetBoundingBox() const
 {
     return EDA_RECT( GetStart(), wxSize( GetEnd().x - GetStart().x, GetEnd().y - GetStart().y ) );
 }
@@ -354,7 +354,7 @@ void WS_DRAW_ITEM_LINE::PrintWsItem(  wxDC* aDC, const wxPoint& aOffset, COLOR4D
 }
 
 
-const EDA_RECT WS_DRAW_ITEM_LINE::GetBoundingBox() const
+EDA_RECT WS_DRAW_ITEM_LINE::GetBoundingBox() const
 {
     return EDA_RECT( GetStart(), wxSize( GetEnd().x - GetStart().x, GetEnd().y - GetStart().y ) );
 }
@@ -388,7 +388,7 @@ void WS_DRAW_ITEM_BITMAP::PrintWsItem( wxDC* aDC, const wxPoint& aOffset, COLOR4
 }
 
 
-const EDA_RECT WS_DRAW_ITEM_BITMAP::GetBoundingBox() const
+EDA_RECT WS_DRAW_ITEM_BITMAP::GetBoundingBox() const
 {
     auto*    bitmap = static_cast<const WS_DATA_ITEM_BITMAP*>( m_peer );
     wxSize bm_size = bitmap->m_ImageBitmap->GetSize();
@@ -435,7 +435,7 @@ wxString WS_DRAW_ITEM_PAGE::GetSelectMenuText( EDA_UNITS_T aUnits ) const
 }
 
 
-const EDA_RECT WS_DRAW_ITEM_PAGE::GetBoundingBox() const
+EDA_RECT WS_DRAW_ITEM_PAGE::GetBoundingBox() const
 {
     EDA_RECT dummy;
 

@@ -54,7 +54,7 @@ public:
 
     ORIGIN_VIEWITEM* Clone() const override;
 
-    const BOX2I ViewBBox() const override;
+    BOX2I ViewBBox() const override;
 
     void ViewDraw( int aLayer, VIEW* aView ) const override;
 
@@ -104,7 +104,7 @@ public:
         m_position = VECTOR2D( aPosition );
     }
 
-    inline const wxPoint GetPosition() const override
+    inline wxPoint GetPosition() const override
     {
         return wxPoint( m_position.x, m_position.y );
     }

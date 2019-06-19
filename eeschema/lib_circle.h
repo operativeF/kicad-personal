@@ -55,7 +55,7 @@ public:
 
     int GetPenSize( ) const override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     void GetMsgPanelInfo( EDA_UNITS_T aUnits, std::vector< MSG_PANEL_ITEM >& aList ) override;
 

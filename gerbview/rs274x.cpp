@@ -147,7 +147,7 @@ int GERBER_FILE_IMAGE::ReadXCommandID( char*& text )
  * Hexadecimal coded values ("\hhhh") are converted to
  * the unicode char value
  */
-static const wxString fromGerberString( const wxString& aGbrString )
+static wxString fromGerberString( const wxString& aGbrString )
 {
     wxString text;
 

@@ -359,7 +359,7 @@ void RotatePoint( double* pX, double* pY, double angle )
 }
 
 
-const VECTOR2I GetArcCenter( const VECTOR2I& aStart, const VECTOR2I& aMid, const VECTOR2I& aEnd )
+VECTOR2I GetArcCenter( const VECTOR2I& aStart, const VECTOR2I& aMid, const VECTOR2I& aEnd )
 {
     VECTOR2I center;
     double yDelta_21 = aMid.y - aStart.y;

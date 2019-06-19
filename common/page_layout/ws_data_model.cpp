@@ -162,7 +162,7 @@ WS_DATA_ITEM* WS_DATA_MODEL::GetItem( unsigned aIdx ) const
 }
 
 
-const wxString WS_DATA_MODEL::MakeShortFileName( const wxString& aFullFileName,
+wxString WS_DATA_MODEL::MakeShortFileName( const wxString& aFullFileName,
                                                  const wxString& aProjectPath  )
 {
     wxString    shortFileName = aFullFileName;
@@ -191,7 +191,7 @@ const wxString WS_DATA_MODEL::MakeShortFileName( const wxString& aFullFileName,
 }
 
 
-const wxString WS_DATA_MODEL::MakeFullFileName( const wxString& aShortFileName,
+wxString WS_DATA_MODEL::MakeFullFileName( const wxString& aShortFileName,
                                                 const wxString& aProjectPath )
 {
     wxString    fullFileName = ExpandEnvVarSubstitutions( aShortFileName );

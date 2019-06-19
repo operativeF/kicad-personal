@@ -511,7 +511,7 @@ public:
     }
 
     ///> @copydoc VIEW_ITEM::ViewBBox()
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
 
     ///> @copydoc VIEW_ITEM::ViewDraw()
     virtual void ViewDraw( int aLayer, KIGFX::VIEW* aView ) const override;

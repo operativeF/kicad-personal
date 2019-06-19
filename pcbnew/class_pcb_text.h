@@ -48,7 +48,7 @@ public:
         return aItem && PCB_TEXT_T == aItem->Type();
     }
 
-    virtual const wxPoint GetPosition() const override
+    virtual wxPoint GetPosition() const override
     {
         return EDA_TEXT::GetTextPos();
     }
@@ -108,7 +108,7 @@ public:
     BITMAP_DEF GetMenuImage() const override;
 
     // Virtual function
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     EDA_ITEM* Clone() const override;
 

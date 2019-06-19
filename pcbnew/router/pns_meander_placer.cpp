@@ -215,7 +215,7 @@ bool MEANDER_PLACER::CheckFit( MEANDER_SHAPE* aShape )
 }
 
 
-const ITEM_SET MEANDER_PLACER::Traces()
+ITEM_SET MEANDER_PLACER::Traces()
 {
     m_currentTrace = LINE( m_originLine, m_finalShape );
     return ITEM_SET( &m_currentTrace );
@@ -233,7 +233,7 @@ int MEANDER_PLACER::CurrentLayer() const
 }
 
 
-const wxString MEANDER_PLACER::TuningInfo( EDA_UNITS_T aUnits ) const
+wxString MEANDER_PLACER::TuningInfo( EDA_UNITS_T aUnits ) const
 {
     wxString status;
 

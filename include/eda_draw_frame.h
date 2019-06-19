@@ -209,7 +209,7 @@ public:
      * Works off of GetPageSettings() to return the size of the paper page in
      * the internal units of this particular view.
      */
-    virtual const wxSize GetPageSizeIU() const = 0;
+    virtual wxSize GetPageSizeIU() const = 0;
 
     /**
      * For those frames that support polar coordinates.
@@ -288,7 +288,7 @@ public:
      * (different internal units and different purposes)
      * note also adjust m_zoomLevelCoeff is the way to adjust the displayed value
      */
-    virtual const wxString GetZoomLevelIndicator() const;
+    virtual wxString GetZoomLevelIndicator() const;
 
     /**
      * Return the coefficient to convert internal display scale factor to zoom level.
@@ -579,7 +579,7 @@ public:
         GetCanvas()->Refresh();
     }
     
-    virtual const BOX2I GetDocumentExtents() const;
+    virtual BOX2I GetDocumentExtents() const;
 };
 
 #endif  // DRAW_FRAME_H_

@@ -324,7 +324,7 @@ public:
     void RemoveInvalidRefs();
 
     virtual int             AnchorCount() const;
-    virtual const VECTOR2I  GetAnchor( int n ) const;
+    virtual VECTOR2I  GetAnchor( int n ) const;
 
     int Net() const;
 };
@@ -372,7 +372,7 @@ public:
     }
 
     virtual int             AnchorCount() const override;
-    virtual const VECTOR2I  GetAnchor( int n ) const override;
+    virtual VECTOR2I  GetAnchor( int n ) const override;
 
 private:
     std::vector<VECTOR2I> m_testOutlinePoints;
@@ -469,7 +469,7 @@ public:
 
     CN_ITEM* Add( VIA* via );
 
-    const std::vector<CN_ITEM*> Add( ZONE_CONTAINER* zone );
+    std::vector<CN_ITEM*> Add( ZONE_CONTAINER* zone );
 };
 
 class CN_CLUSTER

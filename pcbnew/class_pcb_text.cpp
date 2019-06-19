@@ -109,7 +109,7 @@ void TEXTE_PCB::GetMsgPanelInfo( EDA_UNITS_T aUnits, std::vector< MSG_PANEL_ITEM
 }
 
 
-const EDA_RECT TEXTE_PCB::GetBoundingBox() const
+EDA_RECT TEXTE_PCB::GetBoundingBox() const
 {
     EDA_RECT rect = GetTextBox( -1, -1 );
 

@@ -399,7 +399,7 @@ void SELECTION_TOOL::toggleSelection( BOARD_ITEM* aItem, bool aForce )
         m_frame->GetCanvas()->ForceRefresh();
 }
 
-const GENERAL_COLLECTORS_GUIDE SELECTION_TOOL::getCollectorsGuide() const
+GENERAL_COLLECTORS_GUIDE SELECTION_TOOL::getCollectorsGuide() const
 {
     GENERAL_COLLECTORS_GUIDE guide( board()->GetVisibleLayers(),
                                     (PCB_LAYER_ID) view()->GetTopLayer(), view() );

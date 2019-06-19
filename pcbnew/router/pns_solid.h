@@ -61,7 +61,7 @@ public:
 
     const SHAPE* Shape() const override { return m_shape; }
 
-    const SHAPE_LINE_CHAIN Hull( int aClearance = 0, int aWalkaroundThickness = 0 ) const override;
+    SHAPE_LINE_CHAIN Hull( int aClearance = 0, int aWalkaroundThickness = 0 ) const override;
 
     void SetShape( SHAPE* shape )
     {

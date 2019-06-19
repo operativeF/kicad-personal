@@ -262,7 +262,7 @@ public:
      * @param aPoint the point
      * @return the items
      */
-    const ITEM_SET HitTest( const VECTOR2I& aPoint ) const;
+    ITEM_SET HitTest( const VECTOR2I& aPoint ) const;
 
     /**
      * Function Add()
@@ -331,7 +331,7 @@ public:
      * @param aOriginSegmentIndex index of aSeg in the resulting line
      * @return the line
      */
-    const LINE AssembleLine( SEGMENT* aSeg, int* aOriginSegmentIndex = NULL,
+    LINE AssembleLine( SEGMENT* aSeg, int* aOriginSegmentIndex = NULL,
                                  bool aStopAtLockedJoints = false );
 
     ///> Prints the contents and joints structure

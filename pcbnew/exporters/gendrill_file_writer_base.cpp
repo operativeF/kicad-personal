@@ -234,7 +234,7 @@ std::vector<DRILL_LAYER_PAIR> GENDRILL_WRITER_BASE::getUniqueLayerPairs() const
 }
 
 
-const std::string GENDRILL_WRITER_BASE::layerName( PCB_LAYER_ID aLayer ) const
+std::string GENDRILL_WRITER_BASE::layerName( PCB_LAYER_ID aLayer ) const
 {
     // Generic names here.
     switch( aLayer )
@@ -249,7 +249,7 @@ const std::string GENDRILL_WRITER_BASE::layerName( PCB_LAYER_ID aLayer ) const
 }
 
 
-const std::string GENDRILL_WRITER_BASE::layerPairName( DRILL_LAYER_PAIR aPair ) const
+std::string GENDRILL_WRITER_BASE::layerPairName( DRILL_LAYER_PAIR aPair ) const
 {
     std::string ret = layerName( aPair.first );
     ret += '-';
@@ -259,7 +259,7 @@ const std::string GENDRILL_WRITER_BASE::layerPairName( DRILL_LAYER_PAIR aPair ) 
 }
 
 
-const wxString GENDRILL_WRITER_BASE::getDrillFileName( DRILL_LAYER_PAIR aPair, bool aNPTH,
+wxString GENDRILL_WRITER_BASE::getDrillFileName( DRILL_LAYER_PAIR aPair, bool aNPTH,
                                                bool aMerge_PTH_NPTH ) const
 {
     wxASSERT( m_pcb );
@@ -347,7 +347,7 @@ void GENDRILL_WRITER_BASE::CreateMapFilesSet( const wxString& aPlotDirectory,
 }
 
 
-const wxString GENDRILL_WRITER_BASE::BuildFileFunctionAttributeString(
+wxString GENDRILL_WRITER_BASE::BuildFileFunctionAttributeString(
                         DRILL_LAYER_PAIR aLayerPair, bool aIsNpth, bool aCompatNCdrill ) const
 {
 // Build a wxString containing the .FileFunction attribute for drill files.

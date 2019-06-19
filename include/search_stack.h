@@ -121,7 +121,7 @@ public:
      *
      * @param aSubPathToSearch is the preferred sub path to search in path list
      */
-    const wxString LastVisitedPath( const wxString& aSubPathToSearch = wxEmptyString );
+    wxString LastVisitedPath( const wxString& aSubPathToSearch = wxEmptyString );
 #endif
 
 };

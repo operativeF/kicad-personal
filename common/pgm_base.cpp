@@ -212,7 +212,7 @@ const wxString& PGM_BASE::GetEditorName( bool aCanShowFileChooser )
 }
 
 
-const wxString PGM_BASE::AskUserForPreferredEditor( const wxString& aDefaultEditor )
+wxString PGM_BASE::AskUserForPreferredEditor( const wxString& aDefaultEditor )
 {
     // Create a mask representing the executable files in the current platform
 #ifdef __WINDOWS__

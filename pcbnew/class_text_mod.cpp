@@ -237,7 +237,7 @@ void TEXTE_MODULE::SetLocalCoord()
     }
 }
 
-const EDA_RECT TEXTE_MODULE::GetBoundingBox() const
+EDA_RECT TEXTE_MODULE::GetBoundingBox() const
 {
     double   angle = GetDrawRotation();
     EDA_RECT text_area = GetTextBox( -1, -1 );
@@ -417,7 +417,7 @@ EDA_ITEM* TEXTE_MODULE::Clone() const
 }
 
 
-const BOX2I TEXTE_MODULE::ViewBBox() const
+BOX2I TEXTE_MODULE::ViewBBox() const
 {
     double   angle = GetDrawRotation();
     EDA_RECT text_area = GetTextBox( -1, -1 );

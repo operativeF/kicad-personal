@@ -1072,7 +1072,7 @@ int SHAPE_POLY_SET::NormalizeAreaOutlines()
 }
 
 
-const std::string SHAPE_POLY_SET::Format() const
+std::string SHAPE_POLY_SET::Format() const
 {
     std::stringstream ss;
 
@@ -1156,7 +1156,7 @@ bool SHAPE_POLY_SET::Parse( std::stringstream& aStream )
 }
 
 
-const BOX2I SHAPE_POLY_SET::BBox( int aClearance ) const
+BOX2I SHAPE_POLY_SET::BBox( int aClearance ) const
 {
     BOX2I bb;
 

@@ -30,7 +30,7 @@
 #define PARSE_PROBLEM   _( "%s in input/source\n\"%s\"\nline %d, offset %d" )
 
 
-const wxString IO_ERROR::What() const
+wxString IO_ERROR::What() const
 {
 #ifdef DEBUG
      return wxString( "IO_ERROR: " ) + Problem() + "\n\n" + Where();
@@ -40,13 +40,13 @@ const wxString IO_ERROR::What() const
 }
 
 
-const wxString IO_ERROR::Where() const
+wxString IO_ERROR::Where() const
 {
     return where;
 }
 
 
-const wxString IO_ERROR::Problem() const
+wxString IO_ERROR::Problem() const
 {
     return problem;
 }

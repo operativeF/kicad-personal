@@ -221,8 +221,8 @@ public:
     bool    Remove( BOARD_ITEM* aItem );
     bool    Add( BOARD_ITEM* aItem );
 
-    const CLUSTERS  SearchClusters( CLUSTER_SEARCH_MODE aMode, const KICAD_T aTypes[], int aSingleNet );
-    const CLUSTERS  SearchClusters( CLUSTER_SEARCH_MODE aMode );
+    CLUSTERS  SearchClusters( CLUSTER_SEARCH_MODE aMode, const KICAD_T aTypes[], int aSingleNet );
+    CLUSTERS  SearchClusters( CLUSTER_SEARCH_MODE aMode );
 
     /**
      * Propagates nets from pads to other items in clusters

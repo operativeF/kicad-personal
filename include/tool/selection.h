@@ -138,7 +138,7 @@ public:
         return static_cast<VECTOR2I>( GetBoundingBox().Centre() );
     }
 
-    virtual const BOX2I ViewBBox() const override
+    virtual BOX2I ViewBBox() const override
     {
         BOX2I r;
         r.SetMaximum();
@@ -220,7 +220,7 @@ public:
         return false;
     }
 
-    virtual const VIEW_GROUP::ITEMS updateDrawList() const override
+    virtual VIEW_GROUP::ITEMS updateDrawList() const override
     {
         std::vector<VIEW_ITEM*> items;
 

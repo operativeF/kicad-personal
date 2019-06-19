@@ -123,7 +123,7 @@ void ROUTER_PREVIEW_ITEM::Update( const PNS::ITEM* aItem )
 }
 
 
-const BOX2I ROUTER_PREVIEW_ITEM::ViewBBox() const
+BOX2I ROUTER_PREVIEW_ITEM::ViewBBox() const
 {
     BOX2I bbox;
 
@@ -318,7 +318,7 @@ void ROUTER_PREVIEW_ITEM::Box( const BOX2I& aBox, int aStyle )
 }
 
 
-const COLOR4D ROUTER_PREVIEW_ITEM::getLayerColor( int aLayer ) const
+COLOR4D ROUTER_PREVIEW_ITEM::getLayerColor( int aLayer ) const
 {
     auto settings = static_cast<PCB_RENDER_SETTINGS*>( m_view->GetPainter()->GetSettings() );
 
@@ -326,7 +326,7 @@ const COLOR4D ROUTER_PREVIEW_ITEM::getLayerColor( int aLayer ) const
 }
 
 
-const COLOR4D ROUTER_PREVIEW_ITEM::assignColor( int aStyle ) const
+COLOR4D ROUTER_PREVIEW_ITEM::assignColor( int aStyle ) const
 {
     COLOR4D color;
 

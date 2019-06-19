@@ -140,7 +140,7 @@ public:
      * for the shape.
      * @return the bounding box.
      */
-    virtual const BOX2I BBox( int aClearance = 0 ) const = 0;
+    virtual BOX2I BBox( int aClearance = 0 ) const = 0;
 
     /**
      * Function Centre()
@@ -159,7 +159,7 @@ public:
 
     virtual bool Parse( std::stringstream& aStream );
 
-    virtual const std::string Format( ) const;
+    virtual std::string Format( ) const;
 
 protected:
     ///> type of our shape

@@ -147,7 +147,7 @@ wxString LIB_ALIAS::GetUnitReference( int aUnit )
 }
 
 
-const EDA_RECT LIB_ALIAS::GetBoundingBox() const
+EDA_RECT LIB_ALIAS::GetBoundingBox() const
 {
     // a LIB_ALIAS does not really have a bounding box.
     // return a 0 size rect.
@@ -157,7 +157,7 @@ const EDA_RECT LIB_ALIAS::GetBoundingBox() const
 };
 
 
-const BOX2I LIB_ALIAS::ViewBBox() const
+BOX2I LIB_ALIAS::ViewBBox() const
 {
     // LIB_ALIAS may be displayed in preview windows, so ensure that it is always
     // selected for drawing.
@@ -301,7 +301,7 @@ LIB_PART::~LIB_PART()
 }
 
 
-const wxString LIB_PART::GetLibraryName()
+wxString LIB_PART::GetLibraryName()
 {
     if( m_library )
         return m_library->GetName();
@@ -685,7 +685,7 @@ bool LIB_PART::PinsConflictWith( LIB_PART& aOtherPart, bool aTestNums, bool aTes
 }
 
 
-const EDA_RECT LIB_PART::GetUnitBoundingBox( int aUnit, int aConvert ) const
+EDA_RECT LIB_PART::GetUnitBoundingBox( int aUnit, int aConvert ) const
 {
     EDA_RECT bBox;
     bool initialized = false;
@@ -723,7 +723,7 @@ void LIB_PART::ViewGetLayers( int aLayers[], int& aCount ) const
 }
 
 
-const EDA_RECT LIB_PART::GetBodyBoundingBox( int aUnit, int aConvert ) const
+EDA_RECT LIB_PART::GetBodyBoundingBox( int aUnit, int aConvert ) const
 {
     EDA_RECT bBox;
     bool initialized = false;

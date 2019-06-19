@@ -300,7 +300,7 @@ bool DIFF_PAIR::CheckConnectionAngle( const DIFF_PAIR& aOther, int aAllowedAngle
 }
 
 
-const DIFF_PAIR DP_GATEWAY::Entry() const
+DIFF_PAIR DP_GATEWAY::Entry() const
 {
     return DIFF_PAIR( m_entryP, m_entryN, 0 );
 }

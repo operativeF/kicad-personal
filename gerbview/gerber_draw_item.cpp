@@ -277,7 +277,7 @@ D_CODE* GERBER_DRAW_ITEM::GetDcodeDescr() const
 }
 
 
-const EDA_RECT GERBER_DRAW_ITEM::GetBoundingBox() const
+EDA_RECT GERBER_DRAW_ITEM::GetBoundingBox() const
 {
     // return a rectangle which is (pos,dim) in nature.  therefore the +1
     EDA_RECT bbox( m_Start, wxSize( 1, 1 ) );
@@ -895,7 +895,7 @@ void GERBER_DRAW_ITEM::ViewGetLayers( int aLayers[], int& aCount ) const
 }
 
 
-const BOX2I GERBER_DRAW_ITEM::ViewBBox() const
+BOX2I GERBER_DRAW_ITEM::ViewBBox() const
 {
     EDA_RECT bbox = GetBoundingBox();
     return BOX2I( VECTOR2I( bbox.GetOrigin() ),

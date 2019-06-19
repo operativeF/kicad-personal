@@ -100,7 +100,7 @@ public:
     const wxPoint& GetBezControl2() const           { return m_BezierC2; }
 
     void SetPosition( const wxPoint& aPos ) override;
-    const wxPoint GetPosition() const override;
+    wxPoint GetPosition() const override;
 
     /**
      * Function GetStart
@@ -124,10 +124,10 @@ public:
     // m_Start, m_End, and m_Angle.
     // No Set...() function for these attributes.
 
-    const wxPoint GetCenter() const override;
+    wxPoint GetCenter() const override;
     const wxPoint& GetArcStart() const      { return m_End; }
-    const wxPoint GetArcEnd() const;
-    const wxPoint GetArcMid() const;
+    wxPoint GetArcEnd() const;
+    wxPoint GetArcMid() const;
 
     /**
      * function GetArcAngleStart()
@@ -173,7 +173,7 @@ public:
      * to a list of wxPoints, and nothing else, because it duplicates the buffer,
      * that is inefficient to know for instance the corner count
      */
-    const std::vector<wxPoint> BuildPolyPointsList() const;
+    std::vector<wxPoint> BuildPolyPointsList() const;
 
     /** @return the number of corners of the polygonal shape
      */
@@ -211,7 +211,7 @@ public:
 
     void GetMsgPanelInfo( EDA_UNITS_T aUnits, std::vector<MSG_PANEL_ITEM>& aList ) override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override;
     bool HitTest( const EDA_RECT& aRect, bool aContained, int aAccuracy = 0 ) const override;
@@ -254,7 +254,7 @@ public:
 
     virtual EDA_ITEM* Clone() const override;
 
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
 
     virtual void SwapData( BOARD_ITEM* aImage ) override;
 

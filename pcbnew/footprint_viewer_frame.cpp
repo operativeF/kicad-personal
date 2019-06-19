@@ -525,7 +525,7 @@ void FOOTPRINT_VIEWER_FRAME::CommonSettingsChanged( bool aEnvVarsChanged )
 }
 
 
-const wxString FOOTPRINT_VIEWER_FRAME::getCurNickname()
+wxString FOOTPRINT_VIEWER_FRAME::getCurNickname()
 {
     return Prj().GetRString( PROJECT::PCB_FOOTPRINT_VIEWER_NICKNAME );
 }
@@ -537,7 +537,7 @@ void FOOTPRINT_VIEWER_FRAME::setCurNickname( const wxString& aNickname )
 }
 
 
-const wxString FOOTPRINT_VIEWER_FRAME::getCurFootprintName()
+wxString FOOTPRINT_VIEWER_FRAME::getCurFootprintName()
 {
     return Prj().GetRString( PROJECT::PCB_FOOTPRINT_VIEWER_FPNAME );
 }

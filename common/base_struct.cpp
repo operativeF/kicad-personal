@@ -109,7 +109,7 @@ void EDA_ITEM::SetModified()
 }
 
 
-const EDA_RECT EDA_ITEM::GetBoundingBox() const
+EDA_RECT EDA_ITEM::GetBoundingBox() const
 {
 #if defined(DEBUG)
     printf( "Missing GetBoundingBox()\n" );
@@ -240,7 +240,7 @@ EDA_ITEM& EDA_ITEM::operator=( const EDA_ITEM& aItem )
     return *this;
 }
 
-const BOX2I EDA_ITEM::ViewBBox() const
+BOX2I EDA_ITEM::ViewBBox() const
 {
     // Basic fallback
     return BOX2I( VECTOR2I( GetBoundingBox().GetOrigin() ),
@@ -498,7 +498,7 @@ bool EDA_RECT::Intersects( const EDA_RECT& aRect, double aRot ) const
 }
 
 
-const wxPoint EDA_RECT::ClosestPointTo( const wxPoint& aPoint ) const
+wxPoint EDA_RECT::ClosestPointTo( const wxPoint& aPoint ) const
 {
     EDA_RECT me( *this );
 
@@ -512,7 +512,7 @@ const wxPoint EDA_RECT::ClosestPointTo( const wxPoint& aPoint ) const
 }
 
 
-const wxPoint EDA_RECT::FarthestPointTo( const wxPoint& aPoint ) const
+wxPoint EDA_RECT::FarthestPointTo( const wxPoint& aPoint ) const
 {
     EDA_RECT me( *this );
 
@@ -695,7 +695,7 @@ EDA_RECT EDA_RECT::Common( const EDA_RECT& aRect ) const
 }
 
 
-const EDA_RECT EDA_RECT::GetBoundingBoxRotated( wxPoint aRotCenter, double aAngle )
+EDA_RECT EDA_RECT::GetBoundingBoxRotated( wxPoint aRotCenter, double aAngle )
 {
     wxPoint corners[4];
 

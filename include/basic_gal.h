@@ -147,7 +147,7 @@ public:
 
 private:
     // Apply the roation/translation transform to aPoint
-    const VECTOR2D transform( const VECTOR2D& aPoint ) const;
+    VECTOR2D transform( const VECTOR2D& aPoint ) const;
 
     // A clip box, to clip drawings in a wxDC (mandatory to avoid draw issues)
     EDA_RECT  m_clipBox;        // The clip box

@@ -57,7 +57,7 @@ public:
                           double aAspect );
 
     ///> Gets the bounding box of the rectangle
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
 
 private:
 

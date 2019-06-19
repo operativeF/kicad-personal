@@ -110,7 +110,7 @@ void SCH_BUS_ENTRY_BASE::ViewGetLayers( int aLayers[], int& aCount ) const
 }
 
 
-const EDA_RECT SCH_BUS_ENTRY_BASE::GetBoundingBox() const
+EDA_RECT SCH_BUS_ENTRY_BASE::GetBoundingBox() const
 {
     EDA_RECT box;
 

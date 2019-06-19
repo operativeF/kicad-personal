@@ -56,7 +56,7 @@ public:
     }
 
     void SetPosition( const wxPoint& aPos ) override { m_Pos = aPos; }
-    const wxPoint GetPosition() const override { return m_Pos; }
+    wxPoint GetPosition() const override { return m_Pos; }
 
     void SetShape( int aShape )     { m_Shape = aShape; }
     int GetShape() const            { return m_Shape; }
@@ -87,7 +87,7 @@ public:
     bool HitTest( const EDA_RECT& aRect, bool aContained, int aAccuracy = 0 ) const override;
 
     // Virtual function
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     wxString GetSelectMenuText( EDA_UNITS_T aUnits ) const override;
 

@@ -74,7 +74,7 @@ static const BITMAP_DEF iconsPinsOrientations[] =
 };
 
 
-const wxString LIB_PIN::GetCanonicalElectricalTypeName( ELECTRICAL_PINTYPE aType )
+wxString LIB_PIN::GetCanonicalElectricalTypeName( ELECTRICAL_PINTYPE aType )
 {
     if( aType < 0 || aType >= (int) PINTYPE_COUNT )
         return wxT( "???" );
@@ -106,7 +106,7 @@ const wxString LIB_PIN::GetCanonicalElectricalTypeName( ELECTRICAL_PINTYPE aType
 // Note: the strings are *not* static because they are translated and must be built
 // on the fly, to be properly translated
 
-static const wxString getPinOrientationName( unsigned aPinOrientationCode )
+static wxString getPinOrientationName( unsigned aPinOrientationCode )
 {
     /* Note: The following name lists are sentence capitalized per the GNOME UI
      *       standards for list controls.  Please do not change the capitalization
@@ -1460,7 +1460,7 @@ void LIB_PIN::GetMsgPanelInfo( EDA_UNITS_T aUnits, std::vector< MSG_PANEL_ITEM >
 #endif
 }
 
-const EDA_RECT LIB_PIN::GetBoundingBox( bool aIncludeInvisibles ) const
+EDA_RECT LIB_PIN::GetBoundingBox( bool aIncludeInvisibles ) const
 {
     LIB_PART*      entry = (LIB_PART*     ) m_Parent;
     EDA_RECT       bbox;

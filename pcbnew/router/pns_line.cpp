@@ -287,7 +287,7 @@ bool LINE::Walkaround( const SHAPE_LINE_CHAIN& aObstacle, SHAPE_LINE_CHAIN& aPat
 }
 
 
-const SHAPE_LINE_CHAIN SEGMENT::Hull( int aClearance, int aWalkaroundThickness ) const
+SHAPE_LINE_CHAIN SEGMENT::Hull( int aClearance, int aWalkaroundThickness ) const
 {
    return SegmentHull( m_seg, aClearance, aWalkaroundThickness );
 }
@@ -319,7 +319,7 @@ bool LINE::Is45Degree() const
 }
 
 
-const LINE LINE::ClipToNearestObstacle( NODE* aNode ) const
+LINE LINE::ClipToNearestObstacle( NODE* aNode ) const
 {
     const int IterationLimit = 5;
     int i;

@@ -90,10 +90,10 @@ private:
     bool                m_autoZoom;
     double              m_lastZoom;
 
-    const wxString      getCurNickname();
+    wxString      getCurNickname();
     void                setCurNickname( const wxString& aNickname );
 
-    const wxString      getCurFootprintName();
+    wxString      getCurFootprintName();
     void                setCurFootprintName( const wxString& aName );
 
     void OnSize( wxSizeEvent& event ) override;

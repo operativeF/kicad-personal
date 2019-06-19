@@ -1133,7 +1133,7 @@ void SCH_EDIT_FRAME::SetScreen( BASE_SCREEN* aScreen )
 }
 
 
-const BOX2I SCH_EDIT_FRAME::GetDocumentExtents() const
+BOX2I SCH_EDIT_FRAME::GetDocumentExtents() const
 {
     int sizeX = GetScreen()->GetPageSettings().GetWidthIU();
     int sizeY = GetScreen()->GetPageSettings().GetHeightIU();

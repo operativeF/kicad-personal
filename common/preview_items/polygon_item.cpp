@@ -69,7 +69,7 @@ void POLYGON_ITEM::drawPreviewShape( KIGFX::VIEW* aView ) const
 }
 
 
-const BOX2I POLYGON_ITEM::ViewBBox() const
+BOX2I POLYGON_ITEM::ViewBBox() const
 {
     return m_polyfill.BBox();
 }

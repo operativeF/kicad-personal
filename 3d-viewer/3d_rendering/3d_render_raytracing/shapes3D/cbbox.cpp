@@ -140,7 +140,7 @@ float CBBOX::GetCenter( unsigned int aAxis ) const
 }
 
 
-const SFVEC3F CBBOX::GetExtent() const
+SFVEC3F CBBOX::GetExtent() const
 {
     return m_max - m_min;
 }

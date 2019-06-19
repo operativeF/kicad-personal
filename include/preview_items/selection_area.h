@@ -50,7 +50,7 @@ public:
 
     SELECTION_AREA();
 
-    const BOX2I ViewBBox() const override;
+    BOX2I ViewBBox() const override;
 
     ///> Set the origin of the rectange (the fixed corner)
     void SetOrigin( VECTOR2I aOrigin )

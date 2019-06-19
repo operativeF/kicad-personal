@@ -68,7 +68,7 @@ public:
 
     void Clear();
 
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
     virtual void ViewDraw( int aLayer, VIEW *aView ) const override;
     virtual void ViewGetLayers( int aLayers[], int& aCount ) const override;
 

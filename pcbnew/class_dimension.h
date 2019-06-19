@@ -87,7 +87,7 @@ public:
 
     int GetValue() const { return m_Value; }
 
-    const wxPoint GetPosition() const override;
+    wxPoint GetPosition() const override;
 
     void            SetPosition( const wxPoint& aPos ) override;
 
@@ -189,7 +189,7 @@ public:
     }
 
     void            SetText( const wxString& NewText );
-    const wxString  GetText() const;
+    wxString  GetText() const;
 
     TEXTE_PCB&      Text()  { return m_Text; }
     TEXTE_PCB&      Text() const  { return *(const_cast<TEXTE_PCB*> (&m_Text)); }
@@ -224,7 +224,7 @@ public:
     }
 
     // Virtual function
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     wxString GetSelectMenuText( EDA_UNITS_T aUnits ) const override;
 
@@ -232,7 +232,7 @@ public:
 
     EDA_ITEM* Clone() const override;
 
-    virtual const BOX2I ViewBBox() const override;
+    virtual BOX2I ViewBBox() const override;
 
     virtual void SwapData( BOARD_ITEM* aImage ) override;
 

@@ -121,7 +121,7 @@ void GERBER_FILE_IMAGE_LIST::DeleteImage( int aIdx )
 }
 
 // Build a name for image aIdx which can be used in layers manager
-const wxString GERBER_FILE_IMAGE_LIST::GetDisplayName( int aIdx, bool aNameOnly )
+wxString GERBER_FILE_IMAGE_LIST::GetDisplayName( int aIdx, bool aNameOnly )
 {
     wxString name;
 

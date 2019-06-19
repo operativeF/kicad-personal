@@ -108,11 +108,11 @@ public:
      *
      * @return a const wxString object containing the field's string.
      */
-    const wxString GetFullyQualifiedText() const;
+    wxString GetFullyQualifiedText() const;
 
     void Place( SCH_EDIT_FRAME* frame, wxDC* DC );
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     /**
      * Function IsHorizJustifyFlipped

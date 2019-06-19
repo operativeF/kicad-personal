@@ -87,7 +87,7 @@ SHAPE_POLY_SET CENTRELINE_RECT_ITEM::getOutline() const
 }
 
 
-const BOX2I CENTRELINE_RECT_ITEM::ViewBBox() const
+BOX2I CENTRELINE_RECT_ITEM::ViewBBox() const
 {
     return getOutline().BBox();
 }

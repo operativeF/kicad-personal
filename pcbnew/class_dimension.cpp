@@ -59,7 +59,7 @@ void DIMENSION::SetPosition( const wxPoint& aPos )
 }
 
 
-const wxPoint DIMENSION::GetPosition() const
+wxPoint DIMENSION::GetPosition() const
 {
     return m_Text.GetTextPos();
 }
@@ -71,7 +71,7 @@ void DIMENSION::SetText( const wxString& aNewText )
 }
 
 
-const wxString DIMENSION::GetText() const
+wxString DIMENSION::GetText() const
 {
     return m_Text.GetText();
 }
@@ -408,7 +408,7 @@ bool DIMENSION::HitTest( const EDA_RECT& aRect, bool aContained, int aAccuracy )
 }
 
 
-const EDA_RECT DIMENSION::GetBoundingBox() const
+EDA_RECT DIMENSION::GetBoundingBox() const
 {
     EDA_RECT    bBox;
     int         xmin, xmax, ymin, ymax;
@@ -469,7 +469,7 @@ BITMAP_DEF DIMENSION::GetMenuImage() const
 }
 
 
-const BOX2I DIMENSION::ViewBBox() const
+BOX2I DIMENSION::ViewBBox() const
 {
     BOX2I dimBBox = BOX2I( VECTOR2I( GetBoundingBox().GetPosition() ),
                            VECTOR2I( GetBoundingBox().GetSize() ) );

@@ -82,7 +82,7 @@ public:
     {
     }
 
-    virtual const wxPoint GetPosition() const = 0;
+    virtual wxPoint GetPosition() const = 0;
 
     /**
      * Function GetCenter()
@@ -92,7 +92,7 @@ public:
      *
      * @return centre point of the item
      */
-    virtual const wxPoint GetCenter() const { return GetPosition(); }
+    virtual wxPoint GetCenter() const { return GetPosition(); }
 
     virtual void SetPosition( const wxPoint& aPos ) = 0;
 

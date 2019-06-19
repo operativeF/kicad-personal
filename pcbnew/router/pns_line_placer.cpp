@@ -68,7 +68,7 @@ void LINE_PLACER::setWorld( NODE* aWorld )
 }
 
 
-const VIA LINE_PLACER::makeVia( const VECTOR2I& aP )
+VIA LINE_PLACER::makeVia( const VECTOR2I& aP )
 {
     const LAYER_RANGE layers( m_sizes.GetLayerTop(), m_sizes.GetLayerBottom() );
 
@@ -472,7 +472,7 @@ bool LINE_PLACER::rhMarkObstacles( const VECTOR2I& aP, LINE& aNewHead )
 }
 
 
-const LINE LINE_PLACER::reduceToNearestObstacle( const LINE& aOriginalLine )
+LINE LINE_PLACER::reduceToNearestObstacle( const LINE& aOriginalLine )
 {
     const auto& l0 = aOriginalLine.CLine();
 
@@ -807,7 +807,7 @@ bool LINE_PLACER::route( const VECTOR2I& aP )
 }
 
 
-const LINE LINE_PLACER::Trace() const
+LINE LINE_PLACER::Trace() const
 {
     LINE tmp( m_head );
 
@@ -818,7 +818,7 @@ const LINE LINE_PLACER::Trace() const
 }
 
 
-const ITEM_SET LINE_PLACER::Traces()
+ITEM_SET LINE_PLACER::Traces()
 {
     m_currentTrace = Trace();
     return ITEM_SET( &m_currentTrace );

@@ -163,9 +163,9 @@ class GITHUB_PLUGIN : public PCB_IO
 {
 public:
     //-----<PLUGIN API>----------------------------------------------------------
-    const wxString PluginName() const override;
+    wxString PluginName() const override;
 
-    const wxString GetFileExtension() const override;
+    wxString GetFileExtension() const override;
 
     void FootprintEnumerate( wxArrayString& aFootprintNames, const wxString& aLibraryPath,
             const PROPERTIES* aProperties = NULL ) override;

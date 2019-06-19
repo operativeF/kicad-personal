@@ -83,7 +83,7 @@ public:
 
     void Print( wxDC* aDC, const wxPoint& aOffset ) override;
 
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     void Move( const wxPoint& aMoveVector ) override
     {

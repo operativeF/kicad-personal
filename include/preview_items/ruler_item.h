@@ -47,7 +47,7 @@ public:
     RULER_ITEM( const TWO_POINT_GEOMETRY_MANAGER& m_geomMgr, EDA_UNITS_T userUnits );
 
     ///> @copydoc EDA_ITEM::ViewBBox()
-    const BOX2I ViewBBox() const override;
+    BOX2I ViewBBox() const override;
 
     ///> @copydoc EDA_ITEM::ViewGetLayers()
     void ViewGetLayers( int aLayers[], int& aCount ) const override;

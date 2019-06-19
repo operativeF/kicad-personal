@@ -486,7 +486,7 @@ void EDA_DRAW_FRAME::UpdateStatusBar()
 }
 
 
-const wxString EDA_DRAW_FRAME::GetZoomLevelIndicator() const
+wxString EDA_DRAW_FRAME::GetZoomLevelIndicator() const
 {
     // returns a human readable value which can be displayed as zoom
     // level indicator in dialogs.
@@ -688,7 +688,7 @@ wxPoint EDA_DRAW_FRAME::GetNearestGridPosition( const wxPoint& aPosition ) const
 
 //-----</BASE_SCREEN API moved here >--------------------------------------------
 
-const BOX2I EDA_DRAW_FRAME::GetDocumentExtents() const
+BOX2I EDA_DRAW_FRAME::GetDocumentExtents() const
 {
     return BOX2I();
 }

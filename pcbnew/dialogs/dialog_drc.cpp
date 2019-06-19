@@ -574,7 +574,7 @@ void DIALOG_DRC_CONTROL::DelDRCMarkers()
 }
 
 
-const wxString DIALOG_DRC_CONTROL::makeValidFileNameReport()
+wxString DIALOG_DRC_CONTROL::makeValidFileNameReport()
 {
     wxFileName fn = m_RptFilenameCtrl->GetValue();
 

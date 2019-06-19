@@ -197,13 +197,13 @@ EAGLE_PLUGIN::~EAGLE_PLUGIN()
 }
 
 
-const wxString EAGLE_PLUGIN::PluginName() const
+wxString EAGLE_PLUGIN::PluginName() const
 {
     return wxT( "Eagle" );
 }
 
 
-const wxString EAGLE_PLUGIN::GetFileExtension() const
+wxString EAGLE_PLUGIN::GetFileExtension() const
 {
     return wxT( "brd" );
 }

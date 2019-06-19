@@ -105,7 +105,7 @@ public:
      *
      * Returns the complete routed line, as a single-member ITEM_SET.
      */
-    const ITEM_SET Traces() override;
+    ITEM_SET Traces() override;
 
     /**
      * Function CurrentEnd()
@@ -123,7 +123,7 @@ public:
      *
      * Returns the net code of currently routed track.
      */
-    const std::vector<int> CurrentNets() const override;
+    std::vector<int> CurrentNets() const override;
 
     /**
      * Function CurrentLayer()
@@ -224,7 +224,7 @@ private:
     ///> route step, mark obstacles mode
     bool rhMarkObstacles( const VECTOR2I& aP );
 
-    const VIA makeVia ( const VECTOR2I& aP, int aNet );
+    VIA makeVia ( const VECTOR2I& aP, int aNet );
 
     bool findDpPrimitivePair( const VECTOR2I& aP, ITEM* aItem, DP_PRIMITIVE_PAIR& aPair, wxString* aErrorMsg = nullptr );
     OPT_VECTOR2I getDanglingAnchor( NODE* aNode, ITEM* aItem );

@@ -421,7 +421,7 @@ void SCH_TEXT::GetConnectionPoints( std::vector< wxPoint >& aPoints ) const
 }
 
 
-const EDA_RECT SCH_TEXT::GetBoundingBox() const
+EDA_RECT SCH_TEXT::GetBoundingBox() const
 {
     // We must pass the effective text thickness to GetTextBox
     // when calculating the bounding box
@@ -693,7 +693,7 @@ bool SCH_LABEL::IsType( const KICAD_T aScanTypes[] )
 }
 
 
-const EDA_RECT SCH_LABEL::GetBoundingBox() const
+EDA_RECT SCH_LABEL::GetBoundingBox() const
 {
     int         linewidth = GetThickness() == 0 ? GetDefaultLineThickness() : GetThickness();
     EDA_RECT    rect = GetTextBox( -1, linewidth );
@@ -941,7 +941,7 @@ void SCH_GLOBALLABEL::CreateGraphicShape( std::vector <wxPoint>& aPoints, const 
 }
 
 
-const EDA_RECT SCH_GLOBALLABEL::GetBoundingBox() const
+EDA_RECT SCH_GLOBALLABEL::GetBoundingBox() const
 {
     int x, y, dx, dy, length, height;
 
@@ -1102,7 +1102,7 @@ void SCH_HIERLABEL::CreateGraphicShape( std::vector <wxPoint>& aPoints, const wx
 }
 
 
-const EDA_RECT SCH_HIERLABEL::GetBoundingBox() const
+EDA_RECT SCH_HIERLABEL::GetBoundingBox() const
 {
     int x, y, dx, dy, length, height;
 

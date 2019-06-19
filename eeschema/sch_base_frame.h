@@ -158,7 +158,7 @@ public:
      * level indicator in dialogs.
      * Virtual from the base class
      */
-    const wxString GetZoomLevelIndicator() const override;
+    wxString GetZoomLevelIndicator() const override;
 
     void SetMoveTakesCursorAsOrigin( bool aValue ) { m_moveTakesCursorAsOrigin = aValue; }
     bool GetMoveTakesCursorAsOrigin() const { return m_moveTakesCursorAsOrigin; }
@@ -174,7 +174,7 @@ public:
 
     void SetPageSettings( const PAGE_INFO& aPageSettings ) override;
     const PAGE_INFO& GetPageSettings () const override;
-    const wxSize GetPageSizeIU() const override;
+    wxSize GetPageSizeIU() const override;
 
     const wxPoint& GetAuxOrigin() const override;
     void SetAuxOrigin( const wxPoint& aPosition ) override;

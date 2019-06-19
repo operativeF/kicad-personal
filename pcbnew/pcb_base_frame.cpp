@@ -218,7 +218,7 @@ const PAGE_INFO& PCB_BASE_FRAME::GetPageSettings() const
 }
 
 
-const wxSize PCB_BASE_FRAME::GetPageSizeIU() const
+wxSize PCB_BASE_FRAME::GetPageSizeIU() const
 {
     wxASSERT( m_Pcb );
 
@@ -775,7 +775,7 @@ void PCB_BASE_FRAME::OnModify()
 }
 
 
-const wxString PCB_BASE_FRAME::GetZoomLevelIndicator() const
+wxString PCB_BASE_FRAME::GetZoomLevelIndicator() const
 {
     return EDA_DRAW_FRAME::GetZoomLevelIndicator();
 }

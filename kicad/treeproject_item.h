@@ -70,7 +70,7 @@ public:
      * if this item is a directory, returns the stored filename
      * if this is a file, returns its path
      */
-    const wxString GetDir() const;
+    wxString GetDir() const;
 
     bool Rename( const wxString& name, bool check = true );
     bool Delete( bool check = true );

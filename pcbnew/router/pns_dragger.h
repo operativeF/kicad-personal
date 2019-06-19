@@ -92,7 +92,7 @@ public:
      *
      * Returns the set of dragged items.
      */
-    const ITEM_SET Traces();
+    ITEM_SET Traces();
 
     /// @copydoc ALGO_BASE::Logger()
     virtual LOGGER* Logger() override;

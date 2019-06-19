@@ -126,13 +126,13 @@ GITHUB_PLUGIN::~GITHUB_PLUGIN()
 }
 
 
-const wxString GITHUB_PLUGIN::PluginName() const
+wxString GITHUB_PLUGIN::PluginName() const
 {
     return "Github";
 }
 
 
-const wxString GITHUB_PLUGIN::GetFileExtension() const
+wxString GITHUB_PLUGIN::GetFileExtension() const
 {
     return wxEmptyString;
 }

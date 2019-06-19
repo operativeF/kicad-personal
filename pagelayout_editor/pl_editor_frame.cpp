@@ -352,7 +352,7 @@ void PL_EDITOR_FRAME::OnUpdateTitleBlockDisplayEditMode( wxUpdateUIEvent& event 
 }
 
 
-const BOX2I PL_EDITOR_FRAME::GetDocumentExtents() const
+BOX2I PL_EDITOR_FRAME::GetDocumentExtents() const
 {
     BOX2I rv( VECTOR2I( 0, 0 ), GetPageLayout().GetPageSettings().GetSizeIU() );
     return rv;
@@ -443,7 +443,7 @@ const PAGE_INFO& PL_EDITOR_FRAME::GetPageSettings() const
 }
 
 
-const wxSize PL_EDITOR_FRAME::GetPageSizeIU() const
+wxSize PL_EDITOR_FRAME::GetPageSizeIU() const
 {
     // this function is only needed because EDA_DRAW_FRAME is not compiled
     // with either -DPCBNEW or -DEESCHEMA, so the virtual is used to route
@@ -733,7 +733,7 @@ void PL_EDITOR_FRAME::OnNewPageLayout()
 }
 
 
-const wxString PL_EDITOR_FRAME::GetZoomLevelIndicator() const
+wxString PL_EDITOR_FRAME::GetZoomLevelIndicator() const
 {
     return EDA_DRAW_FRAME::GetZoomLevelIndicator();
 }

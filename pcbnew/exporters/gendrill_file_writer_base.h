@@ -320,14 +320,14 @@ protected:
      * string is "<layer1Name>"-"<layer2Name>"
      * used to generate a filename for drill files and drill maps
      */
-    const std::string layerPairName( DRILL_LAYER_PAIR aPair ) const;
+    std::string layerPairName( DRILL_LAYER_PAIR aPair ) const;
 
     /**
      * minor helper function.
      * @return a string from aLayer to identify the layer.
      * string are "front" "back" or "in<aLayer>"
      */
-    const std::string layerName( PCB_LAYER_ID aLayer ) const;
+    std::string layerName( PCB_LAYER_ID aLayer ) const;
 
     /**
      * @return a filename which identify the drill file function.
@@ -338,7 +338,7 @@ protected:
      * @param aMerge_PTH_NPTH = true to generate the filename of a file which containd both
      * NPH and NPTH holes
      */
-    virtual const wxString getDrillFileName( DRILL_LAYER_PAIR aPair, bool aNPTH,
+    virtual wxString getDrillFileName( DRILL_LAYER_PAIR aPair, bool aNPTH,
                                              bool aMerge_PTH_NPTH ) const;
 
 
@@ -352,7 +352,7 @@ protected:
      * @param aIsNpth is true when generating NPTH drill file
      * @param aCompatNCdrill is true when generating NC (Excellon) compatible drill file
      */
-    const wxString BuildFileFunctionAttributeString( DRILL_LAYER_PAIR aLayerPair,
+    wxString BuildFileFunctionAttributeString( DRILL_LAYER_PAIR aLayerPair,
                                                      bool aIsNpth, bool aCompatNCdrill = false ) const;
 };
 

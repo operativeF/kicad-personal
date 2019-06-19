@@ -55,13 +55,13 @@ PCAD_PLUGIN::~PCAD_PLUGIN()
 }
 
 
-const wxString PCAD_PLUGIN::PluginName() const
+wxString PCAD_PLUGIN::PluginName() const
 {
     return wxT( "P-Cad" );
 }
 
 
-const wxString PCAD_PLUGIN::GetFileExtension() const
+wxString PCAD_PLUGIN::GetFileExtension() const
 {
     return wxT( "pcb" );
 }

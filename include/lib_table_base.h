@@ -113,7 +113,7 @@ public:
     /**
      * Return the type of library represented by this row.
      */
-    virtual const wxString GetType() const = 0;
+    virtual wxString GetType() const = 0;
 
     /**
      * Change the type of library represented by this row that must be implemented in the
@@ -127,7 +127,7 @@ public:
      *
      * @param aSubstituted Tells if caller wanted the substituted form, else not.
      */
-    const wxString GetFullURI( bool aSubstituted = false ) const;
+    wxString GetFullURI( bool aSubstituted = false ) const;
 
     /**
      * Change the full URI for the library.
@@ -379,7 +379,7 @@ public:
      * @return the library description from @a aNickname, or an empty string
      *         if @a aNickname does not exist.
      */
-    const wxString GetDescription( const wxString& aNickname );
+    wxString GetDescription( const wxString& aNickname );
 
     /**
      * Test for the existence of \a aNickname in the library table.
@@ -488,7 +488,7 @@ public:
      * This enables library tables to have platform dependent environment variables in them,
      * allowing for a uniform table across platforms.
      */
-    static const wxString ExpandSubstitutions( const wxString& aString );
+    static wxString ExpandSubstitutions( const wxString& aString );
 
 protected:
 

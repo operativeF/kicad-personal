@@ -474,7 +474,7 @@ void SCH_SHEET::Print( wxDC* aDC, const wxPoint& aOffset )
 }
 
 
-const EDA_RECT SCH_SHEET::GetBoundingBox() const
+EDA_RECT SCH_SHEET::GetBoundingBox() const
 {
     wxPoint end;
     EDA_RECT box( m_pos, m_size );

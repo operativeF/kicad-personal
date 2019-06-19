@@ -108,7 +108,7 @@ template <typename T> int KICAD_CURL_EASY::setOption( int aOption, T aArg )
 }
 
 
-const std::string KICAD_CURL_EASY::GetErrorText( int aCode )
+std::string KICAD_CURL_EASY::GetErrorText( int aCode )
 {
     return curl_easy_strerror( (CURLcode)aCode );
 }

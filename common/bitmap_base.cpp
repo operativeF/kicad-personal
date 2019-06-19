@@ -227,7 +227,7 @@ bool BITMAP_BASE::LoadData( LINE_READER& aLine, wxString& aErrorMsg )
 }
 
 
-const EDA_RECT BITMAP_BASE::GetBoundingBox() const
+EDA_RECT BITMAP_BASE::GetBoundingBox() const
 {
     EDA_RECT rect;
 

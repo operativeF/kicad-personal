@@ -163,7 +163,7 @@ public:
      * schematic coordinate system.  It is OK to overestimate the size
      * by a few counts.
      */
-    const EDA_RECT GetBoundingBox() const;
+    EDA_RECT GetBoundingBox() const;
 
     void DrawBitmap( wxDC* aDC, const wxPoint& aPos );
 

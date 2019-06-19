@@ -502,7 +502,7 @@ struct HIT_VISITOR : public OBSTACLE_VISITOR
 };
 
 
-const ITEM_SET NODE::HitTest( const VECTOR2I& aPoint ) const
+ITEM_SET NODE::HitTest( const VECTOR2I& aPoint ) const
 {
     ITEM_SET items;
 
@@ -832,7 +832,7 @@ void NODE::followLine( SEGMENT* aCurrent, bool aScanDirection, int& aPos,
 }
 
 
-const LINE NODE::AssembleLine( SEGMENT* aSeg, int* aOriginSegmentIndex, bool aStopAtLockedJoints )
+LINE NODE::AssembleLine( SEGMENT* aSeg, int* aOriginSegmentIndex, bool aStopAtLockedJoints )
 {
     const int MaxVerts = 1024 * 16;
 

@@ -45,7 +45,7 @@
 #include <gbr_metadata.h>
 
 
-const wxString GetGerberProtelExtension( LAYER_NUM aLayer )
+wxString GetGerberProtelExtension( LAYER_NUM aLayer )
 {
     if( IsCopperLayer( aLayer ) )
     {
@@ -86,7 +86,7 @@ const wxString GetGerberProtelExtension( LAYER_NUM aLayer )
 }
 
 
-const wxString GetGerberFileFunctionAttribute( const BOARD *aBoard, LAYER_NUM aLayer )
+wxString GetGerberFileFunctionAttribute( const BOARD *aBoard, LAYER_NUM aLayer )
 {
     wxString attrib;
 
@@ -206,7 +206,7 @@ const wxString GetGerberFileFunctionAttribute( const BOARD *aBoard, LAYER_NUM aL
 }
 
 
-static const wxString GetGerberFilePolarityAttribute( LAYER_NUM aLayer )
+static wxString GetGerberFilePolarityAttribute( LAYER_NUM aLayer )
 {
     /* build the string %TF.FilePolarity,Positive*%
      * or  %TF.FilePolarity,Negative*%

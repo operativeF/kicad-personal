@@ -85,9 +85,9 @@ public:
     SCH_EAGLE_PLUGIN();
     ~SCH_EAGLE_PLUGIN();
 
-    const wxString GetName() const override;
+    wxString GetName() const override;
 
-    const wxString GetFileExtension() const override;
+    wxString GetFileExtension() const override;
 
     int GetModifyHash() const override;
 

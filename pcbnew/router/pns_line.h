@@ -214,7 +214,7 @@ public:
 
     ///> Clips the line to the nearest obstacle, traversing from the line's start vertex (0).
     ///> Returns the clipped line.
-    const LINE ClipToNearestObstacle( NODE* aNode ) const;
+    LINE ClipToNearestObstacle( NODE* aNode ) const;
 
     ///> Clips the line to a given range of vertices.
     void ClipVertexRange ( int aStart, int aEnd );

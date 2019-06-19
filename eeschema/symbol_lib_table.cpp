@@ -468,7 +468,7 @@ LIB_ALIAS* SYMBOL_LIB_TABLE::LoadSymbolWithOptionalNickname( const LIB_ID& aLibI
 }
 
 
-const wxString SYMBOL_LIB_TABLE::GlobalPathEnvVariableName()
+wxString SYMBOL_LIB_TABLE::GlobalPathEnvVariableName()
 {
     return  "KICAD_SYMBOL_DIR";
 }

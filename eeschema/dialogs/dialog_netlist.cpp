@@ -107,7 +107,7 @@ public:
      * @return the name of the netlist format for this page
      * This is also the page label.
      */
-    const wxString GetPageNetFmtName()
+    wxString GetPageNetFmtName()
     {
         return m_pageNetFmtName;
     }
@@ -180,7 +180,7 @@ private:
      * this function must be called first with "first_item" = true
      * and after with "first_item" = false to get all the other existing netlist names
      */
-    const wxString UserNetlistTypeName( bool first_item );
+    wxString UserNetlistTypeName( bool first_item );
 
     /**
      * Function FilenamePrms
@@ -205,11 +205,11 @@ private:
 
 public:
     NETLIST_DIALOG_ADD_GENERATOR( NETLIST_DIALOG* parent );
-    const wxString GetGeneratorTitle()
+    wxString GetGeneratorTitle()
     {
         return m_textCtrlName->GetValue();
     }
-    const wxString GetGeneratorTCommandLine()
+    wxString GetGeneratorTCommandLine()
     {
         return m_textCtrlCommand->GetValue();
     }
@@ -359,7 +359,7 @@ NETLIST_DIALOG::NETLIST_DIALOG( SCH_EDIT_FRAME* parent ) :
 }
 
 
-const wxString NETLIST_DIALOG::UserNetlistTypeName( bool first_item )
+wxString NETLIST_DIALOG::UserNetlistTypeName( bool first_item )
 {
     static int index;
     wxString   name, msg;

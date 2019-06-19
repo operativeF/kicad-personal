@@ -192,7 +192,7 @@ const wxString& X2_ATTRIBUTE_FILEFUNCTION::GetBrdLayerId()
     return m_Prms.Item( 2 );
 }
 
-const wxString X2_ATTRIBUTE_FILEFUNCTION::GetDrillLayerPair()
+wxString X2_ATTRIBUTE_FILEFUNCTION::GetDrillLayerPair()
 {
     // the layer pair identifiers, for drill files, i.e.
     // with m_Prms.Item( 1 ) = "Plated" or "NonPlated"

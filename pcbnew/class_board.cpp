@@ -83,7 +83,7 @@ public:
     }
 
     // pure virtuals:
-    const wxPoint GetPosition() const override { return wxPoint(); }
+    wxPoint GetPosition() const override { return wxPoint(); }
     void SetPosition( const wxPoint& ) override {}
     void Print( PCB_BASE_FRAME* aFrame, wxDC* DC, const wxPoint& aOffset ) override {}
 
@@ -168,7 +168,7 @@ void BOARD::BuildConnectivity()
 }
 
 
-const wxPoint BOARD::GetPosition() const
+wxPoint BOARD::GetPosition() const
 {
     return ZeroOffset;
 }
@@ -246,7 +246,7 @@ bool BOARD::SetLayerDescr( PCB_LAYER_ID aIndex, const LAYER& aLayer )
 }
 
 
-const PCB_LAYER_ID BOARD::GetLayerID( const wxString& aLayerName ) const
+PCB_LAYER_ID BOARD::GetLayerID( const wxString& aLayerName ) const
 {
 
     // Look for the BOARD specific copper layer names
@@ -270,7 +270,7 @@ const PCB_LAYER_ID BOARD::GetLayerID( const wxString& aLayerName ) const
     return UNDEFINED_LAYER;
 }
 
-const wxString BOARD::GetLayerName( PCB_LAYER_ID aLayer ) const
+wxString BOARD::GetLayerName( PCB_LAYER_ID aLayer ) const
 {
     // All layer names are stored in the BOARD.
     if( IsLayerEnabled( aLayer ) )
@@ -1706,7 +1706,7 @@ bool BOARD::GetBoardPolygonOutlines( SHAPE_POLY_SET& aOutlines, wxString* aError
 }
 
 
-const std::vector<D_PAD*> BOARD::GetPads()
+std::vector<D_PAD*> BOARD::GetPads()
 {
     std::vector<D_PAD*> allPads;
 
@@ -1765,7 +1765,7 @@ void BOARD::ClearAllNetCodes()
         track->SetNetCode( 0 );
 }
 
-const std::vector<BOARD_CONNECTED_ITEM*> BOARD::AllConnectedItems()
+std::vector<BOARD_CONNECTED_ITEM*> BOARD::AllConnectedItems()
 {
     std::vector<BOARD_CONNECTED_ITEM*> items;
 

@@ -275,7 +275,7 @@ void WS_DATA_ITEM::MoveEndPointToUi( wxPoint aPosition )
 }
 
 
-const DPOINT WS_DATA_ITEM::GetStartPos( int ii ) const
+DPOINT WS_DATA_ITEM::GetStartPos( int ii ) const
 {
     WS_DATA_MODEL& model = WS_DATA_MODEL::GetTheInstance();
     DPOINT         pos( m_Pos.m_Pos.x + ( m_IncrementVector.x * ii ),
@@ -306,14 +306,14 @@ const DPOINT WS_DATA_ITEM::GetStartPos( int ii ) const
 }
 
 
-const wxPoint WS_DATA_ITEM::GetStartPosUi( int ii ) const
+wxPoint WS_DATA_ITEM::GetStartPosUi( int ii ) const
 {
     DPOINT pos = GetStartPos( ii ) * WS_DATA_MODEL::GetTheInstance().m_WSunits2Iu;
     return wxPoint( KiROUND( pos.x ), KiROUND( pos.y ) );
 }
 
 
-const DPOINT WS_DATA_ITEM::GetEndPos( int ii ) const
+DPOINT WS_DATA_ITEM::GetEndPos( int ii ) const
 {
     DPOINT pos( m_End.m_Pos.x + ( m_IncrementVector.x * ii ),
                 m_End.m_Pos.y + ( m_IncrementVector.y * ii ) );
@@ -343,7 +343,7 @@ const DPOINT WS_DATA_ITEM::GetEndPos( int ii ) const
 }
 
 
-const wxPoint WS_DATA_ITEM::GetEndPosUi( int ii ) const
+wxPoint WS_DATA_ITEM::GetEndPosUi( int ii ) const
 {
     DPOINT pos = GetEndPos( ii );
     pos = pos * WS_DATA_MODEL::GetTheInstance().m_WSunits2Iu;
@@ -372,7 +372,7 @@ bool WS_DATA_ITEM::IsInsidePage( int ii ) const
 }
 
 
-const wxString WS_DATA_ITEM::GetClassName() const
+wxString WS_DATA_ITEM::GetClassName() const
 {
     wxString name;
 
@@ -456,7 +456,7 @@ int WS_DATA_ITEM_POLYGONS::GetPenSizeUi()
 }
 
 
-const DPOINT WS_DATA_ITEM_POLYGONS::GetCornerPosition( unsigned aIdx, int aRepeat ) const
+DPOINT WS_DATA_ITEM_POLYGONS::GetCornerPosition( unsigned aIdx, int aRepeat ) const
 {
     DPOINT pos = m_Corners[aIdx];
 
@@ -521,7 +521,7 @@ bool WS_DATA_ITEM_POLYGONS::IsInsidePage( int ii ) const
 }
 
 
-const wxPoint WS_DATA_ITEM_POLYGONS::GetCornerPositionUi( unsigned aIdx, int aRepeat ) const
+wxPoint WS_DATA_ITEM_POLYGONS::GetCornerPositionUi( unsigned aIdx, int aRepeat ) const
 {
     DPOINT pos = GetCornerPosition( aIdx, aRepeat );
     pos = pos * WS_DATA_MODEL::GetTheInstance().m_WSunits2Iu;

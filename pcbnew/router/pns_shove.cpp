@@ -1400,7 +1400,7 @@ NODE* SHOVE::CurrentNode()
 }
 
 
-const LINE SHOVE::NewHead() const
+LINE SHOVE::NewHead() const
 {
     assert( m_newHead );
 

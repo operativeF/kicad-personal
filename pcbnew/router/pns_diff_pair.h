@@ -110,7 +110,7 @@ public:
 
     const SHAPE_LINE_CHAIN& EntryP() const { return m_entryP; }
     const SHAPE_LINE_CHAIN& EntryN() const { return m_entryN; }
-    const DIFF_PAIR Entry() const ;
+    DIFF_PAIR Entry() const ;
 
     void Reverse();
 

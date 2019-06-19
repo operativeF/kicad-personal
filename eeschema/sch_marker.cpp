@@ -102,7 +102,7 @@ void SCH_MARKER::ViewGetLayers( int aLayers[], int& aCount ) const
 }
 
 
-const EDA_RECT SCH_MARKER::GetBoundingBox() const
+EDA_RECT SCH_MARKER::GetBoundingBox() const
 {
     return GetBoundingBoxMarker();
 }

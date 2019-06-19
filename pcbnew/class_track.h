@@ -97,7 +97,7 @@ public:
     virtual void Flip( const wxPoint& aCentre ) override;
 
     void SetPosition( const wxPoint& aPos ) override { m_Start = aPos; }
-    const wxPoint GetPosition() const override { return m_Start; }
+    wxPoint GetPosition() const override { return m_Start; }
 
     void SetWidth( int aWidth )                 { m_Width = aWidth; }
     int GetWidth() const                        { return m_Width; }
@@ -119,7 +119,7 @@ public:
     }
 
     // Virtual function
-    const EDA_RECT GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     bool IsLocked() const override
     {
@@ -224,7 +224,7 @@ public:
 
     virtual unsigned int ViewGetLOD( int aLayer, KIGFX::VIEW* aView ) const override;
 
-    const BOX2I ViewBBox() const override;
+    BOX2I ViewBBox() const override;
 
     virtual void SwapData( BOARD_ITEM* aImage ) override;
 
@@ -308,7 +308,7 @@ public:
      */
     void SanitizeLayers();
 
-    const wxPoint GetPosition() const override {  return m_Start; }
+    wxPoint GetPosition() const override {  return m_Start; }
     void SetPosition( const wxPoint& aPoint ) override { m_Start = aPoint;  m_End = aPoint; }
 
     bool HitTest( const wxPoint& aPosition, int aAccuracy = 0 ) const override;

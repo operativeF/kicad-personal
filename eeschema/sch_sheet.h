@@ -393,7 +393,7 @@ public:
 
     void Print( wxDC* aDC, const wxPoint& aOffset ) override;
 
-    EDA_RECT const GetBoundingBox() const override;
+    EDA_RECT GetBoundingBox() const override;
 
     /**
      * Return the position of the lower right corner of the sheet in drawing units.

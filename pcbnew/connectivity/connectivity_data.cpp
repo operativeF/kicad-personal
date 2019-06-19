@@ -352,7 +352,7 @@ void CONNECTIVITY_DATA::Clear()
 }
 
 
-const std::vector<BOARD_CONNECTED_ITEM*> CONNECTIVITY_DATA::GetConnectedItems(
+std::vector<BOARD_CONNECTED_ITEM*> CONNECTIVITY_DATA::GetConnectedItems(
         const BOARD_CONNECTED_ITEM* aItem,
         const KICAD_T aTypes[],
         bool aIgnoreNetcodes ) const
@@ -380,7 +380,7 @@ const std::vector<BOARD_CONNECTED_ITEM*> CONNECTIVITY_DATA::GetConnectedItems(
 }
 
 
-const std::vector<BOARD_CONNECTED_ITEM*> CONNECTIVITY_DATA::GetNetItems( int aNetCode,
+std::vector<BOARD_CONNECTED_ITEM*> CONNECTIVITY_DATA::GetNetItems( int aNetCode,
         const KICAD_T aTypes[] ) const
 {
     std::set<BOARD_CONNECTED_ITEM*> items;
@@ -436,7 +436,7 @@ bool CONNECTIVITY_DATA::CheckConnectivity( std::vector<CN_DISJOINT_NET_ENTRY>& a
 }
 
 
-const std::vector<TRACK*> CONNECTIVITY_DATA::GetConnectedTracks( const BOARD_CONNECTED_ITEM* aItem )
+std::vector<TRACK*> CONNECTIVITY_DATA::GetConnectedTracks( const BOARD_CONNECTED_ITEM* aItem )
 const
 {
     auto& entry = m_connAlgo->ItemEntry( aItem );
@@ -458,7 +458,7 @@ const
 }
 
 
-const void CONNECTIVITY_DATA::GetConnectedPads( const BOARD_CONNECTED_ITEM* aItem,
+void CONNECTIVITY_DATA::GetConnectedPads( const BOARD_CONNECTED_ITEM* aItem,
                                                 std::set<D_PAD*>* pads ) const
 {
     for( auto citem : m_connAlgo->ItemEntry( aItem ).GetItems() )
@@ -472,7 +472,7 @@ const void CONNECTIVITY_DATA::GetConnectedPads( const BOARD_CONNECTED_ITEM* aIte
 }
 
 
-const std::vector<D_PAD*> CONNECTIVITY_DATA::GetConnectedPads( const BOARD_CONNECTED_ITEM* aItem )
+std::vector<D_PAD*> CONNECTIVITY_DATA::GetConnectedPads( const BOARD_CONNECTED_ITEM* aItem )
 const
 {
     std::set<D_PAD*> pads;
@@ -524,7 +524,7 @@ unsigned int CONNECTIVITY_DATA::GetPadCount( int aNet ) const
 }
 
 
-const std::vector<VECTOR2I> CONNECTIVITY_DATA::NearestUnconnectedTargets(
+std::vector<VECTOR2I> CONNECTIVITY_DATA::NearestUnconnectedTargets(
         const BOARD_CONNECTED_ITEM* aRef,
         const VECTOR2I& aPos,
         int aNet )
@@ -601,7 +601,7 @@ void CONNECTIVITY_DATA::GetUnconnectedEdges( std::vector<CN_EDGE>& aEdges) const
 }
 
 
-const std::vector<BOARD_CONNECTED_ITEM*> CONNECTIVITY_DATA::GetConnectedItems(
+std::vector<BOARD_CONNECTED_ITEM*> CONNECTIVITY_DATA::GetConnectedItems(
         const BOARD_CONNECTED_ITEM* aItem, const VECTOR2I& aAnchor, KICAD_T aTypes[] )
 {
     auto& entry = m_connAlgo->ItemEntry( aItem );
@@ -663,7 +663,7 @@ void CONNECTIVITY_DATA::SetProgressReporter( PROGRESS_REPORTER* aReporter )
 }
 
 
-const std::vector<CN_EDGE> CONNECTIVITY_DATA::GetRatsnestForComponent( MODULE* aComponent, bool aSkipInternalConnections )
+std::vector<CN_EDGE> CONNECTIVITY_DATA::GetRatsnestForComponent( MODULE* aComponent, bool aSkipInternalConnections )
 {
     std::set<int> nets;
     std::set<D_PAD*> pads;

@@ -41,7 +41,7 @@ class BRIGHT_BOX : public EDA_ITEM
 public:
     BRIGHT_BOX();
 
-    virtual const BOX2I ViewBBox() const override
+    virtual BOX2I ViewBBox() const override
     {
         if( !m_item )
         {

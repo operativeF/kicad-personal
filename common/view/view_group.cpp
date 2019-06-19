@@ -89,7 +89,7 @@ VIEW_ITEM *VIEW_GROUP::GetItem( unsigned int idx ) const
 }
 
 
-const BOX2I VIEW_GROUP::ViewBBox() const
+BOX2I VIEW_GROUP::ViewBBox() const
 {
     BOX2I bb;
 
@@ -203,7 +203,7 @@ void VIEW_GROUP::FreeItems()
 }
 
 
-const VIEW_GROUP::ITEMS VIEW_GROUP::updateDrawList() const
+VIEW_GROUP::ITEMS VIEW_GROUP::updateDrawList() const
 {
     return m_groupItems;
 }

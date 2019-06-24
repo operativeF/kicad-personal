@@ -33,8 +33,11 @@
 
 #include <tool/coroutine.h>
 
+// Windows already includes this somewhere else, leading to multiple definition
+// errors if it includes it again here.
+#ifndef __WINDOWS__
 #include <common.h>
-
+#endif
 
 /**
  * An event in a simple coroutine harness.

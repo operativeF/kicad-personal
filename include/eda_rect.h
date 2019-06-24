@@ -57,8 +57,6 @@ public:
         m_init( true )
     { }
 
-    virtual ~EDA_RECT() { };
-
     wxPoint Centre() const
     {
         return wxPoint( m_Pos.x + ( m_Size.x >> 1 ),

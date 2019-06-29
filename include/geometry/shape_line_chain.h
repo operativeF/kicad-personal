@@ -35,7 +35,8 @@
 #include <geometry/shape.h>
 #include <geometry/seg.h>
 
-#include <clipper.hpp>
+#include "../../polygon/include/clipper.hpp"
+
 
 /**
  * Class SHAPE_LINE_CHAIN

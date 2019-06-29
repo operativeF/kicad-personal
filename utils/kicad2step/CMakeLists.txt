@@ -30,6 +30,10 @@ target_link_libraries( kicad2step_lib
     sexpr
 )
 
+set_target_properties( kicad2step_lib PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( kicad2step_lib PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( kicad2step_lib )
+
 set( K2S_FILES
     kicad2step.cpp
 )
@@ -56,3 +60,7 @@ else()
             DESTINATION ${KICAD_BIN}
             COMPONENT binary )
 endif()
+
+set_target_properties( kicad2step PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( kicad2step PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( kicad2step )

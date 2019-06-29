@@ -77,6 +77,10 @@ if( MAKE_LINK_MAPS )
         LINK_FLAGS "-Wl,-cref,-Map=pcb_calculator.map" )
 endif()
 
+set_target_properties( pcb_calculator PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( pcb_calculator PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( pcb_calculator )
+
 # the main pcb_calculator program, in DSO form.
 add_library( pcb_calculator_kiface MODULE
     pcb_calculator.cpp
@@ -147,6 +151,10 @@ else()
         COMPONENT binary
         )
 endif()
+
+set_target_properties( pcb_calculator_kiface PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( pcb_calculator_kiface PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( pcb_calculator_kiface )
 
 # auto-generate pcb_calculator_datafile.h and pcb_calculator_datafile_keywords.cpp
 # for the storage data file format.

@@ -101,7 +101,7 @@ set(3D-VIEWER_SRCS
     3d_math.cpp
     )
 
-add_library(3d-viewer STATIC ${3D-VIEWER_SRCS})
+add_library( 3d-viewer STATIC ${3D-VIEWER_SRCS} )
 add_dependencies( 3d-viewer pcbcommon )
 
 target_link_libraries( 3d-viewer
@@ -112,4 +112,8 @@ target_link_libraries( 3d-viewer
                        ${OPENGL_LIBRARIES}
                        kicad_3dsg )
 
+set_target_properties( 3d-viewer PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( 3d-viewer PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( 3d-viewer )
+                       
 add_subdirectory( 3d_cache )

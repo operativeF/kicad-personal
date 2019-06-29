@@ -29,7 +29,7 @@
 
 
 /// Put aPriorityPath in front of all paths in the value of aEnvVar.
-wxString PrePendPath( const wxString& aEnvVar, const wxString& aPriorityPath )
+const wxString PrePendPath( const wxString& aEnvVar, const wxString& aPriorityPath )
 {
     wxPathList  paths;
 

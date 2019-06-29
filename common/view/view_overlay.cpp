@@ -23,29 +23,33 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
  */
 
+#include <gal/graphics_abstraction_layer.h>
+#include <painter.h>
 #include <view/view.h>
 #include <view/view_item.h>
 #include <view/view_overlay.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <painter.h>
 
-#include <layers_id_colors_and_visibility.h>
 #include <geometry/seg.h>
+#include <geometry/shape_poly_set.h>
+#include <layers_id_colors_and_visibility.h>
 
-namespace KIGFX {
+
+
+namespace KIGFX
+{
 
 struct VIEW_OVERLAY::COMMAND
 {
-    virtual ~COMMAND() {};
+    virtual ~COMMAND(){};
     virtual void Execute( VIEW* aView ) const = 0;
 };
 
 
 struct VIEW_OVERLAY::COMMAND_LINE : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_LINE( const VECTOR2D& aP0, const VECTOR2D& aP1 ) :
-        m_p0( aP0 ),
-        m_p1( aP1 ) {}
+    COMMAND_LINE( const VECTOR2D& aP0, const VECTOR2D& aP1 ) : m_p0( aP0 ), m_p1( aP1 )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -59,9 +63,9 @@ struct VIEW_OVERLAY::COMMAND_LINE : public VIEW_OVERLAY::COMMAND
 
 struct VIEW_OVERLAY::COMMAND_RECTANGLE : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_RECTANGLE( const VECTOR2D& aP0, const VECTOR2D& aP1 ) :
-        m_p0( aP0 ), m_p1( aP1 )
-    {}
+    COMMAND_RECTANGLE( const VECTOR2D& aP0, const VECTOR2D& aP1 ) : m_p0( aP0 ), m_p1( aP1 )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -75,9 +79,10 @@ struct VIEW_OVERLAY::COMMAND_RECTANGLE : public VIEW_OVERLAY::COMMAND
 
 struct VIEW_OVERLAY::COMMAND_CIRCLE : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_CIRCLE( const VECTOR2D& aCenter, double aRadius ) :
-        m_center(aCenter),
-        m_radius(aRadius) {}
+    COMMAND_CIRCLE( const VECTOR2D& aCenter, double aRadius )
+            : m_center( aCenter ), m_radius( aRadius )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -85,18 +90,19 @@ struct VIEW_OVERLAY::COMMAND_CIRCLE : public VIEW_OVERLAY::COMMAND
     }
 
     VECTOR2D m_center;
-    double m_radius;
+    double   m_radius;
 };
 
 
 struct VIEW_OVERLAY::COMMAND_ARC : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_ARC( const VECTOR2D& aCenter, double aRadius, double aStartAngle, double aEndAngle ) :
-        m_center( aCenter ),
-        m_radius( aRadius ),
-        m_startAngle( aStartAngle ),
-        m_endAngle( aEndAngle )
-    { }
+    COMMAND_ARC( const VECTOR2D& aCenter, double aRadius, double aStartAngle, double aEndAngle )
+            : m_center( aCenter ),
+              m_radius( aRadius ),
+              m_startAngle( aStartAngle ),
+              m_endAngle( aEndAngle )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -104,16 +110,17 @@ struct VIEW_OVERLAY::COMMAND_ARC : public VIEW_OVERLAY::COMMAND
     }
 
     VECTOR2D m_center;
-    double m_radius;
-    double m_startAngle;
-    double m_endAngle;
+    double   m_radius;
+    double   m_startAngle;
+    double   m_endAngle;
 };
 
 
 struct VIEW_OVERLAY::COMMAND_POLYLINE : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_POLYLINE( const std::deque<VECTOR2D>& aPointList ) :
-       m_pointList( aPointList ) {}
+    COMMAND_POLYLINE( const std::deque<VECTOR2D>& aPointList ) : m_pointList( aPointList )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -126,8 +133,9 @@ struct VIEW_OVERLAY::COMMAND_POLYLINE : public VIEW_OVERLAY::COMMAND
 
 struct VIEW_OVERLAY::COMMAND_POLY_POLYLINE : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_POLY_POLYLINE( const SHAPE_LINE_CHAIN& aLineChain ) :
-       m_polyLine( aLineChain ) {}
+    COMMAND_POLY_POLYLINE( const SHAPE_LINE_CHAIN& aLineChain ) : m_polyLine( aLineChain )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -150,7 +158,7 @@ struct VIEW_OVERLAY::COMMAND_POINT_POLYLINE : public VIEW_OVERLAY::COMMAND
 
     virtual void Execute( VIEW* aView ) const override
     {
-        aView->GetGAL()->DrawPolyline( &m_pointList[0], (int)m_pointList.size() );
+        aView->GetGAL()->DrawPolyline( &m_pointList[0], (int) m_pointList.size() );
     }
 
     std::vector<VECTOR2D> m_pointList;
@@ -159,8 +167,9 @@ struct VIEW_OVERLAY::COMMAND_POINT_POLYLINE : public VIEW_OVERLAY::COMMAND
 
 struct VIEW_OVERLAY::COMMAND_POLYGON : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_POLYGON( const std::deque<VECTOR2D>& aPointList ) :
-       m_pointList( aPointList ) {}
+    COMMAND_POLYGON( const std::deque<VECTOR2D>& aPointList ) : m_pointList( aPointList )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -173,8 +182,9 @@ struct VIEW_OVERLAY::COMMAND_POLYGON : public VIEW_OVERLAY::COMMAND
 
 struct VIEW_OVERLAY::COMMAND_POLY_POLYGON : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_POLY_POLYGON( const SHAPE_POLY_SET& aPolySet ) :
-       m_polySet( aPolySet ) {}
+    COMMAND_POLY_POLYGON( const SHAPE_POLY_SET& aPolySet ) : m_polySet( aPolySet )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -197,7 +207,7 @@ struct VIEW_OVERLAY::COMMAND_POINT_POLYGON : public VIEW_OVERLAY::COMMAND
 
     virtual void Execute( VIEW* aView ) const override
     {
-        aView->GetGAL()->DrawPolygon( &m_pointList[0], (int)m_pointList.size() );
+        aView->GetGAL()->DrawPolygon( &m_pointList[0], (int) m_pointList.size() );
     }
 
     std::vector<VECTOR2D> m_pointList;
@@ -206,8 +216,9 @@ struct VIEW_OVERLAY::COMMAND_POINT_POLYGON : public VIEW_OVERLAY::COMMAND
 
 struct VIEW_OVERLAY::COMMAND_SET_STROKE : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_SET_STROKE( bool aIsStroke ) :
-        m_isStroke( aIsStroke ) {}
+    COMMAND_SET_STROKE( bool aIsStroke ) : m_isStroke( aIsStroke )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -220,8 +231,9 @@ struct VIEW_OVERLAY::COMMAND_SET_STROKE : public VIEW_OVERLAY::COMMAND
 
 struct VIEW_OVERLAY::COMMAND_SET_FILL : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_SET_FILL( bool aIsFill ) :
-        m_isFill(  aIsFill ) {}
+    COMMAND_SET_FILL( bool aIsFill ) : m_isFill( aIsFill )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -234,9 +246,10 @@ struct VIEW_OVERLAY::COMMAND_SET_FILL : public VIEW_OVERLAY::COMMAND
 
 struct VIEW_OVERLAY::COMMAND_SET_COLOR : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_SET_COLOR( bool aIsStroke, const COLOR4D& aColor ) :
-        m_isStroke( aIsStroke ),
-        m_color( aColor ) {}
+    COMMAND_SET_COLOR( bool aIsStroke, const COLOR4D& aColor )
+            : m_isStroke( aIsStroke ), m_color( aColor )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -246,15 +259,16 @@ struct VIEW_OVERLAY::COMMAND_SET_COLOR : public VIEW_OVERLAY::COMMAND
             aView->GetGAL()->SetFillColor( m_color );
     }
 
-    bool m_isStroke;
+    bool    m_isStroke;
     COLOR4D m_color;
 };
 
 
 struct VIEW_OVERLAY::COMMAND_SET_WIDTH : public VIEW_OVERLAY::COMMAND
 {
-    COMMAND_SET_WIDTH( double aWidth ) :
-        m_width( aWidth ) {}
+    COMMAND_SET_WIDTH( double aWidth ) : m_width( aWidth )
+    {
+    }
 
     virtual void Execute( VIEW* aView ) const override
     {
@@ -372,8 +386,8 @@ void VIEW_OVERLAY::Circle( const VECTOR2D& aCenterPoint, double aRadius )
 }
 
 
-void VIEW_OVERLAY::Arc( const VECTOR2D& aCenterPoint,
-                        double aRadius, double aStartAngle, double aEndAngle )
+void VIEW_OVERLAY::Arc(
+        const VECTOR2D& aCenterPoint, double aRadius, double aStartAngle, double aEndAngle )
 {
     m_commands.push_back( new COMMAND_ARC( aCenterPoint, aRadius, aStartAngle, aEndAngle ) );
 }
@@ -413,4 +427,4 @@ void VIEW_OVERLAY::SetLineWidth( double aLineWidth )
     m_commands.push_back( new COMMAND_SET_WIDTH( aLineWidth ) );
 }
 
-} // namespace
+} // namespace KIGFX

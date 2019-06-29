@@ -82,6 +82,10 @@ target_link_libraries( gal
     ${GDI_PLUS_LIBRARIES}
 )
 
+set_target_properties( gal PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( gal PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "gal/stdafx.h" )
+cotire( gal )
+
 
 # Only for win32 cross compilation using MXE
 if( WIN32 AND MSYS )
@@ -102,6 +106,9 @@ add_library( singletop STATIC EXCLUDE_FROM_ALL
     kiway_holder.cpp
     )
 
+if( MSVC ) # MSVC builds require a different variable for build exclusion.
+    set_target_properties( singletop PROPERTIES EXCLUDE_FROM_DEFAULT_BUILD TRUE )
+endif()
 
 # A shared library used by multiple *.kiface files and one or two program
 # launchers.  Object files can migrate into here over time, but only if they are
@@ -109,7 +116,7 @@ add_library( singletop STATIC EXCLUDE_FROM_ALL
 # Functions and data all need to use the #include <import_export.h> and be declared
 # as APIEXPORT
 set( LIB_KICAD_SRCS
-    colors.cpp
+    #colors.cpp
     dlist.cpp
     string.cpp
     )
@@ -406,7 +413,9 @@ set( COMMON_SRCS
 
     libeval/numeric_evaluator.cpp
     )
+
 add_library( common STATIC ${COMMON_SRCS} )
+
 add_dependencies( common version_header )
 target_link_libraries( common
     bitmaps
@@ -418,6 +427,9 @@ target_link_libraries( common
     ${wxWidgets_LIBRARIES}
     )
 
+set_target_properties( common PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( common PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( common )
 
 set( PCB_COMMON_SRCS
     base_screen.cpp
@@ -489,6 +501,10 @@ set_source_files_properties( ${PCB_COMMON_SRCS} PROPERTIES
     )
 
 add_library( pcbcommon STATIC ${PCB_COMMON_SRCS} )
+
+set_target_properties( pcbcommon PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( pcbcommon PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( pcbcommon )
 
 target_include_directories( pcbcommon PUBLIC
 )

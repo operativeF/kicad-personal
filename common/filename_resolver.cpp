@@ -23,7 +23,6 @@
 
 #include <sstream>
 #include <fstream>
-#include <sstream>
 #include <wx/filename.h>
 #include <wx/log.h>
 #include <wx/msgdlg.h>

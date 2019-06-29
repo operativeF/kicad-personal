@@ -127,3 +127,7 @@ else()
         COMPONENT binary
         )
 endif()
+
+set_target_properties( cvpcb_kiface PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( cvpcb_kiface PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( cvpcb_kiface )

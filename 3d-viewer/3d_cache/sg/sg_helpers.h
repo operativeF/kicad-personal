@@ -38,11 +38,11 @@
 #include <vector>
 #include "plugins/3dapi/sg_base.h"
 #include "plugins/3dapi/sg_types.h"
+#include <glm/glm.hpp>
 
 class SGNORMALS;
 class SGCOORDS;
 class SGCOORDINDEX;
-struct glm::dvec3;
 
 
 // Function to drop references within an SGNODE

@@ -32,9 +32,8 @@
 #include <vector>
 #include <deque>
 
-#include <geometry/shape_poly_set.h>
-
 class SEG;
+class SHAPE_POLY_SET;
 
 namespace KIGFX
 {

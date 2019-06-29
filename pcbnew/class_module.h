@@ -39,6 +39,8 @@
 #include <convert_to_biu.h>
 #include <layers_id_colors_and_visibility.h> // ALL_LAYERS definition.
 #include <lib_id.h>
+#include <geometry/shape_poly_set.h>
+
 #include <list>
 
 #include "zones.h"

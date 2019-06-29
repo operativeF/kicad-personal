@@ -95,3 +95,7 @@ if( false )     # linker map with cross reference
         LINK_FLAGS "-Wl,-cref,-Map=bitmap2component.map"
         )
 endif()
+
+set_target_properties( bitmap2component PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( bitmap2component PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( bitmap2component )

@@ -50,3 +50,7 @@ add_library( pnsrouter STATIC ${PCBNEW_PNS_SRCS} )
 target_link_libraries( pnsrouter PRIVATE
     common
 )
+
+set_target_properties( pnsrouter PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( pnsrouter PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "../stdafx.h" )
+cotire( pnsrouter )

@@ -116,6 +116,10 @@ target_link_libraries( gerbview
     ${wxWidgets_LIBRARIES}
     )
 
+set_target_properties( gerbview PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( gerbview PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( gerbview )
+
 if( MAKE_LINK_MAPS )
     set_target_properties( gerbview PROPERTIES
         LINK_FLAGS "-Wl,-cref,-Map=gerbview.map" )
@@ -143,6 +147,10 @@ set_source_files_properties( gerbview.cpp PROPERTIES
     # The KIFACE is in gerbview.cpp, export it:
     COMPILE_DEFINITIONS     "BUILD_KIWAY_DLL;COMPILING_DLL"
     )
+
+set_target_properties( gerbview_kiface PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( gerbview_kiface PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( gerbview_kiface )
 
 if( MAKE_LINK_MAPS )
     set_target_properties( gerbview_kiface PROPERTIES

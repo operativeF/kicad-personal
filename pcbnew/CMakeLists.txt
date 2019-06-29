@@ -600,6 +600,10 @@ if( PCBNEW_LINK_MAPS )
         LINK_FLAGS "-Wl,-cref,-Map=pcbnew.map" )
 endif()
 
+set_target_properties( pcbnew PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( pcbnew PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( pcbnew )
+
 # the main pcbnew program, in DSO form.
 add_library( pcbnew_kiface_objects OBJECT
     pcbnew.cpp
@@ -614,6 +618,10 @@ target_include_directories( pcbnew_kiface_objects PRIVATE
    $<TARGET_PROPERTY:common,INCLUDE_DIRECTORIES>
 )
 
+set_target_properties( pcbnew_kiface_objects PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( pcbnew_kiface_objects PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( pcbnew_kiface_objects )
+
 add_library( pcbnew_kiface MODULE $<TARGET_OBJECTS:pcbnew_kiface_objects> )
 
 set_target_properties( pcbnew_kiface PROPERTIES
@@ -623,6 +631,10 @@ set_target_properties( pcbnew_kiface PROPERTIES
     PREFIX          ${KIFACE_PREFIX}
     SUFFIX          ${KIFACE_SUFFIX}
     )
+
+set_target_properties( pcbnew_kiface PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( pcbnew_kiface PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( pcbnew_kiface )
 
 if ( KICAD_BUILD_TESTS )
     if ( UNIX )

@@ -43,6 +43,10 @@ if( APPLE )
     )
 endif()
 
+set_target_properties( kicad_3dsg PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( kicad_3dsg PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( kicad_3dsg )
+
 find_file( S3DSG_VERSION_FILE sg_version.h
         PATHS ${CMAKE_SOURCE_DIR}/include/plugins/3dapi NO_DEFAULT_PATH )
 

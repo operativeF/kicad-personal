@@ -24,11 +24,9 @@
 
 #include <algorithm>
 
-#include <geometry/shape_line_chain.h>
 #include <geometry/shape_circle.h>
+#include <geometry/shape_line_chain.h>
 #include <trigo.h>
-#include "clipper.hpp"
-
 
 ClipperLib::Path SHAPE_LINE_CHAIN::convertToClipper( bool aRequiredOrientation ) const
 {
@@ -59,22 +57,22 @@ void SHAPE_LINE_CHAIN::Rotate( double aAngle, const VECTOR2I& aCenter )
 {
     for( std::vector<VECTOR2I>::iterator i = m_points.begin(); i != m_points.end(); ++i )
     {
-        (*i) -= aCenter;
-        (*i) = (*i).Rotate( aAngle );
-        (*i) += aCenter;
+        ( *i ) -= aCenter;
+        ( *i ) = ( *i ).Rotate( aAngle );
+        ( *i ) += aCenter;
     }
 }
 
 
 bool SHAPE_LINE_CHAIN::Collide( const SEG& aSeg, int aClearance ) const
 {
-    BOX2I box_a( aSeg.A, aSeg.B - aSeg.A );
+    BOX2I              box_a( aSeg.A, aSeg.B - aSeg.A );
     BOX2I::ecoord_type dist_sq = (BOX2I::ecoord_type) aClearance * aClearance;
 
     for( int i = 0; i < SegmentCount(); i++ )
     {
         const SEG& s = CSegment( i );
-        BOX2I box_b( s.A, s.B - s.A );
+        BOX2I      box_b( s.A, s.B - s.A );
 
         BOX2I::ecoord_type d = box_a.SquaredDistance( box_b );
 
@@ -178,7 +176,7 @@ int SHAPE_LINE_CHAIN::Split( const VECTOR2I& aP )
     for( int s = 0; s < SegmentCount(); s++ )
     {
         const SEG seg = CSegment( s );
-        int dist = seg.Distance( aP );
+        int       dist = seg.Distance( aP );
 
         // make sure we are not producing a 'slightly concave' primitive. This might happen
         // if aP lies very close to one of already existing points.
@@ -245,11 +243,10 @@ const SHAPE_LINE_CHAIN SHAPE_LINE_CHAIN::Slice( int aStartIndex, int aEndIndex )
 
 struct compareOriginDistance
 {
-    compareOriginDistance( VECTOR2I& aOrigin ) :
-        m_origin( aOrigin ) {};
+    compareOriginDistance( VECTOR2I& aOrigin ) : m_origin( aOrigin ){};
 
-    bool operator()( const SHAPE_LINE_CHAIN::INTERSECTION& aA,
-                     const SHAPE_LINE_CHAIN::INTERSECTION& aB )
+    bool operator()(
+            const SHAPE_LINE_CHAIN::INTERSECTION& aA, const SHAPE_LINE_CHAIN::INTERSECTION& aB )
     {
         return ( m_origin - aA.p ).EuclideanNorm() < ( m_origin - aB.p ).EuclideanNorm();
     }
@@ -287,7 +284,7 @@ int SHAPE_LINE_CHAIN::Intersect( const SHAPE_LINE_CHAIN& aChain, INTERSECTIONS& 
 
     for( int s1 = 0; s1 < SegmentCount(); s1++ )
     {
-        const SEG& a = CSegment( s1 );
+        const SEG&  a = CSegment( s1 );
         const BOX2I bb_cur( a.A, a.B - a.A );
 
         if( !bb_other.Intersects( bb_cur ) )
@@ -295,7 +292,7 @@ int SHAPE_LINE_CHAIN::Intersect( const SHAPE_LINE_CHAIN& aChain, INTERSECTIONS& 
 
         for( int s2 = 0; s2 < aChain.SegmentCount(); s2++ )
         {
-            const SEG& b = aChain.CSegment( s2 );
+            const SEG&   b = aChain.CSegment( s2 );
             INTERSECTION is;
 
             if( a.Collinear( b ) )
@@ -303,10 +300,26 @@ int SHAPE_LINE_CHAIN::Intersect( const SHAPE_LINE_CHAIN& aChain, INTERSECTIONS& 
                 is.our = a;
                 is.their = b;
 
-                if( a.Contains( b.A ) ) { is.p = b.A; aIp.push_back( is ); }
-                if( a.Contains( b.B ) ) { is.p = b.B; aIp.push_back( is ); }
-                if( b.Contains( a.A ) ) { is.p = a.A; aIp.push_back( is ); }
-                if( b.Contains( a.B ) ) { is.p = a.B; aIp.push_back( is ); }
+                if( a.Contains( b.A ) )
+                {
+                    is.p = b.A;
+                    aIp.push_back( is );
+                }
+                if( a.Contains( b.B ) )
+                {
+                    is.p = b.B;
+                    aIp.push_back( is );
+                }
+                if( b.Contains( a.A ) )
+                {
+                    is.p = a.A;
+                    aIp.push_back( is );
+                }
+                if( b.Contains( a.B ) )
+                {
+                    is.p = a.B;
+                    aIp.push_back( is );
+                }
             }
             else
             {
@@ -334,7 +347,7 @@ int SHAPE_LINE_CHAIN::PathLength( const VECTOR2I& aP ) const
     for( int i = 0; i < SegmentCount(); i++ )
     {
         const SEG seg = CSegment( i );
-        int d = seg.Distance( aP );
+        int       d = seg.Distance( aP );
 
         if( d <= 1 )
         {
@@ -373,12 +386,12 @@ bool SHAPE_LINE_CHAIN::PointInside( const VECTOR2I& aPt, int aAccuracy ) const
      * vector number-of-points times.  This has a non-trivial impact on zone fill times.
      */
     const std::vector<VECTOR2I>& points = CPoints();
-    int pointCount = points.size();
+    int                          pointCount = points.size();
 
     for( int i = 0; i < pointCount; )
     {
-        const auto p1 = points[ i++ ];
-        const auto p2 = points[ i == pointCount ? 0 : i ];
+        const auto p1 = points[i++];
+        const auto p2 = points[i == pointCount ? 0 : i];
         const auto diff = p2 - p1;
 
         if( diff.y != 0 )
@@ -398,18 +411,18 @@ bool SHAPE_LINE_CHAIN::PointInside( const VECTOR2I& aPt, int aAccuracy ) const
 
 bool SHAPE_LINE_CHAIN::PointOnEdge( const VECTOR2I& aPt, int aAccuracy ) const
 {
-	return EdgeContainingPoint( aPt, aAccuracy ) >= 0;
+    return EdgeContainingPoint( aPt, aAccuracy ) >= 0;
 }
 
 int SHAPE_LINE_CHAIN::EdgeContainingPoint( const VECTOR2I& aPt, int aAccuracy ) const
 {
     if( !PointCount() )
-		return -1;
+        return -1;
 
-	else if( PointCount() == 1 )
+    else if( PointCount() == 1 )
     {
-	    VECTOR2I dist = m_points[0] - aPt;
-	    return ( hypot( dist.x, dist.y ) <= aAccuracy + 1 ) ? 0 : -1;
+        VECTOR2I dist = m_points[0] - aPt;
+        return ( hypot( dist.x, dist.y ) <= aAccuracy + 1 ) ? 0 : -1;
     }
 
     for( int i = 0; i < SegmentCount(); i++ )
@@ -427,7 +440,7 @@ int SHAPE_LINE_CHAIN::EdgeContainingPoint( const VECTOR2I& aPt, int aAccuracy ) 
 }
 
 
-bool SHAPE_LINE_CHAIN::CheckClearance( const VECTOR2I& aP, const int aDist) const
+bool SHAPE_LINE_CHAIN::CheckClearance( const VECTOR2I& aP, const int aDist ) const
 {
     if( !PointCount() )
         return false;
@@ -470,7 +483,7 @@ const OPT<SHAPE_LINE_CHAIN::INTERSECTION> SHAPE_LINE_CHAIN::SelfIntersecting() c
                      // for closed polylines, the ending point of the
                      // last segment == starting point of the first segment
                      // this is a normal case, not self intersecting case
-                     !( IsClosed() && s1 == 0 && s2 == SegmentCount()-1 ) )
+                     !( IsClosed() && s1 == 0 && s2 == SegmentCount() - 1 ) )
             {
                 INTERSECTION is;
                 is.our = CSegment( s1 );
@@ -539,7 +552,7 @@ SHAPE_LINE_CHAIN& SHAPE_LINE_CHAIN::Simplify()
     {
         const VECTOR2I p0 = pts_unique[i];
         const VECTOR2I p1 = pts_unique[i + 1];
-        int n = i;
+        int            n = i;
 
         while( n < np - 2 && SEG( p0, p1 ).LineDistance( pts_unique[n + 2] ) <= 1 )
             n++;
@@ -620,16 +633,16 @@ const std::string SHAPE_LINE_CHAIN::Format() const
 }
 
 
-bool SHAPE_LINE_CHAIN::CompareGeometry ( const SHAPE_LINE_CHAIN & aOther ) const
+bool SHAPE_LINE_CHAIN::CompareGeometry( const SHAPE_LINE_CHAIN& aOther ) const
 {
-    SHAPE_LINE_CHAIN a(*this), b( aOther );
+    SHAPE_LINE_CHAIN a( *this ), b( aOther );
     a.Simplify();
     b.Simplify();
 
     if( a.m_points.size() != b.m_points.size() )
         return false;
 
-    for( int i = 0; i < a.PointCount(); i++)
+    for( int i = 0; i < a.PointCount(); i++ )
         if( a.CPoint( i ) != b.CPoint( i ) )
             return false;
     return true;
@@ -683,7 +696,7 @@ const VECTOR2I SHAPE_LINE_CHAIN::PointAlong( int aPathLength ) const
     for( int i = 0; i < SegmentCount(); i++ )
     {
         const SEG& s = CSegment( i );
-        int l = s.Length();
+        int        l = s.Length();
 
         if( total + l >= aPathLength )
         {
@@ -705,11 +718,12 @@ double SHAPE_LINE_CHAIN::Area() const
         return 0.0;
 
     double area = 0.0;
-    int size = m_points.size();
+    int    size = m_points.size();
 
     for( int i = 0, j = size - 1; i < size; ++i )
     {
-        area += ( (double) m_points[j].x + m_points[i].x ) * ( (double) m_points[j].y - m_points[i].y );
+        area += ( (double) m_points[j].x + m_points[i].x )
+                * ( (double) m_points[j].y - m_points[i].y );
         j = i;
     }
 

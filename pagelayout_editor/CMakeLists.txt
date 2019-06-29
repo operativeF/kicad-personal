@@ -92,6 +92,10 @@ if( MAKE_LINK_MAPS )
         LINK_FLAGS "-Wl,-cref,-Map=pl_editor.map" )
 endif()
 
+set_target_properties( pl_editor PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( pl_editor PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( pl_editor )
+
 # the main pl_editor program, in DSO form.
 add_library( pl_editor_kiface MODULE
     pl_editor.cpp
@@ -119,6 +123,10 @@ if( MAKE_LINK_MAPS )
     set_target_properties( pl_editor_kiface PROPERTIES
         LINK_FLAGS "-Wl,-cref,-Map=_pl_editor.kiface.map" )
 endif()
+
+set_target_properties( pl_editor_kiface PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( pl_editor_kiface PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
+cotire( pl_editor_kiface )
 
 # if building pl_editor, then also build pl_editor_kiface if out of date.
 add_dependencies( pl_editor pl_editor_kiface )

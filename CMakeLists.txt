@@ -45,6 +45,8 @@ include( GNUInstallDirs )
 # Path to local CMake modules.
 set( CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules )
 
+include( cotire )
+
 # On Windows, binaries created by link option -g3 are very large (more than 1Gb for pcbnew,
 # and more than 3Gb for the full kicad suite)
 # This option create binaries using link option -g1 that create much smaller files, but

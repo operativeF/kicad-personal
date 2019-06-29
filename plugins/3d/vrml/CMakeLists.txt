@@ -79,3 +79,7 @@ install( TARGETS
     DESTINATION ${KICAD_USER_PLUGIN}/3d
     COMPONENT binary
     )
+
+set_target_properties( s3d_plugin_vrml PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
+set_target_properties( s3d_plugin_vrml PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "../stdafx.h" )
+cotire( s3d_plugin_vrml )

@@ -45,6 +45,7 @@
 #include <sch_sheet.h>
 #include <sch_bitmap.h>
 #include <class_library.h>
+#include <geometry/seg.h>
 
 
 SCH_DRAWING_TOOLS::SCH_DRAWING_TOOLS() :

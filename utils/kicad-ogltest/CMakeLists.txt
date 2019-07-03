@@ -24,7 +24,7 @@ target_link_libraries( kicad-ogltest
     gal
     common
     polygon
-    ${wxWidgets_LIBRARIES} )
+)
 
 if( APPLE )
     # puts binary into the main kicad.app bundle while linking

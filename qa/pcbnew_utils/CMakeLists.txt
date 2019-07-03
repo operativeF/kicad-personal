@@ -68,7 +68,6 @@ target_link_libraries( qa_pcbnew_utils PUBLIC
 #     lib_dxf
 #     idf3
 #     unit_test_utils
-#     ${wxWidgets_LIBRARIES}
 #     ${GITHUB_PLUGIN_LIBRARIES}
 #     ${GDI_PLUS_LIBRARIES}
 #     ${PYTHON_LIBRARIES}

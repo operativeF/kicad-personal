@@ -37,7 +37,6 @@ add_executable( qa_kicad2step ${K2S_TEST_SRCS} )
 target_link_libraries( qa_kicad2step
     kicad2step_lib
     unit_test_utils
-    ${wxWidgets_LIBRARIES}
 )
 
 target_include_directories( qa_sexpr PRIVATE

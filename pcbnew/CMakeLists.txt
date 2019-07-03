@@ -578,7 +578,8 @@ target_link_libraries( pcbnew
     # There's way too much crap coming in from common yet.
     common
     gal
-    ${wxWidgets_LIBRARIES}
+    wxWidgets::html
+    wxWidgets::net
     )
 
 if( PCBNEW_LINK_MAPS )
@@ -657,7 +658,9 @@ set( PCBNEW_KIFACE_LIBRARIES
     gal
     lib_dxf
     idf3
-    ${wxWidgets_LIBRARIES}
+    wxWidgets::aui
+    wxWidgets::gl
+    wxWidgets::html
     ${GITHUB_PLUGIN_LIBRARIES}
     ${GDI_PLUS_LIBRARIES}
     ${PYTHON_LIBRARIES}

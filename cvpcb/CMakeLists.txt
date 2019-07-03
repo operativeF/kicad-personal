@@ -89,7 +89,8 @@ target_link_libraries( cvpcb_kiface
     3d-viewer
     gal
     common
-    ${wxWidgets_LIBRARIES}
+    wxWidgets::aui
+    wxWidgets::html
     ${GDI_PLUS_LIBRARIES}
     )
 

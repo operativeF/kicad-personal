@@ -37,7 +37,6 @@ include_directories( BEFORE ${INC_BEFORE} )
 
 target_link_libraries( qa_utils
     common
-    ${wxWidgets_LIBRARIES}
 )
 
 target_include_directories( qa_utils PUBLIC

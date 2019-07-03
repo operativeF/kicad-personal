@@ -77,7 +77,6 @@ target_link_libraries( test_gal_pixel_alignment
     ${Boost_FILESYSTEM_LIBRARY}
     ${Boost_SYSTEM_LIBRARY}
     ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
-    ${wxWidgets_LIBRARIES}
 )
 
 kicad_add_utils_executable( test_gal_pixel_alignment )

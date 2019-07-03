@@ -39,7 +39,6 @@ target_link_libraries( github_plugin
 
 if( MINGW )
     target_link_libraries( github_plugin
-        ${wxWidgets_LIBRARIES}
         ws2_32
         )
 endif()

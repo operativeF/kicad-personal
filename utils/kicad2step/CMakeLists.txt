@@ -46,7 +46,8 @@ add_executable( kicad2step ${K2S_FILES} )
 
 target_link_libraries( kicad2step
     kicad2step_lib
-    ${wxWidgets_LIBRARIES}
+    wxWidgets::base
+    wxWidgets::core
     ${OCC_LIBRARIES}
 )
 

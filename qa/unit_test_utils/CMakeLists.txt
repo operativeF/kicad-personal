@@ -38,7 +38,6 @@ target_link_libraries( unit_test_utils PUBLIC
     ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
     ${Boost_FILESYSTEM_LIBRARY}
     ${Boost_SYSTEM_LIBRARY}
-    ${wxWidgets_LIBRARIES}
 )
 
 target_include_directories( unit_test_utils PUBLIC

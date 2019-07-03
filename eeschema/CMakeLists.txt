@@ -322,7 +322,6 @@ target_link_libraries( eeschema
     # There's way too much crap coming in from common yet.
     gal
     common
-    ${wxWidgets_LIBRARIES}
     )
 
 # the main Eeschema program, in DSO form.
@@ -344,7 +343,14 @@ add_library( eeschema_kiface MODULE
 
 target_link_libraries( eeschema_kiface
     common
-    ${wxWidgets_LIBRARIES}
+    wxWidgets::aui
+    wxWidgets::adv
+    wxWidgets::gl
+    wxWidgets::html
+    wxWidgets::core
+    wxWidgets::net
+    wxWidgets::base
+    wxWidgets::xml
     ${GDI_PLUS_LIBRARIES}
     )
 

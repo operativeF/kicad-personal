@@ -14,7 +14,6 @@ add_executable( container_test
     )
 target_link_libraries( container_test
     common
-    ${wxWidgets_LIBRARIES}
     )
 
 add_executable( test-nm-biu-to-ascii-mm-round-tripping
@@ -31,7 +30,6 @@ add_executable( property_tree
     ../common/ptree.cpp
     )
 target_link_libraries( property_tree
-    ${wxWidgets_LIBRARIES}
     )
 
 
@@ -41,5 +39,4 @@ add_executable( utf8_tests
     )
 target_link_libraries( utf8_tests
     common
-    ${wxWidgets_LIBRARIES}
     )

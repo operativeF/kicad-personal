@@ -69,7 +69,6 @@ set( common_libs
     gal
     qa_utils
     unit_test_utils
-    ${wxWidgets_LIBRARIES}
 )
 
 

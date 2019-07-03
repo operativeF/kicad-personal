@@ -84,7 +84,6 @@ target_link_libraries( pl_editor
     # There's way too much crap coming in from common yet.
     gal
     common
-    ${wxWidgets_LIBRARIES}
     )
 
 if( MAKE_LINK_MAPS )
@@ -106,7 +105,6 @@ add_library( pl_editor_kiface MODULE
 target_link_libraries( pl_editor_kiface
     gal
     common
-    ${wxWidgets_LIBRARIES}
     ${GDI_PLUS_LIBRARIES}
     )
 set_target_properties( pl_editor_kiface PROPERTIES

@@ -81,7 +81,6 @@ else()
         common
         gal
         common      #repeated due to a circular dependancy bewteen gal and common
-        ${wxWidgets_LIBRARIES}
         ${GDI_PLUS_LIBRARIES}
         )
 endif()

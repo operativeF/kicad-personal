@@ -69,7 +69,6 @@ target_link_libraries( pcb_calculator
     common
     gal
     common
-    ${wxWidgets_LIBRARIES}
     )
 
 if( MAKE_LINK_MAPS )
@@ -94,7 +93,6 @@ set_target_properties( pcb_calculator_kiface PROPERTIES
 target_link_libraries( pcb_calculator_kiface
     common
     markdown_lib
-    ${wxWidgets_LIBRARIES}
     )
 set_source_files_properties( pcb_calculator.cpp PROPERTIES
     # The KIFACE is in pcb_calculator.cpp, export it:

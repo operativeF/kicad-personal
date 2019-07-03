@@ -113,7 +113,7 @@ target_link_libraries( gerbview
     # There's way too much crap coming in from common yet.
     gal
     common
-    ${wxWidgets_LIBRARIES}
+    wxWidgets::aui
     )
 
 set_target_properties( gerbview PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
@@ -140,7 +140,6 @@ set_target_properties( gerbview_kiface PROPERTIES
 target_link_libraries( gerbview_kiface
     gal
     common
-    ${wxWidgets_LIBRARIES}
     ${GDI_PLUS_LIBRARIES}
     )
 set_source_files_properties( gerbview.cpp PROPERTIES

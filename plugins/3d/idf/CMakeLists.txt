@@ -26,8 +26,9 @@ target_link_libraries( s3d_plugin_idf
         kicad_3dsg
         idf3
         common
-        ${OPENGL_LIBRARIES}
-        ${wxWidgets_LIBRARIES} )
+		wxWidgets::base
+		wxWidgets::core
+        ${OPENGL_LIBRARIES} )
 
 if( APPLE )
     # puts library into the main kicad.app bundle in build tree

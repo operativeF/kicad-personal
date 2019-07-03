@@ -51,7 +51,6 @@ target_link_libraries( qa_common_tools
     gal
     qa_utils
     sexpr
-    ${wxWidgets_LIBRARIES}
 )
 
 # we need to pretend to be something to appease the units code

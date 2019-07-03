@@ -80,6 +80,7 @@ add_library( gal STATIC ${GAL_SRCS} )
 target_link_libraries( gal
     polygon
     bitmaps
+    wxWidgets::gl
     ${GLEW_LIBRARIES}
     ${CAIRO_LIBRARIES}
     ${PIXMAN_LIBRARIES}
@@ -433,7 +434,12 @@ target_link_libraries( common
     ${Boost_LIBRARIES}
     ${CURL_LIBRARIES}
     ${OPENSSL_LIBRARIES}        # empty on Apple
-    ${wxWidgets_LIBRARIES}
+    wxWidgets::aui
+    wxWidgets::base
+    wxWidgets::core
+    wxWidgets::html
+    wxWidgets::net
+    wxWidgets::xml
     )
 
 set_target_properties( common PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )

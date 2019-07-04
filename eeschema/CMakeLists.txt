@@ -474,14 +474,6 @@ make_lexer(
     T_BOMCFG_T
     )
 
-set_target_properties( eeschema PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
-set_target_properties( eeschema PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
-cotire( eeschema )
-
-set_target_properties( eeschema_kiface PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
-set_target_properties( eeschema_kiface PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
-cotire( eeschema_kiface )
-
 set_target_properties( eeschema_kiface_objects PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE )
 set_target_properties( eeschema_kiface_objects PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "stdafx.h" )
 cotire( eeschema_kiface_objects )

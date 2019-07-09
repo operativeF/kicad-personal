@@ -30,7 +30,7 @@
 #include <fctsys.h>
 #include <common.h>
 #include <plotter.h>
-#include <base_struct.h>
+#include <eda_rect.h>
 #include <gr_text.h>
 #include <confirm.h>
 #include <kicad_string.h>

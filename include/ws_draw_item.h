@@ -26,7 +26,7 @@
 #define  WS_DRAW_ITEM_H
 
 #include <math/vector2d.h>
-#include <eda_text.h>
+#include <base_struct.h>
 #include <eda_text.h>
 #include <bitmap_base.h>
 #include "msgpanel.h"

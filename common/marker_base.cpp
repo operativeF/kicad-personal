@@ -32,7 +32,7 @@
 
 #include "fctsys.h"
 #include "base_screen.h"
-#include "common.h"
+#include <common_enum.h>
 #include "macros.h"
 #include "marker_base.h"
 #include <geometry/shape_line_chain.h>

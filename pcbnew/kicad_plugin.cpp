@@ -24,7 +24,7 @@
 
 #include <fctsys.h>
 #include <kicad_string.h>
-#include <common.h>
+#include <wx_filename.h>
 #include <build_version.h>      // LEGACY_BOARD_FILE_VERSION
 #include <macros.h>
 #include <wildcards_and_files_ext.h>

@@ -40,6 +40,7 @@
 #include <layers_id_colors_and_visibility.h> // ALL_LAYERS definition.
 #include <lib_id.h>
 #include <geometry/shape_poly_set.h>
+#include <timestamp.h>
 
 #include <list>
 

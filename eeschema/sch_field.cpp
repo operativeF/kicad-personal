@@ -33,6 +33,7 @@
 #include <fctsys.h>
 #include <sch_draw_panel.h>
 #include <base_struct.h>
+#include <eda_rect.h>
 #include <gr_basic.h>
 #include <gr_text.h>
 #include <macros.h>

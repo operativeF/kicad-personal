@@ -19,6 +19,7 @@
 
 
 #include <libeval/numeric_evaluator.h>
+#include <common_enum.h>
 
 /* The (generated) lemon parser is written in C.
  * In order to keep its symbol from the global namespace include the parser code with

@@ -36,6 +36,7 @@
 
 #include <math/vector2d.h>
 #include <common.h>
+#include <common_enum.h>
 #include <convert_to_biu.h>
 
 //TODO: Abstract Base Units to a single class

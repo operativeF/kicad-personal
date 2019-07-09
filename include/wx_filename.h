@@ -1,8 +1,7 @@
 /*
  * This program source code file is part of KiCad, a free EDA CAD application.
  *
- * Copyright (C) 2007-2014 Jean-Pierre Charras, jp.charras at wanadoo.fr
- * Copyright (C) 1992-2014 KiCad Developers, see CHANGELOG.TXT for contributors.
+ * Copyright (C) 2019 KiCad Developers, see AUTHORS.txt for contributors.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -22,16 +21,40 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
  */
 
-#ifndef FCTSYS_H_
-#define FCTSYS_H_
+#ifndef WX_KIFILENAME_H_
+#define WX_KIFILENAME_H_
 
-#ifdef DEBUG
-#define DBG(x)        x
-#else
-#define DBG(x)        // nothing
-#endif
+#include <wx/filename.h>
+#include <wx/string.h>
+
+/**
+ * A wrapper around a wxFileName which is much more performant with a subset of the API.
+ */
+class WX_FILENAME
+{
+public:
+    WX_FILENAME( const wxString& aPath, const wxString& aFilename );
+
+    void SetFullName( const wxString& aFileNameAndExtension );
+
+    wxString GetName() const;
+    wxString GetFullName() const;
+    wxString GetPath() const;
+    wxString GetFullPath() const;
+
+    // Avoid multiple calls to stat() on POSIX kernels.
+    long long GetTimestamp();
+
+private:
+    // Write cached values to the wrapped wxFileName.  MUST be called before using m_fn.
+    void resolve();
+
+    wxFileName m_fn;
+    wxString   m_path;
+    wxString   m_fullName;
+};
 
 
-#include <config.h>
+long long TimestampDir( const wxString& aDirPath, const wxString& aFilespec );
 
-#endif // FCTSYS_H__
+#endif // WX_KIFILENAME_H_

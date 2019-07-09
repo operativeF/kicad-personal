@@ -31,6 +31,7 @@
 
 #include <base_struct.h>
 #include <dlist.h>
+#include <eda_rect.h>
 #include <layers_id_colors_and_visibility.h>
 #include <gr_basic.h>
 #include <gbr_netlist_metadata.h>

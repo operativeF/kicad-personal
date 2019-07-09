@@ -31,6 +31,7 @@
 #include <fctsys.h>
 #include <gr_basic.h>
 #include <base_struct.h>
+#include <eda_rect.h>
 #include <gr_text.h>
 #include <kicad_string.h>
 #include <trigo.h>

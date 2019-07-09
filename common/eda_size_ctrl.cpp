@@ -26,6 +26,7 @@
 #include <dialog_helpers.h>
 #include <base_units.h>
 #include <macros.h>
+#include <common_enum.h>
 
 
 /********************************************************/

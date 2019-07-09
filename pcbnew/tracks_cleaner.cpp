@@ -26,6 +26,7 @@
 #include <fctsys.h>
 #include <pcb_edit_frame.h>
 #include <pcbnew.h>
+#include <common_enum.h>
 #include <class_board.h>
 #include <class_track.h>
 #include <dialog_cleanup_tracks_and_vias.h>

@@ -28,7 +28,7 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
+#include <wx_filename.h>
 #include <macros.h>
 #include <trigo.h>
 #include <wildcards_and_files_ext.h>

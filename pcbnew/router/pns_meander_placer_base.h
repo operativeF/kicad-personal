@@ -26,6 +26,7 @@
 
 #include <geometry/shape.h>
 #include <geometry/shape_line_chain.h>
+#include <common_enum.h>
 
 #include "pns_node.h"
 #include "pns_via.h"

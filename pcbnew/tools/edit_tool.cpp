@@ -26,6 +26,7 @@
 
 #include <limits>
 
+#include <common_enum.h>
 #include <class_board.h>
 #include <class_module.h>
 #include <class_edge_mod.h>

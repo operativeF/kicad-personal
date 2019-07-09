@@ -35,31 +35,11 @@
 #include <deque>
 
 #include <core/typeinfo.h>
-#include "common.h"
+#include <timestamp.h>
+#include <common_enum.h>
 
 #include <bitmap_types.h>
 #include <view/view_item.h>
-
-/**
- * Enum FILL_T
- * is the set of fill types used in plotting or drawing enclosed areas.
- */
-enum FILL_T {
-    NO_FILL,                     // Poly, Square, Circle, Arc = option No Fill
-    FILLED_SHAPE,                /* Poly, Square, Circle, Arc = option Fill
-                                  * with current color ("Solid shape") */
-    FILLED_WITH_BG_BODYCOLOR     /* Poly, Square, Circle, Arc = option Fill
-                                  * with background body color, translucent
-                                  * (texts inside this shape can be seen)
-                                  * not filled in B&W mode when plotting or
-                                  * printing */
-};
-
-
-enum SEARCH_RESULT {
-    SEARCH_QUIT,
-    SEARCH_CONTINUE
-};
 
 
 class wxFindReplaceData;

@@ -32,18 +32,22 @@
 #ifndef INCLUDE__COMMON_H_
 #define INCLUDE__COMMON_H_
 
+#include <atomic>
+#include <memory>
+#include <string>
 #include <vector>
 
-#include <wx/wx.h>
 #include <wx/confbase.h>
-#include <wx/fileconf.h>
 #include <wx/dir.h>
+#include <wx/fileconf.h>
+#include <wx/gdicmn.h>
+#include <wx/string.h>
+#include <wx/textctrl.h>
+#include <wx/textentry.h>
+#include <wx/window.h>
 
 #include <richio.h>
 #include <gal/color4d.h>
-
-#include <atomic>
-#include <memory>
 
 // C++11 "polyfill" for the C++14 std::make_unique function
 #include "make_unique.h"
@@ -51,17 +55,6 @@
 class wxAboutDialogInfo;
 class SEARCH_STACK;
 class REPORTER;
-
-
-/**
- * timestamp_t is our type to represent unique IDs for all kinds of elements;
- * historically simply the timestamp when they were created.
- *
- * Long term, this type might be renamed to something like unique_id_t
- * (and then rename all the methods from {Get,Set}TimeStamp()
- * to {Get,Set}Id()) ?
- */
-typedef uint32_t timestamp_t;
 
 
 // Flag for special keys
@@ -83,20 +76,6 @@ typedef uint32_t EDA_KEY;
 
 /// default name for nameless projects
 #define NAMELESS_PROJECT wxT( "noname" )
-
-
-/// Pseudo key codes for command panning
-enum pseudokeys {
-    EDA_PANNING_UP_KEY = 1,
-    EDA_PANNING_DOWN_KEY,
-    EDA_PANNING_LEFT_KEY,
-    EDA_PANNING_RIGHT_KEY,
-    EDA_ZOOM_IN_FROM_MOUSE,
-    EDA_ZOOM_OUT_FROM_MOUSE,
-    EDA_ZOOM_CENTER_FROM_MOUSE
-};
-
-#define ESC 27
 
 /// Frequent text rotations, used with {Set,Get}TextAngle(),
 /// in 0.1 degrees for now, hoping to migrate to degrees eventually.
@@ -152,20 +131,6 @@ static inline int kiRound_( double v, int line, const char* filename )
 #endif
 
 //-----</KiROUND KIT>-----------------------------------------------------------
-
-
-enum EDA_UNITS_T {
-    INCHES = 0,
-    MILLIMETRES = 1,
-    UNSCALED_UNITS = 2,
-    DEGREES = 3,
-    PERCENT = 4,
-};
-
-
-/// Draw color for moving objects.
-extern KIGFX::COLOR4D  g_GhostColor;
-
 
 /**
  * Instantiate the current locale within a scope in which you are expecting
@@ -230,11 +195,6 @@ void SelectReferenceNumber( wxTextEntry* aTextEntry );
  */
 int ProcessExecute( const wxString& aCommandLine, int aFlags = wxEXEC_ASYNC,
                     wxProcess *callback = NULL );
-
-/**
- * @return an unique time stamp that changes after each call
- */
-timestamp_t GetNewTimeStamp();
 
 int GetCommandOptions( const int argc, const char** argv,
                        const char* stringtst, const char** optarg,
@@ -406,39 +366,5 @@ std::ostream& operator<<( std::ostream& out, const wxSize& size );
  * testing fixtures.
  */
 std::ostream& operator<<( std::ostream& out, const wxPoint& pt );
-
-
-/**
- * A wrapper around a wxFileName which is much more performant with a subset of the API.
- */
-class WX_FILENAME
-{
-public:
-    WX_FILENAME( const wxString& aPath, const wxString& aFilename );
-
-    void SetFullName( const wxString& aFileNameAndExtension );
-
-    wxString GetName() const;
-    wxString GetFullName() const;
-    wxString GetPath() const;
-    wxString GetFullPath() const;
-
-    // Avoid multiple calls to stat() on POSIX kernels.
-    long long GetTimestamp();
-
-private:
-    // Write cached values to the wrapped wxFileName.  MUST be called before using m_fn.
-    void resolve();
-
-    wxFileName m_fn;
-    wxString   m_path;
-    wxString   m_fullName;
-};
-
-
-long long TimestampDir( const wxString& aDirPath, const wxString& aFilespec );
-
-
-
 
 #endif  // INCLUDE__COMMON_H_

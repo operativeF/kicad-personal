@@ -55,9 +55,6 @@ using KIGFX::COLOR4D;
  *       application class.
  */
 
-COLOR4D        g_GhostColor;
-
-
 #if defined( _WIN32 ) && defined( DEBUG )
 // a wxAssertHandler_t function to filter wxWidgets alert messages when reading/writing a file
 // when switching the locale to LC_NUMERIC, "C"
@@ -211,22 +208,6 @@ void wxStringSplit( const wxString& aText, wxArrayString& aStrings, wxChar aSpli
 int ProcessExecute( const wxString& aCommandLine, int aFlags, wxProcess *callback )
 {
     return wxExecute( aCommandLine, aFlags, callback );
-}
-
-
-timestamp_t GetNewTimeStamp()
-{
-    static timestamp_t oldTimeStamp;
-    timestamp_t newTimeStamp;
-
-    newTimeStamp = time( NULL );
-
-    if( newTimeStamp <= oldTimeStamp )
-        newTimeStamp = oldTimeStamp + 1;
-
-    oldTimeStamp = newTimeStamp;
-
-    return newTimeStamp;
 }
 
 
@@ -627,79 +608,6 @@ std::ostream& operator<<( std::ostream& out, const wxPoint& pt )
 
 
 /**
- * Performance enhancements to file and directory operations.
- *
- * Note: while it's annoying to have to make copies of wxWidgets stuff and then
- * add platform-specific performance optimizations, the following routines offer
- * SIGNIFICANT performance benefits.
- */
-
-/**
- * WX_FILENAME
- *
- * A wrapper around a wxFileName which avoids expensive calls to wxFileName::SplitPath()
- * and string concatenations by caching the path and filename locally and only resolving
- * the wxFileName when it has to.
- */
-WX_FILENAME::WX_FILENAME( const wxString& aPath, const wxString& aFilename ) :
-        m_fn( aPath, aFilename ),
-        m_path( aPath ),
-        m_fullName( aFilename )
-{ }
-
-
-void WX_FILENAME::SetFullName( const wxString& aFileNameAndExtension )
-{
-    m_fullName = aFileNameAndExtension;
-}
-
-
-wxString WX_FILENAME::GetName() const
-{
-    size_t dot = m_fullName.find_last_of( wxT( '.' ) );
-    return m_fullName.substr( 0, dot );
-}
-
-
-wxString WX_FILENAME::GetFullName() const
-{
-    return m_fullName;
-}
-
-
-wxString WX_FILENAME::GetPath() const
-{
-    return m_path;
-}
-
-
-wxString WX_FILENAME::GetFullPath() const
-{
-    return m_path + wxT( '/' ) + m_fullName;
-}
-
-
-// Write locally-cached values to the wxFileName.  MUST be called before using m_fn.
-void WX_FILENAME::resolve()
-{
-    size_t dot = m_fullName.find_last_of( wxT( '.' ) );
-    m_fn.SetName( m_fullName.substr( 0, dot ) );
-    m_fn.SetExt( m_fullName.substr( dot + 1 ) );
-}
-
-
-long long WX_FILENAME::GetTimestamp()
-{
-    resolve();
-
-    if( m_fn.FileExists() )
-        return m_fn.GetModificationTime().GetValue().GetValue();
-
-    return 0;
-}
-
-
-/**
  * A copy of wxMatchWild(), which wxWidgets attributes to Douglas A. Lewis
  * <dalewis@cs.Buffalo.EDU> and ircII's reg.c.
  *
@@ -810,114 +718,4 @@ bool matchWild( const char* pat, const char* text, bool dot_special )
             }
         }
     }
-}
-
-
-/**
- * A copy of ConvertFileTimeToWx() because wxWidgets left it as a static function
- * private to src/common/filename.cpp.
- */
-#if wxUSE_DATETIME && defined(__WIN32__) && !defined(__WXMICROWIN__)
-
-// Convert between wxDateTime and FILETIME which is a 64-bit value representing
-// the number of 100-nanosecond intervals since January 1, 1601 UTC.
-//
-// This is the offset between FILETIME epoch and the Unix/wxDateTime Epoch.
-static wxInt64 EPOCH_OFFSET_IN_MSEC = wxLL(11644473600000);
-
-
-static void ConvertFileTimeToWx( wxDateTime *dt, const FILETIME &ft )
-{
-    wxLongLong t( ft.dwHighDateTime, ft.dwLowDateTime );
-    t /= 10000; // Convert hundreds of nanoseconds to milliseconds.
-    t -= EPOCH_OFFSET_IN_MSEC;
-
-    *dt = wxDateTime( t );
-}
-
-#endif // wxUSE_DATETIME && __WIN32__
-
-
-/**
- * TimestampDir
- *
- * This routine offers SIGNIFICANT performance benefits over using wxWidgets to gather
- * timestamps from matching files in a directory.
- * @param aDirPath the directory to search
- * @param aFilespec a (wildcarded) file spec to match against
- * @return a hash of the last-mod-dates of all matching files in the directory
- */
-long long TimestampDir( const wxString& aDirPath, const wxString& aFilespec )
-{
-    long long timestamp = 0;
-
-#if defined( __WIN32__ )
-    // Win32 version.
-    // Save time by not searching for each path twice: once in wxDir.GetNext() and once in
-    // wxFileName.GetModificationTime().  Also cuts out wxWidgets' string-matching and case
-    // conversion by staying on the MSW side of things.
-    std::wstring filespec( aDirPath.t_str() );
-    filespec += '\\';
-    filespec += aFilespec.t_str();
-
-    WIN32_FIND_DATA findData;
-    wxDateTime      lastModDate;
-
-    HANDLE fileHandle = ::FindFirstFile( filespec.data(), &findData );
-
-    if( fileHandle != INVALID_HANDLE_VALUE )
-    {
-        do
-        {
-            ConvertFileTimeToWx( &lastModDate, findData.ftLastWriteTime );
-            timestamp += lastModDate.GetValue().GetValue();
-        }
-        while ( FindNextFile( fileHandle, &findData ) != 0 );
-    }
-
-    FindClose( fileHandle );
-#else
-    // POSIX version.
-    // Save time by not converting between encodings -- do everything on the file-system side.
-    std::string filespec( aFilespec.fn_str() );
-    std::string dir_path( aDirPath.fn_str() );
-
-    DIR* dir = opendir( dir_path.c_str() );
-
-    if( dir )
-    {
-        for( dirent* dir_entry = readdir( dir ); dir_entry; dir_entry = readdir( dir ) )
-        {
-            if( !matchWild( filespec.c_str(), dir_entry->d_name, true ) )
-                continue;
-
-            std::string entry_path = dir_path + '/' + dir_entry->d_name;
-            struct stat entry_stat;
-
-            wxCRT_Lstat( entry_path.c_str(), &entry_stat );
-
-            // Timestamp the source file, not the symlink
-            if( S_ISLNK( entry_stat.st_mode ) )    // wxFILE_EXISTS_SYMLINK
-            {
-                char buffer[ PATH_MAX + 1 ];
-                ssize_t pathLen = readlink( entry_path.c_str(), buffer, PATH_MAX );
-
-                if( pathLen > 0 )
-                {
-                    buffer[ pathLen ] = '\0';
-                    entry_path = dir_path + buffer;
-
-                    wxCRT_Lstat( entry_path.c_str(), &entry_stat );
-                }
-            }
-
-            if( S_ISREG( entry_stat.st_mode ) )    // wxFileExists()
-                timestamp += entry_stat.st_mtime * 1000;
-        }
-
-        closedir( dir );
-    }
-#endif
-
-    return timestamp;
 }

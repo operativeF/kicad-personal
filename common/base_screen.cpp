@@ -31,7 +31,7 @@
 
 #include <fctsys.h>
 #include <macros.h>
-#include <common.h>
+#include <common_enum.h>
 #include <base_struct.h>
 #include <base_screen.h>
 #include <id.h>

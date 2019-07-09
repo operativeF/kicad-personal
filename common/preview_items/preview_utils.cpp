@@ -22,6 +22,8 @@
 #include <base_units.h>
 #include <pcb_painter.h>
 #include <view/view.h>
+#include <common_enum.h>
+
 
 double KIGFX::PREVIEW::PreviewOverlayDeemphAlpha( bool aDeemph )
 {

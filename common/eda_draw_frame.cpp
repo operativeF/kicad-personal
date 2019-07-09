@@ -24,6 +24,7 @@
  */
 
 #include <fctsys.h>
+#include <common_enum.h>
 #include <pgm_base.h>
 #include <kiface_i.h>
 #include <bitmaps.h>

@@ -30,7 +30,7 @@
 #include <pcb_painter.h>
 
 #include <base_units.h>
-#include <common.h>
+#include <common_enum.h>
 
 using namespace KIGFX::PREVIEW;
 

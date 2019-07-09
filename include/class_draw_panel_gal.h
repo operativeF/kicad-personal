@@ -32,7 +32,7 @@
 #include <math/vector2d.h>
 #include <msgpanel.h>
 #include <memory>
-#include <common.h>
+#include <common_enum.h>
 
 class BOARD;
 class EDA_DRAW_FRAME;

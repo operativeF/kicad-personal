@@ -18,6 +18,7 @@
  */
 
 #include <base_struct.h>
+#include <eda_rect.h>
 #include <view/view_group.h>
 #include <gerber_draw_item.h>
 #include <tools/gerbview_selection.h>

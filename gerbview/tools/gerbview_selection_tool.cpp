@@ -24,6 +24,7 @@ using namespace std::placeholders;
 
 #include <base_struct.h>
 #include <bitmaps.h>
+#include <eda_rect.h>
 #include <gerber_collectors.h>
 #include <class_draw_panel_gal.h>
 #include <view/view.h>

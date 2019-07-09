@@ -294,6 +294,7 @@ set( COMMON_SRCS
     eda_dockart.cpp
     eda_draw_frame.cpp
     eda_pattern_match.cpp
+	eda_rect.cpp
     eda_size_ctrl.cpp
     env_paths.cpp
     env_vars.cpp
@@ -339,12 +340,14 @@ set( COMMON_SRCS
     settings.cpp
     status_popup.cpp
     systemdirsappend.cpp
+	timestamp.cpp
     trace_helpers.cpp
     undo_redo_container.cpp
     utf8.cpp
     validators.cpp
     wildcards_and_files_ext.cpp
     page_layout/ws_painter.cpp
+	wx_filename.cpp
     wxdataviewctrl_helpers.cpp
     xnode.cpp
     )

@@ -37,7 +37,7 @@
 #include <macros.h>
 #include <base_struct.h>
 #include <title_block.h>
-#include <common.h>
+#include <common_enum.h>
 #include <base_units.h>
 #include "libeval/numeric_evaluator.h"
 

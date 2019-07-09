@@ -29,7 +29,7 @@
 #include <common.h>
 #include <trigo.h>
 #include <macros.h>
-#include <base_struct.h>
+#include <eda_rect.h>
 #include <base_screen.h>
 #include <bezier_curves.h>
 #include <math_for_graphics.h>

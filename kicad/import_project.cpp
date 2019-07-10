@@ -29,21 +29,10 @@
 
 
 #include <wx/filename.h>
-#include <wx/dir.h>
-#include <wx/log.h>
-#include <wx/stdpaths.h>
-#include <wx/string.h>
 
-#include <common.h>
 #include <confirm.h>
-#include <hotkeys_basic.h>
 #include <kiway.h>
-#include <richio.h>
 #include <wildcards_and_files_ext.h>
-#include <systemdirsappend.h>
-#include <kiway_player.h>
-#include <stdexcept>
-#include "pgm_kicad.h"
 
 #include <io_mgr.h>
 #include <sch_io_mgr.h>

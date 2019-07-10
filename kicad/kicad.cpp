@@ -29,25 +29,16 @@
 
 
 #include <wx/filename.h>
-#include <wx/log.h>
-#include <wx/stdpaths.h>
-#include <wx/string.h>
 
-#include <common.h>
-#include <hotkeys_basic.h>
 #include <kiway.h>
-#include <richio.h>
-#include <wildcards_and_files_ext.h>
 #include <systemdirsappend.h>
 
-#include <stdexcept>
 
 #include "pgm_kicad.h"
 #include "kicad_manager_frame.h"
 
 
 // a dummy to quiet linking with EDA_BASE_FRAME::config();
-#include <kiface_i.h>
 KIFACE_I& Kiface()
 {
     // This function should never be called.  It is only referenced from

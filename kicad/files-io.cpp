@@ -34,7 +34,6 @@
 #include <wx/zipstrm.h>
 
 #include <confirm.h>
-#include <kiway.h>
 #include "pgm_kicad.h"
 #include "wildcards_and_files_ext.h"
 

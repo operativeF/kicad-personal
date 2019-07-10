@@ -32,15 +32,12 @@
 #include <wx/regex.h>
 
 #include <gestfich.h>
-#include <executable_names.h>
 #include <kiway.h>
 #include <tool/tool_manager.h>
 #include <tools/kicad_manager_actions.h>
 #include "treeprojectfiles.h"
-#include "pgm_kicad.h"
 #include "tree_project_frame.h"
 #include "treeproject_item.h"
-#include "kicad_id.h"
 
 
 TREEPROJECT_ITEM::TREEPROJECT_ITEM( enum TreeFileType type, const wxString& data,

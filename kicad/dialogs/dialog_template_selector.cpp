@@ -24,8 +24,6 @@
 
 #include "dialog_template_selector.h"
 
-#include <wx/dir.h>
-#include <wx/settings.h>
 
 
 TEMPLATE_SELECTION_PANEL::TEMPLATE_SELECTION_PANEL( wxNotebookPage* aParent,

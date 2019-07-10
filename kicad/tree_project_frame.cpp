@@ -33,12 +33,9 @@
 
 #include <wx/regex.h>
 #include <wx/stdpaths.h>
-#include <wx/string.h>
 
-#include <bitmaps.h>
 #include <gestfich.h>
 #include <menus_helpers.h>
-#include <trace_helpers.h>
 #include <wildcards_and_files_ext.h>
 
 #include "treeproject_item.h"

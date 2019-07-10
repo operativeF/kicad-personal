@@ -28,11 +28,8 @@
 #include "tree_project_frame.h"
 #include <bitmaps.h>
 #include <build_version.h>
-#include <executable_names.h>
 #include <gestfich.h>
 #include <kiway.h>
-#include <kiway_express.h>
-#include <kiway_player.h>
 #include <panel_hotkeys_editor.h>
 #include <tool/action_toolbar.h>
 #include <tool/common_control.h>

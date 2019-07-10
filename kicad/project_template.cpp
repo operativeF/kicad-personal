@@ -27,7 +27,6 @@
 #include <wx/dir.h>
 #include <wx/txtstrm.h>
 #include <wx/wfstream.h>
-#include <wx/log.h>
 
 #include "project_template.h"
 

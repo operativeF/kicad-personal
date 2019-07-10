@@ -27,7 +27,6 @@
 #ifndef __CLASS_PAINTER_H
 #define __CLASS_PAINTER_H
 
-#include <map>
 #include <set>
 
 #include <gal/color4d.h>
@@ -73,7 +72,7 @@ public:
      * @param aLayerId is a layer number that should be displayed in a specific mode.
      * @param aEnabled is the new layer state ( true = active or false = not active).
      */
-    inline void SetActiveLayer( int aLayerId, bool aEnabled = true )
+    void SetActiveLayer( int aLayerId, bool aEnabled = true )
     {
         if( aEnabled )
             m_activeLayers.insert( aLayerId );
@@ -86,7 +85,7 @@ public:
      * Returns the set of currently active layers.
      * @return The set of currently active layers.
      */
-    const std::set<unsigned int> GetActiveLayers()
+    const std::set<unsigned int>& GetActiveLayers()
     {
         return m_activeLayers;
     }
@@ -95,7 +94,7 @@ public:
      * Function ClearActiveLayers
      * Clears the list of active layers.
      */
-    inline void ClearActiveLayers()
+    void ClearActiveLayers()
     {
         m_activeLayers.clear();
     }
@@ -105,7 +104,7 @@ public:
      * Returns information whether the queried layer is marked as active.
      * @return True if the queried layer is marked as active.
      */
-    inline bool IsActiveLayer( int aLayerId ) const
+    bool IsActiveLayer( int aLayerId ) const
     {
         return ( m_activeLayers.count( aLayerId ) > 0 );
     }
@@ -115,7 +114,7 @@ public:
      * Returns current highlight setting.
      * @return True if highlight is enabled, false otherwise.
      */
-    inline bool IsHighlightEnabled() const
+    bool IsHighlightEnabled() const
     {
         return m_highlightEnabled;
     }
@@ -125,7 +124,7 @@ public:
      * Returns netcode of currently highlighted net.
      * @return Netcode of currently highlighted net.
      */
-    inline int GetHighlightNetCode() const
+    int GetHighlightNetCode() const
     {
         return m_highlightNetcode;
     }
@@ -138,7 +137,7 @@ public:
      * @param aNetcode is optional and if specified, turns on higlighting only for the net with
      * number given as the parameter.
      */
-    inline void SetHighlight( bool aEnabled, int aNetcode = -1, bool aHighlightItems = false )
+    void SetHighlight( bool aEnabled, int aNetcode = -1, bool aHighlightItems = false )
     {
         m_highlightEnabled = aEnabled;
         m_highlightNetcode = aEnabled ? aNetcode : -1;
@@ -150,7 +149,7 @@ public:
      * Turns on/off high contrast display mode.
      * @param aEnabled determines if high contrast display mode should be enabled or not.
      */
-    inline void SetHighContrast( bool aEnabled )
+    void SetHighContrast( bool aEnabled )
     {
         m_hiContrastEnabled = aEnabled;
     }
@@ -160,7 +159,7 @@ public:
      * Returns information about high contrast display mode.
      * @return True if the high contrast mode is on, false otherwise.
      */
-    inline bool GetHighContrast() const
+    bool GetHighContrast() const
     {
         return m_hiContrastEnabled;
     }
@@ -180,12 +179,12 @@ public:
         return m_worksheetLineWidth;
     }
 
-    inline bool GetShowPageLimits() const
+    bool GetShowPageLimits() const
     {
         return m_showPageLimits;
     }
 
-    inline void SetShowPageLimits( bool aDraw )
+    void SetShowPageLimits( bool aDraw )
     {
         m_showPageLimits = aDraw;
     }
@@ -218,7 +217,7 @@ public:
      * Returns the color used to draw a layer.
      * @param aLayer is the layer number.
      */
-    inline const COLOR4D& GetLayerColor( int aLayer ) const
+    const COLOR4D& GetLayerColor( int aLayer ) const
     {
         return m_layerColors[aLayer];
     }
@@ -229,7 +228,7 @@ public:
      * @param aLayer is the layer number.
      * @param aColor is the new color.
      */
-    inline void SetLayerColor( int aLayer, const COLOR4D& aColor )
+    void SetLayerColor( int aLayer, const COLOR4D& aColor )
     {
         m_layerColors[aLayer] = aColor;
 

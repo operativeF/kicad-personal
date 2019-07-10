@@ -33,7 +33,6 @@
 #define PLOT_COMMON_H_
 
 #include <vector>
-#include <math/box2.h>
 #include <gr_text.h>
 #include <page_info.h>
 #include <eda_text.h>       // FILL_T

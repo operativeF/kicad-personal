@@ -154,7 +154,7 @@ struct KIFACE
     // order of functions in this listing unless you recompile all clients of
     // this interface.
 
-    virtual ~KIFACE() throw() {}
+    virtual ~KIFACE() {}
 
 #define KFCTL_STANDALONE        (1<<0)  ///< Am running as a standalone Top.
 #define KFCTL_CPP_PROJECT_SUITE (1<<1)  ///< Am running under C++ project mgr, possibly with others

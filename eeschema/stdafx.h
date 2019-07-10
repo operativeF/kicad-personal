@@ -43,6 +43,11 @@
 #include <sch_text.h>
 #include <sch_view.h>
 
+#include <boost/ptr_container/ptr_map.hpp>
+#include <boost/ptr_container/ptr_set.hpp>
+#include <boost/ptr_container/ptr_vector.hpp>
+#include <boost/range/adaptor/map.hpp>
+
 #include <wx/artprov.h>
 #include <wx/string.h>
 #include <wx/arrstr.h>

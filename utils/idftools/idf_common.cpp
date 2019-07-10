@@ -46,7 +46,7 @@ std::string message;
 IDF_ERROR::IDF_ERROR( const char* aSourceFile,
            const char* aSourceMethod,
            int         aSourceLine,
-           const std::string& aMessage ) throw()
+           const std::string& aMessage )
 {
     ostringstream ostr;
 
@@ -69,13 +69,7 @@ IDF_ERROR::IDF_ERROR( const char* aSourceFile,
 }
 
 
-IDF_ERROR::~IDF_ERROR() throw()
-{
-    return;
-}
-
-
-const char* IDF_ERROR::what() const throw()
+const char* IDF_ERROR::what() const
 {
     return message.c_str();
 }

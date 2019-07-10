@@ -26,10 +26,9 @@
 #define DIALOG_SHIM_
 
 #include <wx/dialog.h>
-#include <hashtables.h>
 #include <kiway_player.h>
-class wxGridEvent;
 
+class wxGridEvent;
 
 
 struct WINDOW_THAWER

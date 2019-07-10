@@ -32,6 +32,7 @@
 #define MODULE_H_
 
 #include <deque>
+#include <vector>
 
 #include <board_item_container.h>
 #include <class_board_item.h>
@@ -41,8 +42,6 @@
 #include <lib_id.h>
 #include <geometry/shape_poly_set.h>
 #include <timestamp.h>
-
-#include <list>
 
 #include <class_text_mod.h>
 #include "zones.h"
@@ -183,8 +182,8 @@ public:
         return m_drawings;
     }
 
-    std::list<MODULE_3D_SETTINGS>& Models()             { return m_3D_Drawings; }
-    const std::list<MODULE_3D_SETTINGS>& Models() const { return m_3D_Drawings; }
+    std::vector<MODULE_3D_SETTINGS>& Models()             { return m_3D_Drawings; }
+    const std::vector<MODULE_3D_SETTINGS>& Models() const { return m_3D_Drawings; }
 
     void SetPosition( const wxPoint& aPos ) override;
 
@@ -680,7 +679,7 @@ private:
     /// D_PAD items, owned by pointer
     PADS                    m_pads;
 
-    std::list<MODULE_3D_SETTINGS> m_3D_Drawings;  ///< Linked list of 3D models.
+    std::vector<MODULE_3D_SETTINGS> m_3D_Drawings;  ///< Linked list of 3D models.
     double m_Orient;                    ///< Orientation in tenths of a degree, 900=90.0 degrees.
     wxPoint m_Pos;                      ///< Position of module on the board in internal units.
     TEXTE_MODULE* m_Reference;          ///< Component reference designator value (U34, R18..)

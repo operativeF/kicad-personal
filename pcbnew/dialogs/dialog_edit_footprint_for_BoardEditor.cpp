@@ -718,7 +718,7 @@ bool DIALOG_FOOTPRINT_BOARD_EDITOR::TransferDataFromWindow()
     if( change_layer )
         m_footprint->Flip( m_footprint->GetPosition() );
 
-    std::list<MODULE_3D_SETTINGS>* draw3D = &m_footprint->Models();
+    std::vector<MODULE_3D_SETTINGS>* draw3D = &m_footprint->Models();
     draw3D->clear();
     draw3D->insert( draw3D->end(), m_shapes3D_list.begin(), m_shapes3D_list.end() );
 

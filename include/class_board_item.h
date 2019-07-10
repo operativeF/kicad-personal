@@ -33,7 +33,6 @@
 
 #include <base_struct.h>
 #include <convert_to_biu.h>
-#include <gr_basic.h>
 #include <layers_id_colors_and_visibility.h>
 
 

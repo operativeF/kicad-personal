@@ -21,6 +21,11 @@
 #include <unordered_set>
 #include <vector>
 
+#include <boost/ptr_container/ptr_map.hpp>
+#include <boost/ptr_container/ptr_set.hpp>
+#include <boost/ptr_container/ptr_vector.hpp>
+#include <boost/range/adaptor/map.hpp>
+
 #include <board_connected_item.h>
 #include <class_board.h>
 #include <class_board_item.h>

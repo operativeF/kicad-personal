@@ -52,8 +52,6 @@ public:
 
     SCH_LINE( const SCH_LINE& aLine );
 
-    ~SCH_LINE() { }
-
     SCH_LINE* Next() const { return (SCH_LINE*) Pnext; }
     SCH_LINE* Back() const { return (SCH_LINE*) Pback; }
 

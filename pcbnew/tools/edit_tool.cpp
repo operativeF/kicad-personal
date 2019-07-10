@@ -26,43 +26,20 @@
 
 #include <limits>
 
-#include <common_enum.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <class_edge_mod.h>
-#include <class_zone.h>
-#include <collectors.h>
-#include <pcb_edit_frame.h>
 #include <kiway.h>
-#include <class_draw_panel_gal.h>
 #include <footprint_edit_frame.h>
 #include <array_creator.h>
-#include <pcbnew_id.h>
-#include <status_popup.h>
 #include <tool/tool_manager.h>
-#include <view/view_controls.h>
-#include <view/view.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <connectivity/connectivity_data.h>
-#include <confirm.h>
-#include <bitmaps.h>
-#include <cassert>
-#include <functional>
 using namespace std::placeholders;
-#include "pcb_actions.h"
-#include "selection_tool.h"
 #include "edit_tool.h"
 #include "pcbnew_picker_tool.h"
 #include "grid_helper.h"
 #include "kicad_clipboard.h"
-#include "pcbnew_control.h"
 #include <router/router_tool.h>
 #include <dialogs/dialog_move_exact.h>
 #include <dialogs/dialog_track_via_properties.h>
-#include <dialogs/dialog_exchange_footprints.h>
 #include <tools/tool_event_utils.h>
 #include <preview_items/ruler_item.h>
-#include <board_commit.h>
 
 
 void EditToolSelectionFilter( GENERAL_COLLECTOR& aCollector, int aFlags )

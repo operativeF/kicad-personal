@@ -47,7 +47,6 @@
 #include <wx/window.h>
 
 #include <richio.h>
-#include <gal/color4d.h>
 
 // C++11 "polyfill" for the C++14 std::make_unique function
 #include "make_unique.h"

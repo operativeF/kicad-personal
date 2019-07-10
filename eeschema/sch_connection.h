@@ -22,10 +22,9 @@
 #define _SCH_CONNECTION_H
 
 #include <memory>
-#include <unordered_set>
+#include <vector>
 
-#include <boost/optional.hpp>
-#include <wx/regex.h>
+#include <wx/string.h>
 
 #include <bus_alias.h>
 #include <msgpanel.h>

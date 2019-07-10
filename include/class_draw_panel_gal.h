@@ -26,12 +26,13 @@
 #ifndef  PANELGAL_WXSTRUCT_H
 #define  PANELGAL_WXSTRUCT_H
 
+#include <wx/scrolwin.h>
 #include <wx/window.h>
 #include <wx/timer.h>
 #include <math/box2.h>
-#include <math/vector2d.h>
 #include <msgpanel.h>
 #include <memory>
+#include <vector>
 #include <common_enum.h>
 
 class BOARD;

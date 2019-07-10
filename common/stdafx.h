@@ -38,6 +38,8 @@
 #include <kicad_string.h>
 #include <pgm_base.h>
 
+#include <boost/version.hpp>
+
 #include <wx/artprov.h>
 #include <wx/bitmap.h>
 #include <wx/button.h>

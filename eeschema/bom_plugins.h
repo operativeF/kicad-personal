@@ -29,8 +29,6 @@
 #include <wx/file.h>
 #include <wx/filename.h>
 
-#include <memory>
-
 /**
  * Class handling a Bill of Material output generator.
  * A Material output generator is an external application called by Eeschema to create
@@ -41,8 +39,6 @@
 class BOM_GENERATOR_HANDLER
 {
 public:
-    typedef std::unique_ptr<BOM_GENERATOR_HANDLER> PTR;
-
     /**
      * Constructor.
      * @param aFile is path to the plugin file.

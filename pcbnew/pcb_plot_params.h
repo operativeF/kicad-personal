@@ -23,7 +23,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
  */
 
-#include <wx/wx.h>
+#include <wx/string.h>
 #include <eda_text.h>                // EDA_DRAW_MODE_T
 #include <plotter.h>
 #include <layers_id_colors_and_visibility.h>

@@ -65,7 +65,7 @@ class wxMenu;
 class wxWindow;
 
 /**
- *   A small class to handle the list of existing translations.
+ *   A small struct to handle the list of existing translations.
  *   The locale translation is automatic.
  *   The selection of languages is mainly for maintainer's convenience
  *   To add a support to a new translation:
@@ -119,8 +119,6 @@ public:
         m_isDefinedExternally( aIsDefinedExternally )
     {
     }
-
-    ~ENV_VAR_ITEM() throw() {}    // tell SWIG no exception
 
     bool GetDefinedExternally() const { return m_isDefinedExternally; }
     void SetDefinedExternally( bool aIsDefinedExternally )

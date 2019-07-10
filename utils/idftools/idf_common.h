@@ -51,11 +51,11 @@ struct IDF_ERROR : std::exception
     IDF_ERROR( const char* aSourceFile,
                const char* aSourceMethod,
                int         aSourceLine,
-               const std::string& aMessage ) throw();
+               const std::string& aMessage );
 
-    virtual ~IDF_ERROR() throw();
+    virtual ~IDF_ERROR() {};
 
-    virtual const char* what() const throw() override;
+    virtual const char* what() const override;
 };
 
 

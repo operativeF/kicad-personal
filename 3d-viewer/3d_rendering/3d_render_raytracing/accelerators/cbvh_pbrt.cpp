@@ -69,9 +69,8 @@
 #include "cbvh_pbrt.h"
 #include "../../../3d_fastmath.h"
 #include <vector>
-#include <boost/range/algorithm/partition.hpp>
-#include <boost/range/algorithm/nth_element.hpp>
 #include <cstdlib>
+#include <algorithm>
 
 #include <stack>
 #include <wx/debug.h>

@@ -26,7 +26,7 @@
 #define __SEG_H
 
 #include <cstdio>
-#include <climits>
+#include <cstdlib>
 
 #include <math/vector2d.h>
 #include <core/optional.h>

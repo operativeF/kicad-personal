@@ -63,9 +63,6 @@ KIWAY_PLAYER::KIWAY_PLAYER( wxWindow* aParent, wxWindowID aId, const wxString& a
 }
 
 
-KIWAY_PLAYER::~KIWAY_PLAYER() throw() {}
-
-
 void KIWAY_PLAYER::KiwayMailIn( KIWAY_EXPRESS& aEvent )
 {
     // override this in derived classes.

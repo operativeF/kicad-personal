@@ -65,8 +65,6 @@
 // TODO(JE) Debugging only
 #include <profile.h>
 
-#include <boost/foreach.hpp>
-
 #define EESCHEMA_FILE_STAMP   "EESchema"
 
 /* Default zoom values. Limited to these values to keep a decent size

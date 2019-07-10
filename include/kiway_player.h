@@ -70,8 +70,6 @@ public:
             const wxPoint& aPos, const wxSize& aSize, long aStyle,
             const wxString& aWdoName = wxFrameNameStr );
 
-    ~KIWAY_PLAYER() throw();
-
     //----<Cross Module API>-----------------------------------------------------
 
     // For the aCtl argument of OpenProjectFiles()

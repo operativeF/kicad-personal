@@ -30,7 +30,6 @@
 #define CLASS_NETINFO_
 
 #include <macros.h>
-#include <gr_basic.h>
 #include <netclass.h>
 #include <class_board_item.h>
 

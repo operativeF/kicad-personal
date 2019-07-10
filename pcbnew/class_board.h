@@ -37,7 +37,6 @@
 #include <board_design_settings.h>
 #include <board_item_container.h>
 #include <class_module.h>
-#include <class_pad.h>
 #include <colors_design_settings.h>
 #include <common.h> // PAGE_INFO
 #include <eda_rect.h>

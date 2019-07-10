@@ -31,48 +31,48 @@
 #include <config_params.h>
 #include <board_stackup_manager/class_board_stackup.h>
 
-#define DEFAULT_SILK_LINE_WIDTH       0.12
-#define DEFAULT_COPPER_LINE_WIDTH     0.20
-#define DEFAULT_EDGE_WIDTH            0.05
-#define DEFAULT_COURTYARD_WIDTH       0.05
-#define DEFAULT_LINE_WIDTH            0.10
+static constexpr double DEFAULT_SILK_LINE_WIDTH      = 0.12;
+static constexpr double DEFAULT_COPPER_LINE_WIDTH    = 0.20;
+static constexpr double DEFAULT_EDGE_WIDTH           = 0.05;
+static constexpr double DEFAULT_COURTYARD_WIDTH      = 0.05;
+static constexpr double DEFAULT_LINE_WIDTH           = 0.10;
 
-#define DEFAULT_SILK_TEXT_SIZE        1.0
-#define DEFAULT_COPPER_TEXT_SIZE      1.5
-#define DEFAULT_TEXT_SIZE             1.0
+static constexpr double DEFAULT_SILK_TEXT_SIZE        = 1.0;
+static constexpr double DEFAULT_COPPER_TEXT_SIZE      = 1.5;
+static constexpr double DEFAULT_TEXT_SIZE             = 1.0;
 
-#define DEFAULT_SILK_TEXT_WIDTH       0.15
-#define DEFAULT_COPPER_TEXT_WIDTH     0.30
-#define DEFAULT_TEXT_WIDTH            0.15
+static constexpr double DEFAULT_SILK_TEXT_WIDTH       = 0.15;
+static constexpr double DEFAULT_COPPER_TEXT_WIDTH     = 0.30;
+static constexpr double DEFAULT_TEXT_WIDTH            = 0.15;
 
 // Board thickness, mainly for 3D view:
-#define DEFAULT_BOARD_THICKNESS_MM    1.6
+static constexpr double DEFAULT_BOARD_THICKNESS_MM    = 1.6;
 
-#define DEFAULT_PCB_EDGE_THICKNESS    0.15
+static constexpr double DEFAULT_PCB_EDGE_THICKNESS    = 0.15;
 
-#define DEFAULT_SOLDERMASK_CLEARANCE  0.051  // soldermask to pad clearance
-#define DEFAULT_SOLDERMASK_MIN_WIDTH  0.25   // soldermask minimum dam size
-#define DEFAULT_SOLDERPASTE_CLEARANCE 0.0
-#define DEFAULT_SOLDERPASTE_RATIO     0.0
+static constexpr double DEFAULT_SOLDERMASK_CLEARANCE  = 0.051;  // soldermask to pad clearance
+static constexpr double DEFAULT_SOLDERMASK_MIN_WIDTH  = 0.25;   // soldermask minimum dam size
+static constexpr double DEFAULT_SOLDERPASTE_CLEARANCE = 0.0;
+static constexpr double DEFAULT_SOLDERPASTE_RATIO     = 0.0;
 
-#define DEFAULT_CUSTOMTRACKWIDTH      0.2
-#define DEFAULT_CUSTOMDPAIRWIDTH      0.125
-#define DEFAULT_CUSTOMDPAIRGAP        0.18
-#define DEFAULT_CUSTOMDPAIRVIAGAP     0.18
+static constexpr double DEFAULT_CUSTOMTRACKWIDTH      = 0.2;
+static constexpr double DEFAULT_CUSTOMDPAIRWIDTH      = 0.125;
+static constexpr double DEFAULT_CUSTOMDPAIRGAP        = 0.18;
+static constexpr double DEFAULT_CUSTOMDPAIRVIAGAP     = 0.18;
 
-#define DEFAULT_TRACKMINWIDTH         0.2     // track width min value
-#define DEFAULT_VIASMINSIZE           0.4     // vias (not micro vias) min diameter
-#define DEFAULT_VIASMINDRILL          0.3     // vias (not micro vias) min drill diameter
-#define DEFAULT_MICROVIASMINSIZE      0.2     // micro vias (not vias) min diameter
-#define DEFAULT_MICROVIASMINDRILL     0.1     // micro vias (not vias) min drill diameter
-#define DEFAULT_HOLETOHOLEMIN         0.25    // separation between drilled hole edges
+static constexpr double DEFAULT_TRACKMINWIDTH         = 0.2;     // track width min value
+static constexpr double DEFAULT_VIASMINSIZE           = 0.4;     // vias (not micro vias) min diameter
+static constexpr double DEFAULT_VIASMINDRILL          = 0.3;     // vias (not micro vias) min drill diameter
+static constexpr double DEFAULT_MICROVIASMINSIZE      = 0.2;     // micro vias (not vias) min diameter
+static constexpr double DEFAULT_MICROVIASMINDRILL     = 0.1;     // micro vias (not vias) min drill diameter
+static constexpr double DEFAULT_HOLETOHOLEMIN         = 0.25;    // separation between drilled hole edges
 
-#define DEFAULT_COPPEREDGECLEARANCE   0.01    // clearance between copper items and edge cuts
-#define LEGACY_COPPEREDGECLEARANCE   -0.01    // A flag to indicate the legacy method (based
+static constexpr double DEFAULT_COPPEREDGECLEARANCE   =  0.01;    // clearance between copper items and edge cuts
+static constexpr double LEGACY_COPPEREDGECLEARANCE    = -0.01;    // A flag to indicate the legacy method (based
                                               // on edge cut line thicknesses) should be used.
 
-#define MINIMUM_ERROR_SIZE_MM         0.001
-#define MAXIMUM_ERROR_SIZE_MM         0.1
+static constexpr double MINIMUM_ERROR_SIZE_MM         = 0.001;
+static constexpr double MAXIMUM_ERROR_SIZE_MM         = 0.1;
 
 /**
  * Struct VIA_DIMENSION

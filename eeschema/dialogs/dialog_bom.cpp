@@ -27,6 +27,7 @@
  * @brief Dialog box for creating bom and other documents from generic netlist.
  */
 
+#include <memory>
 
 #include <fctsys.h>
 #include <pgm_base.h>
@@ -59,7 +60,7 @@ using namespace T_BOMCFG_T;     // for the BOM_CFG_PARSER parser and its keyword
 
 // BOM "plugins" are not actually plugins. They are external tools
 // (scripts or executables) called by this dialog.
-typedef std::vector<BOM_GENERATOR_HANDLER::PTR> BOM_GENERATOR_ARRAY;
+typedef std::vector< std::unique_ptr<BOM_GENERATOR_HANDLER> > BOM_GENERATOR_ARRAY;
 
 
 /**

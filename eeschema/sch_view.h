@@ -25,8 +25,8 @@
 #define SCH_VIEW_H_
 
 #include <memory>
+#include <vector>
 #include <view/view.h>
-#include <math/box2.h>
 
 #include <view/wx_view_controls.h>
 #include <ws_proxy_view_item.h>

@@ -30,7 +30,8 @@
 #ifndef MACROS_H
 #define MACROS_H
 
-#include <wx/wx.h>
+#include <wx/chartype.h>
+#include <wx/string.h>
 #include <deque>
 #include <vector>
 #include <map>

@@ -25,7 +25,9 @@
 #ifndef SCREEN_H
 #define SCREEN_H
 
+#include <memory>
 #include <unordered_set>
+
 #include <macros.h>
 #include <dlist.h>
 #include <sch_item.h>
@@ -58,7 +60,7 @@ enum SCH_LINE_TEST_T
 
 
 /// Max number of sheets in a hierarchy project
-#define NB_MAX_SHEET    500
+static constexpr int NB_MAX_SHEET =    500;
 
 
 class SCH_SCREEN : public BASE_SCREEN, public KIWAY_HOLDER

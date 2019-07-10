@@ -26,7 +26,6 @@
 
 #include <memory>
 #include <core/optional.h>
-#include <boost/unordered_set.hpp>
 
 #include <geometry/shape_line_chain.h>
 

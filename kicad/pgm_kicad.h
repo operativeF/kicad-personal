@@ -44,7 +44,7 @@ public:
         m_bm( "kicad" )     // indicates a "$HOME/.kicad wxConfig like" config file.
     {}
 
-    ~PGM_KICAD() throw()
+    ~PGM_KICAD()
     {
         Destroy();
     }

@@ -25,7 +25,7 @@
 #ifndef PICKER_TOOL_H
 #define PICKER_TOOL_H
 
-#include <boost/optional/optional.hpp>
+#include <core/optional.h>
 #include <tools/pcb_tool_base.h>
 
 /**

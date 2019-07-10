@@ -29,8 +29,6 @@
 
 #include "ctriangle2d.h"
 #include <map>
-#include <boost/smart_ptr/shared_ptr.hpp>
-#include <boost/smart_ptr/shared_array.hpp>
 #include <wx/debug.h>
 
 #include <wx/glcanvas.h>    // CALLBACK definition, needed on Windows

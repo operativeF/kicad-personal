@@ -34,7 +34,11 @@
 #ifndef COLORS_H_
 #define COLORS_H_
 
-#include <wx/wx.h>
+#include <wx/brush.h>
+#include <wx/chartype.h>
+#include <wx/colour.h>
+#include <wx/debug.h>
+#include <wx/string.h>
 
 /** The color enumeration. Also contains a flag and the alpha value in
  * the upper bits

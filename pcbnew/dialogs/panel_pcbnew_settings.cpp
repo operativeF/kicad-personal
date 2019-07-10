@@ -23,14 +23,8 @@
  */
 
 #include <fctsys.h>
-#include <pcbnew.h>
-#include <pcb_edit_frame.h>
-#include <board_design_settings.h>
-#include <pcbnew_id.h>
-#include <class_board.h>
 #include <panel_pcbnew_settings.h>
 #include <widgets/paged_dialog.h>
-#include <pcb_view.h>
 #include <pcb_painter.h>
 
 PANEL_PCBNEW_SETTINGS::PANEL_PCBNEW_SETTINGS( PCB_EDIT_FRAME* aFrame, PAGED_DIALOG* aParent ) :

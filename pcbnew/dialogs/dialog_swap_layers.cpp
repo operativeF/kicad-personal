@@ -23,12 +23,7 @@
 
 #include <pcb_base_edit_frame.h>
 #include <grid_layer_box_helpers.h>
-#include <class_drawsegment.h>
-#include <class_track.h>
-#include <view/view.h>
 #include <widgets/wx_grid.h>
-#include <class_zone.h>
-#include <class_board.h>
 #include "dialog_swap_layers.h"
 
 

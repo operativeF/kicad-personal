@@ -24,23 +24,10 @@
 
 #include <dialog_choose_footprint.h>
 
-#include <algorithm>
-#include <set>
-#include <wx/utils.h>
 
-#include <wx/button.h>
-#include <wx/dataview.h>
-#include <wx/panel.h>
-#include <wx/sizer.h>
-#include <wx/splitter.h>
-#include <wx/timer.h>
-#include <wx/utils.h>
 
-#include <pcb_base_frame.h>
 #include <fp_lib_table.h>
 #include <widgets/lib_tree.h>
-#include <widgets/footprint_preview_widget.h>
-#include <widgets/footprint_select_widget.h>
 
 
 wxSize DIALOG_CHOOSE_FOOTPRINT::m_last_dlg_size( -1, -1 );

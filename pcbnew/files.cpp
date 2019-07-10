@@ -25,29 +25,16 @@
 
 #include <fctsys.h>
 #include <confirm.h>
-#include <kicad_string.h>
 #include <gestfich.h>
-#include <pcb_edit_frame.h>
-#include <macros.h>
 #include <3d_viewer/eda_3d_viewer.h>
-#include <richio.h>
-#include <filter_reader.h>
-#include <pgm_base.h>
-#include <msgpanel.h>
 #include <fp_lib_table.h>
-#include <ratsnest_data.h>
 #include <kiway.h>
-#include <kiway_player.h>
 #include <trace_helpers.h>
 #include <lockfile.cpp>
 #include <pcb_netlist.h>
-#include <pcbnew.h>
 #include <pcbnew_id.h>
-#include <io_mgr.h>
 #include <wildcards_and_files_ext.h>
 
-#include <class_board.h>
-#include <build_version.h>      // LEGACY_BOARD_FILE_VERSION
 
 #include <wx/stdpaths.h>
 

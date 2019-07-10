@@ -24,23 +24,12 @@
 
 #include "pad_tool.h"
 
-#include <pcb_base_edit_frame.h>
-#include <class_draw_panel_gal.h>
-#include <view/view_controls.h>
-#include <view/view.h>
 #include <tool/tool_manager.h>
 #include <bitmaps.h>
-#include <class_board_item.h>
-#include <class_module.h>
 #include <board_commit.h>
 #include <dialogs/dialog_push_pad_properties.h>
-#include <tools/pcb_actions.h>
-#include <tools/pcbnew_selection.h>
-#include <tools/selection_tool.h>
-#include <tools/pcb_selection_conditions.h>
 #include <tools/edit_tool.h>
 #include <dialogs/dialog_enum_pads.h>
-#include "pcbnew_id.h"
 
 
 class PAD_CONTEXT_MENU : public ACTION_MENU

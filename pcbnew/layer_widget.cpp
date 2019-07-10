@@ -35,12 +35,8 @@
 
 #include <layer_widget.h>
 
-#include <macros.h>
-#include <common.h>
 
-#include <widgets/indicator_icon.h>
 
-#include <algorithm>
 
 #include <menus_helpers.h>
 

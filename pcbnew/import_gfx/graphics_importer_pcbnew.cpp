@@ -25,13 +25,7 @@
 
 #include "graphics_importer_pcbnew.h"
 
-#include <class_board.h>
-#include <class_edge_mod.h>
-#include <class_pcb_text.h>
-#include <class_text_mod.h>
-#include <tuple>
 
-#include "convert_to_biu.h"
 
 
 GRAPHICS_IMPORTER_PCBNEW::GRAPHICS_IMPORTER_PCBNEW()

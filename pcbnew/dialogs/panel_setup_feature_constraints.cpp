@@ -23,8 +23,6 @@
 
 
 #include <fctsys.h>
-#include <pcb_edit_frame.h>
-#include <board_design_settings.h>
 
 #include <panel_setup_feature_constraints.h>
 

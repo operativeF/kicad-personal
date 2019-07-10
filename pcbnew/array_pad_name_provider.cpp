@@ -23,7 +23,6 @@
 
 #include <array_pad_name_provider.h>
 
-#include <class_pad.h>
 
 
 ARRAY_PAD_NAME_PROVIDER::ARRAY_PAD_NAME_PROVIDER(

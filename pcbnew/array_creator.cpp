@@ -28,7 +28,6 @@
 #include <board_commit.h>
 #include <pad_naming.h>
 
-#include <dialogs/dialog_create_array.h>
 
 /**
  * Transform a #BOARD_ITEM from the given #ARRAY_OPTIONS and an index into the array.

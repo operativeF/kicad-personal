@@ -29,20 +29,8 @@
 
 #include <fctsys.h>
 #include <confirm.h>
-#include <gestfich.h>
 #include <kiface_i.h>
-#include <pcb_edit_frame.h>
-#include <trigo.h>
-#include <build_version.h>
-#include <macros.h>
 #include <wildcards_and_files_ext.h>
-#include <pcbnew.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <class_track.h>
-#include <class_edge_mod.h>
-#include <vector>
-#include <cctype>
 
 /* Structure for holding the D-356 record fields.
  * Useful because 356A (when implemented) must be sorted before outputting it */

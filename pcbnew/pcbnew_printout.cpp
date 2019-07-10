@@ -26,10 +26,7 @@
  */
 
 #include "pcbnew_printout.h"
-#include <class_board.h>
 
-#include <pcb_painter.h>
-#include <view/view.h>
 #include <pcbplot.h>
 
 PCBNEW_PRINTOUT_SETTINGS::PCBNEW_PRINTOUT_SETTINGS( const PAGE_INFO& aPageInfo )

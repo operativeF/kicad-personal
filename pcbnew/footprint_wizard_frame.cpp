@@ -25,32 +25,19 @@
  */
 
 #include <fctsys.h>
-#include <kiface_i.h>
-#include <pcb_draw_panel_gal.h>
-#include <pcb_edit_frame.h>
 #include <3d_viewer/eda_3d_viewer.h>
-#include <msgpanel.h>
-#include <macros.h>
 #include <bitmaps.h>
 #include <grid_tricks.h>
 #include <eda_dockart.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <footprint_edit_frame.h>
 #include <pcbnew_id.h>
 #include "footprint_wizard_frame.h"
-#include <footprint_info.h>
 #include <wx/tokenzr.h>
 #include <wx/numformatter.h>
-#include <wildcards_and_files_ext.h>
-#include <base_units.h>
 #include <tool/tool_manager.h>
 #include <tool/tool_dispatcher.h>
 #include <tool/action_toolbar.h>
 #include <tool/common_tools.h>
-#include "tools/selection_tool.h"
 #include "tools/pcbnew_control.h"
-#include "tools/pcb_actions.h"
 
 
 BEGIN_EVENT_TABLE( FOOTPRINT_WIZARD_FRAME, EDA_DRAW_FRAME )

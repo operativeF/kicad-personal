@@ -26,13 +26,7 @@
 
 #include <fctsys.h>
 #include <kiface_i.h>
-#include <confirm.h>
-#include <base_units.h>
-#include <pcbnew.h>
-#include <pcbplot.h>
-#include <class_board.h>
 #include <tool/tool_manager.h>
-#include <tools/pcb_actions.h>
 #include <tools/pcbnew_control.h>
 #include <dialog_print_generic.h>
 #include <pcbnew_printout.h>

@@ -23,19 +23,10 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
  */
 #include <cstdint>
-#include <thread>
-#include <mutex>
 
-#include <class_zone.h>
-#include <class_module.h>
-#include <connectivity/connectivity_data.h>
 #include <board_commit.h>
 
 #include <widgets/progress_reporter.h>
-#include <tool/tool_manager.h>
-#include <bitmaps.h>
-#include "pcb_actions.h"
-#include "selection_tool.h"
 #include "zone_filler_tool.h"
 #include "zone_filler.h"
 

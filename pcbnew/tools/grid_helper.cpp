@@ -26,21 +26,10 @@
 #include <functional>
 using namespace std::placeholders;
 
-#include <pcb_edit_frame.h>
 
-#include <class_board.h>
-#include <class_dimension.h>
-#include <class_draw_panel_gal.h>
-#include <class_edge_mod.h>
-#include <class_module.h>
-#include <class_zone.h>
 
 #include <painter.h>
-#include <view/view.h>
-#include <view/view_controls.h>
-#include <gal/graphics_abstraction_layer.h>
 
-#include <geometry/shape_line_chain.h>
 
 #include "grid_helper.h"
 

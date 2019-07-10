@@ -23,10 +23,6 @@
 
 
 #include <fctsys.h>
-#include <pcbnew.h>
-#include <pcb_edit_frame.h>
-#include <board_design_settings.h>
-#include <dialog_text_entry.h>
 #include <panel_setup_mask_and_paste.h>
 
 

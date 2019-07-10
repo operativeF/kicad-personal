@@ -24,34 +24,13 @@
  */
 
 #include "footprint_editor_tools.h"
-#include "kicad_clipboard.h"
-#include "selection_tool.h"
-#include "pcb_actions.h"
-#include <core/optional.h>
 #include <tool/tool_manager.h>
-#include <class_draw_panel_gal.h>
-#include <view/view_controls.h>
-#include <view/view_group.h>
-#include <pcb_painter.h>
-#include <origin_viewitem.h>
-#include <status_popup.h>
 #include <footprint_edit_frame.h>
-#include <kicad_plugin.h>
 #include <pcbnew_id.h>
-#include <collectors.h>
 #include <confirm.h>
-#include <bitmaps.h>
-#include <pcb_edit_frame.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <class_edge_mod.h>
 #include <board_commit.h>
-#include <project.h>
-#include <tools/tool_event_utils.h>
 #include <fp_lib_table.h>
-#include <functional>
 using namespace std::placeholders;
-#include <wx/defs.h>
 
 
 MODULE_EDITOR_TOOLS::MODULE_EDITOR_TOOLS() :

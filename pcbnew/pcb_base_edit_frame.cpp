@@ -24,13 +24,8 @@
 
 #include <pcb_base_edit_frame.h>
 #include <tool/tool_manager.h>
-#include <pcb_draw_panel_gal.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <class_board.h>
-#include <view/view.h>
 #include "footprint_info_impl.h"
 #include <project.h>
-#include <tools/pcb_actions.h>
 
 PCB_BASE_EDIT_FRAME::PCB_BASE_EDIT_FRAME( KIWAY* aKiway, wxWindow* aParent,
                                           FRAME_T aFrameType, const wxString& aTitle,

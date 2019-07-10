@@ -24,37 +24,18 @@
  */
 
 #include "drawing_tool.h"
-#include "pcb_actions.h"
 
-#include <pcb_edit_frame.h>
-#include <project.h>
-#include <id.h>
-#include <confirm.h>
 #include <import_gfx/dialog_import_gfx.h>
-#include <view/view_controls.h>
-#include <view/view.h>
-#include <gal/graphics_abstraction_layer.h>
 #include <tool/tool_manager.h>
 #include <geometry/geometry_utils.h>
-#include <ratsnest_data.h>
 #include <board_commit.h>
 #include <scoped_set_reset.h>
-#include <bitmaps.h>
-#include <painter.h>
-#include <status_popup.h>
 #include "grid_helper.h"
 #include "point_editor.h"
 #include <dialogs/dialog_text_properties.h>
 #include <preview_items/arc_assistant.h>
 
-#include <class_board.h>
-#include <class_edge_mod.h>
-#include <class_pcb_text.h>
-#include <class_dimension.h>
-#include <class_zone.h>
-#include <class_module.h>
 
-#include <tools/selection_tool.h>
 #include <tools/tool_event_utils.h>
 #include <tools/zone_create_helper.h>
 

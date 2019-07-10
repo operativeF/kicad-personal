@@ -26,20 +26,11 @@
 
 #include <fctsys.h>
 #include <kiface_i.h>
-#include <view/view.h>
-#include <gr_basic.h>
 #include <confirm.h>
-#include <pcbnew.h>
 #include <pgm_base.h>
-#include <pcb_edit_frame.h>
 #include <board_commit.h>
-#include <board_design_settings.h>
-#include <dialog_text_entry.h>
-#include <class_module.h>
 #include <validators.h>
-#include <widgets/wx_grid.h>
 #include <widgets/text_ctrl_eval.h>
-#include <filename_resolver.h>
 #include "3d_cache/dialogs/panel_prev_model.h"
 #include "3d_cache/dialogs/3d_cache_dialogs.h"
 #include <bitmaps.h>

@@ -28,10 +28,6 @@
  */
 
 #include "class_board_stackup.h"
-#include <convert_to_biu.h>
-#include <layers_id_colors_and_visibility.h>
-#include <board_design_settings.h>
-#include <i18n_utility.h>       // _HKI definition
 #include "stackup_predefined_prms.h"
 
 // A list of copper finish standard type names

@@ -23,17 +23,10 @@
 
 #include <tools/zone_create_helper.h>
 
-#include <view/view.h>
 #include <tool/tool_manager.h>
-#include <class_zone.h>
-#include <class_drawsegment.h>
-#include <class_edge_mod.h>
-#include <class_pad.h>
 #include <board_commit.h>
 #include <pcb_painter.h>
 
-#include <tools/pcb_actions.h>
-#include <tools/selection_tool.h>
 
 #include <zone_filler.h>
 

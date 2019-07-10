@@ -23,7 +23,6 @@
  */
 
 #include "graphics_importer.h"
-#include "graphics_import_plugin.h"
 
 GRAPHICS_IMPORTER::GRAPHICS_IMPORTER()
 {

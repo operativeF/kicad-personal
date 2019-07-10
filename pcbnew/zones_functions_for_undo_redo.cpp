@@ -42,14 +42,8 @@
  */
 
 #include <fctsys.h>
-#include <pgm_base.h>
-#include <pcb_edit_frame.h>
 
-#include <class_board.h>
-#include <class_zone.h>
 
-#include <pcbnew.h>
-#include <zones.h>
 #include <zones_functions_for_undo_redo.h>
 
 /**

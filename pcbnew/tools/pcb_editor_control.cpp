@@ -23,40 +23,20 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
  */
 #include <cstdint>
-#include <thread>
-#include <functional>
 #include "pcb_editor_control.h"
-#include "pcb_actions.h"
 #include <tool/tool_manager.h>
-#include <tools/tool_event_utils.h>
-#include <wx/progdlg.h>
 #include <ws_proxy_undo_item.h>
 #include "edit_tool.h"
-#include "selection_tool.h"
 #include "drawing_tool.h"
 #include "pcbnew_picker_tool.h"
 
 #include <painter.h>
-#include <project.h>
 #include <pcbnew_id.h>
-#include <pcb_edit_frame.h>
-#include <class_board.h>
-#include <class_zone.h>
-#include <pcb_draw_panel_gal.h>
-#include <class_module.h>
-#include <class_pcb_target.h>
 #include <connectivity/connectivity_data.h>
-#include <collectors.h>
-#include <zones_functions_for_undo_redo.h>
 #include <board_commit.h>
-#include <confirm.h>
 #include <bitmaps.h>
-#include <view/view_group.h>
-#include <view/view_controls.h>
 #include <origin_viewitem.h>
 #include <profile.h>
-#include <widgets/progress_reporter.h>
-#include <dialogs/dialog_find.h>
 #include <dialogs/dialog_page_settings.h>
 #include <pcb_netlist.h>
 #include <dialogs/dialog_update_pcb.h>

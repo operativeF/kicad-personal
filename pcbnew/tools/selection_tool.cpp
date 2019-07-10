@@ -25,40 +25,20 @@
  */
 #include <limits>
 
-#include <functional>
 using namespace std::placeholders;
 
-#include <class_board.h>
-#include <class_board_item.h>
-#include <class_track.h>
-#include <class_module.h>
-#include <class_pcb_text.h>
-#include <class_drawsegment.h>
-#include <class_zone.h>
 
-#include <pcb_edit_frame.h>
-#include <collectors.h>
 #include <confirm.h>
 #include <dialog_find.h>
 #include <dialog_block_options.h>
-#include <class_draw_panel_gal.h>
-#include <view/view_controls.h>
-#include <view/view_group.h>
 #include <preview_items/selection_area.h>
 #include <painter.h>
 #include <bitmaps.h>
-#include <tool/tool_event.h>
 #include <tool/tool_manager.h>
 #include <router/router_tool.h>
 #include <connectivity/connectivity_data.h>
-#include <footprint_viewer_frame.h>
-#include <id.h>
-#include "tool_event_utils.h"
 #include "selection_tool.h"
-#include "pcb_bright_box.h"
-#include "pcb_actions.h"
 
-#include "kicad_plugin.h"
 
 
 class SELECT_MENU : public ACTION_MENU

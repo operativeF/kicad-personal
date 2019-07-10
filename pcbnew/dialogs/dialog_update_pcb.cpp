@@ -26,19 +26,11 @@
  */
 
 #include <common.h>
-#include <pcb_edit_frame.h>
 #include <pcb_netlist.h>
 #include <dialog_update_pcb.h>
 #include <wx_html_report_panel.h>
 #include <board_netlist_updater.h>
 #include <tool/tool_manager.h>
-#include <tools/pcb_actions.h>
-#include <tools/selection_tool.h>
-#include <class_draw_panel_gal.h>
-#include <class_board.h>
-#include <ratsnest_data.h>
-#include <view/view.h>
-#include <functional>
 #include <kiface_i.h>
 
 using namespace std::placeholders;

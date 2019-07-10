@@ -24,17 +24,6 @@
  */
 
 #include <fctsys.h>
-#include <pcb_edit_frame.h>
-#include <trigo.h>
-#include <pcbnew.h>
-#include <tools/drc.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <class_track.h>
-#include <class_zone.h>
-#include <class_drawsegment.h>
-#include <class_marker_pcb.h>
-#include <math_for_graphics.h>
 #include <polygon_test_point_inside.h>
 #include <convert_basic_shapes_to_polygon.h>
 #include <board_commit.h>

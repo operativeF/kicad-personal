@@ -26,7 +26,6 @@
 
 #include <widgets/tab_traversal.h>
 
-#include <pcb_edit_frame.h>
 
 // initialise statics
 DIALOG_MOVE_EXACT::MOVE_EXACT_OPTIONS DIALOG_MOVE_EXACT::m_options;

@@ -28,13 +28,7 @@
 #include "ar_matrix.h"
 #include "ar_cell.h"
 
-#include <common.h>
-#include <math_for_graphics.h>
-#include <trigo.h>
 
-#include <class_drawsegment.h>
-#include <class_pad.h>
-#include <class_track.h>
 
 AR_MATRIX::AR_MATRIX()
 {

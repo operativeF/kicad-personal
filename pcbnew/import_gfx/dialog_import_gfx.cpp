@@ -29,17 +29,9 @@
 
 #include "dialog_import_gfx.h"
 
-#include <advanced_config.h>
-#include <convert_to_biu.h>
 #include <kiface_i.h>
 #include <pcb_layer_box_selector.h>
-#include <wildcards_and_files_ext.h>
 
-#include <class_board.h>
-#include <class_module.h>
-#include <class_edge_mod.h>
-#include <class_text_mod.h>
-#include <class_pcb_text.h>
 
 // Configuration path (group) to store entry keys below.
 #define IMPORT_GFX_GROUP                        "ImportGraphics"

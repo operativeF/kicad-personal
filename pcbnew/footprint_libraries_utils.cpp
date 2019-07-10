@@ -27,26 +27,15 @@
  */
 
 #include <wx/ffile.h>
-#include <wx/stdpaths.h>
-#include <fctsys.h>
-#include <pgm_base.h>
 #include <kiface_i.h>
 #include <confirm.h>
-#include <kicad_string.h>
-#include <gestfich.h>
-#include <pcb_edit_frame.h>
 #include <dialog_helpers.h>
 #include <filter_reader.h>
-#include <macros.h>
 #include <fp_lib_table.h>
 #include <validators.h>
 #include <dialog_text_entry.h>
 #include <tool/tool_manager.h>
-#include <tools/pcb_actions.h>
-#include <class_board.h>
-#include <class_module.h>
 #include <board_commit.h>
-#include <pcbnew.h>
 #include <footprint_edit_frame.h>
 #include <wildcards_and_files_ext.h>
 #include <kicad_plugin.h>

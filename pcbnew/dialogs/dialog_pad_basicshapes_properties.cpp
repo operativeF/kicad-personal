@@ -29,17 +29,7 @@
 
 #include <algorithm>
 
-#include <fctsys.h>
-#include <common.h>
-#include <confirm.h>
-#include <pcbnew.h>
-#include <trigo.h>
-#include <macros.h>
-#include <pcb_base_frame.h>
-#include <base_units.h>
 #include <widgets/wx_grid.h>
-#include <class_board.h>
-#include <class_module.h>
 
 #include <dialog_pad_properties.h>
 #include <bitmaps.h>

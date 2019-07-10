@@ -24,10 +24,7 @@
 #include <macros.h>
 #include <bitmaps.h>
 #include <tool/action_toolbar.h>
-#include <tool/conditional_menu.h>
 #include <tool/tool_manager.h>
-#include <tools/selection_tool.h>
-#include <tools/pcb_actions.h>
 #include "footprint_viewer_frame.h"
 #include "pcbnew_id.h"
 

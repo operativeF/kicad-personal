@@ -26,37 +26,20 @@
 #include <functional>
 using namespace std::placeholders;
 
-#include <fctsys.h>
-#include <pcb_draw_panel_gal.h>
 #include <confirm.h>
-#include <eda_doc.h>
-#include <kicad_string.h>
-#include <pgm_base.h>
 #include <kiway.h>
 #include <view/view_controls.h>
-#include <pcb_edit_frame.h>
 #include <dialog_helpers.h>
-#include <filter_reader.h>
-#include <gr_basic.h>
-#include <macros.h>
 #include <fp_lib_table.h>
-#include <lib_id.h>
 #include <footprint_tree_pane.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <io_mgr.h>
 #include <connectivity/connectivity_data.h>
-#include <pcbnew.h>
 #include <footprint_edit_frame.h>
-#include <footprint_info.h>
 #include <footprint_info_impl.h>
 #include <dialog_choose_footprint.h>
 #include <dialog_get_footprint_by_name.h>
 #include <footprint_viewer_frame.h>
-#include <wildcards_and_files_ext.h>
 #include <widgets/progress_reporter.h>
 #include <widgets/lib_tree.h>
-#include "fp_tree_model_adapter.h"
 
 
 static wxArrayString s_ModuleHistoryList;
@@ -85,8 +68,6 @@ static void clearModuleItemFlags( BOARD_ITEM* aItem )
     aItem->ClearFlags();
 }
 
-#include "pcbnew_id.h"
-#include <bitmaps.h>
 bool FOOTPRINT_EDIT_FRAME::Load_Module_From_BOARD( MODULE* aModule )
 {
     bool is_last_fp_from_brd = IsCurrentFPFromBoard();

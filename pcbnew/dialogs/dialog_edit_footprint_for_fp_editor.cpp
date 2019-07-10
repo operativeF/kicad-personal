@@ -25,29 +25,19 @@
  */
 
 #include <fctsys.h>
-#include <base_units.h>
-#include <view/view.h>
 #include <confirm.h>
-#include <dialog_text_entry.h>
-#include <pcbnew.h>
 #include <kiface_i.h>
 #include <3d_viewer/eda_3d_viewer.h>
-#include <pcb_edit_frame.h>
 #include <validators.h>
-#include <board_design_settings.h>
 #include <board_commit.h>
 #include <bitmaps.h>
-#include <widgets/wx_grid.h>
 #include <widgets/text_ctrl_eval.h>
-#include <class_module.h>
 #include <footprint_edit_frame.h>
 #include <dialog_edit_footprint_for_fp_editor.h>
-#include "filename_resolver.h"
 #include <pgm_base.h>
 #include "3d_cache/dialogs/panel_prev_model.h"
 #include "3d_cache/dialogs/3d_cache_dialogs.h"
 
-#include <fp_lib_table.h>
 
 #define LibFootprintTextShownColumnsKey   wxT( "LibFootprintTextShownColumns" )
 

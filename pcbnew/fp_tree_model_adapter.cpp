@@ -18,11 +18,8 @@
  */
 
 #include <wx/tokenzr.h>
-#include <wx/progdlg.h>
 
-#include <eda_pattern_match.h>
 #include <fp_lib_table.h>
-#include <footprint_info.h>
 #include <footprint_info_impl.h>
 #include <generate_footprint_info.h>
 

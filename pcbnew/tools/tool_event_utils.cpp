@@ -22,8 +22,6 @@
  */
 
 #include <tools/tool_event_utils.h>
-#include <tools/pcb_actions.h>
-#include <pcb_base_edit_frame.h>
 
 
 bool TOOL_EVT_UTILS::IsRotateToolEvt( const TOOL_EVENT& aEvt )

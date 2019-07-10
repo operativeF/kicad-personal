@@ -22,9 +22,7 @@
  */
 
 #include "footprint_tree_pane.h"
-#include "fp_tree_synchronizing_adapter.h"
 #include <widgets/lib_tree.h>
-#include <pcbnew_id.h>
 #include <footprint_edit_frame.h>
 #include <fp_lib_table.h>
 

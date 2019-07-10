@@ -22,29 +22,14 @@
 
 #include <fctsys.h>
 #include <kiface_i.h>
-#include <kiway.h>
-#include <project.h>
-#include <kicad_plugin.h>
-#include <pcb_draw_panel_gal.h>
 #include <confirm.h>
-#include <pcb_edit_frame.h>
-#include <dialog_helpers.h>
-#include <3d_viewer/eda_3d_viewer.h>
-#include <msgpanel.h>
 #include <fp_lib_table.h>
 #include <bitmaps.h>
-#include <gal/graphics_abstraction_layer.h>
 #include <eda_dockart.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <pcbnew.h>
 #include <pcbnew_id.h>
 #include <footprint_edit_frame.h>
-#include <footprint_viewer_frame.h>
 #include <wildcards_and_files_ext.h>
 #include <pcb_layer_widget.h>
-#include <invoke_pcb_dialog.h>
-#include <tool/tool_manager.h>
 #include <tool/common_control.h>
 #include <tool/common_tools.h>
 #include <tool/tool_dispatcher.h>
@@ -52,7 +37,6 @@
 #include <tool/zoom_tool.h>
 #include <footprint_tree_pane.h>
 #include <widgets/lib_tree.h>
-#include <fp_lib_table.h>
 #include <footprint_info_impl.h>
 #include <widgets/paged_dialog.h>
 #include <dialogs/panel_modedit_settings.h>
@@ -61,7 +45,6 @@
 #include <panel_hotkeys_editor.h>
 #include <tools/position_relative_tool.h>
 #include <widgets/progress_reporter.h>
-#include "tools/selection_tool.h"
 #include "tools/edit_tool.h"
 #include "tools/drawing_tool.h"
 #include "tools/point_editor.h"
@@ -70,7 +53,6 @@
 #include "tools/placement_tool.h"
 #include "tools/pcbnew_picker_tool.h"
 #include "tools/pad_tool.h"
-#include "tools/pcb_actions.h"
 
 
 BEGIN_EVENT_TABLE( FOOTPRINT_EDIT_FRAME, PCB_BASE_FRAME )

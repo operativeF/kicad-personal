@@ -34,12 +34,9 @@
 
 #include <wx/wx.h>
 #include <wx/uri.h>
-#include <wx/dir.h>
 #include <wx/progdlg.h>
-#include <wx/config.h>
 
 #include <pgm_base.h>
-#include <project.h>
 #include <wizard_3DShape_Libs_downloader.h>
 #include <confirm.h>
 #include <3d_viewer/eda_3d_viewer.h>

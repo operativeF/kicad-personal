@@ -27,7 +27,6 @@
 #include <router/pns_meander_placer.h>
 #include <widgets/text_ctrl_eval.h>
 #include <bitmaps.h>
-#include <eda_draw_frame.h>
 
 DIALOG_PNS_LENGTH_TUNING_SETTINGS::DIALOG_PNS_LENGTH_TUNING_SETTINGS( EDA_DRAW_FRAME* aParent,
                         PNS::MEANDER_SETTINGS& aSettings, PNS::ROUTER_MODE aMode )

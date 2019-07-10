@@ -28,11 +28,8 @@
 
 #include <fctsys.h>
 #include <confirm.h>
-#include <pcb_edit_frame.h>
 
-#include <class_board.h>
 
-#include <pcbnew.h>
 #include <footprint_edit_frame.h>
 
 

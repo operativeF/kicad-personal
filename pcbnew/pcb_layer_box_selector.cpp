@@ -29,14 +29,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
  */
 #include <common.h>
-#include <pcbnew.h>
-#include <pcb_edit_frame.h>
-#include <board_design_settings.h>
-#include <layers_id_colors_and_visibility.h>
 
-#include <class_board.h>
 #include <pcb_layer_box_selector.h>
-#include <tools/pcb_actions.h>
 
 // translate aLayer to its hotkey
 static TOOL_ACTION* layer2action( PCB_LAYER_ID aLayer )

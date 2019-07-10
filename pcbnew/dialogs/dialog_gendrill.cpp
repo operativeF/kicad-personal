@@ -25,16 +25,10 @@
 #include <fctsys.h>
 #include <kiface_i.h>
 #include <confirm.h>
-#include <pcbnew.h>
-#include <pcb_edit_frame.h>
-#include <pcbplot.h>
 #include <gendrill_Excellon_writer.h>
 #include <gendrill_gerber_writer.h>
 #include <bitmaps.h>
 #include <tools/pcb_editor_control.h>
-#include <class_board.h>
-#include <class_track.h>
-#include <class_module.h>
 #include <dialog_gendrill.h>
 #include <wildcards_and_files_ext.h>
 #include <reporter.h>

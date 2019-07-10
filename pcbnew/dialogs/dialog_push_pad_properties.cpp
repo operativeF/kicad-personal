@@ -24,8 +24,6 @@
 
 #include <dialog_push_pad_properties.h>
 
-#include <class_pad.h>
-#include <pcb_edit_frame.h>
 
 
 // Class DIALOG_PUSH_PAD_PROPERTIES static variables

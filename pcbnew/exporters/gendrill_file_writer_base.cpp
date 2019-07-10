@@ -24,9 +24,6 @@
  */
 #include <fctsys.h>
 
-#include <class_board.h>
-#include <class_module.h>
-#include <collectors.h>
 #include <reporter.h>
 
 #include <gendrill_file_writer_base.h>

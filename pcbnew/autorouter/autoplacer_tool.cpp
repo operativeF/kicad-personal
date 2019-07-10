@@ -23,26 +23,11 @@
 
 
 #include <board_commit.h>
-#include <class_draw_panel_gal.h>
-#include <confirm.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <preview_items/centreline_rect_item.h>
-#include <preview_items/two_point_geom_manager.h>
-#include <tool/tool_manager.h>
-#include <view/view.h>
-#include <view/view_controls.h>
 
 // For frame ToolID values
-#include <pcbnew_id.h>
 
 // For action icons
-#include <bitmaps.h>
 
-#include <class_board_item.h>
-#include <class_module.h>
-#include <tools/pcb_actions.h>
-#include <tools/selection_tool.h>
-#include <tools/tool_event_utils.h>
 
 #include <widgets/progress_reporter.h>
 

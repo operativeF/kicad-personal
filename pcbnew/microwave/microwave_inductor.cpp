@@ -23,17 +23,11 @@
 
 #include "microwave_inductor.h"
 
-#include <wx/wx.h>
 
-#include <base_units.h>
 #include <dialog_text_entry.h>
 #include <geometry/geometry_utils.h>
-#include <pcb_edit_frame.h>
 #include <validators.h>
 
-#include <class_pad.h>
-#include <class_edge_mod.h>
-#include <class_module.h>
 
 
 using namespace MWAVE;

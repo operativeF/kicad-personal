@@ -22,7 +22,6 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
 #include <footprint_viewer_frame.h>
 #include <dialog_fp_browser_display_options.h>
 

@@ -23,13 +23,7 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <pcb_edit_frame.h>
 #include <pcbnew_id.h>
-#include <class_board.h>
-#include <class_track.h>
-#include <pcbnew.h>
-#include <tools/drc.h>
 
 
 int PCB_EDIT_FRAME::SetTrackSegmentWidth( TRACK*             aTrackItem,

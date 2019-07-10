@@ -24,23 +24,10 @@
  */
 
 #include <fctsys.h>
-#include <kiface_i.h>
 #include <hotkeys_basic.h>
-#include <id.h>
-#include <confirm.h>
-#include <kicad_string.h>
-#include <gestfich.h>
-#include <eda_base_frame.h>
-#include <macros.h>
-#include <menus_helpers.h>
-#include <eda_draw_frame.h>
 
-#include <tool/tool_manager.h>
 #include "dialogs/dialog_hotkey_list.h"
-#include <wx/apptrait.h>
-#include <wx/stdpaths.h>
 #include <wx/tokenzr.h>
-#include <tool/tool_action.h>
 
 
 /*

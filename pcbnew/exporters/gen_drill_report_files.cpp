@@ -28,17 +28,8 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
-#include <plotter.h>
-#include <eda_rect.h>
-#include <gr_text.h>
-#include <confirm.h>
-#include <kicad_string.h>
-#include <macros.h>
 
-#include <class_board.h>
 
-#include <pcbnew.h>
 #include <pcbplot.h>
 #include <gendrill_file_writer_base.h>
 

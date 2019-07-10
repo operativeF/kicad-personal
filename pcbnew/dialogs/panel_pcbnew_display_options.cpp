@@ -19,14 +19,8 @@
  */
 
 #include <fctsys.h>
-#include <pcbnew.h>
-#include <pcb_edit_frame.h>
-#include <pcb_display_options.h>
 #include <config_map.h>
-#include <pcbnew_id.h>
 #include <panel_pcbnew_display_options.h>
-#include <pcb_draw_panel_gal.h>
-#include <pcb_view.h>
 #include <pcb_painter.h>
 #include <widgets/paged_dialog.h>
 #include <widgets/gal_options_panel.h>

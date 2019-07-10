@@ -22,16 +22,11 @@
  */
 
 #include <bitmaps.h>
-#include <class_zone.h>
 #include <tool/tool_manager.h>
-#include <tools/pcb_actions.h>
-#include <tools/selection_tool.h>
 #include <tools/edit_tool.h>
-#include <dialogs/dialog_track_via_properties.h>
 #include <dialogs/dialog_exchange_footprints.h>
 #include <dialogs/dialog_swap_layers.h>
 #include <tools/global_edit_tool.h>
-#include <board_commit.h>
 
 
 GLOBAL_EDIT_TOOL::GLOBAL_EDIT_TOOL() :

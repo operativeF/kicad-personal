@@ -28,18 +28,8 @@
 
 #include <fctsys.h>
 #include <confirm.h>
-#include <kicad_string.h>
-#include <gestfich.h>
-#include <pcb_edit_frame.h>
-#include <pgm_base.h>
 #include <bitmaps.h>
-#include <build_version.h>
-#include <macros.h>
-#include <reporter.h>
 #include <tools/pcb_editor_control.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <pcbnew.h>
 #include <wildcards_and_files_ext.h>
 #include <kiface_i.h>
 #include <wx_html_report_panel.h>

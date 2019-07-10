@@ -28,14 +28,8 @@
 #include <confirm.h>
 #include <wildcards_and_files_ext.h>
 #include <bitmaps.h>
-#include <pgm_base.h>
 #include <dialog_drc.h>
-#include <pcb_edit_frame.h>
-#include <base_units.h>
-#include <view/view.h>
-#include <collectors.h>
 #include <tool/tool_manager.h>
-#include <tools/pcb_actions.h>
 
 /* class DIALOG_DRC_CONTROL: a dialog to set DRC parameters (clearance, min cooper size)
  * and run DRC tests

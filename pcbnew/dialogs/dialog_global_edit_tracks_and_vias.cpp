@@ -24,14 +24,9 @@
 
 #include <fctsys.h>
 #include <confirm.h>
-#include <pcb_edit_frame.h>
-#include <class_board.h>
 #include <connectivity/connectivity_data.h>
-#include <view/view.h>
 #include <pcb_layer_box_selector.h>
 #include <tool/tool_manager.h>
-#include <tool/selection.h>
-#include <tools/selection_tool.h>
 #include <tools/global_edit_tool.h>
 #include "dialog_global_edit_tracks_and_vias_base.h"
 

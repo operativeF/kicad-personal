@@ -28,15 +28,10 @@
 
 #include "dialog_drclistbox.h"
 #include <board_commit.h>
-#include <collectors.h>
 #include <dialog_cleanup_tracks_and_vias.h>
 #include <kiface_i.h>
-#include <pcb_edit_frame.h>
-#include <reporter.h>
 #include <tool/tool_manager.h>
-#include <tools/pcb_actions.h>
 #include <tracks_cleaner.h>
-#include <wx_html_report_panel.h>
 
 // Keywords for read and write config
 #define CleanupViaKey wxT( "DialogCleanupVias" )

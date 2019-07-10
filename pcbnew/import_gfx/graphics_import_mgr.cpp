@@ -27,7 +27,6 @@
 #include "dxf_import_plugin.h"
 #include "svg_import_plugin.h"
 
-#include <wx/regex.h>
 
 GRAPHICS_IMPORT_MGR::GRAPHICS_IMPORT_MGR( const TYPE_LIST& aBlacklist )
 {

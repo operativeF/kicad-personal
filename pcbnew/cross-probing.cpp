@@ -35,25 +35,11 @@
  */
 
 #include <fctsys.h>
-#include <pgm_base.h>
 #include <kiface_i.h>
 #include <kiway_express.h>
-#include <pcb_edit_frame.h>
 #include <eda_dde.h>
-#include <macros.h>
 
-#include <pcbnew_id.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <class_track.h>
-#include <class_zone.h>
-#include <collectors.h>
-#include <pcbnew.h>
-#include <pcb_netlist.h>
-#include <tools/pcb_actions.h>
 #include <tool/tool_manager.h>
-#include <tools/selection_tool.h>
-#include <pcb_draw_panel_gal.h>
 #include <pcb_painter.h>
 
 /* Execute a remote command send by Eeschema via a socket,

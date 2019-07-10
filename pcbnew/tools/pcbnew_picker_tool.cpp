@@ -24,12 +24,8 @@
  */
 
 #include "pcbnew_picker_tool.h"
-#include "pcb_actions.h"
 #include "grid_helper.h"
 #include <view/view_controls.h>
-#include <tool/tool_manager.h>
-#include "tool_event_utils.h"
-#include "selection_tool.h"
 
 
 PCBNEW_PICKER_TOOL::PCBNEW_PICKER_TOOL()

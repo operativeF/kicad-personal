@@ -24,18 +24,9 @@
 #include <functional>
 using namespace std::placeholders;
 
-#include <fctsys.h>
 #include <confirm.h>
-#include <pcbnew.h>
-#include <pcb_edit_frame.h>
-#include <ratsnest_data.h>
 #include <board_commit.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <class_track.h>
-#include <class_zone.h>
 #include <tool/tool_manager.h>
-#include <tools/pcb_actions.h>
 #include <tools/global_edit_tool.h>
 #include <dialog_global_deletion.h>
 

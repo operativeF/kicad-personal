@@ -37,15 +37,8 @@
 
 #include <fctsys.h>
 
-#include <plotter.h>
-#include <kicad_string.h>
-#include <pcb_edit_frame.h>
-#include <pgm_base.h>
 #include <build_version.h>
 
-#include <pcbplot.h>
-#include <pcbnew.h>
-#include <class_board.h>
 #include <gendrill_Excellon_writer.h>
 #include <wildcards_and_files_ext.h>
 #include <reporter.h>

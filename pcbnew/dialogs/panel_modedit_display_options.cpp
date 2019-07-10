@@ -18,7 +18,6 @@
  */
 
 #include <footprint_edit_frame.h>
-#include <view/view.h>
 #include <widgets/gal_options_panel.h>
 #include <widgets/paged_dialog.h>
 

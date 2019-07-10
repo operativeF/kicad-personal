@@ -24,36 +24,15 @@
  */
 
 #include <fctsys.h>
-#include <pcb_edit_frame.h>
-#include <trigo.h>
-#include <board_design_settings.h>
-#include <class_edge_mod.h>
-#include <class_drawsegment.h>
-#include <class_module.h>
-#include <class_track.h>
-#include <class_pad.h>
-#include <class_zone.h>
-#include <class_pcb_text.h>
-#include <class_draw_panel_gal.h>
-#include <view/view.h>
-#include <geometry/seg.h>
-#include <math_for_graphics.h>
-#include <geometry/geometry_utils.h>
-#include <connectivity/connectivity_data.h>
 #include <connectivity/connectivity_algo.h>
-#include <bitmaps.h>
 #include <tool/tool_manager.h>
-#include <tools/pcb_actions.h>
-#include <tools/pcb_tool_base.h>
 #include <kiface_i.h>
-#include <pcbnew.h>
 #include <tools/drc.h>
 #include <pcb_netlist.h>
 
 #include <dialog_drc.h>
 #include <wx/progdlg.h>
 #include <board_commit.h>
-#include <geometry/shape_segment.h>
 #include <geometry/shape_arc.h>
 
 #include <drc/courtyard_overlap.h>

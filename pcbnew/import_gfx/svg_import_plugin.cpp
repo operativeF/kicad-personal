@@ -25,13 +25,8 @@
 
 #include "svg_import_plugin.h"
 
-#include <algorithm>
-#include <cmath>
 
-#include <wx/gdicmn.h>
-#include <math/vector2d.h>
 
-#include "convert_to_biu.h"
 #include "graphics_importer.h"
 
 static VECTOR2D calculateBezierBoundingBoxExtremity( const float* aCurvePoints,

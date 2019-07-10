@@ -25,13 +25,8 @@
 
 #include <dialogs/dialog_track_via_properties.h>
 #include <pcb_layer_box_selector.h>
-#include <tools/selection_tool.h>
-#include <class_track.h>
-#include <pcb_edit_frame.h>
 #include <confirm.h>
 #include <connectivity/connectivity_data.h>
-#include <class_module.h>
-#include <widgets/net_selector.h>
 #include <board_commit.h>
 
 DIALOG_TRACK_VIA_PROPERTIES::DIALOG_TRACK_VIA_PROPERTIES( PCB_BASE_FRAME* aParent,

@@ -22,20 +22,8 @@
  */
 
 #include <kiface_i.h>
-#include <pcb_edit_frame.h>
-#include <pcbnew.h>
 
-#include <class_board.h>
-#include <class_board_item.h>
-#include <class_drawsegment.h>
-#include <class_edge_mod.h>
-#include <class_module.h>
-#include <class_track.h>
-#include <class_zone.h>
-#include <cstdio>
-#include <vector>
 
-#include <ki_exception.h>
 #include <reporter.h>
 
 #include <exporters/board_exporter_base.h>

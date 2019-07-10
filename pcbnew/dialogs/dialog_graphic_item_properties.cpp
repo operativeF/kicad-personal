@@ -27,16 +27,9 @@
  */
 
 #include <fctsys.h>
-#include <macros.h>
-#include <confirm.h>
-#include <pcb_base_edit_frame.h>
-#include <wx/valnum.h>
 #include <board_commit.h>
 #include <pcb_layer_box_selector.h>
 #include <html_messagebox.h>
-#include <class_board.h>
-#include <class_drawsegment.h>
-#include <class_edge_mod.h>
 #include <widgets/unit_binder.h>
 
 #include <dialog_graphic_item_properties_base.h>

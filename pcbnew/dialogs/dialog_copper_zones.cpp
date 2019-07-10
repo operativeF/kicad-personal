@@ -26,12 +26,8 @@
 #include <fctsys.h>
 #include <kiface_i.h>
 #include <confirm.h>
-#include <pcb_edit_frame.h>
-#include <zones.h>
 #include <bitmaps.h>
 #include <widgets/unit_binder.h>
-#include <class_zone.h>
-#include <class_board.h>
 
 #include <dialog_copper_zones_base.h>
 

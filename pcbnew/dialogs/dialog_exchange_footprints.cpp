@@ -25,14 +25,7 @@
  */
 
 #include <fctsys.h>
-#include <kicad_string.h>
-#include <pcb_edit_frame.h>
-#include <macros.h>
-#include <board_commit.h>
 #include <bitmaps.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <project.h>
 #include <wx_html_report_panel.h>
 #include <kiway.h>
 #include <dialog_exchange_footprints.h>

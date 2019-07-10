@@ -26,10 +26,6 @@
 #include <fctsys.h>
 #include <kiface_i.h>
 #include <confirm.h>
-#include <pcb_edit_frame.h>
-#include <class_zone.h>
-#include <zones.h>
-#include <zone_settings.h>
 #include <dialog_keepout_area_properties_base.h>
 
 

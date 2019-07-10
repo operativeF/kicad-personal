@@ -22,22 +22,12 @@
  */
 
 #include "microwave_tool.h"
-#include <gal/graphics_abstraction_layer.h>
-#include <class_draw_panel_gal.h>
-#include <view/view_controls.h>
-#include <view/view.h>
 #include <tool/tool_manager.h>
 #include <board_commit.h>
 #include <confirm.h>
 #include <preview_items/two_point_geom_manager.h>
 #include <preview_items/centreline_rect_item.h>
-#include <pcbnew_id.h>
-#include <bitmaps.h>
-#include <class_board_item.h>
-#include <class_module.h>
 #include <microwave/microwave_inductor.h>
-#include "pcb_actions.h"
-#include "selection_tool.h"
 
 
 MICROWAVE_TOOL::MICROWAVE_TOOL() :

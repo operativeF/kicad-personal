@@ -27,16 +27,9 @@
 
 #include <fctsys.h>
 #include <confirm.h>
-#include <kicad_string.h>
-#include <gestfich.h>
-#include <pcbnew.h>
-#include <pcb_edit_frame.h>
-#include <macros.h>
 #include <project.h>
 #include <wildcards_and_files_ext.h>
 
-#include <class_board.h>
-#include <class_module.h>
 
 #include <wx/listimpl.cpp>
 

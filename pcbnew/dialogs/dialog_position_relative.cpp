@@ -23,11 +23,9 @@
 
 #include <dialogs/dialog_position_relative.h>
 
-#include <tools/pcb_actions.h>
 
 #include <widgets/tab_traversal.h>
 
-#include <pcb_edit_frame.h>
 
 // initialise statics
 DIALOG_POSITION_RELATIVE::POSITION_RELATIVE_OPTIONS DIALOG_POSITION_RELATIVE::m_options;

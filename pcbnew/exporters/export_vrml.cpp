@@ -25,28 +25,14 @@
  */
 
 #include <cmath>
-#include <exception>
 #include <fstream>
 #include <iomanip>
-#include <vector>
-#include <wx/dir.h>
 
 #include "3d_cache/3d_cache.h"
-#include "3d_cache/3d_info.h"
-#include "class_board.h"
-#include "class_edge_mod.h"
-#include "class_module.h"
-#include "class_pcb_text.h"
-#include "class_track.h"
-#include "class_zone.h"
-#include "convert_to_biu.h"
-#include "gr_text.h"
-#include "macros.h"
 #include "pgm_base.h"
 #include "plugins/3dapi/ifsg_all.h"
 #include "streamwrapper.h"
 #include "vrml_layer.h"
-#include "pcb_edit_frame.h"
 
 #include <convert_basic_shapes_to_polygon.h>
 #include <geometry/geometry_utils.h>

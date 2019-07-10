@@ -48,15 +48,11 @@
 
 
 #include <cstdarg>
-#include <cstdio>
 
 #include <build_version.h>
 
-#include <class_board.h>
-#include <class_track.h>
 
 #include "specctra.h"
-#include <macros.h>
 
 
 namespace DSN {

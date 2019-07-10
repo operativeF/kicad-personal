@@ -30,33 +30,12 @@
 
 #include <fctsys.h>
 #include <kiface_i.h>
-#include <project.h>
-#include <pcb_draw_panel_gal.h>
-#include <confirm.h>
-#include <gestfich.h>
-#include <xnode.h>
-#include <common.h>
-#include <macros.h>
-#include <pcb_edit_frame.h>
-#include <board_design_settings.h>
-#include <plotter.h>
-#include <ws_painter.h>
 #include <panel_hotkeys_editor.h>
 #include <panel_pcbnew_settings.h>
 #include <panel_pcbnew_display_options.h>
-#include <panel_pcbnew_action_plugins.h>
-#include <panel_hotkeys_editor.h>
-#include <fp_lib_table.h>
-#include <ws_draw_item.h>
 #include <ws_data_model.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <pcbplot.h>
-#include <pcbnew_id.h>
-#include <footprint_viewer_frame.h>
 #include <invoke_pcb_dialog.h>
 #include <wildcards_and_files_ext.h>
-#include <view/view.h>
 #include <widgets/paged_dialog.h>
 
 

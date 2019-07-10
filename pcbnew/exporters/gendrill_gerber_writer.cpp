@@ -29,23 +29,13 @@
 
 #include <fctsys.h>
 
-#include <vector>
 
-#include <plotter.h>
-#include <kicad_string.h>
-#include <pcb_edit_frame.h>
-#include <pgm_base.h>
-#include <build_version.h>
 
-#include <class_board.h>
 
 #include <pcbplot.h>
-#include <pcbnew.h>
 #include <gendrill_gerber_writer.h>
-#include <wildcards_and_files_ext.h>
 #include <reporter.h>
 #include <gbr_metadata.h>
-#include <class_module.h>
 
 
 GERBER_WRITER::GERBER_WRITER( BOARD* aPcb )

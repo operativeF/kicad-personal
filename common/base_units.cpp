@@ -35,11 +35,7 @@
  */
 
 #include <macros.h>
-#include <base_struct.h>
-#include <title_block.h>
-#include <common_enum.h>
 #include <base_units.h>
-#include "libeval/numeric_evaluator.h"
 
 
 #if defined( PCBNEW ) || defined( CVPCB ) || defined( EESCHEMA ) || defined( GERBVIEW ) || defined( PL_EDITOR )

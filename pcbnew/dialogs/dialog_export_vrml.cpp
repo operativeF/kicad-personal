@@ -28,12 +28,8 @@
  */
 #include <wx/dir.h>
 
-#include <fctsys.h>
-#include <pcb_edit_frame.h>
 #include <kiface_i.h>
 
-#include <pcbnew.h>
-#include <class_board.h>
 
 
 /* the dialog to create VRML files, derived from DIALOG_EXPORT_3DFILE_BASE,

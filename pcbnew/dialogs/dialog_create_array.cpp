@@ -23,13 +23,9 @@
 
 #include "dialogs/dialog_create_array.h"
 
-#include <base_units.h>
 
 #include <widgets/text_ctrl_eval.h>
 
-#include <class_board.h>
-#include <class_module.h>
-#include <pcb_edit_frame.h>
 
 #include <boost/algorithm/string/join.hpp>
 

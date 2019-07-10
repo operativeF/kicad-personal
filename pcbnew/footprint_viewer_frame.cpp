@@ -24,38 +24,22 @@
  */
 
 #include <fctsys.h>
-#include <pgm_base.h>
 #include <kiway.h>
-#include <pcb_draw_panel_gal.h>
-#include <3d_viewer/eda_3d_viewer.h>
-#include <dialog_helpers.h>
-#include <msgpanel.h>
 #include <fp_lib_table.h>
-#include <lib_id.h>
 #include <confirm.h>
 #include <bitmaps.h>
-#include <gal/graphics_abstraction_layer.h>
 #include <eda_dockart.h>
 #include <pcb_painter.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <pcbnew.h>
 #include <pcbnew_id.h>
 #include <footprint_viewer_frame.h>
 #include <footprint_info.h>
-#include <wildcards_and_files_ext.h>
-#include <config_params.h>
 #include <tool/tool_manager.h>
 #include <tool/tool_dispatcher.h>
 #include <tool/action_toolbar.h>
 #include <tool/common_tools.h>
-#include "tools/selection_tool.h"
 #include "tools/pcbnew_control.h"
-#include "tools/pcb_actions.h"
 #include "board_commit.h"
 
-#include <functional>
-#include <memory>
 using namespace std::placeholders;
 
 

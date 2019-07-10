@@ -23,11 +23,6 @@
 
 #include <grid_layer_box_helpers.h>
 
-#include <pcb_edit_frame.h>
-#include <class_board.h>
-#include <wx/textctrl.h>
-#include <widgets/layer_box_selector.h>
-#include <pcb_layer_box_selector.h>
 
 
 //-------- Custom wxGridCellRenderers --------------------------------------------------

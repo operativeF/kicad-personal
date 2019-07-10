@@ -24,21 +24,9 @@
 
 #include <dialog_text_properties.h>
 #include <confirm.h>
-#include <gr_text.h>
-#include <fctsys.h>
-#include <gr_basic.h>
 #include <widgets/tab_traversal.h>
-#include <widgets/unit_binder.h>
 #include <board_commit.h>
-#include <class_board.h>
-#include <class_dimension.h>
-#include <class_module.h>
-#include <class_pcb_text.h>
-#include <class_text_mod.h>
-#include <pcb_edit_frame.h>
 #include <pcb_layer_box_selector.h>
-#include <pcbnew.h>
-#include <wx/valnum.h>
 
 
 /**

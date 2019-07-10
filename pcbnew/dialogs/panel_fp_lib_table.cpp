@@ -32,28 +32,19 @@
 
 
 #include <set>
-#include <wx/regex.h>
-#include <wx/grid.h>
 
-#include <fctsys.h>
-#include <project.h>
 #include <3d_viewer/eda_3d_viewer.h>      // for KISYS3DMOD
 #include <panel_fp_lib_table.h>
-#include <lib_id.h>
 #include <fp_lib_table.h>
 #include <lib_table_lexer.h>
 #include <invoke_pcb_dialog.h>
 #include <bitmaps.h>
 #include <grid_tricks.h>
-#include <widgets/wx_grid.h>
 #include <confirm.h>
 #include <lib_table_grid.h>
 #include <wildcards_and_files_ext.h>
-#include <pgm_base.h>
-#include <pcb_edit_frame.h>
 #include <env_paths.h>
 #include <dialogs/dialog_file_dir_picker.h>
-#include <dialog_edit_library_tables.h>
 #include <footprint_viewer_frame.h>
 #include <footprint_edit_frame.h>
 #include <kiway.h>

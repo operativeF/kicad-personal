@@ -25,17 +25,11 @@
 
 #include <fctsys.h>
 #include <kiface_i.h>
-#include <common.h>
-#include <pcb_base_frame.h>
 #include <wildcards_and_files_ext.h>
-#include <reporter.h>
 #include <confirm.h>
 
-#include <pcbnew.h>
 #include <pcbplot.h>
-#include <class_board.h>
 #include <dialog_export_svg_base.h>
-#include <invoke_pcb_dialog.h>
 #include <wx_html_report_panel.h>
 #include <bitmaps.h>
 #include <widgets/unit_binder.h>

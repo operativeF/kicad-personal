@@ -26,21 +26,10 @@
 
 #include <fctsys.h>
 #include <confirm.h>
-#include <trigo.h>
-#include <kicad_string.h>
 #include <gestfich.h>
-#include <pcb_edit_frame.h>
 #include <dialog_helpers.h>
-#include <richio.h>
 #include <filter_reader.h>
-#include <base_units.h>
-#include <validators.h>
 #include <dialog_text_entry.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <class_edge_mod.h>
-#include <microwave/microwave_inductor.h>
-#include <pcbnew.h>
 
 static std::vector< wxRealPoint > PolyEdges;
 static double  ShapeScaleX, ShapeScaleY;

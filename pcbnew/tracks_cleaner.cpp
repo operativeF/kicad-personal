@@ -24,18 +24,9 @@
  */
 
 #include <fctsys.h>
-#include <pcb_edit_frame.h>
-#include <pcbnew.h>
-#include <common_enum.h>
-#include <class_board.h>
-#include <class_track.h>
 #include <dialog_cleanup_tracks_and_vias.h>
-#include <reporter.h>
 #include <board_commit.h>
 #include <connectivity/connectivity_algo.h>
-#include <connectivity/connectivity_data.h>
-#include <tool/tool_manager.h>
-#include <tools/pcb_actions.h>
 #include <tools/global_edit_tool.h>
 #include <tracks_cleaner.h>
 

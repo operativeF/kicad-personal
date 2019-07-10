@@ -29,20 +29,11 @@
 
 #include <fctsys.h>
 
-#include <vector>
 
-#include <plotter.h>
-#include <pcb_edit_frame.h>
 #include <build_version.h>
 
-#include <class_board.h>
-#include <class_zone.h>
-#include <class_module.h>
 
-#include <pcbplot.h>
-#include <pcbnew.h>
 #include <gerber_jobfile_writer.h>
-#include <wildcards_and_files_ext.h>
 #include <reporter.h>
 #include <gbr_metadata.h>
 #include <board_stackup_manager/stackup_predefined_prms.h>

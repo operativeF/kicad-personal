@@ -20,22 +20,8 @@
  */
 
 #include <footprint_preview_panel.h>
-#include <pcb_draw_panel_gal.h>
 #include <kiface_i.h>
-#include <kiway.h>
-#include <io_mgr.h>
 #include <fp_lib_table.h>
-#include <view/view.h>
-#include <math/box2.h>
-#include <class_module.h>
-#include <class_board.h>
-#include <mutex>
-#include <eda_draw_frame.h>
-#include <utility>
-#include <make_unique.h>
-#include <colors_design_settings.h>
-#include <pcb_edit_frame.h>
-#include <wx/stattext.h>
 #include <pgm_base.h>
 #include <painter.h>
 #include <pcbnew_id.h>

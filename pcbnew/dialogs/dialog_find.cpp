@@ -24,17 +24,8 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
 #include <confirm.h>
-#include <kicad_string.h>
-#include <pcb_edit_frame.h>
 #include <tool/tool_manager.h>
-#include <tools/pcb_actions.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <class_marker_pcb.h>
-#include <pcbnew.h>
-#include <pcbnew_id.h>
 #include <dialog_find.h>
 
 

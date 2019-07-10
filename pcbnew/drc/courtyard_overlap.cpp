@@ -30,10 +30,7 @@
 
 #include <drc/courtyard_overlap.h>
 
-#include <class_module.h>
-#include <tools/drc.h>
 
-#include <drc/drc_marker_factory.h>
 
 
 /**

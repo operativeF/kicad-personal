@@ -26,32 +26,10 @@
 
 #include <limits>
 
-#include <functional>
 using namespace std::placeholders;
 
-#include <class_board.h>
-#include <class_board_item.h>
-#include <class_track.h>
-#include <class_module.h>
-#include <class_pcb_text.h>
-#include <class_drawsegment.h>
-#include <class_zone.h>
-#include <pcb_edit_frame.h>
-#include <class_draw_panel_gal.h>
-#include <view/view_controls.h>
-#include <view/view_group.h>
-#include <preview_items/selection_area.h>
-#include <painter.h>
-#include <bitmaps.h>
-#include <tool/tool_event.h>
-#include <tool/tool_manager.h>
 #include <tools/pcbnew_selection.h>
-#include <connectivity/connectivity_data.h>
-#include "selection_tool.h"
-#include "pcb_bright_box.h"
-#include "pcb_actions.h"
 
-#include "kicad_plugin.h"
 
 
 

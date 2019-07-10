@@ -25,21 +25,6 @@
 
 #include "drc_marker_factory.h"
 
-#include <board_design_settings.h>
-#include <class_board_item.h>
-#include <class_edge_mod.h>
-#include <class_marker_pcb.h>
-#include <class_pad.h>
-#include <class_pcb_text.h>
-#include <class_text_mod.h>
-#include <class_track.h>
-#include <class_zone.h>
-#include <common.h>
-#include <tools/drc.h>
-#include <fctsys.h>
-#include <geometry/geometry_utils.h>
-#include <pcb_edit_frame.h>
-#include <pcbnew.h>
 
 
 const int EPSILON = Mils2iu( 5 );

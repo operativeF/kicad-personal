@@ -19,11 +19,9 @@
 #include <pcb_edit_frame.h>
 #include <panel_setup_layers.h>
 #include <panel_setup_text_and_graphics.h>
-#include <panel_setup_feature_constraints.h>
 #include <panel_setup_netclasses.h>
 #include <panel_setup_tracks_and_vias.h>
 #include <panel_setup_mask_and_paste.h>
-#include <kiface_i.h>
 #include "dialog_import_settings.h"
 
 #include "dialog_board_setup.h"

@@ -30,28 +30,11 @@
 #include <functional>
 using namespace std::placeholders;
 
-#include <fctsys.h>
-#include <pgm_base.h>
-#include <class_draw_panel_gal.h>
-#include <confirm.h>
-#include <dialog_helpers.h>
-#include <pcb_edit_frame.h>
 #include <pcb_netlist.h>
-#include <netlist_reader.h>
 #include <reporter.h>
-#include <wildcards_and_files_ext.h>
-#include <lib_id.h>
 #include <fp_lib_table.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <ratsnest_data.h>
-#include <pcbnew.h>
-#include <io_mgr.h>
 #include <board_netlist_updater.h>
 #include <tool/tool_manager.h>
-#include <tools/pcb_actions.h>
-#include <tools/selection_tool.h>
-#include <view/view.h>
 
 
 bool PCB_EDIT_FRAME::ReadNetlistFromFile( const wxString &aFilename,

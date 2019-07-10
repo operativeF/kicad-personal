@@ -25,15 +25,9 @@
 using namespace std::placeholders;
 
 #include "position_relative_tool.h"
-#include "pcb_actions.h"
-#include "selection_tool.h"
 #include "edit_tool.h"
 #include "pcbnew_picker_tool.h"
-#include <dialogs/dialog_position_relative.h>
-#include <status_popup.h>
 #include <board_commit.h>
-#include <bitmaps.h>
-#include <confirm.h>
 
 
 POSITION_RELATIVE_TOOL::POSITION_RELATIVE_TOOL() :

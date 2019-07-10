@@ -24,26 +24,14 @@
  */
 
 #include <cstdint>
-#include <thread>
-#include <mutex>
-#include <algorithm>
 #include <future>
 
-#include <class_board.h>
-#include <class_zone.h>
-#include <class_module.h>
-#include <class_edge_mod.h>
-#include <class_drawsegment.h>
-#include <class_track.h>
-#include <class_pcb_text.h>
-#include <class_pcb_target.h>
 
 #include <connectivity/connectivity_data.h>
 #include <board_commit.h>
 
 #include <widgets/progress_reporter.h>
 
-#include <geometry/shape_poly_set.h>
 #include <geometry/shape_file_io.h>
 #include <geometry/convex_hull.h>
 #include <geometry/geometry_utils.h>

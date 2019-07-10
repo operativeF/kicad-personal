@@ -25,21 +25,11 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
-#include <gr_basic.h>
-#include <gal/graphics_abstraction_layer.h>
 #include <view/view_controls.h>
-#include <trigo.h>
 #include <confirm.h>
-#include <pcbnew.h>
-#include <pcb_base_frame.h>
-#include <base_units.h>
 #include <board_commit.h>
 #include <bitmaps.h>
-#include <class_board.h>
-#include <class_module.h>
 #include <pcb_painter.h>
-#include <widgets/net_selector.h>
 #include <dialog_pad_properties.h>
 #include <dialog_pad_properties.h>
 #include <html_messagebox.h>

@@ -22,13 +22,7 @@
  */
 
 #include <dialog_set_grid_base.h>
-#include <base_units.h>
-#include <common.h>
 #include <widgets/unit_binder.h>
-#include <pcb_base_edit_frame.h>
-#include <class_draw_panel_gal.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <tools/pcb_actions.h>
 #include <tool/tool_manager.h>
 #include <pcbnew_id.h>
 #include <tool/common_tools.h>

@@ -25,13 +25,10 @@
 
 #include <base_units.h>
 #include <bitmaps.h>
-#include <board_design_settings.h>
 #include <confirm.h>
 #include <grid_tricks.h>
 #include <panel_setup_netclasses.h>
-#include <pcb_edit_frame.h>
 #include <tool/tool_manager.h>
-#include <widgets/wx_grid.h>
 
 // Columns of netclasses grid
 enum {

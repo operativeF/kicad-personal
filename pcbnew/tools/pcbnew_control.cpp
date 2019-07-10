@@ -24,35 +24,15 @@
  */
 
 #include "edit_tool.h"
-#include "pcb_actions.h"
 #include "pcbnew_control.h"
 #include "pcbnew_picker_tool.h"
-#include "selection_tool.h"
-#include <3d_viewer/eda_3d_viewer.h>
-#include <bitmaps.h>
 #include <board_commit.h>
-#include <class_board.h>
-#include <class_board_item.h>
-#include <class_module.h>
-#include <class_track.h>
-#include <class_zone.h>
 #include <confirm.h>
-#include <connectivity/connectivity_data.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <io_mgr.h>
 #include <kicad_clipboard.h>
-#include <kicad_plugin.h>
-#include <kiway.h>
 #include <origin_viewitem.h>
-#include <pcb_edit_frame.h>
 #include <pcb_painter.h>
-#include <pcb_screen.h>
-#include <pcbnew_id.h>
 #include <properties.h>
 #include <tool/tool_manager.h>
-#include <view/view_controls.h>
-#include <functional>
-#include <footprint_viewer_frame.h>
 
 using namespace std::placeholders;
 

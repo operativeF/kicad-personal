@@ -26,14 +26,10 @@
 
 #include "dialog_gencad_export_options.h"
 
-#include <pcb_edit_frame.h>
-#include <class_board.h>
 #include <project.h>
 #include <confirm.h>
 #include <wildcards_and_files_ext.h>
 
-#include <wx/statline.h>
-#include <wx/button.h>
 
 DIALOG_GENCAD_EXPORT_OPTIONS::DIALOG_GENCAD_EXPORT_OPTIONS( PCB_EDIT_FRAME* aParent )
     : DIALOG_SHIM( aParent, wxID_ANY, _( "Export to GenCAD settings" ), wxDefaultPosition,

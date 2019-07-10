@@ -21,8 +21,6 @@
 #include "dialog_global_fp_lib_table_config.h"
 
 #include <confirm.h>
-#include <kiface_i.h>
-#include <macros.h>
 
 #include "fp_lib_table.h"
 

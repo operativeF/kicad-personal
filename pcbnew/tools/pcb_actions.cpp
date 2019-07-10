@@ -26,8 +26,6 @@
 #include "pcb_actions.h"
 #include <pcbnew_id.h>
 #include <bitmaps.h>
-#include <layers_id_colors_and_visibility.h>
-#include <tool/tool_manager.h>
 #include <tools/pcb_actions.h>
 #include <router/pns_router.h>
 

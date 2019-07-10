@@ -28,10 +28,8 @@
 
 #include <wx/grid.h>
 
-#include <pcbnew.h>
 #include <kiface_i.h>
 #include <dialog_footprint_wizard_list.h>
-#include <footprint_wizard_frame.h>
 
 #if defined(KICAD_SCRIPTING) || defined(KICAD_SCRIPTING_WXPYTHON)
 #include <python_scripting.h>

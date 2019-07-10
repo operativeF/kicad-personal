@@ -30,17 +30,7 @@
 
 
 #include "dxf_import_plugin.h"
-#include <wx/arrstr.h>
-#include <wx/regex.h>
 
-#include <trigo.h>
-#include <macros.h>
-#include <class_board.h>
-#include <class_drawsegment.h>
-#include <class_edge_mod.h>
-#include <class_pcb_text.h>
-#include <class_text_mod.h>
-#include "common.h"
 
 
 /*

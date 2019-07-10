@@ -27,24 +27,14 @@
 
 
 #include <list>
-#include <pcb_edit_frame.h>
-#include <macros.h>
-#include <pcbnew.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <class_edge_mod.h>
 #include <idf_parser.h>
-#include <3d_cache/3d_info.h>
 #include <build_version.h>
 #include "project.h"
-#include "kiway.h"
 #include "3d_cache/3d_cache.h"
-#include "filename_resolver.h"
 
 #ifndef PCBNEW
 #define PCBNEW                  // needed to define the right value of Millimeter2iu(x)
 #endif
-#include <convert_to_biu.h>     // to define Millimeter2iu(x)
 
 // assumed default graphical line thickness: == 0.1mm
 #define LINE_WIDTH (Millimeter2iu( 0.1 ))

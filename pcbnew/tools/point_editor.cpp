@@ -26,29 +26,12 @@
 using namespace std::placeholders;
 
 #include <tool/tool_manager.h>
-#include <view/view_controls.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <geometry/seg.h>
-#include <confirm.h>
 
-#include "pcb_actions.h"
-#include "selection_tool.h"
 #include "point_editor.h"
 #include "grid_helper.h"
 #include <board_commit.h>
-#include <bitmaps.h>
-#include <status_popup.h>
 
-#include <pcb_edit_frame.h>
-#include <class_edge_mod.h>
-#include <class_dimension.h>
-#include <class_zone.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <connectivity/connectivity_data.h>
-#include <widgets/progress_reporter.h>
 
-#include "zone_filler.h"
 
 // Few constants to avoid using bare numbers for point indices
 enum SEG_POINTS

@@ -22,18 +22,10 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
 #include <project.h>
 #include <confirm.h>
-#include <gr_basic.h>
-#include <base_struct.h>
-#include <title_block.h>
-#include <eda_draw_frame.h>
 #include <ws_data_model.h>
-#include <base_screen.h>
 #include <wildcards_and_files_ext.h>
-#include <tool/tool_manager.h>
-#include <wx/valgen.h>
 #include <wx/tokenzr.h>
 
 #ifdef EESCHEMA
@@ -43,7 +35,6 @@
 
 #include <ws_painter.h>
 #include <dialog_page_settings.h>
-#include <tool/actions.h>
 
 #define MAX_PAGE_EXAMPLE_SIZE 200
 

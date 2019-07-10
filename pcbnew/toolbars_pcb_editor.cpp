@@ -26,21 +26,11 @@
 
 #include <fctsys.h>
 #include <kiface_i.h>
-#include <help_common_strings.h>
-#include <dialog_helpers.h>
-#include <pcb_edit_frame.h>
-#include <confirm.h>
 #include <bitmaps.h>
-#include <class_board.h>
 #include <tool/action_toolbar.h>
-#include <tool/actions.h>
-#include <pcbnew.h>
 #include <pcb_layer_box_selector.h>
-#include <view/view.h>
 #include <wx/wupdlock.h>
-#include <memory>
 #include <pgm_base.h>
-#include <tools/pcb_actions.h>
 #include <pcbnew_id.h>
 
 extern bool IsWxPythonLoaded();

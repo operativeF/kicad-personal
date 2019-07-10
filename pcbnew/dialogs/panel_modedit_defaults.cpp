@@ -22,11 +22,8 @@
  */
 
 #include <fctsys.h>
-#include <pcbnew.h>
-#include <board_design_settings.h>
 #include <widgets/paged_dialog.h>
 #include <footprint_edit_frame.h>
-#include <widgets/wx_grid.h>
 #include <grid_tricks.h>
 
 #include <panel_modedit_defaults.h>

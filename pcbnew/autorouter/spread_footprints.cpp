@@ -35,13 +35,7 @@
  */
 
 #include <algorithm>
-#include <fctsys.h>
-#include <convert_to_biu.h>
 #include <confirm.h>
-#include <pcbnew.h>
-#include <pcb_edit_frame.h>
-#include <class_board.h>
-#include <class_module.h>
 #include <rect_placement/rect_placement.h>
 
 struct TSubRect : public CRectPlacement::TRect

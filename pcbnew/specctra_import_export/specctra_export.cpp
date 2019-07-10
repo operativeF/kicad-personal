@@ -33,32 +33,15 @@
 
 #include <pcb_edit_frame.h>
 #include <confirm.h>            // DisplayError()
-#include <gestfich.h>           // EDA_FileSelector()
-#include <trigo.h>              // RotatePoint()
-#include <macros.h>
 
-#include <set>                  // std::set
-#include <map>                  // std::map
 
-#include <boost/utility.hpp>    // boost::addressof()
 
-#include <class_board.h>
-#include <class_module.h>
-#include <class_edge_mod.h>
-#include <class_track.h>
-#include <class_zone.h>
-#include <class_drawsegment.h>
-#include <base_units.h>
-#include <wildcards_and_files_ext.h>
 
-#include <collectors.h>
 
-#include <geometry/shape_poly_set.h>
 #include <geometry/convex_hull.h>
 #include <convert_basic_shapes_to_polygon.h>
 #include <geometry/geometry_utils.h>
 
-#include "specctra.h"
 
 using namespace DSN;
 

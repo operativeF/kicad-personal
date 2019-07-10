@@ -23,13 +23,8 @@
  */
 
 #include "dialog_track_via_size.h"
-#include <base_units.h>
 #include <confirm.h>
-#include <widgets/text_ctrl_eval.h>
-#include <core/optional.h>
-#include <eda_draw_frame.h>
 
-#include "board_design_settings.h"
 
 const int minSize = (int)( 0.01 * IU_PER_MM );
 

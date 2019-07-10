@@ -27,9 +27,7 @@
  */
 
 #include <fctsys.h>
-#include <kicad_string.h>
 #include <build_version.h>
-#include <macros.h>
 #include <export_footprints_placefile.h>
 
 

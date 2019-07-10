@@ -29,13 +29,9 @@
 #include <wx/choicdlg.h>
 #include <wx/stdpaths.h>
 
-#include "pcb_edit_frame.h"
 #include "kiface_i.h"
 #include "confirm.h"
-#include "reporter.h"
 
-#include "pcbnew.h"
-#include "class_board.h"
 #include "dialog_export_step_base.h"
 #include <widgets/text_ctrl_eval.h>
 #include <wx_html_report_panel.h>

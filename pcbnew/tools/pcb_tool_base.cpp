@@ -23,14 +23,8 @@
 
 #include "pcb_tool_base.h"
 
-#include <view/view_controls.h>
-#include <view/view.h>
 #include <tool/tool_manager.h>
 #include <board_commit.h>
-#include <class_module.h>
-#include <pcb_draw_panel_gal.h>
-#include "selection_tool.h"
-#include "pcb_actions.h"
 #include "tool_event_utils.h"
 
 void PCB_TOOL_BASE::doInteractiveItemPlacement( INTERACTIVE_PLACER_BASE* aPlacer,

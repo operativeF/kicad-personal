@@ -23,14 +23,8 @@
  */
 
 #include <fctsys.h>
-#include <kicad_string.h>
 #include <board_commit.h>
-#include <pcb_edit_frame.h>
 #include <pcb_layer_box_selector.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <class_edge_mod.h>
-#include <class_pcb_text.h>
 #include <widgets/unit_binder.h>
 #include <tools/global_edit_tool.h>
 #include <dialog_global_edit_text_and_graphics_base.h>

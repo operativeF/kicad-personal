@@ -22,26 +22,9 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
-#include <plotter.h>
-#include <base_struct.h>
-#include <gr_text.h>
-#include <trigo.h>
-#include <macros.h>
-#include <pcb_base_frame.h>
 
-#include <class_board.h>
-#include <class_module.h>
-#include <class_track.h>
-#include <class_edge_mod.h>
-#include <class_pcb_text.h>
-#include <class_zone.h>
-#include <class_drawsegment.h>
-#include <class_pcb_target.h>
-#include <class_dimension.h>
 #include <convert_basic_shapes_to_polygon.h>
 
-#include <pcbnew.h>
 #include <pcbplot.h>
 #include <gbr_metadata.h>
 

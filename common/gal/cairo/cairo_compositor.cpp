@@ -29,7 +29,6 @@
  */
 
 #include <gal/cairo/cairo_compositor.h>
-#include <wx/log.h>
 
 using namespace KIGFX;
 

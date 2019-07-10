@@ -27,15 +27,12 @@
  */
 
 #include <wx/image.h>
-#include <wx/log.h>
 
 #include <gal/cairo/cairo_gal.h>
 #include <gal/cairo/cairo_compositor.h>
-#include <gal/definitions.h>
 #include <geometry/shape_poly_set.h>
 #include <bitmap_base.h>
 
-#include <limits>
 
 #include <pixman.h>
 

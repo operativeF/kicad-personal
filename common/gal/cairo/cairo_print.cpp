@@ -19,11 +19,7 @@
 
 #include <gal/cairo/cairo_print.h>
 
-#include <stdexcept>
-#include <wx/dcclient.h>
 #include <wx/dcgraph.h>
-#include <wx/dcmemory.h>
-#include <wx/dcprint.h>
 
 #ifdef NOMINMAX         /* workaround for gdiplus.h */
 #include <algorithm>

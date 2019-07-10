@@ -27,22 +27,17 @@
  */
 
 #include <gal/opengl/opengl_gal.h>
-#include <gal/opengl/utils.h>
-#include <gal/definitions.h>
 #include <gl_context_mgr.h>
 #include <geometry/shape_poly_set.h>
 #include <text_utils.h>
 #include <bitmap_base.h>
 
-#include <macros.h>
 
 #ifdef __WXDEBUG__
 #include <profile.h>
 #include <wx/log.h>
 #endif /* __WXDEBUG__ */
 
-#include <limits>
-#include <functional>
 using namespace std::placeholders;
 using namespace KIGFX;
 

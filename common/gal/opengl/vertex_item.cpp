@@ -28,8 +28,6 @@
  */
 
 #include <gal/opengl/vertex_item.h>
-#include <gal/opengl/vertex_manager.h>
-#include <cstring>
 
 using namespace KIGFX;
 

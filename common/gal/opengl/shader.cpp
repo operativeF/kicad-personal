@@ -28,13 +28,9 @@
 
 #include <iostream>
 #include <fstream>
-#include <stdexcept>
 
-#include <cstring>
-#include <cassert>
 
 #include <gal/opengl/shader.h>
-#include <vector>
 
 using namespace KIGFX;
 

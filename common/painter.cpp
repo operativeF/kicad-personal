@@ -25,7 +25,6 @@
  */
 
 #include <painter.h>
-#include <gal/graphics_abstraction_layer.h>
 
 using namespace KIGFX;
 

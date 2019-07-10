@@ -23,8 +23,6 @@
 
 #include <gal/gal_display_options.h>
 
-#include <wx/config.h>
-#include <wx/log.h>
 
 #include <config_map.h>
 #include <dpi_scaling.h>

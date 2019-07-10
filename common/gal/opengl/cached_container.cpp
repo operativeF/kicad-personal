@@ -30,12 +30,7 @@
  */
 
 #include <gal/opengl/cached_container.h>
-#include <gal/opengl/vertex_manager.h>
-#include <gal/opengl/vertex_item.h>
-#include <gal/opengl/utils.h>
 
-#include <list>
-#include <cassert>
 
 #ifdef __WXDEBUG__
 #include <wx/log.h>

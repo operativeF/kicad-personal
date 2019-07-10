@@ -42,10 +42,6 @@
 #include <ttl/halfedge/hetriang.h>
 #include <ttl/halfedge/hetraits.h>
 #include <ttl/ttl.h>
-#include <algorithm>
-#include <fstream>
-#include <limits>
-#include <memory>
 
 using namespace hed;
 

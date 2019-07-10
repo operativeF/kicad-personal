@@ -23,12 +23,7 @@
  */
 
 #include <gal/opengl/cached_container_gpu.h>
-#include <gal/opengl/vertex_manager.h>
-#include <gal/opengl/vertex_item.h>
-#include <gal/opengl/shader.h>
-#include <gal/opengl/utils.h>
 
-#include <list>
 
 #ifdef __WXDEBUG__
 #include <wx/log.h>

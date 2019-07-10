@@ -24,8 +24,6 @@
 
 #include <confirm.h>    // DisplayError
 
-#include <GL/glew.h>
-#include <stdexcept>
 
 int checkGlError( const std::string& aInfo, bool aThrow )
 {

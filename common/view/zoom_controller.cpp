@@ -28,12 +28,9 @@
 
 #include <view/zoom_controller.h>
 
-#include <make_unique.h>
 #include <trace_helpers.h>
 
-#include <wx/log.h>
 
-#include <algorithm>
 
 using namespace KIGFX;
 

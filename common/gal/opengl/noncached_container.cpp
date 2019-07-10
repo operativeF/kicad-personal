@@ -29,8 +29,6 @@
  */
 
 #include <gal/opengl/noncached_container.h>
-#include <cstring>
-#include <cstdlib>
 
 using namespace KIGFX;
 

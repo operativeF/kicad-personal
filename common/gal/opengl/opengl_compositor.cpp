@@ -29,13 +29,8 @@
  */
 
 #include <gal/opengl/opengl_compositor.h>
-#include <gal/opengl/utils.h>
 
-#include <gal/color4d.h>
 
-#include <make_unique.h>
-#include <stdexcept>
-#include <cassert>
 
 using namespace KIGFX;
 

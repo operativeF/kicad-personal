@@ -24,7 +24,6 @@
  */
 
 #include <gl_context_mgr.h>
-#include <wx/debug.h>
 
 GL_CONTEXT_MANAGER& GL_CONTEXT_MANAGER::Get()
 {

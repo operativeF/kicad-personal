@@ -31,9 +31,7 @@
 #include <gal/opengl/cached_container_ram.h>
 #include <gal/opengl/cached_container_gpu.h>
 #include <gal/opengl/noncached_container.h>
-#include <gal/opengl/shader.h>
 
-#include <cstring>
 
 using namespace KIGFX;
 

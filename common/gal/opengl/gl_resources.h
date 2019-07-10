@@ -30,12 +30,14 @@ namespace KIGFX {
 
     namespace BUILTIN_FONT {
 
+        static constexpr int PIXEL_COUNT = 1024 * 1024 * 3;
+
         struct FONT_IMAGE_TYPE
         {
             unsigned int width, height;
             unsigned int char_border;
             unsigned int spacing;
-            unsigned char pixels[1024 * 1024 * 3];
+            unsigned char pixels[PIXEL_COUNT];
         };
 
         struct FONT_INFO_TYPE

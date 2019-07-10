@@ -27,11 +27,8 @@
 #include <wx/log.h>
 
 #include <gal/graphics_abstraction_layer.h>
-#include <gal/definitions.h>
 
-#include <cmath>
 
-#include <glm/glm.hpp>
 
 using namespace KIGFX;
 

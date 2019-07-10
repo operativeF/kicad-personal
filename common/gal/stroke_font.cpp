@@ -29,7 +29,6 @@
 #include <gal/stroke_font.h>
 #include <gal/graphics_abstraction_layer.h>
 #include <text_utils.h>
-#include <wx/string.h>
 
 
 using namespace KIGFX;

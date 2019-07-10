@@ -26,7 +26,6 @@
 
 #include <view/view.h>
 #include <view/view_controls.h>
-#include <gal/graphics_abstraction_layer.h>
 
 using namespace KIGFX;
 

@@ -30,8 +30,6 @@
 #include <view/view.h>
 #include <view/wx_view_controls.h>
 #include <view/zoom_controller.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <tool/tool_dispatcher.h>
 
 using namespace KIGFX;
 

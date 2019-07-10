@@ -25,20 +25,16 @@
  */
 
 #include <eda_draw_frame.h>
-#include <kiface_i.h>
 #include <confirm.h>
 
-#include <class_draw_panel_gal.h>
 #include <view/view.h>
 #include <view/wx_view_controls.h>
 #include <painter.h>
 #include <base_screen.h>
-#include <gal/graphics_abstraction_layer.h>
 #include <gal/opengl/opengl_gal.h>
 #include <gal/cairo/cairo_gal.h>
 
 #include <tool/tool_dispatcher.h>
-#include <tool/tool_manager.h>
 
 #ifdef __WXDEBUG__
 #include <profile.h>

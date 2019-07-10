@@ -26,12 +26,8 @@
 #include <gal/graphics_abstraction_layer.h>
 #include <painter.h>
 #include <view/view.h>
-#include <view/view_item.h>
 #include <view/view_overlay.h>
 
-#include <geometry/seg.h>
-#include <geometry/shape_poly_set.h>
-#include <layers_id_colors_and_visibility.h>
 
 
 

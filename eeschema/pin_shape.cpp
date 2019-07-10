@@ -28,7 +28,6 @@
 
 #include "pin_shape.h"
 
-#include <macros.h>
 
 wxString GetText( GRAPHIC_PINSHAPE shape )
 {

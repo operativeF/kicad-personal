@@ -23,12 +23,7 @@
  */
 
 #include <fctsys.h>
-#include <base_screen.h>
-#include <widgets/wx_grid.h>
-#include <template_fieldnames.h>
 #include <grid_tricks.h>
-#include <sch_edit_frame.h>
-#include <bitmaps.h>
 
 #include <panel_eeschema_template_fieldnames.h>
 

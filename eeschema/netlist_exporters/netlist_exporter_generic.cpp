@@ -26,13 +26,9 @@
 #include "netlist_exporter_generic.h"
 
 #include <build_version.h>
-#include <sch_base_frame.h>
-#include <class_library.h>
 #include <connection_graph.h>
 #include <refdes_utils.h>
 
-#include <class_library.h>
-#include <sch_base_frame.h>
 #include <symbol_lib_table.h>
 
 

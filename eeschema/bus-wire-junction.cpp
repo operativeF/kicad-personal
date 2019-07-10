@@ -23,20 +23,8 @@
  */
 
 #include <fctsys.h>
-#include <sch_edit_frame.h>
-#include <lib_draw_item.h>
-#include <general.h>
-#include <sch_bus_entry.h>
-#include <sch_junction.h>
-#include <sch_line.h>
-#include <sch_no_connect.h>
-#include <sch_component.h>
-#include <sch_sheet.h>
-#include <sch_view.h>
 #include <tools/ee_actions.h>
-#include <tools/ee_selection_tool.h>
 #include <tool/tool_manager.h>
-#include "eeschema_id.h"
 
 void SCH_EDIT_FRAME::GetSchematicConnections( std::vector< wxPoint >& aConnections )
 {

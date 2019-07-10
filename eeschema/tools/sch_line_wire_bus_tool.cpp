@@ -23,23 +23,8 @@
 
 #include <connection_graph.h>
 #include <sch_line_wire_bus_tool.h>
-#include <ee_selection_tool.h>
 #include <ee_actions.h>
-#include <sch_edit_frame.h>
-#include <sch_view.h>
-#include <class_draw_panel_gal.h>
-#include <id.h>
 #include <eeschema_id.h>
-#include <confirm.h>
-#include <view/view_group.h>
-#include <view/view_controls.h>
-#include <view/view.h>
-#include <tool/tool_manager.h>
-#include <sch_junction.h>
-#include <sch_line.h>
-#include <sch_bus_entry.h>
-#include <sch_text.h>
-#include <sch_sheet.h>
 #include <advanced_config.h>
 #include "ee_point_editor.h"
 

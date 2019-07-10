@@ -23,20 +23,8 @@
  */
 
 #include <fctsys.h>
-#include <pgm_base.h>
-#include <gr_basic.h>
-#include <sch_draw_panel.h>
-#include <confirm.h>
-#include <sch_screen.h>
-#include <sch_edit_frame.h>
-#include <base_units.h>
 
-#include <general.h>
-#include <eeschema_config.h>
-#include <sch_sheet.h>
-#include <sch_sheet_path.h>
 
-#include <invoke_sch_dialog.h>
 #include <dialog_print_using_printer_base.h>
 
 

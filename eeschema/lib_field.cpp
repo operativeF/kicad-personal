@@ -23,23 +23,8 @@
  */
 
 #include <eda_rect.h>
-#include <fctsys.h>
-#include <pgm_base.h>
-#include <gr_basic.h>
-#include <base_struct.h>
-#include <gr_text.h>
-#include <kicad_string.h>
-#include <sch_draw_panel.h>
 #include <plotter.h>
-#include <trigo.h>
-#include <base_units.h>
-#include <msgpanel.h>
-#include <bitmaps.h>
-#include <general.h>
-#include <class_libentry.h>
-#include <transform.h>
 #include <lib_field.h>
-#include <template_fieldnames.h>
 
 
 LIB_FIELD::LIB_FIELD(LIB_PART * aParent, int idfield ) :

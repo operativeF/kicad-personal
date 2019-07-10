@@ -20,9 +20,7 @@
  */
 
 #include <lib_pin.h>
-#include <sch_component.h>
 #include <sch_pin.h>
-#include <sch_sheet_path.h>
 
 
 SCH_PIN::SCH_PIN( LIB_PIN* aLibPin, SCH_COMPONENT* aParentComponent ) :

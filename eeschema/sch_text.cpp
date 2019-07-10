@@ -29,19 +29,9 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <macros.h>
-#include <trigo.h>
-#include <sch_draw_panel.h>
-#include <gr_text.h>
-#include <sch_edit_frame.h>
 #include <plotter.h>
-#include <msgpanel.h>
-#include <gal/stroke_font.h>
-#include <bitmaps.h>
 
 #include <sch_text.h>
-#include <netlist_object.h>
 #include <trace_helpers.h>
 
 

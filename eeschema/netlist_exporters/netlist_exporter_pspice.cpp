@@ -24,20 +24,12 @@
  */
 
 #include "netlist_exporter_pspice.h"
-#include <fctsys.h>
-#include <build_version.h>
 #include <confirm.h>
 
-#include <map>
-#include <search_stack.h>
 
-#include <sch_edit_frame.h>
-#include <netlist.h>
-#include <sch_reference_list.h>
 #include <env_paths.h>
 
 #include <wx/tokenzr.h>
-#include <wx/regex.h>
 
 
 wxString NETLIST_EXPORTER_PSPICE::GetSpiceDevice( const wxString& aComponent ) const

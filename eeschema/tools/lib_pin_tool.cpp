@@ -22,13 +22,8 @@
  */
 
 #include <tool/tool_manager.h>
-#include <tools/ee_selection_tool.h>
-#include <lib_edit_frame.h>
-#include <eeschema_id.h>
 #include <confirm.h>
 #include <ee_actions.h>
-#include <sch_view.h>
-#include <dialogs/dialog_display_info_HTML_base.h>
 #include <dialogs/dialog_lib_edit_pin.h>
 #include "lib_pin_tool.h"
 

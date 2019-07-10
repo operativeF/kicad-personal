@@ -22,16 +22,10 @@
  */
 
 #include <fctsys.h>
-#include <pgm_base.h>
 #include <kiface_i.h>
 #include <confirm.h>
-#include <gestfich.h>
-#include <sch_edit_frame.h>
-#include <sch_sheet.h>
-#include <lib_edit_frame.h>
 #include <eeschema_config.h>
 #include <ws_data_model.h>
-#include <class_library.h>
 #include <symbol_lib_table.h>
 #include <wildcards_and_files_ext.h>
 #include <widgets/paged_dialog.h>
@@ -43,10 +37,6 @@
 #include <widgets/widget_eeschema_color_config.h>
 #include <widgets/symbol_tree_pane.h>
 #include <dialogs/panel_libedit_settings.h>
-#include <sch_view.h>
-#include <sch_painter.h>
-#include "sch_junction.h"
-#include "eeschema_id.h"
 
 #define FR_HISTORY_LIST_CNT     10   ///< Maximum number of find and replace strings.
 

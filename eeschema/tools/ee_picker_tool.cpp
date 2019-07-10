@@ -23,8 +23,6 @@
 
 #include <ee_picker_tool.h>
 #include <ee_actions.h>
-#include <view/view_controls.h>
-#include <sch_base_frame.h>
 
 
 EE_PICKER_TOOL::EE_PICKER_TOOL()

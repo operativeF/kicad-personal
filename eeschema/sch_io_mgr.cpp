@@ -21,7 +21,6 @@
  */
 
 #include <wx/filename.h>
-#include <wx/uri.h>
 
 #include <sch_io_mgr.h>
 #include <sch_legacy_plugin.h>

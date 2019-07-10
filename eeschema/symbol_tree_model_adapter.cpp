@@ -22,9 +22,7 @@
 #include <wx/tokenzr.h>
 #include <wx/progdlg.h>
 
-#include <eda_pattern_match.h>
 #include <symbol_lib_table.h>
-#include <class_libentry.h>
 #include <generate_alias_info.h>
 
 #include <symbol_tree_model_adapter.h>

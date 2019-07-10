@@ -26,37 +26,24 @@
 #include <confirm.h>
 #include <eda_dockart.h>
 #include <executable_names.h>
-#include <fctsys.h>
 #include <gestfich.h>
-#include <gr_basic.h>
 #include <html_messagebox.h>
 #include <kiface_i.h>
-#include <kiway.h>
 #include <pgm_base.h>
 #include <profile.h>
 #include <advanced_config.h>
-#include <general.h>
 #include <eeschema_id.h>
-#include <class_library.h>
 #include <sch_edit_frame.h>
-#include <symbol_lib_table.h>
-#include <reporter.h>
-#include <lib_edit_frame.h>
 #include <viewlib_frame.h>
-#include <eeschema_config.h>
-#include <sch_sheet.h>
 #include <sim/sim_plot_frame.h>
 #include <invoke_sch_dialog.h>
-#include <dialogs/dialog_schematic_find.h>
 #include <dialog_symbol_remap.h>
-#include <tool/tool_manager.h>
 #include <tool/tool_dispatcher.h>
 #include <tool/action_toolbar.h>
 #include <tool/common_control.h>
 #include <tool/common_tools.h>
 #include <tool/zoom_tool.h>
 #include <tools/ee_actions.h>
-#include <tools/ee_selection_tool.h>
 #include <tools/ee_picker_tool.h>
 #include <tools/ee_point_editor.h>
 #include <tools/sch_drawing_tools.h>
@@ -67,9 +54,7 @@
 #include <tools/sch_editor_control.h>
 #include <wildcards_and_files_ext.h>
 #include <connection_graph.h>
-#include <sch_painter.h>
 
-#include <gal/graphics_abstraction_layer.h>
 
 SCH_SHEET_PATH* g_CurrentSheet = nullptr; // declared in general.h
 CONNECTION_GRAPH* g_ConnectionGraph = nullptr;

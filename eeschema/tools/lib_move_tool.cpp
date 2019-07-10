@@ -22,13 +22,7 @@
  */
 
 #include <tool/tool_manager.h>
-#include <tools/ee_selection_tool.h>
 #include <ee_actions.h>
-#include <view/view.h>
-#include <bitmaps.h>
-#include <base_struct.h>
-#include <lib_edit_frame.h>
-#include <eeschema_id.h>
 #include "lib_move_tool.h"
 #include "lib_pin_tool.h"
 

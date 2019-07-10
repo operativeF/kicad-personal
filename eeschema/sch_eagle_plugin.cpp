@@ -23,36 +23,10 @@
 #include <properties.h>
 #include <kiway.h>
 
-#include <wx/filename.h>
 #include <wx/tokenzr.h>
-#include <memory>
-#include <algorithm>
 
-#include <sch_junction.h>
-#include <sch_sheet.h>
-#include <sch_edit_frame.h>
-#include <ws_draw_item.h>
-#include <template_fieldnames.h>
 #include <wildcards_and_files_ext.h>
-#include <sch_screen.h>
-#include <class_library.h>
-#include <class_libentry.h>
-#include <lib_draw_item.h>
-#include <lib_id.h>
-#include <sch_component.h>
-#include <sch_connection.h>
-#include <sch_sheet_path.h>
-#include <lib_arc.h>
-#include <lib_circle.h>
-#include <lib_rectangle.h>
-#include <lib_polyline.h>
-#include <lib_pin.h>
-#include <lib_text.h>
-#include <sch_text.h>
 #include <gr_text.h>
-#include <sch_marker.h>
-#include <sch_bus_entry.h>
-#include <eagle_parser.h>
 #include <symbol_lib_table.h>
 #include <sch_legacy_plugin.h>
 #include <sch_eagle_plugin.h>

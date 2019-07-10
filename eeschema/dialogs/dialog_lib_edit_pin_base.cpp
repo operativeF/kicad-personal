@@ -7,7 +7,6 @@
 
 #include "pin_shape_combobox.h"
 #include "pin_type_combobox.h"
-#include "wx/bmpcbox.h"
 
 #include "dialog_lib_edit_pin_base.h"
 

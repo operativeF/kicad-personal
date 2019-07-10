@@ -19,9 +19,6 @@
  */
 
 #include <generate_alias_info.h>
-#include <kicad_string.h>
-#include <template_fieldnames.h>
-#include <class_libentry.h>
 #include <symbol_lib_table.h>
 
 

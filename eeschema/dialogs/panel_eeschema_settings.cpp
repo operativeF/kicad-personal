@@ -23,8 +23,6 @@
  */
 
 #include <fctsys.h>
-#include <base_screen.h>
-#include <sch_edit_frame.h>
 
 #include "panel_eeschema_settings.h"
 

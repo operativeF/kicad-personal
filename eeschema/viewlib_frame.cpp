@@ -24,25 +24,11 @@
  */
 
 #include <fctsys.h>
-#include <kiface_i.h>
-#include <pgm_base.h>
-#include <sch_draw_panel.h>
-#include <sch_view.h>
-#include <msgpanel.h>
-#include <bitmaps.h>
 #include <eda_dockart.h>
-#include <sch_edit_frame.h>
 #include <eeschema_id.h>
-#include <general.h>
 #include <viewlib_frame.h>
 #include <symbol_lib_table.h>
-#include <dialog_helpers.h>
-#include <class_libentry.h>
-#include <class_library.h>
-#include <view/view_controls.h>
-#include <sch_painter.h>
 #include <confirm.h>
-#include <tool/tool_manager.h>
 #include <tool/action_toolbar.h>
 #include <tool/tool_dispatcher.h>
 #include <tools/ee_actions.h>

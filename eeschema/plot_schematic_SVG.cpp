@@ -28,14 +28,6 @@
  */
 
 #include <fctsys.h>
-#include <pgm_base.h>
-#include <sch_draw_panel.h>
-#include <sch_edit_frame.h>
-#include <base_units.h>
-#include <lib_edit_frame.h>
-#include <sch_sheet_path.h>
-#include <project.h>
-#include <reporter.h>
 
 #include <dialog_plot_schematic.h>
 #include <wx_html_report_panel.h>

@@ -25,26 +25,13 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
 #include <confirm.h>
-#include <gestfich.h>
-#include <sch_edit_frame.h>
-#include <pgm_base.h>
 #include <kiface_i.h>
-#include <richio.h>
 #include <trace_helpers.h>
 #include <tool/tool_manager.h>
 #include <eeschema_id.h>
-#include <class_library.h>
-#include <lib_edit_frame.h>
-#include <sch_sheet.h>
-#include <sch_sheet_path.h>
-#include <sch_component.h>
 #include <wildcards_and_files_ext.h>
-#include <project_rescue.h>
 #include <eeschema_config.h>
-#include <sch_legacy_plugin.h>
-#include <sch_eagle_plugin.h>
 #include <symbol_lib_table.h>
 #include <dialog_symbol_remap.h>
 #include <dialog_migrate_buses.h>

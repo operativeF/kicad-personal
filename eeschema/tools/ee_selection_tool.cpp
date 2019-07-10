@@ -23,28 +23,11 @@
 
 
 #include <ee_actions.h>
-#include <core/typeinfo.h>
-#include <sch_item.h>
 #include <ee_selection_tool.h>
-#include <sch_base_frame.h>
-#include <sch_edit_frame.h>
-#include <lib_edit_frame.h>
 #include <viewlib_frame.h>
-#include <sch_component.h>
-#include <sch_sheet.h>
-#include <sch_field.h>
-#include <sch_line.h>
-#include <view/view.h>
-#include <view/view_controls.h>
-#include <view/view_group.h>
 #include <preview_items/selection_area.h>
-#include <tool/tool_event.h>
-#include <tool/tool_manager.h>
 #include <tools/sch_line_wire_bus_tool.h>
-#include <ee_collectors.h>
-#include <painter.h>
 #include <eeschema_id.h>
-#include <menus_helpers.h>
 
 
 SELECTION_CONDITION EE_CONDITIONS::Empty = [] (const SELECTION& aSelection )

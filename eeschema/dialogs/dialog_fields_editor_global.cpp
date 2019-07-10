@@ -24,20 +24,9 @@
 
 
 #include <wx/msgdlg.h>
-#include <wx/grid.h>
-#include <widgets/wx_grid.h>
-#include <base_units.h>
 #include <confirm.h>
-#include <bitmaps.h>
 #include <grid_tricks.h>
-#include <kicad_string.h>
 #include <refdes_utils.h>
-#include <build_version.h>
-#include <general.h>
-#include <sch_view.h>
-#include <class_library.h>
-#include <sch_edit_frame.h>
-#include <sch_reference_list.h>
 #include <kiface_i.h>
 #include <eda_doc.h>
 #include <widgets/grid_text_button_helpers.h>

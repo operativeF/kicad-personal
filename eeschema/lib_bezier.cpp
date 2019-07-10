@@ -22,18 +22,10 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <macros.h>
-#include <sch_draw_panel.h>
 #include <plotter.h>
-#include <trigo.h>
 #include <bezier_curves.h>
-#include <base_units.h>
-#include <msgpanel.h>
 
-#include <general.h>
 #include <lib_bezier.h>
-#include <transform.h>
 
 
 LIB_BEZIER::LIB_BEZIER( LIB_PART* aParent ) :

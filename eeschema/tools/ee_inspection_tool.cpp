@@ -22,27 +22,14 @@
  */
 
 #include <view/view_controls.h>
-#include <sch_component.h>
-#include <sch_marker.h>
 #include <id.h>
 #include <kiway.h>
 #include <confirm.h>
-#include <tool/conditional_menu.h>
-#include <tool/selection_conditions.h>
-#include <tool/tool_manager.h>
 #include <tools/ee_actions.h>
 #include <tools/ee_inspection_tool.h>
-#include <tools/ee_selection_tool.h>
-#include <tools/ee_selection.h>
-#include <search_stack.h>
-#include <sim/sim_plot_frame.h>
-#include <sch_view.h>
-#include <sch_edit_frame.h>
-#include <lib_edit_frame.h>
 #include <viewlib_frame.h>
 #include <eda_doc.h>
 #include <invoke_sch_dialog.h>
-#include <project.h>
 #include <dialogs/dialog_display_info_HTML_base.h>
 
 

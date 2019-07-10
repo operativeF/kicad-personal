@@ -23,18 +23,7 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <sch_draw_panel.h>
-#include <gr_text.h>
-#include <plotter.h>
-#include <trigo.h>
-#include <richio.h>
-#include <sch_edit_frame.h>
-#include <bitmaps.h>
 
-#include <general.h>
-#include <sch_sheet.h>
-#include <kicad_string.h>
 #include <trace_helpers.h>
 
 

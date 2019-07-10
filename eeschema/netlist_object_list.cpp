@@ -28,17 +28,6 @@
  */
 
 #include <netlist.h>
-#include <netlist_object.h>
-#include <class_library.h>
-#include <lib_pin.h>
-#include <sch_junction.h>
-#include <sch_component.h>
-#include <sch_line.h>
-#include <sch_no_connect.h>
-#include <sch_text.h>
-#include <sch_sheet.h>
-#include <sch_screen.h>
-#include <algorithm>
 
 #define IS_WIRE false
 #define IS_BUS true

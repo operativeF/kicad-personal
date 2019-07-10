@@ -30,40 +30,14 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <common.h>
-#include <kicad_string.h>
 #include <eeschema_id.h>
-#include <pgm_base.h>
-#include <kiway.h>
-#include <sch_draw_panel.h>
-#include <sch_item.h>
-#include <gr_text.h>
-#include <sch_edit_frame.h>
 #include <plotter.h>
 
-#include <netlist.h>
-#include <netlist_object.h>
-#include <class_library.h>
-#include <sch_junction.h>
-#include <sch_bus_entry.h>
-#include <sch_line.h>
-#include <sch_marker.h>
-#include <sch_no_connect.h>
-#include <sch_sheet.h>
-#include <sch_component.h>
-#include <sch_text.h>
-#include <lib_pin.h>
 #include <symbol_lib_table.h>
-#include <tool/common_tools.h>
 
-#include <thread>
-#include <algorithm>
 #include <future>
-#include <array>
 
 // TODO(JE) Debugging only
-#include <profile.h>
 
 #define EESCHEMA_FILE_STAMP   "EESchema"
 

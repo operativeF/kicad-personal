@@ -23,14 +23,8 @@
  */
 
 #include <fctsys.h>
-#include <base_screen.h>
-#include <sch_view.h>
-#include <sch_edit_frame.h>
-#include <sch_painter.h>
-#include <class_libentry.h>
 #include <panel_eeschema_display_options.h>
 #include <widgets/gal_options_panel.h>
-#include <sch_junction.h>
 
 PANEL_EESCHEMA_DISPLAY_OPTIONS::PANEL_EESCHEMA_DISPLAY_OPTIONS( SCH_EDIT_FRAME* aFrame,
                                                                 wxWindow* aWindow ) :

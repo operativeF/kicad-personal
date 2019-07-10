@@ -23,46 +23,16 @@
 #include <boost/algorithm/string/join.hpp>
 
 #include <wx/mstream.h>
-#include <wx/filename.h>
 #include <wx/tokenzr.h>
 #include <pgm_base.h>
 #include <gr_text.h>
 #include <kiway.h>
-#include <kicad_string.h>
-#include <richio.h>
-#include <core/typeinfo.h>
-#include <properties.h>
 #include <trace_helpers.h>
 
-#include <general.h>
-#include <sch_bitmap.h>
-#include <sch_bus_entry.h>
-#include <sch_component.h>
-#include <sch_junction.h>
-#include <sch_line.h>
-#include <sch_marker.h>
-#include <sch_no_connect.h>
-#include <sch_text.h>
-#include <sch_sheet.h>
-#include <sch_bitmap.h>
-#include <bus_alias.h>
 #include <sch_legacy_plugin.h>
-#include <template_fieldnames.h>
-#include <sch_screen.h>
-#include <class_libentry.h>
-#include <class_library.h>
-#include <lib_arc.h>
-#include <lib_bezier.h>
-#include <lib_circle.h>
-#include <lib_field.h>
-#include <lib_pin.h>
-#include <lib_polyline.h>
-#include <lib_rectangle.h>
-#include <lib_text.h>
 #include <eeschema_id.h>       // for MAX_UNIT_COUNT_PER_PACKAGE definition
 #include <symbol_lib_table.h>  // for PropPowerSymsOnly definintion.
 #include <confirm.h>
-#include <tool/selection.h>
 
 
 // Must be the first line of part library document (.dcm) files.

@@ -42,20 +42,14 @@
 #include <pgm_base.h>
 #include <kiface_i.h>
 #include <gestfich.h>
-#include <sch_edit_frame.h>
 
-#include <general.h>
 #include <netlist.h>
-#include <sch_sheet.h>
-#include <dialog_helpers.h>
 #include <dialogs/dialog_netlist_base.h>
-#include <wildcards_and_files_ext.h>
 #include <wildcards_and_files_ext.h>
 #include <invoke_sch_dialog.h>
 #include <netlist_exporters/netlist_exporter_pspice.h>
 
 #include <eeschema_id.h>
-#include <wx/regex.h>
 
 
 #define CUSTOMPANEL_COUNTMAX 8  // Max number of netlist plugins

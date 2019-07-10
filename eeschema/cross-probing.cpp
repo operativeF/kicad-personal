@@ -24,21 +24,9 @@
  */
 
 #include <fctsys.h>
-#include <pgm_base.h>
 #include <kiface_i.h>
 #include <kiway_express.h>
-#include <macros.h>
 #include <eda_dde.h>
-#include <sch_draw_panel.h>
-#include <tool/tool_manager.h>
-#include <sch_edit_frame.h>
-#include <general.h>
-#include <eeschema_id.h>
-#include <lib_draw_item.h>
-#include <lib_pin.h>
-#include <sch_component.h>
-#include <sch_sheet.h>
-#include <sch_view.h>
 #include <reporter.h>
 #include <netlist_exporters/netlist_exporter_kicad.h>
 #include <tools/ee_actions.h>

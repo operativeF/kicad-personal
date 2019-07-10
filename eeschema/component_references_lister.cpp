@@ -30,17 +30,10 @@
 
 #include <sch_reference_list.h>
 
-#include <wx/regex.h>
-#include <algorithm>
-#include <vector>
-#include <unordered_set>
 
-#include <fctsys.h>
 #include <refdes_utils.h>
 #include <reporter.h>
 
-#include <sch_component.h>
-#include <sch_edit_frame.h>
 
 
 //#define USE_OLD_ALGO

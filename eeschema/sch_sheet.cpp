@@ -28,19 +28,9 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
-#include <gr_text.h>
-#include <trigo.h>
-#include <richio.h>
-#include <sch_edit_frame.h>
 #include <plotter.h>
-#include <kicad_string.h>
-#include <msgpanel.h>
 
 #include <sch_sheet.h>
-#include <sch_sheet_path.h>
-#include <sch_component.h>
-#include <netlist_object.h>
 #include <trace_helpers.h>
 
 

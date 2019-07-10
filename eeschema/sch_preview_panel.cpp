@@ -23,20 +23,11 @@
 
 
 #include <view/wx_view_controls.h>
-#include <ws_proxy_view_item.h>
 
-#include <gal/graphics_abstraction_layer.h>
 
 #include <sch_preview_panel.h>
-#include <sch_view.h>
-#include <sch_painter.h>
-#include <sch_edit_frame.h>
-#include <preview_items/selection_area.h>
 
-#include <functional>
 
-#include <sch_sheet.h>
-#include <pgm_base.h>
 
 using namespace std::placeholders;
 

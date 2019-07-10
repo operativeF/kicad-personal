@@ -29,12 +29,8 @@
 
 
 #include <fctsys.h>
-#include <sch_edit_frame.h>
-#include <sch_draw_panel.h>
-#include <bitmaps.h>
 #include <confirm.h>
 
-#include <invoke_sch_dialog.h>
 #include <dialog_annotate_base.h>
 #include <kiface_i.h>
 #include <wx_html_report_panel.h>

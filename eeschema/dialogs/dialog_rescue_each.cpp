@@ -22,18 +22,11 @@
  */
 
 #include <sch_edit_frame.h>
-#include <sch_component.h>
-#include <invoke_sch_dialog.h>
 #include <dialog_rescue_each_base.h>
 #include <kiface_i.h>
-#include <class_library.h>
-#include <class_libentry.h>
-#include <set>
-#include <vector>
 #include <project_rescue.h>
 #include <eeschema_config.h>
 #include <symbol_preview_widget.h>
-#include <class_draw_panel_gal.h>
 
 
 class DIALOG_RESCUE_EACH: public DIALOG_RESCUE_EACH_BASE

@@ -24,14 +24,9 @@
  */
 
 #include <menus_helpers.h>
-#include <pgm_base.h>
-#include <tool/conditional_menu.h>
 #include <tool/tool_manager.h>
 #include <tools/ee_actions.h>
 #include <tools/ee_selection_tool.h>
-#include <lib_manager.h>
-#include "eeschema_id.h"
-#include "lib_edit_frame.h"
 
 
 void LIB_EDIT_FRAME::ReCreateMenuBar()

@@ -21,14 +21,9 @@
 
 
 #include <macros.h>
-#include "class_library.h"
 #include "eeschema_id.h"
-#include "general.h"
 #include "viewlib_frame.h"
-#include <symbol_lib_table.h>
 #include <tool/action_toolbar.h>
-#include <tool/conditional_menu.h>
-#include <tool/tool_manager.h>
 #include <tools/ee_actions.h>
 #include <tools/lib_control.h>
 

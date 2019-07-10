@@ -23,18 +23,9 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <macros.h>
-#include <sch_draw_panel.h>
 #include <plotter.h>
-#include <trigo.h>
-#include <base_units.h>
-#include <msgpanel.h>
-#include <bitmaps.h>
 
-#include <general.h>
 #include <lib_circle.h>
-#include <transform.h>
 
 
 LIB_CIRCLE::LIB_CIRCLE( LIB_PART* aParent ) :

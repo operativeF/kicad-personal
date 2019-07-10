@@ -18,7 +18,6 @@
  */
 
 #include <lib_edit_frame.h>
-#include <sch_view.h>
 #include <widgets/gal_options_panel.h>
 #include <widgets/paged_dialog.h>
 

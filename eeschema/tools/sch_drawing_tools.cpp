@@ -22,30 +22,9 @@
  */
 
 #include "sch_drawing_tools.h"
-#include "ee_selection_tool.h"
 #include "ee_point_editor.h"
 #include <ee_actions.h>
-#include <sch_edit_frame.h>
-#include <sch_view.h>
-#include <class_draw_panel_gal.h>
-#include <project.h>
-#include <id.h>
 #include <eeschema_id.h>
-#include <confirm.h>
-#include <view/view_group.h>
-#include <view/view_controls.h>
-#include <view/view.h>
-#include <tool/tool_manager.h>
-#include <sch_component.h>
-#include <sch_no_connect.h>
-#include <sch_line.h>
-#include <sch_junction.h>
-#include <sch_bus_entry.h>
-#include <sch_text.h>
-#include <sch_sheet.h>
-#include <sch_bitmap.h>
-#include <class_library.h>
-#include <geometry/seg.h>
 
 
 SCH_DRAWING_TOOLS::SCH_DRAWING_TOOLS() :

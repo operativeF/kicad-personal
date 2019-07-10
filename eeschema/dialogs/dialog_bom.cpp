@@ -29,21 +29,14 @@
 
 #include <memory>
 
-#include <fctsys.h>
 #include <pgm_base.h>
 #include <kiface_i.h>
 #include <confirm.h>
 #include <gestfich.h>
-#include <sch_edit_frame.h>
-#include <netlist.h>
-#include <netlist_exporter_generic.h>
-#include <invoke_sch_dialog.h>
-#include <dialog_helpers.h>
 #include <dialog_bom_base.h>
 #include <html_messagebox.h>
 #include <reporter.h>
 #include <bom_plugins.h>
-#include <make_unique.h>
 
 #include <dialogs/dialog_bom_cfg_lexer.h>
 

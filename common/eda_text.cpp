@@ -29,13 +29,8 @@
 
 #include <eda_text.h>
 #include <gr_text.h>
-#include <eda_rect.h>
-#include <macros.h>
-#include <trigo.h>               // RotatePoint
 
 #include <basic_gal.h>
-#include <base_units.h>
-#include <convert_to_biu.h>
 
 // Sadly we store the orientation of hierarchical and global labels using a different
 // int encoding than that for local labels:

@@ -28,27 +28,13 @@
  */
 
 #include <algorithm>
-#include <fctsys.h>
 #include <kiface_i.h>
-#include <gr_basic.h>
-#include <macros.h>
-#include <eda_base_frame.h>
-#include <kicad_string.h>
-#include <gestfich.h>
-#include <eda_doc.h>
-#include <richio.h>
-#include <config_params.h>
 #include <wildcards_and_files_ext.h>
 #include <project_rescue.h>
-#include <properties.h>
 
-#include <general.h>
 #include <class_library.h>
-#include <sch_legacy_plugin.h>
 
 #include <wx/progdlg.h>
-#include <wx/tokenzr.h>
-#include <wx/regex.h>
 
 #define DUPLICATE_NAME_MSG  \
     _(  "Library \"%s\" has duplicate entry name \"%s\".\n" \

@@ -52,19 +52,8 @@
 
 #include <boost/range/adaptor/reversed.hpp>
 
-#include <sch_edit_frame.h>
-#include <hotkeys_basic.h>
-#include <sch_component.h>
-#include <sch_line.h>
-#include <lib_pin.h>
-#include <sch_draw_panel.h>
-#include <class_libentry.h>
 #include <eeschema_config.h>
 #include <kiface_i.h>
-#include <vector>
-#include <algorithm>
-#include <tool/tool_manager.h>
-#include <tools/ee_selection_tool.h>
 
 #define FIELD_PADDING 10            // arbitrarily chosen for aesthetics
 #define FIELD_PADDING_ALIGNED 18    // aligns 50 mil text to a 100 mil grid

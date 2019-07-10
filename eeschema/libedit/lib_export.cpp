@@ -26,11 +26,7 @@
 #include <fctsys.h>
 #include <confirm.h>
 #include <symbol_lib_table.h>
-#include <lib_edit_frame.h>
-#include <class_library.h>
 #include <wildcards_and_files_ext.h>
-#include <lib_manager.h>
-#include <wx/filename.h>
 
 
 void LIB_EDIT_FRAME::ImportPart()

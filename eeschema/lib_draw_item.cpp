@@ -28,11 +28,7 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <sch_draw_panel.h>
-#include <msgpanel.h>
 
-#include <general.h>
 #include <lib_draw_item.h>
 
 const int fill_tab[3] = { 'N', 'F', 'f' };

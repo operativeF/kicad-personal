@@ -29,25 +29,10 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
-#include <kicad_string.h>
 #include <gestfich.h>
 #include <pgm_base.h>
-#include <sch_screen.h>
-#include <sch_edit_frame.h>
-#include <invoke_sch_dialog.h>
-#include <project.h>
-#include <kiface_i.h>
-#include <bitmaps.h>
 #include <reporter.h>
 #include <wildcards_and_files_ext.h>
-#include <sch_view.h>
-#include <netlist.h>
-#include <netlist_object.h>
-#include <sch_marker.h>
-#include <sch_sheet.h>
-#include <lib_pin.h>
-#include <sch_component.h>
 #include <connection_graph.h>
 #include <tools/ee_actions.h>
 #include <tool/tool_manager.h>

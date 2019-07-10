@@ -28,28 +28,10 @@
  */
 
 #include <fctsys.h>
-#include <macros.h>
-#include <kicad_string.h>
-#include <sch_draw_panel.h>
 #include <plotter.h>
-#include <gr_basic.h>
-#include <sch_screen.h>
-#include <richio.h>
-#include <kicad_string.h>
 #include <trace_helpers.h>
 
-#include <general.h>
-#include <template_fieldnames.h>
-#include <transform.h>
-#include <class_library.h>
 #include <class_libentry.h>
-#include <lib_pin.h>
-#include <lib_arc.h>
-#include <lib_bezier.h>
-#include <lib_circle.h>
-#include <lib_polyline.h>
-#include <lib_rectangle.h>
-#include <lib_text.h>
 
 
 // the separator char between the subpart id and the reference

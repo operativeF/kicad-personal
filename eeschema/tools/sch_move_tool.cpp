@@ -22,17 +22,8 @@
  */
 
 #include <tool/tool_manager.h>
-#include <tools/ee_selection_tool.h>
 #include <tools/sch_line_wire_bus_tool.h>
 #include <ee_actions.h>
-#include <bitmaps.h>
-#include <base_struct.h>
-#include <sch_item.h>
-#include <sch_component.h>
-#include <sch_sheet.h>
-#include <sch_view.h>
-#include <sch_line.h>
-#include <sch_edit_frame.h>
 #include <eeschema_id.h>
 #include "sch_move_tool.h"
 

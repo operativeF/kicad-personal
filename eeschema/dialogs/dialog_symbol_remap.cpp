@@ -23,21 +23,12 @@
  */
 
 #include <macros.h>
-#include <pgm_base.h>
 #include <kiface_i.h>
-#include <project.h>
 #include <confirm.h>
-#include <reporter.h>
 #include <wildcards_and_files_ext.h>
 #include <wx_html_report_panel.h>
 
-#include <class_library.h>
 #include <project_rescue.h>
-#include <sch_io_mgr.h>
-#include <sch_sheet.h>
-#include <sch_component.h>
-#include <sch_screen.h>
-#include <sch_edit_frame.h>
 #include <symbol_lib_table.h>
 #include <viewlib_frame.h>
 #include <env_paths.h>

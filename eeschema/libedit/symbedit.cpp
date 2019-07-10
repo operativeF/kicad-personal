@@ -25,18 +25,10 @@
 
 #include <fctsys.h>
 #include <kiway.h>
-#include <pgm_base.h>
-#include <sch_draw_panel.h>
 #include <confirm.h>
-#include <kicad_string.h>
-#include <gestfich.h>
-#include <lib_pin.h>
-#include <lib_edit_frame.h>
-#include <class_libentry.h>
 #include <wildcards_and_files_ext.h>
 #include <sch_legacy_plugin.h>
 #include <properties.h>
-#include <view/view.h>
 #include <tool/tool_manager.h>
 #include <tools/ee_selection_tool.h>
 

@@ -23,11 +23,7 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
 
-#include <lib_edit_frame.h>
-#include <class_libentry.h>
-#include <lib_manager.h>
 #include <widgets/lib_tree.h>
 #include <symbol_tree_pane.h>
 #include <tool/tool_manager.h>

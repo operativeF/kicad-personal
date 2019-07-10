@@ -23,21 +23,11 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
 #include <confirm.h>
-#include <kiface_i.h>
-#include <project.h>
 #include <wildcards_and_files_ext.h>
-#include <tool/tool_manager.h>
 #include <wx/clipbrd.h>
-#include <sch_edit_frame.h>
-#include <sch_legacy_plugin.h>
-#include <sch_sheet.h>
-#include <sch_sheet_path.h>
-#include <sch_view.h>
 #include <dialogs/dialog_sch_sheet_props.h>
 #include <dialogs/dialog_sch_edit_sheet_pin.h>
-#include <tool/actions.h>
 
 void SCH_EDIT_FRAME::InitSheet( SCH_SHEET* aSheet, const wxString& aNewFilename )
 {

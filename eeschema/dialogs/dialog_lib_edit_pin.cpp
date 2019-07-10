@@ -23,13 +23,6 @@
  */
 
 #include <fctsys.h>
-#include <macros.h>
-#include <gr_basic.h>
-#include <bitmaps.h>
-#include <sch_painter.h>
-#include <lib_edit_frame.h>
-#include <class_libentry.h>
-#include <lib_pin.h>
 
 #include <dialog_lib_edit_pin.h>
 #include <confirm.h>

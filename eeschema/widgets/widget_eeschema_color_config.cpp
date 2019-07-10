@@ -26,10 +26,6 @@
  */
 
 #include <fctsys.h>
-#include <eda_draw_frame.h>
-#include <sch_draw_panel.h>
-#include <sch_view.h>
-#include <general.h>
 
 #include "widget_eeschema_color_config.h"
 #include <dialogs/dialog_color_picker.h>

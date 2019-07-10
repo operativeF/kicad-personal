@@ -23,12 +23,6 @@
 
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <sch_draw_panel.h>
-#include <sch_screen.h>
-#include <general.h>
-#include <lib_edit_frame.h>
-#include <class_library.h>
 #include <plotter.h>
 
 void LIB_EDIT_FRAME::SVG_PlotComponent( const wxString& aFullFileName )

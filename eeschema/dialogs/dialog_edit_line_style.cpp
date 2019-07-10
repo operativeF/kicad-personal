@@ -23,8 +23,6 @@
  */
 
 #include <cassert>
-#include <sch_edit_frame.h>
-#include <sch_line.h>
 #include <dialogs/dialog_color_picker.h>
 #include <dialog_edit_line_style.h>
 

@@ -23,10 +23,6 @@
  */
 
 #include <fctsys.h>
-#include <base_screen.h>
-#include <lib_edit_frame.h>
-#include <sch_view.h>
-#include <sch_painter.h>
 
 #include "panel_libedit_settings.h"
 

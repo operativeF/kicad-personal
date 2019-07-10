@@ -31,21 +31,9 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
-#include <base_struct.h>
-#include <eda_rect.h>
-#include <gr_basic.h>
-#include <gr_text.h>
-#include <macros.h>
-#include <sch_edit_frame.h>
 #include <plotter.h>
-#include <bitmaps.h>
 
-#include <general.h>
-#include <class_library.h>
-#include <sch_component.h>
 #include <sch_field.h>
-#include <kicad_string.h>
 #include <trace_helpers.h>
 
 

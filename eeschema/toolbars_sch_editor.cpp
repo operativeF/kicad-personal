@@ -24,12 +24,8 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
-#include <sch_edit_frame.h>
 #include <kiface_i.h>
-#include <bitmaps.h>
 #include <eeschema_id.h>
-#include <tool/tool_manager.h>
 #include <tool/action_toolbar.h>
 #include <tools/ee_actions.h>
 

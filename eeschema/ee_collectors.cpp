@@ -23,14 +23,8 @@
  */
 
 #include <macros.h>
-#include <trace_helpers.h>
 
-#include <sch_sheet_path.h>
-#include <transform.h>
 #include <ee_collectors.h>
-#include <sch_component.h>
-#include <sch_line.h>
-#include <sch_bus_entry.h>
 
 
 const KICAD_T EE_COLLECTOR::AllItems[] = {

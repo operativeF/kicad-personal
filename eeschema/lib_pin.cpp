@@ -29,25 +29,9 @@
 
 #include <wx/tokenzr.h>
 
-#include <fctsys.h>
-#include <pgm_base.h>
-#include <gr_basic.h>
-#include <macros.h>
-#include <trigo.h>
-#include <sch_draw_panel.h>
-#include <gr_text.h>
 #include <plotter.h>
-#include <sch_edit_frame.h>
-#include <base_units.h>
-#include <msgpanel.h>
 
-#include <general.h>
-#include <lib_edit_frame.h>
-#include <class_libentry.h>
 #include <lib_pin.h>
-#include <transform.h>
-#include <sch_component.h>
-#include <sch_sheet_path.h>
 #include <trace_helpers.h>
 
 

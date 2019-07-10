@@ -28,14 +28,8 @@
 
 #include <algorithm>
 
-#include <fctsys.h>
-#include <sch_draw_panel.h>
-#include <confirm.h>
 #include <reporter.h>
-#include <sch_edit_frame.h>
 
-#include <sch_reference_list.h>
-#include <class_library.h>
 
 
 void mapExistingAnnotation( std::map<timestamp_t, wxString>& aMap )

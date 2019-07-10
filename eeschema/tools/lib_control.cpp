@@ -23,16 +23,11 @@
 
 #include <fctsys.h>
 #include <kiway.h>
-#include <sch_painter.h>
-#include <tool/tool_manager.h>
 #include <tools/ee_actions.h>
 #include <tools/lib_control.h>
-#include <eeschema_id.h>
-#include <lib_edit_frame.h>
 #include <viewlib_frame.h>
 #include <wildcards_and_files_ext.h>
 #include <gestfich.h>
-#include <project.h>
 #include <confirm.h>
 
 

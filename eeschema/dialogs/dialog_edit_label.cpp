@@ -24,20 +24,11 @@
  */
 
 #include <fctsys.h>
-#include <sch_edit_frame.h>
-#include <base_units.h>
 #include <sch_validators.h>
-#include <tool/tool_manager.h>
-#include <sch_draw_panel.h>
-#include <general.h>
 #include <gr_text.h>
 #include <confirm.h>
-#include <sch_text.h>
-#include <typeinfo>
 #include <widgets/unit_binder.h>
 #include <dialog_edit_label_base.h>
-#include <kicad_string.h>
-#include <tool/actions.h>
 
 class SCH_EDIT_FRAME;
 class SCH_TEXT;

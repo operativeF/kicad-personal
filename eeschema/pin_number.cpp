@@ -23,7 +23,6 @@
  */
 
 #include "pin_number.h"
-#include <wx/crt.h>
 
 namespace {
 

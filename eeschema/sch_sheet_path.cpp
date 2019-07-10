@@ -30,21 +30,11 @@
 
 #include <fctsys.h>
 
-#include <dlist.h>
-#include <sch_screen.h>
-#include <sch_item.h>
 
-#include <sch_reference_list.h>
-#include <class_library.h>
 #include <sch_sheet_path.h>
-#include <sch_component.h>
-#include <sch_sheet.h>
-#include <template_fieldnames.h>
 
-#include <dialogs/dialog_schematic_find.h>
 
 #include <boost/functional/hash.hpp>
-#include <wx/filename.h>
 
 
 namespace std

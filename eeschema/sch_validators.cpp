@@ -28,9 +28,7 @@
  */
 
 #include <wx/combo.h>
-#include <sch_connection.h>
 #include <sch_validators.h>
-#include <template_fieldnames.h>
 
 
 SCH_FIELD_VALIDATOR::SCH_FIELD_VALIDATOR(  bool aIsLibEditor, int aFieldId, wxString* aValue ) :

@@ -24,14 +24,11 @@
  */
 
 #include <kiface_i.h>
-#include <menus_helpers.h>
 #include <pgm_base.h>
-#include <tool/conditional_menu.h>
 #include <tool/tool_manager.h>
 #include <tools/ee_selection_tool.h>
 #include <tools/ee_actions.h>
 #include "eeschema_id.h"
-#include "sch_edit_frame.h"
 
 extern void AddMenuLanguageList( CONDITIONAL_MENU* aMasterMenu, TOOL_INTERACTIVE* aControlTool );
 

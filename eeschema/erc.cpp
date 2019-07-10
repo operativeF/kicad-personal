@@ -29,17 +29,8 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
-#include <kicad_string.h>
-#include <sch_edit_frame.h>
 
-#include <netlist.h>
-#include <netlist_object.h>
-#include <lib_pin.h>
 #include <erc.h>
-#include <sch_marker.h>
-#include <sch_sheet.h>
-#include <sch_reference_list.h>
 
 #include <wx/ffile.h>
 

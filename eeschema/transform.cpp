@@ -23,10 +23,7 @@
  */
 
 #include <macros.h>
-#include <trigo.h>
 #include <transform.h>
-#include <common.h>
-#include <eda_rect.h>
 
 
 bool TRANSFORM::operator==( const TRANSFORM& aTransform ) const

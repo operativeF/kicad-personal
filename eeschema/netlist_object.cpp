@@ -29,13 +29,8 @@
  */
 
 #include <fctsys.h>
-#include <macros.h>
-#include <list>
 
-#include <sch_component.h>
-#include <sch_connection.h>
 #include <netlist_object.h>
-#include <sch_edit_frame.h>
 
 #if defined(DEBUG)
 

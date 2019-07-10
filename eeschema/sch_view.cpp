@@ -25,18 +25,7 @@
 
 
 #include <view/view.h>
-#include <view/view_group.h>
-#include <view/view_rtree.h>
-#include <view/wx_view_controls.h>
-#include <ws_proxy_view_item.h>
-#include <layers_id_colors_and_visibility.h>
-#include <class_libentry.h>
-#include <sch_sheet.h>
-#include <sch_screen.h>
-#include <sch_component.h>
-#include <lib_pin.h>
 #include <preview_items/selection_area.h>
-#include <sch_edit_frame.h>
 
 #include "sch_view.h"
 

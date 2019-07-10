@@ -24,7 +24,6 @@
 
 #include <dialog_sch_sheet_props.h>
 
-#include <wx/string.h>
 
 #include <confirm.h>
 #include <validators.h>
@@ -32,8 +31,6 @@
 
 #include <widgets/tab_traversal.h>
 
-#include <sch_edit_frame.h>
-#include <sch_sheet.h>
 
 
 DIALOG_SCH_SHEET_PROPS::DIALOG_SCH_SHEET_PROPS( SCH_EDIT_FRAME* parent, SCH_SHEET* aSheet ) :

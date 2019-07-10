@@ -28,17 +28,8 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <macros.h>
-#include <sch_draw_panel.h>
 #include <plotter.h>
-#include <base_units.h>
-#include <eeschema_config.h>
-#include <general.h>
 #include <sch_line.h>
-#include <sch_edit_frame.h>
-#include <netlist_object.h>
-#include <sch_view.h>
 
 
 static wxPenStyle getwxPenStyle( PlotDashType aType )

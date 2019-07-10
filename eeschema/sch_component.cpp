@@ -23,35 +23,14 @@
  */
 
 #include <fctsys.h>
-#include <pgm_base.h>
-#include <sch_draw_panel.h>
-#include <gr_basic.h>
-#include <kicad_string.h>
-#include <richio.h>
-#include <sch_edit_frame.h>
 #include <plotter.h>
-#include <msgpanel.h>
-#include <bitmaps.h>
 
-#include <general.h>
-#include <class_library.h>
-#include <lib_rectangle.h>
-#include <lib_pin.h>
-#include <lib_text.h>
 #include <sch_component.h>
-#include <sch_sheet.h>
-#include <sch_sheet_path.h>
-#include <netlist_object.h>
-#include <lib_draw_item.h>
 #include <symbol_lib_table.h>
 
-#include <dialogs/dialog_schematic_find.h>
 
 #include <wx/tokenzr.h>
-#include <iostream>
-#include <cctype>
 
-#include <eeschema_id.h>    // for MAX_UNIT_COUNT_PER_PACKAGE definition
 
 #include <trace_helpers.h>
 

@@ -29,23 +29,16 @@
  */
 
 #include <fctsys.h>
-#include <kicad_string.h>
-#include <gestfich.h>
-#include <pgm_base.h>
-#include <sch_edit_frame.h>
 #include <reporter.h>
 #include <confirm.h>
 #include <kiway.h>
 
 #include <netlist.h>
-#include <netlist_exporter.h>
 #include <netlist_exporter_orcadpcb2.h>
 #include <netlist_exporter_cadstar.h>
 #include <netlist_exporter_pspice.h>
 #include <netlist_exporter_kicad.h>
-#include <netlist_exporter_generic.h>
 
-#include <invoke_sch_dialog.h>
 
 bool SCH_EDIT_FRAME::WriteNetListFile( NETLIST_OBJECT_LIST* aConnectedItemsList,
                                        int aFormat, const wxString& aFullFileName,

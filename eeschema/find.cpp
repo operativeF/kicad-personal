@@ -24,18 +24,6 @@
  */
 
 #include <fctsys.h>
-#include <pgm_base.h>
-#include <kicad_string.h>
-#include <sch_edit_frame.h>
-#include <base_units.h>
-#include <trace_helpers.h>
-#include <sch_view.h>
-#include <general.h>
-#include <class_library.h>
-#include <lib_pin.h>
-#include <sch_component.h>
-#include <sch_sheet.h>
-#include <sch_sheet_path.h>
 
 
 SCH_ITEM* SCH_EDIT_FRAME::FindComponentAndItem( const wxString& aReference,

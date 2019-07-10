@@ -19,26 +19,17 @@
  */
 
 #include <set>
-#include <wx/regex.h>
 
-#include <fctsys.h>
-#include <project.h>
 #include <panel_sym_lib_table.h>
-#include <lib_id.h>
 #include <symbol_lib_table.h>
 #include <lib_table_lexer.h>
 #include <grid_tricks.h>
-#include <widgets/wx_grid.h>
 #include <confirm.h>
-#include <bitmaps.h>
 #include <lib_table_grid.h>
 #include <wildcards_and_files_ext.h>
 #include <env_paths.h>
-#include <lib_edit_frame.h>
-#include <sch_edit_frame.h>
 #include <viewlib_frame.h>
 #include <kiway.h>
-#include <sch_screen.h>
 
 #include <widgets/grid_readonly_text_helpers.h>
 #include <widgets/grid_text_button_helpers.h>

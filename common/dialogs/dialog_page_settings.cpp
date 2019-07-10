@@ -22,7 +22,6 @@
  */
 
 #include <fctsys.h>
-#include <project.h>
 #include <confirm.h>
 #include <ws_data_model.h>
 #include <wildcards_and_files_ext.h>

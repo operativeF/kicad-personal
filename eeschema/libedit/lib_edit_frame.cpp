@@ -24,31 +24,23 @@
  */
 
 #include <fctsys.h>
-#include <pgm_base.h>
 #include <kiface_i.h>
 #include <kiway_express.h>
-#include <sch_draw_panel.h>
-#include <base_screen.h>
 #include <confirm.h>
 #include <eda_dockart.h>
-#include <general.h>
 #include <eeschema_id.h>
 #include <lib_edit_frame.h>
-#include <class_library.h>
-#include <lib_manager.h>
 #include <widgets/symbol_tree_pane.h>
 #include <widgets/lib_tree.h>
 #include <symbol_lib_table.h>
 #include <wildcards_and_files_ext.h>
 #include <wx/progdlg.h>
-#include <tool/tool_manager.h>
 #include <tool/tool_dispatcher.h>
 #include <tool/action_toolbar.h>
 #include <tool/common_control.h>
 #include <tool/common_tools.h>
 #include <tool/zoom_tool.h>
 #include <tools/ee_actions.h>
-#include <tools/ee_selection_tool.h>
 #include <tools/ee_picker_tool.h>
 #include <tools/ee_inspection_tool.h>
 #include <tools/lib_pin_tool.h>
@@ -57,8 +49,6 @@
 #include <tools/lib_drawing_tools.h>
 #include <tools/lib_control.h>
 #include <tools/ee_point_editor.h>
-#include <sch_view.h>
-#include <sch_painter.h>
 
 
 bool LIB_EDIT_FRAME::          m_showDeMorgan    = false;

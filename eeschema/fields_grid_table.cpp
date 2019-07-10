@@ -22,16 +22,7 @@
  */
 
 #include <kiway.h>
-#include <kiway_player.h>
-#include <dialog_shim.h>
 #include <fields_grid_table.h>
-#include <sch_base_frame.h>
-#include <sch_field.h>
-#include <sch_validators.h>
-#include <validators.h>
-#include <class_library.h>
-#include <template_fieldnames.h>
-#include <widgets/grid_icon_text_helpers.h>
 #include <widgets/grid_text_button_helpers.h>
 
 #include "eda_doc.h"

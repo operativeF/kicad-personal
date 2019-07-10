@@ -25,7 +25,6 @@
 
 #include <common.h>
 #include <page_info.h>
-#include <macros.h>
 
 
 // late arriving wxPAPER_A0, wxPAPER_A1

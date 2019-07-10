@@ -23,19 +23,7 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
-#include <sch_edit_frame.h>
 #include <tool/tool_manager.h>
-#include <general.h>
-#include <sch_bus_entry.h>
-#include <sch_marker.h>
-#include <sch_junction.h>
-#include <sch_line.h>
-#include <sch_no_connect.h>
-#include <sch_component.h>
-#include <sch_sheet.h>
-#include <sch_bitmap.h>
-#include <sch_view.h>
 #include <tools/ee_selection_tool.h>
 #include <ws_proxy_undo_item.h>
 #include <tool/actions.h>

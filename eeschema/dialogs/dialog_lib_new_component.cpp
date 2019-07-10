@@ -24,7 +24,6 @@
 
 #include <dialog_lib_new_component.h>
 #include <sch_validators.h>
-#include <template_fieldnames.h>
 
 DIALOG_LIB_NEW_COMPONENT::DIALOG_LIB_NEW_COMPONENT( wxWindow* parent ) :
     DIALOG_LIB_NEW_COMPONENT_BASE( parent )

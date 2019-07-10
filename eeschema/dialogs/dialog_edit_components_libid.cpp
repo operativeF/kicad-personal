@@ -29,13 +29,7 @@
 
 
 #include <fctsys.h>
-#include <sch_edit_frame.h>
-#include <sch_draw_panel.h>
-#include <sch_component.h>
-#include <sch_reference_list.h>
-#include <pgm_base.h>
 #include <symbol_lib_table.h>
-#include <widgets/wx_grid.h>
 
 #include <dialog_edit_components_libid_base.h>
 #include <wx/tokenzr.h>

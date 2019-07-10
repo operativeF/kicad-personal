@@ -24,26 +24,14 @@
  */
 
 #include <algorithm>
-#include <fctsys.h>
-#include <pgm_base.h>
 #include <kiway.h>
-#include <gr_basic.h>
-#include <sch_draw_panel.h>
 #include <confirm.h>
-#include <sch_edit_frame.h>
-#include <msgpanel.h>
 #include <tool/tool_manager.h>
 #include <tools/ee_actions.h>
-#include <general.h>
-#include <class_library.h>
-#include <sch_component.h>
-#include <lib_edit_frame.h>
 #include <viewlib_frame.h>
-#include <eeschema_id.h>
 #include <symbol_lib_table.h>
 
 #include <dialog_choose_component.h>
-#include <symbol_tree_model_adapter.h>
 
 
 SCH_BASE_FRAME::COMPONENT_SELECTION SCH_BASE_FRAME::SelectComponentFromLibBrowser(

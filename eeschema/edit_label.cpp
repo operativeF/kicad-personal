@@ -23,18 +23,9 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <base_struct.h>
-#include <gr_text.h>
-#include <sch_draw_panel.h>
 #include <confirm.h>
-#include <sch_edit_frame.h>
 #include <tool/tool_manager.h>
 #include <tools/ee_actions.h>
-#include <general.h>
-#include <sch_text.h>
-#include <eeschema_id.h>
-#include <sch_view.h>
 
 #include <wx/tokenzr.h>
 

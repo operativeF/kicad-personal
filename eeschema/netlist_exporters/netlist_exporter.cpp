@@ -26,14 +26,9 @@
 #include <netlist_exporter.h>
 
 #include <confirm.h>
-#include <fctsys.h>
-#include <gestfich.h>
-#include <pgm_base.h>
 #include <refdes_utils.h>
 
-#include <class_library.h>
 #include <netlist.h>
-#include <sch_reference_list.h>
 
 
 wxString NETLIST_EXPORTER::MakeCommandLine( const wxString& aFormatString,

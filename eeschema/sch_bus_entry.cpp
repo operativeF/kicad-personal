@@ -23,19 +23,8 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <macros.h>
-#include <sch_draw_panel.h>
-#include <trigo.h>
-#include <common.h>
-#include <richio.h>
 #include <plotter.h>
-#include <bitmaps.h>
-#include <eeschema_config.h>
-#include <general.h>
 #include <sch_bus_entry.h>
-#include <sch_line.h>
-#include <sch_text.h>
 
 
 SCH_BUS_ENTRY_BASE::SCH_BUS_ENTRY_BASE( KICAD_T aType, const wxPoint& pos, char shape ) :

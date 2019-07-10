@@ -23,20 +23,14 @@
  */
 
 #include <sch_draw_panel.h>
-#include <class_library.h>
 #include <confirm.h>
 #include <invoke_sch_dialog.h>
 #include <kiway.h>
 #include <project_rescue.h>
-#include <sch_component.h>
-#include <sch_sheet.h>
-#include <sch_edit_frame.h>
 #include <symbol_lib_table.h>
 #include <viewlib_frame.h>
 #include <wildcards_and_files_ext.h>
 
-#include <cctype>
-#include <map>
 
 
 typedef std::pair<SCH_COMPONENT*, wxString> COMPONENT_NAME_PAIR;

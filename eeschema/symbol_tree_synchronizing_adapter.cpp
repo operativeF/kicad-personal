@@ -24,10 +24,7 @@
  */
 
 #include <symbol_tree_synchronizing_adapter.h>
-#include <lib_manager.h>
 #include <symbol_lib_table.h>
-#include <class_libentry.h>
-#include <tool/tool_manager.h>
 #include <tools/lib_control.h>
 
 

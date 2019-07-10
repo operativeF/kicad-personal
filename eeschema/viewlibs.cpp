@@ -23,19 +23,10 @@
  */
 
 #include <fctsys.h>
-#include <kiway.h>
-#include <pgm_base.h>
-#include <sch_draw_panel.h>
-#include <sch_view.h>
-#include <confirm.h>
-#include <eda_doc.h>
 
 #include <viewlib_frame.h>
 #include <eeschema_id.h>
-#include <class_library.h>
-#include <dialog_helpers.h>
 #include <dialog_choose_component.h>
-#include <symbol_tree_model_adapter.h>
 #include <symbol_lib_table.h>
 
 void LIB_VIEW_FRAME::OnSelectSymbol( wxCommandEvent& aEvent )

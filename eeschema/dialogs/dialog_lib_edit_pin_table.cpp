@@ -22,19 +22,11 @@
  */
 
 #include "dialog_lib_edit_pin_table.h"
-#include "lib_pin.h"
 #include "pin_number.h"
 #include "grid_tricks.h"
 #include <widgets/grid_icon_text_helpers.h>
-#include <widgets/wx_grid.h>
-#include <queue>
-#include <base_units.h>
-#include <bitmaps.h>
-#include <wx/bmpcbox.h>
 #include <kiface_i.h>
-#include <kicad_string.h>
 #include <confirm.h>
-#include <lib_edit_frame.h>
 
 #define PinTableShownColumnsKey    wxT( "PinTableShownColumns" )
 

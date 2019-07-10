@@ -27,15 +27,9 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
-#include <trigo.h>
-#include <macros.h>
-#include <bitmaps.h>
-#include <base_units.h>
 
 #include <sch_bitmap.h>
 
-#include <wx/mstream.h>
 
 
 SCH_BITMAP::SCH_BITMAP( const wxPoint& pos ) :

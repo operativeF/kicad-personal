@@ -26,19 +26,8 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <macros.h>
-#include <sch_draw_panel.h>
 #include <plotter.h>
-#include <gr_text.h>
-#include <trigo.h>
-#include <base_units.h>
-#include <msgpanel.h>
-#include <bitmaps.h>
 
-#include <lib_draw_item.h>
-#include <general.h>
-#include <transform.h>
 #include <lib_text.h>
 
 

@@ -23,19 +23,7 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
-#include <gr_basic.h>
-#include <base_struct.h>
-#include <trace_helpers.h>
 #include <sch_item.h>
-#include <sch_screen.h>
-#include <sch_sheet_path.h>
-#include <sch_draw_panel.h>
-#include <sch_edit_frame.h>
-#include <sch_component.h>
-#include <sch_sheet.h>
-#include <sch_pin.h>
-#include <general.h>
 
 
 /* Constructor and destructor for SCH_ITEM */

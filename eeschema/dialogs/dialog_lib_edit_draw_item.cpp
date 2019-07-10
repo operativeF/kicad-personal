@@ -26,9 +26,7 @@
  */
 
 #include <lib_draw_item.h>
-#include <class_libentry.h>
 #include <dialog_lib_edit_draw_item.h>
-#include <lib_edit_frame.h>
 
 
 DIALOG_LIB_EDIT_DRAW_ITEM::DIALOG_LIB_EDIT_DRAW_ITEM( LIB_EDIT_FRAME* aParent, LIB_ITEM* aItem ) :

@@ -22,17 +22,11 @@
  */
 
 #include <tool/tool_manager.h>
-#include <tools/ee_selection_tool.h>
 #include <tools/ee_picker_tool.h>
 #include <tools/lib_pin_tool.h>
 #include <tools/lib_drawing_tools.h>
 #include <tools/lib_move_tool.h>
 #include <ee_actions.h>
-#include <bitmaps.h>
-#include <confirm.h>
-#include <sch_view.h>
-#include <lib_edit_frame.h>
-#include <eeschema_id.h>
 #include <dialogs/dialog_lib_edit_draw_item.h>
 #include <dialogs/dialog_lib_edit_text.h>
 #include <dialogs/dialog_edit_one_field.h>

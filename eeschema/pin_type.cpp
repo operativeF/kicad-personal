@@ -28,7 +28,6 @@
 
 #include "pin_type.h"
 
-#include <macros.h>
 
 wxString GetText( ELECTRICAL_PINTYPE aType )
 {

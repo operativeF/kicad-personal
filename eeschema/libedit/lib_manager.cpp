@@ -24,17 +24,9 @@
  */
 
 #include <lib_manager.h>
-#include <class_libentry.h>
-#include <class_library.h>
-#include <lib_edit_frame.h>
-#include <confirm.h>
 #include <env_paths.h>
-#include <pgm_base.h>
-#include <kiway.h>
-#include <profile.h>
 #include <symbol_lib_table.h>
 #include <sch_legacy_plugin.h>
-#include <list>
 
 
 LIB_MANAGER::LIB_MANAGER( LIB_EDIT_FRAME& aFrame ) :

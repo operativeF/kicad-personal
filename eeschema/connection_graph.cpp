@@ -19,25 +19,11 @@
  */
 
 #include <list>
-#include <thread>
-#include <algorithm>
 #include <future>
-#include <vector>
-#include <unordered_map>
 #include <profile.h>
 
 #include <advanced_config.h>
-#include <common.h>
 #include <erc.h>
-#include <sch_edit_frame.h>
-#include <sch_bus_entry.h>
-#include <sch_component.h>
-#include <sch_line.h>
-#include <sch_pin.h>
-#include <sch_screen.h>
-#include <sch_sheet.h>
-#include <sch_sheet_path.h>
-#include <sch_text.h>
 
 #include <connection_graph.h>
 

@@ -24,8 +24,6 @@
 
 #include "symbol_tree_pane.h"
 #include <widgets/lib_tree.h>
-#include <lib_manager.h>
-#include <lib_edit_frame.h>
 #include <symbol_lib_table.h>
 #include <tool/tool_manager.h>
 #include <tools/ee_actions.h>

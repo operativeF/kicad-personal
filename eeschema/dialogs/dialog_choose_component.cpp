@@ -24,21 +24,8 @@
 
 #include <dialog_choose_component.h>
 
-#include <algorithm>
-#include <set>
-#include <wx/utils.h>
 
-#include <wx/button.h>
-#include <wx/dataview.h>
-#include <wx/panel.h>
-#include <wx/sizer.h>
-#include <wx/splitter.h>
-#include <wx/timer.h>
-#include <wx/utils.h>
 
-#include <class_library.h>
-#include <sch_base_frame.h>
-#include <template_fieldnames.h>
 #include <symbol_lib_table.h>
 #include <widgets/lib_tree.h>
 #include <widgets/footprint_preview_widget.h>

@@ -23,23 +23,10 @@
  */
 
 #include <base_units.h>
-#include <kiway.h>
-#include <sch_draw_panel.h>
-#include <sch_view.h>
-#include <sch_painter.h>
-#include <gal/graphics_abstraction_layer.h>
 #include <confirm.h>
-#include <preview_items/selection_area.h>
-#include <class_library.h>
-#include <eeschema_id.h>
-#include <lib_edit_frame.h>
-#include <viewlib_frame.h>
 #include <sch_base_frame.h>
 #include <symbol_lib_table.h>
-#include <tool/action_toolbar.h>
 #include <tool/tool_manager.h>
-#include <tool/tool_dispatcher.h>
-#include <tools/ee_actions.h>
 
 
 LIB_ALIAS* SchGetLibAlias( const LIB_ID& aLibId, SYMBOL_LIB_TABLE* aLibTable, PART_LIB* aCacheLib,

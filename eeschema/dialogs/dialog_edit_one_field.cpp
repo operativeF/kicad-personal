@@ -29,21 +29,11 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
 #include <kiway.h>
 #include <confirm.h>
-#include <kicad_string.h>
-#include <sch_base_frame.h>
-#include <sch_component.h>
-#include <class_libentry.h>
-#include <lib_field.h>
-#include <sch_component.h>
-#include <template_fieldnames.h>
-#include <class_library.h>
 #include <sch_validators.h>
 
 #include <dialog_edit_one_field.h>
-#include <sch_text.h>
 
 DIALOG_EDIT_ONE_FIELD::DIALOG_EDIT_ONE_FIELD( SCH_BASE_FRAME* aParent, const wxString& aTitle,
                                               const EDA_TEXT* aTextItem ) :

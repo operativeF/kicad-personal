@@ -20,8 +20,6 @@
 
 #include <wx/tokenzr.h>
 
-#include <invoke_sch_dialog.h>
-#include <sch_sheet_path.h>
 
 #include "dialog_bus_manager.h"
 

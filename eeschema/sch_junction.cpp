@@ -27,18 +27,9 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <macros.h>
-#include <sch_draw_panel.h>
-#include <trigo.h>
-#include <common.h>
-#include <richio.h>
 #include <plotter.h>
-#include <bitmaps.h>
 
 #include <sch_junction.h>
-#include <netlist_object.h>
-#include <sch_connection.h>
 
 
 int SCH_JUNCTION::m_symbolSize = 40;    // Default diameter of the junction symbol

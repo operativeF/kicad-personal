@@ -24,15 +24,10 @@
 
 
 #include <fctsys.h>
-#include <common.h>
-#include <macros.h>
-#include <lib_id.h>
 #include <lib_table_lexer.h>
 #include <pgm_base.h>
-#include <search_stack.h>
 #include <systemdirsappend.h>
 #include <symbol_lib_table.h>
-#include <class_libentry.h>
 
 #define OPT_SEP     '|'         ///< options separator character
 

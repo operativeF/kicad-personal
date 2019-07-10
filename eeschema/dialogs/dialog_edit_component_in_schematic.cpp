@@ -23,23 +23,12 @@
 
 #include <dialogs/dialog_edit_component_in_schematic.h>
 
-#include <wx/tooltip.h>
 
 #include <confirm.h>
-#include <grid_tricks.h>
 #include <kiface_i.h>
-#include <menus_helpers.h>
-#include <pgm_base.h>
 
-#include <widgets/wx_grid.h>
 
-#include <class_library.h>
-#include <fields_grid_table.h>
 #include <invoke_sch_dialog.h>
-#include <sch_draw_panel.h>
-#include <sch_edit_frame.h>
-#include <sch_reference_list.h>
-#include <sch_validators.h>
 #include <symbol_lib_table.h>
 
 #ifdef KICAD_SPICE

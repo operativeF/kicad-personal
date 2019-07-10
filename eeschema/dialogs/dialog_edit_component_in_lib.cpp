@@ -22,23 +22,12 @@
  */
 
 #include <fctsys.h>
-#include <kiway.h>
-#include <common.h>
 #include <confirm.h>
-#include <pgm_base.h>
 #include <kiface_i.h>
 #include <dialog_text_entry.h>
 
-#include <general.h>
-#include <widgets/wx_grid.h>
 #include <widgets/grid_text_button_helpers.h>
-#include <lib_edit_frame.h>
-#include <class_library.h>
 #include <symbol_lib_table.h>
-#include <sch_item.h>
-#include <sch_component.h>
-#include <dialog_helpers.h>
-#include <bitmaps.h>
 
 #ifdef KICAD_SPICE
 #include <dialog_spice_model.h>

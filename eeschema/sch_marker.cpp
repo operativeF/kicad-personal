@@ -23,14 +23,8 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
-#include <trigo.h>
-#include <msgpanel.h>
-#include <bitmaps.h>
-#include <base_units.h>
 
 #include <sch_marker.h>
-#include <erc.h>
 
 /// Factor to convert the maker unit shape to internal units:
 #define SCALING_FACTOR  Millimeter2iu( 0.1 )

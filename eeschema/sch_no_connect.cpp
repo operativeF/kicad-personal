@@ -28,16 +28,9 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <macros.h>
-#include <sch_draw_panel.h>
-#include <common.h>
 #include <plotter.h>
-#include <bitmaps.h>
 
-#include <general.h>
 #include <sch_no_connect.h>
-#include <netlist_object.h>
 
 
 SCH_NO_CONNECT::SCH_NO_CONNECT( const wxPoint& pos ) :

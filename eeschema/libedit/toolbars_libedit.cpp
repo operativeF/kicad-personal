@@ -25,12 +25,6 @@
 
 #include <fctsys.h>
 #include <eeschema_id.h>
-#include <general.h>
-#include <lib_edit_frame.h>
-#include <dialog_helpers.h>
-#include <bitmaps.h>
-#include <lib_manager.h>
-#include <class_library.h>
 #include <tool/action_toolbar.h>
 #include <tools/ee_actions.h>
 

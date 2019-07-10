@@ -23,10 +23,6 @@
  */
 
 #include <fctsys.h>
-#include <sch_draw_panel.h>
-#include <lib_edit_frame.h>
-#include <class_libentry.h>
-#include <lib_text.h>
 
 #include <dialog_lib_edit_text.h>
 

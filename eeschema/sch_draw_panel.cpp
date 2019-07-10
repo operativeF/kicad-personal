@@ -25,18 +25,7 @@
 
 
 #include <view/wx_view_controls.h>
-#include <gal/graphics_abstraction_layer.h>
 #include <sch_draw_panel.h>
-#include <sch_view.h>
-#include <sch_painter.h>
-#include <sch_edit_frame.h>
-#include <preview_items/selection_area.h>
-#include <tool/tool_manager.h>
-#include <tool/actions.h>
-#include <functional>
-#include <sch_sheet.h>
-#include <pgm_base.h>
-#include <tools/ee_selection_tool.h>
 
 
 SCH_DRAW_PANEL::SCH_DRAW_PANEL( wxWindow* aParentWindow, wxWindowID aWindowId,

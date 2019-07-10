@@ -25,26 +25,8 @@
 using namespace std::placeholders;
 
 #include "ee_point_editor.h"
-#include <tool/tool_manager.h>
-#include <view/view_controls.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <geometry/seg.h>
-#include <confirm.h>
 
 #include <tools/ee_actions.h>
-#include <tools/ee_selection_tool.h>
-#include <bitmaps.h>
-#include <status_popup.h>
-#include <sch_edit_frame.h>
-#include <sch_line.h>
-#include <sch_bitmap.h>
-#include <sch_sheet.h>
-#include <lib_edit_frame.h>
-#include <lib_arc.h>
-#include <lib_circle.h>
-#include <lib_rectangle.h>
-#include <lib_polyline.h>
-#include <eeschema_id.h>
 
 
 

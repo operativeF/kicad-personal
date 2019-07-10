@@ -22,24 +22,9 @@
  */
 
 #include <ee_actions.h>
-#include <lib_edit_frame.h>
-#include <sch_view.h>
-#include <eeschema_id.h>
-#include <confirm.h>
-#include <view/view_controls.h>
-#include <view/view.h>
-#include <tool/tool_manager.h>
-#include <tools/ee_selection_tool.h>
 #include <tools/lib_drawing_tools.h>
 #include <tools/lib_pin_tool.h>
-#include <class_libentry.h>
-#include <bitmaps.h>
-#include <lib_text.h>
 #include <dialogs/dialog_lib_edit_text.h>
-#include <lib_arc.h>
-#include <lib_circle.h>
-#include <lib_polyline.h>
-#include <lib_rectangle.h>
 #include "ee_point_editor.h"
 
 static void* g_lastPinWeakPtr;

@@ -22,10 +22,7 @@
  */
 
 #include <tool/tool_action.h>
-#include <bitmaps.h>
 #include <tools/ee_actions.h>
-#include <core/typeinfo.h>
-#include <layers_id_colors_and_visibility.h>
 
 
 // Actions, being statically-defined, require specialized I18N handling.  We continue to

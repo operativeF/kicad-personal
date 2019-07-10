@@ -21,12 +21,9 @@
 
 #include <core/optional.h>
 
-#include <geometry/shape_line_chain.h>
 
 #include "pns_walkaround.h"
 #include "pns_optimizer.h"
-#include "pns_utils.h"
-#include "pns_router.h"
 
 namespace PNS {
 

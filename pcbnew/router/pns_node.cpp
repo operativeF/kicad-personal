@@ -20,23 +20,12 @@
  */
 
 #include <vector>
-#include <cassert>
 
-#include <math/vector2d.h>
 
-#include <geometry/seg.h>
-#include <geometry/shape.h>
-#include <geometry/shape_line_chain.h>
-#include <geometry/shape_index.h>
 
-#include "pns_item.h"
-#include "pns_line.h"
 #include "pns_node.h"
-#include "pns_via.h"
 #include "pns_solid.h"
-#include "pns_joint.h"
 #include "pns_index.h"
-#include "pns_router.h"
 
 
 namespace PNS {

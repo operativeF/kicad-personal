@@ -21,8 +21,6 @@
 
 #include <base_units.h> // God forgive me doing this...
 
-#include "pns_node.h"
-#include "pns_itemset.h"
 #include "pns_topology.h"
 #include "pns_meander_placer.h"
 #include "pns_router.h"

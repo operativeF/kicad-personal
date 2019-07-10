@@ -21,48 +21,23 @@
 
 #include <undo_redo_container.h>
 #include <class_board.h>
-#include <board_connected_item.h>
-#include <class_module.h>
-#include <class_text_mod.h>
 #include <class_edge_mod.h>
-#include <class_track.h>
 #include <class_zone.h>
-#include <class_drawsegment.h>
 #include <class_pcb_text.h>
 #include <board_commit.h>
-#include <layers_id_colors_and_visibility.h>
-#include <geometry/convex_hull.h>
 #include <confirm.h>
 
-#include <view/view.h>
-#include <view/view_item.h>
-#include <view/view_group.h>
-#include <gal/graphics_abstraction_layer.h>
 
-#include <pcb_painter.h>
 
-#include <geometry/shape.h>
-#include <geometry/shape_line_chain.h>
 #include <geometry/shape_rect.h>
-#include <geometry/shape_circle.h>
 #include <geometry/shape_arc.h>
-#include <geometry/convex_hull.h>
 
-#include "tools/pcb_tool_base.h"
 
 #include "pns_kicad_iface.h"
 
 #include "../../include/geometry/shape_simple.h"
-#include "pns_routing_settings.h"
-#include "pns_sizes_settings.h"
-#include "pns_item.h"
 #include "pns_solid.h"
-#include "pns_segment.h"
-#include "pns_solid.h"
-#include "pns_itemset.h"
-#include "pns_node.h"
 #include "pns_topology.h"
-#include "pns_router.h"
 #include "pns_debug_decorator.h"
 #include "router_preview_item.h"
 

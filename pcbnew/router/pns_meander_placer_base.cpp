@@ -20,7 +20,6 @@
  */
 
 #include "pns_router.h"
-#include "pns_meander.h"
 #include "pns_meander_placer_base.h"
 
 namespace PNS {

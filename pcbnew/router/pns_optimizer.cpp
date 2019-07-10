@@ -20,18 +20,13 @@
  */
 
 #include <geometry/shape_line_chain.h>
-#include <geometry/shape_rect.h>
-#include <cmath>
 
-#include "pns_line.h"
 #include "pns_diff_pair.h"
 #include "pns_node.h"
 #include "pns_solid.h"
 #include "pns_optimizer.h"
 
-#include "../../include/geometry/shape_simple.h"
 #include "pns_utils.h"
-#include "pns_router.h"
 
 namespace PNS {
 

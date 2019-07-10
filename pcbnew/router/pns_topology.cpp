@@ -20,17 +20,11 @@
  */
 
 #include "pns_line.h"
-#include "pns_segment.h"
 #include "pns_node.h"
-#include "pns_joint.h"
-#include "pns_solid.h"
-#include "pns_router.h"
-#include "pns_utils.h"
 
 #include "pns_diff_pair.h"
 #include "pns_topology.h"
 
-#include <class_board.h>
 
 namespace PNS {
 

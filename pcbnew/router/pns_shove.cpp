@@ -22,26 +22,16 @@
 #define PNS_DEBUG
 
 #include <deque>
-#include <cassert>
 
-#include "range.h"
 
-#include "pns_line.h"
-#include "pns_node.h"
 #include "pns_walkaround.h"
 #include "pns_shove.h"
 #include "pns_solid.h"
-#include "pns_optimizer.h"
-#include "pns_via.h"
 #include "pns_utils.h"
-#include "pns_router.h"
 #include "pns_shove.h"
-#include "pns_utils.h"
 #include "pns_topology.h"
 
-#include "time_limit.h"
 
-#include <profile.h>
 
 namespace PNS {
 

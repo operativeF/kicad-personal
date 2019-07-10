@@ -21,8 +21,6 @@
 
 #include <class_board.h>
 
-#include "pns_item.h"
-#include "pns_via.h"
 #include "pns_solid.h"
 #include "pns_node.h"
 #include "pns_sizes_settings.h"

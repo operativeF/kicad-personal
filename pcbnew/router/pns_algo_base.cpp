@@ -20,7 +20,6 @@
  */
 
 #include "pns_algo_base.h"
-#include "pns_debug_decorator.h"
 #include "pns_router.h"
 
 namespace PNS {

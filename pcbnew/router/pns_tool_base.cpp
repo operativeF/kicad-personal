@@ -21,40 +21,19 @@
 
 #include <wx/numdlg.h>
 
-#include <functional>
 using namespace std::placeholders;
 
-#include "class_draw_panel_gal.h"
-#include "class_board.h"
 
-#include <pcb_edit_frame.h>
-#include <id.h>
-#include <macros.h>
-#include <pcbnew_id.h>
 #include <view/view_controls.h>
 #include <pcb_painter.h>
-#include <dialogs/dialog_pns_settings.h>
-#include <dialogs/dialog_pns_diff_pair_dimensions.h>
-#include <dialogs/dialog_pns_length_tuning_settings.h>
-#include <dialogs/dialog_track_via_size.h>
-#include <base_units.h>
-#include <bitmaps.h>
 
-#include <tool/action_menu.h>
-#include <tools/pcb_actions.h>
 #include <tools/grid_helper.h>
 
 #include "pns_kicad_iface.h"
 #include "pns_tool_base.h"
-#include "pns_segment.h"
 #include "pns_solid.h"
-#include "pns_via.h"
-#include "pns_router.h"
-#include "pns_meander_placer.h" // fixme: move settings to separate header
-#include "pns_tune_status_popup.h"
 #include "pns_topology.h"
 
-#include <view/view.h>
 
 using namespace KIGFX;
 

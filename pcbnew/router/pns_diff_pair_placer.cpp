@@ -20,16 +20,10 @@
  */
 
 #include <class_board.h>
-#include <class_board_item.h>
-#include <netinfo.h>
 
-#include "pns_node.h"
 #include "pns_walkaround.h"
 #include "pns_shove.h"
-#include "pns_utils.h"
-#include "pns_router.h"
 #include "pns_diff_pair_placer.h"
-#include "pns_solid.h"
 #include "pns_topology.h"
 #include "pns_debug_decorator.h"
 

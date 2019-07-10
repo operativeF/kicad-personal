@@ -20,38 +20,18 @@
  */
 
 #include <cstdio>
-#include <make_unique.h>
-#include <vector>
 
-#include <view/view.h>
-#include <view/view_item.h>
-#include <view/view_group.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <gal/color4d.h>
 
-#include <pcb_painter.h>
 
-#include <geometry/shape.h>
-#include <geometry/shape_line_chain.h>
-#include <geometry/shape_rect.h>
-#include <geometry/shape_circle.h>
-#include <geometry/convex_hull.h>
 
-#include "pns_node.h"
 #include "pns_line_placer.h"
-#include "pns_line.h"
-#include "pns_solid.h"
-#include "pns_utils.h"
 #include "pns_router.h"
 #include "pns_shove.h"
 #include "pns_dragger.h"
-#include "pns_topology.h"
 #include "pns_diff_pair_placer.h"
-#include "pns_meander_placer.h"
 #include "pns_meander_skew_placer.h"
 #include "pns_dp_meander_placer.h"
 
-#include <router/router_preview_item.h>
 
 namespace PNS {
 

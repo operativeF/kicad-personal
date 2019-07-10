@@ -20,22 +20,12 @@
  */
 
 #include <cstdio>
-#include <cstdlib>
-#include <cmath>
-#include <limits>
 
-#include <geometry/direction45.h>
-#include <geometry/shape.h>
 #include <geometry/shape_rect.h>
-#include <geometry/shape_circle.h>
-#include <geometry/shape_segment.h>
 
 
 #include "pns_diff_pair.h"
 #include "pns_router.h"
-#include "pns_solid.h"
-#include "pns_utils.h"
-#include "pns_debug_decorator.h"
 
 namespace PNS {
 

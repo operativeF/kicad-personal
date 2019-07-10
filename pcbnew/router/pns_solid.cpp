@@ -21,13 +21,8 @@
 
 #include <math/vector2d.h>
 
-#include <geometry/shape.h>
-#include <geometry/shape_line_chain.h>
-#include <geometry/shape_rect.h>
-#include <geometry/shape_circle.h>
 #include "pns_solid.h"
 
-#include "../../include/geometry/shape_simple.h"
 #include "pns_utils.h"
 
 namespace PNS {

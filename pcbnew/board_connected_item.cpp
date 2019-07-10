@@ -29,12 +29,9 @@
  */
 
 #include <fctsys.h>
-#include <pcbnew.h>
 
 #include <class_board.h>
-#include <class_board_item.h>
 
-#include <connectivity/connectivity_data.h>
 
 
 const wxChar* const traceMask = wxT( "BOARD_CONNECTED_ITEM" );

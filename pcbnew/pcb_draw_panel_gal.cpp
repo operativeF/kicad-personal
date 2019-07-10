@@ -23,26 +23,16 @@
  */
 
 #include "pcb_draw_panel_gal.h"
-#include <pcb_view.h>
 #include <view/wx_view_controls.h>
 #include <pcb_painter.h>
 #include <ws_proxy_view_item.h>
 #include <ratsnest_viewitem.h>
 #include <ratsnest_data.h>
-#include <connectivity/connectivity_data.h>
 
-#include <colors_design_settings.h>
-#include <class_board.h>
-#include <class_module.h>
-#include <class_track.h>
 #include <class_marker_pcb.h>
 #include <pcb_base_frame.h>
-#include <confirm.h>
 
-#include <gal/graphics_abstraction_layer.h>
 
-#include <functional>
-#include <thread>
 using namespace std::placeholders;
 
 const LAYER_NUM GAL_LAYER_ORDER[] =

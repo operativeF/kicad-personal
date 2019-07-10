@@ -22,7 +22,6 @@
  */
 
 #include <pcb_general_settings.h>
-#include <wx/tokenzr.h>
 
 
 PCB_GENERAL_SETTINGS::PCB_GENERAL_SETTINGS( FRAME_T aFrameType ) :

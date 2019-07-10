@@ -23,13 +23,9 @@
  */
 
 #include <wx/clipbrd.h>
-#include <common.h>
-#include <pcb_parser.h>
-#include <netinfo.h>
 #include <class_board.h>
 #include <build_version.h>
 
-#include <kicad_plugin.h>
 #include <kicad_clipboard.h>
 
 CLIPBOARD_IO::CLIPBOARD_IO():

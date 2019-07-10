@@ -28,17 +28,12 @@
  */
 
 #include <fctsys.h>
-#include <trigo.h>
 
-#include <pcbnew.h>
 
 #include <bezier_curves.h>
 #include <class_board.h>
-#include <class_drawsegment.h>
 #include <class_edge_mod.h>
-#include <class_pad.h>
 #include <convert_basic_shapes_to_polygon.h>
-#include <geometry/convex_hull.h>
 #include <geometry/geometry_utils.h>
 #include <geometry/shape_rect.h>
 

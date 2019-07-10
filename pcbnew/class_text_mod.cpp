@@ -24,20 +24,8 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <trigo.h>
-#include <gr_text.h>
-#include <kicad_string.h>
-#include <richio.h>
-#include <macros.h>
 #include <pcb_edit_frame.h>
-#include <msgpanel.h>
-#include <base_units.h>
-#include <bitmaps.h>
 #include <class_board.h>
-#include <class_module.h>
-#include <view/view.h>
-#include <pcbnew.h>
 
 
 TEXTE_MODULE::TEXTE_MODULE( MODULE* parent, TEXT_TYPE text_type ) :

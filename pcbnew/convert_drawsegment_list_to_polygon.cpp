@@ -30,14 +30,10 @@
  */
 
 #include <trigo.h>
-#include <macros.h>
 
-#include <math/vector2d.h>
 #include <class_drawsegment.h>
 #include <class_module.h>
-#include <base_units.h>
 #include <convert_basic_shapes_to_polygon.h>
-#include <geometry/shape_poly_set.h>
 #include <geometry/geometry_utils.h>
 
 
@@ -740,7 +736,6 @@ bool ConvertOutlineToPolygon( std::vector<DRAWSEGMENT*>& aSegList, SHAPE_POLY_SE
 }
 
 #include <class_board.h>
-#include <collectors.h>
 
 /* This function is used to extract a board outlines (3D view, automatic zones build ...)
  * Any closed outline inside the main outline is a hole

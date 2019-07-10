@@ -25,32 +25,13 @@
  */
 
 #include <fctsys.h>
-#include <kiface_i.h>
-#include <eda_base_frame.h>
-#include <confirm.h>
-#include <kiface_i.h>
-#include <dialog_helpers.h>
 #include <pcb_base_frame.h>
-#include <base_units.h>
-#include <msgpanel.h>
-#include <pgm_base.h>
 #include <3d_viewer/eda_3d_viewer.h>          // To include VIEWER3D_FRAMENAME
-#include <pcbnew.h>
 #include <fp_lib_table.h>
 #include <pcbnew_id.h>
 #include <class_board.h>
-#include <class_track.h>
-#include <class_module.h>
-#include <class_drawsegment.h>
-#include <collectors.h>
-#include <pcb_draw_panel_gal.h>
-#include <pcb_view.h>
-#include <math/vector2d.h>
-#include <trigo.h>
 #include <pcb_painter.h>
 #include <tool/tool_manager.h>
-#include <tool/tool_dispatcher.h>
-#include <tools/pcb_actions.h>
 
 const wxChar PCB_BASE_FRAME::AUTO_ZOOM_KEY[] = wxT( "AutoZoom" );
 const wxChar PCB_BASE_FRAME::ZOOM_KEY[] = wxT( "Zoom" );

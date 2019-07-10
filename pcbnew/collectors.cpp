@@ -23,7 +23,6 @@
  */
 
 #include <collectors.h>
-#include <class_board_item.h>             // class BOARD_ITEM
 
 #include <class_module.h>
 #include <class_pad.h>

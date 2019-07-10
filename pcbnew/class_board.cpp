@@ -31,35 +31,12 @@
  */
 
 #include <climits>
-#include <algorithm>
-#include <iterator>
 
-#include <fctsys.h>
-#include <common.h>
-#include <kicad_string.h>
-#include <pcb_base_frame.h>
-#include <msgpanel.h>
-#include <pcb_netlist.h>
-#include <reporter.h>
-#include <base_units.h>
 #include <ratsnest_data.h>
-#include <ratsnest_viewitem.h>
-#include <ws_proxy_view_item.h>
 
-#include <pcbnew.h>
-#include <collectors.h>
 
 #include <class_board.h>
-#include <class_module.h>
-#include <class_pad.h>
-#include <class_track.h>
-#include <class_zone.h>
 #include <class_marker_pcb.h>
-#include <class_drawsegment.h>
-#include <class_pcb_text.h>
-#include <class_pcb_target.h>
-#include <class_dimension.h>
-#include <connectivity/connectivity_data.h>
 
 
 /**

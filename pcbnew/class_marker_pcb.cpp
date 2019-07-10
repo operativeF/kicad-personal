@@ -29,14 +29,7 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <trigo.h>
-#include <msgpanel.h>
-#include <bitmaps.h>
-#include <base_units.h>
-#include <pcbnew.h>
 #include <class_marker_pcb.h>
-#include <layers_id_colors_and_visibility.h>
 
 
 /// Factor to convert the maker unit shape to internal units:

@@ -24,26 +24,14 @@
  */
 
 #include <class_board.h>
-#include <class_track.h>
-#include <class_module.h>
-#include <class_pad.h>
 #include <class_drawsegment.h>
 #include <class_zone.h>
-#include <class_pcb_text.h>
-#include <colors_design_settings.h>
 #include <class_marker_pcb.h>
 #include <class_dimension.h>
 #include <class_pcb_target.h>
-#include <class_marker_pcb.h>
 
-#include <layers_id_colors_and_visibility.h>
 #include <pcb_painter.h>
-#include <pcb_display_options.h>
 
-#include <convert_basic_shapes_to_polygon.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <geometry/geometry_utils.h>
-#include <geometry/shape_line_chain.h>
 
 
 using namespace KIGFX;

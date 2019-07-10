@@ -24,12 +24,8 @@
 
 #include <connectivity/connectivity_algo.h>
 #include <widgets/progress_reporter.h>
-#include <geometry/geometry_utils.h>
 #include <board_commit.h>
 
-#include <thread>
-#include <mutex>
-#include <algorithm>
 #include <future>
 
 #ifdef PROFILE

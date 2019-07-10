@@ -25,11 +25,9 @@
 #include <hash_eda.h>
 
 #include <class_module.h>
-#include <class_text_mod.h>
 #include <class_edge_mod.h>
 #include <class_pad.h>
 
-#include <functional>
 
 using namespace std;
 

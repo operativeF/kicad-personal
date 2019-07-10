@@ -52,25 +52,14 @@ Load() TODO's
 
 #include <cerrno>
 
-#include <wx/string.h>
-#include <wx/xml/xml.h>
 
-#include <common.h>
 #include <convert_basic_shapes_to_polygon.h>
-#include <fctsys.h>
 #include <geometry/geometry_utils.h>
-#include <kicad_string.h>
-#include <macros.h>
 #include <properties.h>
-#include <trigo.h>
-#include <wx/filename.h>
 
 #include <class_board.h>
-#include <class_module.h>
-#include <class_track.h>
 #include <class_edge_mod.h>
 #include <class_zone.h>
-#include <class_pcb_text.h>
 #include <class_dimension.h>
 
 #include <eagle_plugin.h>

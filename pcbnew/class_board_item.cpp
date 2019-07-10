@@ -29,12 +29,8 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
-#include <pcbnew.h>
-#include <wx/debug.h>
 
 #include <class_board.h>
-#include <string>
 
 wxString BOARD_ITEM::ShowShape( STROKE_T aShape )
 {

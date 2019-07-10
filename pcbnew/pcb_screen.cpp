@@ -25,16 +25,8 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
-#include <macros.h>
-#include <trigo.h>
 #include <pcb_screen.h>
-#include <eda_text.h>                // FILLED
-#include <base_units.h>
 
-#include <pcbnew.h>
-#include <board_design_settings.h>
-#include <layers_id_colors_and_visibility.h>
 
 #include <pcbnew_id.h>
 

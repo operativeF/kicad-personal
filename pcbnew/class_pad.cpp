@@ -29,20 +29,10 @@
  */
 
 #include <fctsys.h>
-#include <trigo.h>
-#include <macros.h>
-#include <msgpanel.h>
-#include <base_units.h>
-#include <bitmaps.h>
 
-#include <geometry/geometry_utils.h>
-#include <pcbnew.h>
-#include <view/view.h>
 
 #include <class_board.h>
-#include <class_module.h>
 #include <polygon_test_point_inside.h>
-#include <convert_to_biu.h>
 #include <convert_basic_shapes_to_polygon.h>
 
 

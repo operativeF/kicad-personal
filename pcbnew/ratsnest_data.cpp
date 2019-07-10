@@ -33,12 +33,8 @@
 #endif
 
 #include <ratsnest_data.h>
-#include <functional>
 using namespace std::placeholders;
 
-#include <cassert>
-#include <algorithm>
-#include <limits>
 
 static uint64_t getDistance( const CN_ANCHOR_PTR& aNode1, const CN_ANCHOR_PTR& aNode2 )
 {

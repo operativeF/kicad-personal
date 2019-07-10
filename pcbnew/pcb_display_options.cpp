@@ -25,10 +25,7 @@
  */
 
 #include <pcbnew.h>
-#include <board_design_settings.h>
-#include <layers_id_colors_and_visibility.h>
 #include <pcb_display_options.h>
-#include <eda_text.h>
 
 PCB_DISPLAY_OPTIONS::PCB_DISPLAY_OPTIONS()
 {

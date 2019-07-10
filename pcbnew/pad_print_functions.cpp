@@ -25,18 +25,9 @@
  */
 
 #include <class_board.h>
-#include <common.h>
 #include <convert_basic_shapes_to_polygon.h>
-#include <gr_text.h>
-#include <fctsys.h>
 #include <geometry/geometry_utils.h>
-#include <gr_basic.h>
-#include <layers_id_colors_and_visibility.h>
 #include <pcb_edit_frame.h>
-#include <pcb_screen.h>
-#include <pcbnew.h>
-#include <pcbnew_id.h> // ID_TRACK_BUTT
-#include <trigo.h>
 
 
 // Helper class to store parameters used to draw a pad

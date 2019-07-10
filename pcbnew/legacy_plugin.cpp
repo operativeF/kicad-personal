@@ -59,34 +59,15 @@
 
 
 #include <cmath>
-#include <cstdio>
-#include <cstring>
-#include <cerrno>
-#include <wx/ffile.h>
-#include <wx/string.h>
 #include <legacy_plugin.h>   // implement this here
 
-#include <kicad_string.h>
-#include <macros.h>
-#include <properties.h>
-#include <zones.h>
 
 #include <class_board.h>
-#include <class_module.h>
-#include <class_track.h>
-#include <class_pcb_text.h>
 #include <class_zone.h>
 #include <class_dimension.h>
-#include <class_drawsegment.h>
 #include <class_pcb_target.h>
 #include <class_edge_mod.h>
-#include <3d_cache/3d_info.h>
-#include <pcb_plot_params.h>
 #include <pcb_plot_params_parser.h>
-#include <convert_to_biu.h>
-#include <trigo.h>
-#include <build_version.h>
-#include <confirm.h>
 
 typedef LEGACY_PLUGIN::BIU      BIU;
 
@@ -3179,7 +3160,6 @@ void LEGACY_PLUGIN::SaveModule3D( const MODULE* me ) const
 
 
 #include <boost/ptr_container/ptr_map.hpp>
-#include <wx/filename.h>
 
 typedef boost::ptr_map< std::string, MODULE >   MODULE_MAP;
 typedef MODULE_MAP::iterator                    MODULE_ITER;

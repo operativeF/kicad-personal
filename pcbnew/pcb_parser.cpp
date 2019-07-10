@@ -28,26 +28,14 @@
  */
 
 #include <cerrno>
-#include <common.h>
-#include <confirm.h>
-#include <macros.h>
-#include <trigo.h>
-#include <title_block.h>
 
 #include <class_board.h>
 #include <class_dimension.h>
-#include <class_drawsegment.h>
 #include <class_edge_mod.h>
 #include <class_pcb_target.h>
-#include <class_module.h>
-#include <netclass.h>
-#include <class_pad.h>
-#include <class_track.h>
 #include <class_zone.h>
 #include <kicad_plugin.h>
 #include <pcb_plot_params_parser.h>
-#include <pcb_plot_params.h>
-#include <zones.h>
 #include <pcb_parser.h>
 #include <convert_basic_shapes_to_polygon.h>    // for RECT_CHAMFER_POSITIONS definition
 

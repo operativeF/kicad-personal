@@ -29,24 +29,14 @@
 
 #include <fctsys.h>
 #include <wx_filename.h>
-#include <macros.h>
-#include <trigo.h>
 #include <wildcards_and_files_ext.h>
-#include <filter_reader.h>
 #include <trace_helpers.h>
 
 #include <class_board.h>
-#include <class_module.h>
-#include <class_pcb_text.h>
-#include <class_drawsegment.h>
 #include <class_edge_mod.h>
 #include <gpcb_plugin.h>
 
-#include <wx/dir.h>
-#include <wx/filename.h>
-#include <wx/wfstream.h>
 #include <boost/ptr_container/ptr_map.hpp>
-#include <memory.h>
 
 
 static inline long parseInt( const wxString& aValue, double aScalar )

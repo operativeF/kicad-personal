@@ -25,9 +25,6 @@
 #include <widgets/net_selector.h>
 
 #include <class_board.h>
-#include <netinfo.h>
-#include <wx/arrstr.h>
-#include <wx/display.h>
 
 wxDEFINE_EVENT( NET_SELECTED, wxCommandEvent );
 

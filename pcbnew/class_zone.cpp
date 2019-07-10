@@ -24,22 +24,11 @@
  */
 
 #include <bitmaps.h>
-#include <fctsys.h>
 #include <geometry/geometry_utils.h>
-#include <kicad_string.h>
-#include <macros.h>
-#include <msgpanel.h>
 #include <pcb_base_frame.h>
-#include <pcb_screen.h>
-#include <richio.h>
-#include <trigo.h>
-#include <convert_to_biu.h>
 #include <class_board.h>
 #include <class_zone.h>
-#include <pcbnew.h>
-#include <zones.h>
 #include <math_for_graphics.h>
-#include <polygon_test_point_inside.h>
 
 
 ZONE_CONTAINER::ZONE_CONTAINER( BOARD* aBoard ) :

@@ -23,20 +23,14 @@
  */
 
 #include <class_board.h>
-#include <class_module.h>
-#include <pcb_edit_frame.h>
 #include <tool/tool_manager.h>
 #include <tools/selection_tool.h>
-#include <view/view.h>
 #include <board_commit.h>
-#include <tools/pcb_tool_base.h>
 #include <tools/pcb_actions.h>
 #include <connectivity/connectivity_data.h>
 
-#include <functional>
 using namespace std::placeholders;
 
-#include "pcb_draw_panel_gal.h"
 
 BOARD_COMMIT::BOARD_COMMIT( PCB_TOOL_BASE* aTool )
 {

@@ -23,10 +23,6 @@
 
 #include <pcb_plot_params_parser.h>
 #include <pcb_plot_params.h>
-#include <layers_id_colors_and_visibility.h>
-#include <plotter.h>
-#include <macros.h>
-#include <convert_to_biu.h>
 #include <board_design_settings.h>
 
 

@@ -29,18 +29,7 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <base_struct.h>
-#include <eda_rect.h>
-#include <gr_text.h>
-#include <kicad_string.h>
-#include <trigo.h>
-#include <richio.h>
-#include <macros.h>
 #include <pcb_edit_frame.h>
-#include <msgpanel.h>
-#include <base_units.h>
-#include <bitmaps.h>
 
 #include <class_board.h>
 #include <class_pcb_text.h>

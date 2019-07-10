@@ -31,15 +31,9 @@
 
 #include <ratsnest_viewitem.h>
 #include <ratsnest_data.h>
-#include <gal/graphics_abstraction_layer.h>
 #include <pcb_painter.h>
-#include <layers_id_colors_and_visibility.h>
-#include <pcb_base_frame.h>
 
-#include <memory>
-#include <utility>
 
-#include <view/view.h>
 
 namespace KIGFX {
 

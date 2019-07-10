@@ -23,33 +23,19 @@
  */
 
 #include <fctsys.h>
-#include <kicad_string.h>
 #include <wx_filename.h>
 #include <build_version.h>      // LEGACY_BOARD_FILE_VERSION
-#include <macros.h>
 #include <wildcards_and_files_ext.h>
-#include <base_units.h>
 #include <trace_helpers.h>
 
 #include <class_board.h>
-#include <class_module.h>
-#include <class_pcb_text.h>
 #include <class_dimension.h>
-#include <class_track.h>
-#include <class_zone.h>
-#include <class_drawsegment.h>
 #include <class_pcb_target.h>
 #include <class_edge_mod.h>
-#include <pcb_plot_params.h>
-#include <zones.h>
 #include <kicad_plugin.h>
 #include <pcb_parser.h>
 
-#include <wx/dir.h>
-#include <wx/filename.h>
-#include <wx/wfstream.h>
 #include <boost/ptr_container/ptr_map.hpp>
-#include <memory.h>
 #include <connectivity/connectivity_data.h>
 #include <convert_basic_shapes_to_polygon.h>    // for enum RECT_CHAMFER_POSITIONS definition
 

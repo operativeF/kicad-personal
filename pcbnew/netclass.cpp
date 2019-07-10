@@ -24,11 +24,6 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
-#include <kicad_string.h>
-#include <pcbnew.h>
-#include <richio.h>
-#include <macros.h>
 
 #include <class_board.h>
 #include <netclass.h>

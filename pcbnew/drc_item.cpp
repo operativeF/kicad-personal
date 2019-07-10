@@ -24,13 +24,9 @@
 
 
 #include <fctsys.h>
-#include <common.h>
 
-#include <pcbnew.h>
 #include <tools/drc.h>
 #include <drc_item.h>
-#include <class_board.h>
-#include <base_units.h>
 
 
 wxString DRC_ITEM::GetErrorText() const

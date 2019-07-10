@@ -25,20 +25,9 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <common.h>
-#include <trigo.h>
-#include <macros.h>
-#include <pcb_screen.h>
-#include <gr_text.h>
 #include <pcb_base_frame.h>
 #include <class_board.h>
 #include <class_track.h>
-#include <pcbnew.h>
-#include <base_units.h>
-#include <msgpanel.h>
-#include <bitmaps.h>
-#include <view/view.h>
 
 /**
  * Function ShowClearance

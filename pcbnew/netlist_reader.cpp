@@ -29,11 +29,9 @@
 
 
 #include <kicad_string.h>
-#include <reporter.h>
 
 #include <pcb_netlist.h>
 #include <netlist_reader.h>
-#include <class_module.h>
 
 #include <wx/regex.h>
 

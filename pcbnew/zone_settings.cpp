@@ -29,16 +29,11 @@
 
 #include <zone_settings.h>
 
-#include <fctsys.h>
 
-#include <convert_to_biu.h>
-#include <pcbnew.h>
 #include <pcb_base_frame.h>
 #include <class_board.h>
-#include <zones.h>
 
 #include <class_zone.h>
-#include <wx/dataview.h>
 #include <widgets/color_swatch.h>
 
 ZONE_SETTINGS::ZONE_SETTINGS()

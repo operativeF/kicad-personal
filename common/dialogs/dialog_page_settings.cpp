@@ -23,6 +23,7 @@
 
 #include <fctsys.h>
 #include <confirm.h>
+#include <project.h>
 #include <ws_data_model.h>
 #include <wildcards_and_files_ext.h>
 #include <wx/tokenzr.h>

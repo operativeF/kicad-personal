@@ -23,10 +23,11 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
  */
 
-#include <fctsys.h>
+#include "dialog_hotkey_list.h"
 #include <hotkeys_basic.h>
-
-#include "dialogs/dialog_hotkey_list.h"
+#include <fctsys.h>
+#include <tool/tool_action.h>
+#include <tool/tool_event.h>
 #include <wx/tokenzr.h>
 
 

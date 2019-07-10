@@ -26,10 +26,12 @@
 #include <functional>
 using namespace std::placeholders;
 
-
-
 #include <painter.h>
-
+#include <class_dimension.h>
+#include <class_drawsegment.h>
+#include <class_pad.h>
+#include <class_track.h>
+#include <class_zone.h>
 
 #include "grid_helper.h"
 

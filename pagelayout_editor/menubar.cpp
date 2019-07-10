@@ -26,13 +26,7 @@
 #include <kiface_i.h>
 #include <menus_helpers.h>
 #include <pgm_base.h>
-#include <tool/conditional_menu.h>
 #include <tool/tool_manager.h>
-#include <tool/selection.h>
-#include <tools/pl_actions.h>
-#include <tools/pl_selection_tool.h>
-#include "pl_editor_frame.h"
-#include "pl_editor_id.h"
 
 
 void PL_EDITOR_FRAME::ReCreateMenuBar()

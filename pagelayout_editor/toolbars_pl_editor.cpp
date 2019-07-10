@@ -20,13 +20,9 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
-#include <macros.h>
 #include <bitmaps.h>
 #include <tool/action_toolbar.h>
-#include <tools/pl_actions.h>
 #include <pl_editor_id.h>
-#include <pl_editor_frame.h>
 
 void PL_EDITOR_FRAME::ReCreateHToolbar()
 {

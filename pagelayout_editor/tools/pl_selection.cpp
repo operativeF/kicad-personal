@@ -22,7 +22,6 @@
  */
 
 #include <tools/pl_selection.h>
-#include <ws_draw_item.h>
 
 
 EDA_ITEM* PL_SELECTION::GetTopLeftItem( bool onlyModules ) const

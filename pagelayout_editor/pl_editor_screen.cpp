@@ -24,10 +24,7 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
-#include <macros.h>
 #include <pl_editor_screen.h>
-#include <base_units.h>
 #include <pl_editor_id.h>
 
 

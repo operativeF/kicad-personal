@@ -22,20 +22,9 @@
  */
 
 #include <tool/tool_manager.h>
-#include <tools/pl_selection_tool.h>
-#include <tools/pl_drawing_tools.h>
-#include <tools/pl_actions.h>
 #include <tools/pl_edit_tool.h>
 #include <tools/pl_picker_tool.h>
-#include <ws_data_model.h>
-#include <ws_draw_item.h>
-#include <bitmaps.h>
-#include <confirm.h>
-#include <base_struct.h>
-#include <view/view.h>
-#include <pl_editor_frame.h>
 #include <pl_editor_id.h>
-#include <wildcards_and_files_ext.h>
 
 
 PL_EDIT_TOOL::PL_EDIT_TOOL() :

@@ -22,20 +22,8 @@
  */
 
 #include <pl_editor_frame.h>
-#include <class_draw_panel_gal.h>
-#include <pl_editor_id.h>
-#include <confirm.h>
-#include <view/view_group.h>
-#include <view/view_controls.h>
-#include <view/view.h>
 #include <tool/tool_manager.h>
-#include <tools/pl_actions.h>
-#include <tools/pl_selection_tool.h>
 #include <tools/pl_drawing_tools.h>
-#include <bitmaps.h>
-#include <ws_draw_item.h>
-#include <ws_data_item.h>
-#include <invoke_pl_editor_dialog.h>
 #include "pl_point_editor.h"
 
 PL_DRAWING_TOOLS::PL_DRAWING_TOOLS() :

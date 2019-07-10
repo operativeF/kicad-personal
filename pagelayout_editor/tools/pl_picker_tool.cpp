@@ -22,11 +22,7 @@
  */
 
 #include <tool/tool_manager.h>
-#include <tool/selection_conditions.h>
 #include <tools/pl_picker_tool.h>
-#include <tools/pl_actions.h>
-#include <view/view_controls.h>
-#include <pl_editor_frame.h>
 
 
 PL_PICKER_TOOL::PL_PICKER_TOOL() :

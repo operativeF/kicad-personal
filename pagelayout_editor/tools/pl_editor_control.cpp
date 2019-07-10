@@ -22,18 +22,9 @@
  */
 
 #include <fctsys.h>
-#include <kiway.h>
-#include <view/view.h>
 #include <tool/tool_manager.h>
-#include <tools/pl_actions.h>
 #include <tools/pl_editor_control.h>
-#include <tools/pl_selection_tool.h>
-#include <pl_editor_frame.h>
-#include <ws_painter.h>
-#include <confirm.h>
-#include <bitmaps.h>
 #include <properties_frame.h>
-#include <pl_editor_id.h>
 #include <dialog_page_settings.h>
 
 bool PL_EDITOR_CONTROL::Init()

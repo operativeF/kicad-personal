@@ -29,13 +29,6 @@
 
 #include <fctsys.h>
 #include <kiface_i.h>
-#include <confirm.h>
-#include <gestfich.h>
-#include <ws_draw_item.h>
-#include <pl_editor_frame.h>
-#include <build_version.h>
-#include <wx/file.h>
-#include <wx/snglinst.h>
 
 
 namespace PGE {

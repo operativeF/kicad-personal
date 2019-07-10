@@ -25,14 +25,7 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
 #include <confirm.h>
-#include <gestfich.h>
-#include <macros.h>
-#include <ws_draw_item.h>
-#include <ws_data_model.h>
-#include <pl_editor_frame.h>
-#include <properties_frame.h>
 #include <pl_editor_id.h>
 #include <wildcards_and_files_ext.h>
 

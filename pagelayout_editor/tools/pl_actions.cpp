@@ -24,7 +24,6 @@
 #include <tool/tool_action.h>
 #include <bitmaps.h>
 #include <tools/pl_actions.h>
-#include <ws_data_item.h>
 
 
 // Actions, being statically-defined, require specialized I18N handling.  We continue to

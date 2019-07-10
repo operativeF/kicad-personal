@@ -18,19 +18,9 @@
  */
 
 #include "pl_draw_panel_gal.h"
-#include <view/view.h>
 #include <tool/tool_manager.h>
-#include <tools/pl_actions.h>
 #include <view/wx_view_controls.h>
-#include <ws_proxy_view_item.h>
-#include <ws_data_model.h>
-#include <ws_painter.h>
-#include <colors_design_settings.h>
-#include <pl_editor_frame.h>
-#include <gal/graphics_abstraction_layer.h>
 
-#include <functional>
-#include <tools/pl_selection_tool.h>
 
 using namespace std::placeholders;
 

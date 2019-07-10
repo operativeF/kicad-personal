@@ -24,15 +24,9 @@
  */
 
 #include <fctsys.h>
-#include <macros.h>
-#include <ws_data_model.h>
-#include <ws_draw_item.h>
 
-#include <pl_editor_frame.h>
 #include <tool/tool_manager.h>
-#include <tools/pl_selection_tool.h>
 #include <ws_proxy_undo_item.h>
-#include <tool/actions.h>
 
 void PL_EDITOR_FRAME::SaveCopyInUndoList( bool aSavePageSettingsAndTitleBlock )
 {

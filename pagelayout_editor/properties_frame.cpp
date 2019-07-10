@@ -24,12 +24,8 @@
  */
 
 #include <fctsys.h>
-#include <ws_draw_item.h>
-#include <ws_data_model.h>
 #include <properties_frame.h>
 #include <tool/tool_manager.h>
-#include <tools/pl_selection_tool.h>
-#include <pl_draw_panel_gal.h>
 
 PROPERTIES_FRAME::PROPERTIES_FRAME( PL_EDITOR_FRAME* aParent ):
     PANEL_PROPERTIES_BASE( aParent )

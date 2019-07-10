@@ -27,15 +27,6 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <base_units.h>
-#include <pl_editor_frame.h>
-#include <pl_editor_id.h>
-#include <dialog_helpers.h>
-#include <ws_draw_item.h>
-#include <ws_data_item.h>
-#include <dialog_page_settings.h>
-#include <invoke_pl_editor_dialog.h>
 
 /**
  * Custom print out for printing schematics.

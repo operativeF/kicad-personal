@@ -18,7 +18,6 @@
  */
 
 #include <widgets/stepped_slider.h>
-#include <wx/event.h>
 
 
 BEGIN_EVENT_TABLE( STEPPED_SLIDER, wxSlider )

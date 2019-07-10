@@ -26,10 +26,7 @@
 #include <tool/action_manager.h>
 #include <tool/tool_manager.h>
 #include <tool/tool_action.h>
-#include <eda_draw_frame.h>
 
-#include <hotkeys_basic.h>
-#include <cctype>
 
 ACTION_MANAGER::ACTION_MANAGER( TOOL_MANAGER* aToolManager ) :
     m_toolMgr( aToolManager )

@@ -29,14 +29,6 @@
 #include <deque>
 
 #include <base_struct.h>
-#include <common_enum.h>
-#include <fctsys.h>
-#include <trigo.h>
-#include <macros.h>
-#include <kicad_string.h>
-#include <eda_base_frame.h>
-#include <base_screen.h>
-#include <bitmaps.h>
 #include <trace_helpers.h>
 
 #include "../eeschema/dialogs/dialog_schematic_find.h"

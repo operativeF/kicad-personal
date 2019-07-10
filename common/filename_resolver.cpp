@@ -22,14 +22,8 @@
  */
 
 #include <sstream>
-#include <fstream>
-#include <wx/filename.h>
-#include <wx/log.h>
-#include <wx/msgdlg.h>
-#include <pgm_base.h>
 #include <trace_helpers.h>
 
-#include "common.h"
 #include "filename_resolver.h"
 
 // configuration file version

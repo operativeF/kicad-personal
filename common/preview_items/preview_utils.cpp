@@ -18,11 +18,8 @@
  */
 
 #include <preview_items/preview_utils.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <base_units.h>
 #include <pcb_painter.h>
 #include <view/view.h>
-#include <common_enum.h>
 
 
 double KIGFX::PREVIEW::PreviewOverlayDeemphAlpha( bool aDeemph )

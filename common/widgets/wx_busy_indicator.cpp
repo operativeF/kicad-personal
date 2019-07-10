@@ -23,9 +23,7 @@
 
 #include <widgets/wx_busy_indicator.h>
 
-#include <make_unique.h>
 
-#include <wx/cursor.h>
 
 
 WX_BUSY_INDICATOR::WX_BUSY_INDICATOR() : m_cursor( std::make_unique<wxBusyCursor>() )

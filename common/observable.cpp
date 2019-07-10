@@ -22,7 +22,6 @@
 */
 
 #include "observable.h"
-#include <algorithm>
 
 namespace UTIL {
 

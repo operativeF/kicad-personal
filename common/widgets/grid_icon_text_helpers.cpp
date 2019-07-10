@@ -23,8 +23,6 @@
 
 #include <widgets/grid_icon_text_helpers.h>
 
-#include <wx/textctrl.h>
-#include <wx/dc.h>
 
 
 //---- Grid helpers: custom wxGridCellRenderer that renders icon and a label ------------

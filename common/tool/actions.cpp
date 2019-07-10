@@ -23,8 +23,6 @@
 
 #include <fctsys.h>
 #include <tool/actions.h>
-#include <bitmaps.h>
-#include <frame_type.h>
 
 
 // Actions, being statically-defined, require specialized I18N handling.  We continue to

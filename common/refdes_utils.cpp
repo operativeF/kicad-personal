@@ -23,10 +23,7 @@
 
 #include <refdes_utils.h>
 
-#include <kicad_string.h>
 
-#include <algorithm>
-#include <cctype>
 
 
 namespace UTIL

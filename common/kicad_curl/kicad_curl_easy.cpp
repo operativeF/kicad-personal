@@ -25,11 +25,6 @@
 #include <kicad_curl/kicad_curl.h>
 #include <kicad_curl/kicad_curl_easy.h>
 
-#include <cstddef>
-#include <exception>
-#include <cstdarg>
-#include <sstream>
-#include <ki_exception.h>   // THROW_IO_ERROR
 
 
 static size_t write_callback( void* contents, size_t size, size_t nmemb, void* userp )

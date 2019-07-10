@@ -25,8 +25,6 @@
 #include <cctype>
 #include <widgets/widget_hotkey_list.h>
 #include <wx/statline.h>
-#include <tool/tool_action.h>
-#include <eda_draw_frame.h>
 #include <dialog_shim.h>
 
 

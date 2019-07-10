@@ -22,11 +22,8 @@
  */
 
 #include <functional>
-#include <eda_draw_frame.h>
 #include <tool/actions.h>
-#include <tool/tool_event.h>
 #include <tool/tool_manager.h>
-#include <tool/tool_interactive.h>
 #include <tool/action_toolbar.h>
 
 

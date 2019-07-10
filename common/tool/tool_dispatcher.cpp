@@ -32,11 +32,7 @@
 #include <view/view.h>
 #include <view/wx_view_controls.h>
 
-#include <class_draw_panel_gal.h>
-#include <eda_draw_frame.h>
-#include <pcbnew_id.h>
 
-#include <core/optional.h>
 
 
 ///> Stores information about a mouse button state

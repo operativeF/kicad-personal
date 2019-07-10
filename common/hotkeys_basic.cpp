@@ -25,9 +25,7 @@
 
 #include "dialog_hotkey_list.h"
 #include <hotkeys_basic.h>
-#include <fctsys.h>
 #include <tool/tool_action.h>
-#include <tool/tool_event.h>
 #include <wx/tokenzr.h>
 
 

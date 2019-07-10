@@ -23,10 +23,7 @@
  */
 
 #include <boost/version.hpp>
-#include <wx/aboutdlg.h>
 #include <wx/arrimpl.cpp>
-#include <wx/textctrl.h>
-#include <wx/utils.h>
 
 /* Used icons:
  *  lang_xx_xpm;      // Icons of various national flags
@@ -34,13 +31,8 @@
  *  edit_module_xpm;
  *  icon_kicad_xpm;   // Icon of the application
  */
-#include <bitmaps.h>
 #include <build_version.h>
-#include <common.h>
-#include <pgm_base.h>
-#include <eda_base_frame.h>
 
-#include "aboutinfo.h"
 #include "dialog_about.h"
 
 

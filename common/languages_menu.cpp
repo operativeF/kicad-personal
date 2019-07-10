@@ -29,11 +29,7 @@
 
 #include <fctsys.h>
 
-#include <pgm_base.h>
-#include <id.h>
 #include <tool/tool_interactive.h>
-#include <tool/conditional_menu.h>
-#include <bitmaps.h>
 
 
 extern LANGUAGE_DESCR LanguagesList[];

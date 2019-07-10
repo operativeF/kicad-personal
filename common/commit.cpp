@@ -26,7 +26,6 @@
 #include <algorithm>
 
 #include <commit.h>
-#include <base_struct.h>
 
 COMMIT::COMMIT()
 {

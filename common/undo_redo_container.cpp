@@ -24,7 +24,6 @@
  */
 
 #include <fctsys.h>
-#include <base_struct.h>
 #include <undo_redo_container.h>
 
 

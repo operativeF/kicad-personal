@@ -26,19 +26,8 @@
 #include <wx/image.h>
 #include <wx/bitmap.h>
 #include <wx/mstream.h>
-#include <wx/menu.h>
-#include <wx/menuitem.h>
-#include <wx/aui/auibar.h>
 
-#include <cstdint>
-#include <mutex>
-#include <unordered_map>
 
-#include <common.h>
-#include <bitmaps.h>
-#include <pgm_base.h>
-#include <eda_base_frame.h>
-#include <eda_draw_frame.h>
 
 
 struct SCALED_BITMAP_ID {

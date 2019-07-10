@@ -22,11 +22,6 @@
 #include <lib_tree_model.h>
 
 #include <eda_pattern_match.h>
-#include <lib_tree_item.h>
-#include <make_unique.h>
-#include <utility>
-#include <pgm_base.h>
-#include <kicad_string.h>
 
 // Each node gets this lowest score initially, without any matches applied.
 // Matches will then increase this score depending on match quality.  This way,

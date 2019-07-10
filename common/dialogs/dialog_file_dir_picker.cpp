@@ -21,7 +21,6 @@
 // inspired by David Hart's FileDirDlg widget (4Pane project)
 
 #include "dialog_file_dir_picker.h"
-#include <wx/filename.h>
 
 
 DIALOG_FILE_DIR_PICKER::DIALOG_FILE_DIR_PICKER( wxWindow* parent, const wxString& title,

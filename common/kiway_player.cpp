@@ -28,9 +28,6 @@
 #include <kiway_express.h>
 #include <kiway.h>
 #include <id.h>
-#include <macros.h>
-#include <typeinfo>
-#include <wx/utils.h>
 #include <wx/evtloop.h>
 
 

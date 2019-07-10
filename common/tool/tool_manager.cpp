@@ -25,23 +25,15 @@
  */
 
 #include <map>
-#include <stack>
-#include <algorithm>
-#include <core/optional.h>
 
-#include <wx/event.h>
 #include <wx/clipbrd.h>
 
 #include <view/view.h>
-#include <eda_base_frame.h>
-#include <tool/tool_base.h>
 #include <tool/tool_interactive.h>
 #include <tool/tool_manager.h>
-#include <tool/action_menu.h>
 #include <tool/coroutine.h>
 #include <tool/action_manager.h>
 
-#include <class_draw_panel_gal.h>
 
 /// Struct describing the current execution state of a TOOL
 struct TOOL_MANAGER::TOOL_STATE

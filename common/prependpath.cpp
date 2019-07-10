@@ -24,8 +24,6 @@
  */
 
 #include <macros.h>
-#include <fctsys.h>
-#include <wx/filename.h>
 
 
 /// Put aPriorityPath in front of all paths in the value of aEnvVar.

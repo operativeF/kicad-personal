@@ -25,7 +25,6 @@
 
 #include <preview_items/two_point_geom_manager.h>
 
-#include <gal/graphics_abstraction_layer.h>
 #include <view/view.h>
 
 using namespace KIGFX::PREVIEW;

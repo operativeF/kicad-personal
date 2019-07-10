@@ -23,9 +23,6 @@
 
 #include <time.h>
 
-#include <wx/datetime.h>
-#include <wx/filename.h>
-#include <wx/string.h>
 
 #include <timestamp.h>
 

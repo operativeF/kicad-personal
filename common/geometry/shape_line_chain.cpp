@@ -24,9 +24,7 @@
 
 #include <algorithm>
 
-#include <geometry/shape_circle.h>
 #include <geometry/shape_line_chain.h>
-#include <trigo.h>
 
 ClipperLib::Path SHAPE_LINE_CHAIN::convertToClipper( bool aRequiredOrientation ) const
 {

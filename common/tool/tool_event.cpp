@@ -23,11 +23,8 @@
  */
 
 #include <cstring>
-#include <string>
 
 #include <tool/tool_event.h>
-#include <tool/tool_action.h>
-#include <tool/tool_manager.h>
 #include <tool/actions.h>
 
 struct FlagString

@@ -23,8 +23,6 @@
 
 #include <eda_pattern_match.h>
 
-#include <wx/progdlg.h>
-#include <wx/tokenzr.h>
 #include <wx/wupdlock.h>
 
 

@@ -24,10 +24,8 @@
 
 #include <string>
 
-#include <tool/tool_event.h>
 #include <tool/tool_manager.h>
 #include <tool/tool_interactive.h>
-#include <tool/action_menu.h>
 
 TOOL_INTERACTIVE::TOOL_INTERACTIVE( TOOL_ID aId, const std::string& aName ) :
     TOOL_BASE( INTERACTIVE, aId, aName ),

@@ -28,10 +28,7 @@
  */
 
 #include <fctsys.h>
-#include <macros.h>
 #include <trigo.h>
-#include <common.h>
-#include <math_for_graphics.h>
 
 // Returns true if the point P is on the segment S.
 // faster than TestSegmentHit() because P should be exactly on S

@@ -27,13 +27,7 @@
 
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <trigo.h>
-#include <eda_base_frame.h>
-#include <base_struct.h>
 #include <plotter.h>
-#include <macros.h>
-#include <kicad_string.h>
 #include <convert_basic_shapes_to_polygon.h>
 
 /**

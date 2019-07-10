@@ -25,7 +25,6 @@
 
 
 #include <config.h>
-#include <common.h>
 
 #if defined(_WIN32)
 

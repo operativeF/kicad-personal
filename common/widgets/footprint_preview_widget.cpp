@@ -19,8 +19,6 @@
  */
 
 #include <widgets/footprint_preview_widget.h>
-#include <wx/stattext.h>
-#include <wx/sizer.h>
 #include <kiway.h>
 
 

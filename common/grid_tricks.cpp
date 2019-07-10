@@ -25,9 +25,7 @@
 
 #include <fctsys.h>
 #include <grid_tricks.h>
-#include <wx/tokenzr.h>
 #include <wx/clipbrd.h>
-#include <widgets/grid_readonly_text_helpers.h>
 
 
 // It works for table data on clipboard for an Excell spreadsheet,

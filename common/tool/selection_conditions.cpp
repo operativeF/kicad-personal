@@ -26,7 +26,6 @@
 #include <tool/selection.h>
 #include <tool/selection_conditions.h>
 
-#include <functional>
 
 using namespace std::placeholders;
 

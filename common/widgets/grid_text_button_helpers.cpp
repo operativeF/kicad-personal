@@ -22,10 +22,7 @@
  */
 
 #include <wx/combo.h>
-#include <bitmap_types.h>
-#include <bitmaps.h>
 #include <kiway.h>
-#include <kiway_player.h>
 #include <dialog_shim.h>
 
 #include <widgets/grid_text_button_helpers.h>

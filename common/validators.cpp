@@ -29,13 +29,8 @@
  */
 
 #include <kicad_string.h>
-#include <confirm.h>
 #include <validators.h>
 
-#include <wx/grid.h>
-#include <wx/textctrl.h>
-#include <wx/textentry.h>
-#include <wx/log.h>
 
 
 GRID_CELL_TEXT_EDITOR::GRID_CELL_TEXT_EDITOR() : wxGridCellTextEditor()

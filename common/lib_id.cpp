@@ -24,12 +24,8 @@
  */
 
 #include <cstring>
-#include <memory>
-#include <wx/wx.h>      // _()
 
-#include <macros.h>     // TO_UTF8()
 #include <lib_id.h>
-#include <kicad_string.h>
 
 
 static inline bool isDigit( char c )

@@ -24,7 +24,6 @@
 
 #include <preview_items/selection_area.h>
 
-#include <gal/graphics_abstraction_layer.h>
 #include <view/view.h>
 #include <pcb_painter.h>
 

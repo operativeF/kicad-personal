@@ -22,7 +22,6 @@
  */
 
 #include <fctsys.h>
-#include <common.h>
 
 #include <dialog_text_entry.h>
 

@@ -31,27 +31,19 @@
  */
 
 #include <fctsys.h>
-#include <wx/html/htmlwin.h>
+#include <wx/confbase.h>
 #include <wx/fs_zip.h>
-#include <wx/dir.h>
 #include <wx/filename.h>
+#include <wx/image.h>
 #include <wx/snglinst.h>
 #include <wx/stdpaths.h>
-#include <wx/sysopt.h>
-#include <wx/richmsgdlg.h>
 
+#include <bitmaps_png/bitmaps_list.h>
 #include <pgm_base.h>
 #include <eda_draw_frame.h>
-#include <eda_base_frame.h>
-#include <macros.h>
-#include <config_params.h>
 #include <id.h>
-#include <build_version.h>
-#include <hotkeys_basic.h>
 #include <gestfich.h>
-#include <menus_helpers.h>
 #include <confirm.h>
-#include <dialog_configure_paths.h>
 #include <lockfile.h>
 #include <systemdirsappend.h>
 #include <trace_helpers.h>

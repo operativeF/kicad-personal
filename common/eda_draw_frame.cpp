@@ -24,31 +24,17 @@
  */
 
 #include <fctsys.h>
-#include <common_enum.h>
-#include <pgm_base.h>
 #include <kiface_i.h>
-#include <bitmaps.h>
-#include <macros.h>
 #include <id.h>
-#include <base_screen.h>
-#include <msgpanel.h>
 #include <eda_draw_frame.h>
-#include <confirm.h>
 #include <dialog_helpers.h>
 #include <lockfile.h>
-#include <trace_helpers.h>
 #include <wx/snglinst.h>
 #include <view/view.h>
 #include <tool/tool_manager.h>
 #include <tool/action_manager.h>
-#include <tool/tool_dispatcher.h>
 #include <tool/actions.h>
-#include <wx/clipbrd.h>
 #include <ws_draw_item.h>
-#include <page_info.h>
-#include <title_block.h>
-#include <tool/tool_menu.h>
-#include <tool/selection_conditions.h>
 #include <tool/zoom_menu.h>
 #include <tool/grid_menu.h>
 #include <tool/common_tools.h>

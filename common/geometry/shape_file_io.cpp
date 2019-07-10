@@ -23,7 +23,6 @@
  */
 
 #include <string>
-#include <cassert>
 
 #include <geometry/shape.h>
 #include <geometry/shape_file_io.h>

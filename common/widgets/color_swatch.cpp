@@ -24,7 +24,6 @@
 #include <widgets/color_swatch.h>
 
 #include "dialog_color_picker.h"
-#include <memory>
 
 wxDEFINE_EVENT(COLOR_SWATCH_CHANGED, wxCommandEvent);
 

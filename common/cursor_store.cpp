@@ -23,8 +23,6 @@
 
 #include <cursor_store.h>
 
-#include <wx/bitmap.h>
-#include <wx/debug.h>
 
 
 /**

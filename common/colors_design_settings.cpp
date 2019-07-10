@@ -27,7 +27,6 @@
  * @brief Handle colors used to draw all items or layers.
  */
 #include <fctsys.h>
-#include <macros.h>
 
 #include <colors_design_settings.h>
 

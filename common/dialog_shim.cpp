@@ -23,13 +23,9 @@
  */
 
 #include <dialog_shim.h>
-#include <kiway_player.h>
 #include <wx/evtloop.h>
-#include <pgm_base.h>
 #include <tool/tool_manager.h>
-#include <eda_rect.h>
 #include <wx/display.h>
-#include <wx/grid.h>
 
 /// Toggle a window's "enable" status to disabled, then enabled on destruction.
 class WDO_ENABLE_DISABLE
@@ -171,8 +167,6 @@ int DIALOG_SHIM::VertPixelsFromDU( int y )
 
 // our hashtable is an implementation secret, don't need or want it in a header file
 #include <hashtables.h>
-#include <eda_rect.h>
-#include <typeinfo>
 
 static RECT_MAP class_map;
 

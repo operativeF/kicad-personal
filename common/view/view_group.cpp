@@ -31,12 +31,9 @@
  */
 
 #include <set>
-#include <algorithm>
 #include <view/view_group.h>
 #include <view/view.h>
 #include <painter.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <layers_id_colors_and_visibility.h>
 
 using namespace KIGFX;
 

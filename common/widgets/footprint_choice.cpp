@@ -19,8 +19,6 @@
 
 #include <functional>
 #include <widgets/footprint_choice.h>
-#include <wx/dc.h>
-#include <wx/pen.h>
 
 wxDEFINE_EVENT( EVT_INTERACTIVE_CHOICE, wxCommandEvent );
 

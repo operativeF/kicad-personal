@@ -26,10 +26,6 @@
 
 #include <eagle_parser.h>
 
-#include <functional>
-#include <sstream>
-#include <iomanip>
-#include <cstdio>
 
 constexpr auto DEFAULT_ALIGNMENT = ETEXT::BOTTOM_LEFT;
 

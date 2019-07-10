@@ -24,7 +24,6 @@
 
 
 #include <config.h>
-#include <string>
 
 // kicad_curl.h must be included before wx headers, to avoid
 // conflicts for some defines, at least on Windows
@@ -39,10 +38,7 @@ extern std::string GetCurlLibVersion();
 #include <Standard_Version.hxx>
 #endif
 
-#include <boost/version.hpp>
 #include <wx/clipbrd.h>
-#include <wx/msgdlg.h>
-#include <wx/hyperlink.h>
 
 /* All KiCad icons are linked into shared library 'libbitmaps.a'.
  *  Icons:
@@ -54,8 +50,6 @@ extern std::string GetCurlLibVersion();
  *  info_xpm;          // Bulb for description tab
  *  tools_xpm;         // Sheet of paper icon for license info tab
  */
-#include <bitmaps.h>
-#include <build_version.h>
 #include <html_messagebox.h>
 
 #include "dialog_about.h"

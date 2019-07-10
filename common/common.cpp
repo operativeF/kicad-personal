@@ -28,21 +28,12 @@
  */
 
 #include <fctsys.h>
-#include <eda_base_frame.h>
-#include <base_struct.h>
 #include <common.h>
-#include <macros.h>
-#include <base_units.h>
 #include <reporter.h>
-#include <mutex>
 
-#include <wx/process.h>
-#include <wx/config.h>
-#include <wx/utils.h>
 #include <wx/stdpaths.h>
 #include <wx/url.h>
 
-#include <pgm_base.h>
 
 using KIGFX::COLOR4D;
 

@@ -23,12 +23,8 @@
  */
 
 #include <math/vector2d.h>
-#include <cmath>
 
-#include <geometry/shape.h>
 #include <geometry/shape_arc.h>
-#include <geometry/shape_line_chain.h>
-#include <geometry/shape_circle.h>
 #include <geometry/shape_rect.h>
 #include <geometry/shape_segment.h>
 #include "../../include/geometry/shape_simple.h"

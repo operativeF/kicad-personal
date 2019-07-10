@@ -23,15 +23,9 @@
 
 #include "panel_common_settings.h"
 
-#include <bitmap_types.h>
-#include <bitmaps.h>
-#include <dialog_shim.h>
 #include <dpi_scaling.h>
-#include <kiface_i.h>
-#include <pgm_base.h>
 #include <id.h>
 
-#include <wx/graphics.h>
 
 
 static constexpr int dpi_scaling_precision = 1;

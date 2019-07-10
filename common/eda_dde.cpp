@@ -28,10 +28,7 @@
 
 #include <fctsys.h>
 #include <eda_dde.h>
-#include <eda_draw_frame.h>
 #include <id.h>
-#include <common.h>
-#include <macros.h>
 
 static const wxString HOSTNAME( wxT( "localhost" ) );
 

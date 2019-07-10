@@ -28,14 +28,9 @@
  */
 
 #include <wx/stockitem.h>
-#include <wx/richmsgdlg.h>
 
 #include <confirm.h>
-#include <bitmaps.h>
-#include <html_messagebox.h>
 
-#include <functional>
-#include <unordered_map>
 
 // Set of dialogs that have been chosen not to be shown again
 static std::unordered_map<unsigned long, int> doNotShowAgainDlgs;

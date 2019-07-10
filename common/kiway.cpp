@@ -24,17 +24,10 @@
 
 #include <cstring>
 
-#include <macros.h>
 #include <kiway.h>
-#include <kiway_player.h>
 #include <kiway_express.h>
-#include <pgm_base.h>
-#include <config.h>
-#include <id.h>
 
 #include <wx/stdpaths.h>
-#include <wx/debug.h>
-#include <wx/utils.h>
 
 
 KIFACE* KIWAY::m_kiface[KIWAY_FACE_COUNT];

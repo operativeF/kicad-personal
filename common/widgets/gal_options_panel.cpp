@@ -23,14 +23,10 @@
 
 
 #include <wx/sizer.h>
-#include <wx/checkbox.h>
-#include <wx/radiobox.h>
 #include <wx/spinctrl.h>
-#include <wx/stattext.h>
 
 #include <widgets/gal_options_panel.h>
 
-#include <common.h>
 
 #include <config_map.h>
 

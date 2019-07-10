@@ -23,7 +23,6 @@
  */
 
 #include <gal/graphics_abstraction_layer.h>
-#include <gal/color4d.h>
 #include "tool/edit_points.h"
 
 bool EDIT_POINT::WithinPoint( const VECTOR2I& aPoint, unsigned int aSize ) const

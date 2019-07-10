@@ -25,14 +25,8 @@
 
 
 #include <wx/filename.h>
-#include <wx/uri.h>
 
-#include <set>
 
-#include <fctsys.h>
-#include <common.h>
-#include <macros.h>
-#include <kiface_i.h>
 #include <lib_table_lexer.h>
 #include <lib_table_base.h>
 

@@ -18,14 +18,11 @@
  */
 
 #include <class_draw_panel_gal.h>
-#include <eda_draw_frame.h>
-#include <id.h>
 #include <preview_items/selection_area.h>
 #include <tool/actions.h>
 #include <tool/tool_manager.h>
 #include <tool/zoom_tool.h>
 #include <view/view.h>
-#include <view/view_controls.h>
 
 
 ZOOM_TOOL::ZOOM_TOOL() :

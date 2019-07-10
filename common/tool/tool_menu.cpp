@@ -24,11 +24,6 @@
 #include <eda_draw_frame.h>
 #include <tool/tool_menu.h>
 #include <tool/tool_interactive.h>
-#include <tool/action_menu.h>
-#include <tool/actions.h>
-#include <tool/zoom_menu.h>
-#include <tool/grid_menu.h>
-#include <tool/selection.h>
 
 
 TOOL_MENU::TOOL_MENU( TOOL_INTERACTIVE& aTool ) :

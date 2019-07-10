@@ -23,13 +23,9 @@
 
 #include <dpi_scaling.h>
 
-#include <core/optional.h>
 
 #include <env_vars.h>
-#include <pgm_base.h>
 
-#include <wx/config.h>
-#include <wx/log.h>
 
 
 /**

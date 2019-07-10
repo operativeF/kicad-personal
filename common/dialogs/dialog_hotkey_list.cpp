@@ -26,8 +26,6 @@
 #include <panel_hotkeys_editor.h>
 #include <widgets/ui_common.h>
 
-#include <wx/sizer.h>
-#include <wx/button.h>
 
 
 DIALOG_LIST_HOTKEYS::DIALOG_LIST_HOTKEYS( EDA_BASE_FRAME* aParent, TOOL_MANAGER* aToolMgr ):

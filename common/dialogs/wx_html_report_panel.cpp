@@ -24,7 +24,6 @@
 #include "wx_html_report_panel.h"
 
 #include <wildcards_and_files_ext.h>
-#include <gal/color4d.h>
 #include <wx/clipbrd.h>
 
 WX_HTML_REPORT_PANEL::WX_HTML_REPORT_PANEL( wxWindow*      parent,

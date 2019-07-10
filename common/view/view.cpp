@@ -25,16 +25,11 @@
 
 
 #include <base_struct.h>
-#include <layers_id_colors_and_visibility.h>
 
 #include <view/view.h>
 #include <view/view_group.h>
-#include <view/view_item.h>
 #include <view/view_rtree.h>
-#include <view/view_overlay.h>
 
-#include <gal/definitions.h>
-#include <gal/graphics_abstraction_layer.h>
 #include <painter.h>
 
 #ifdef __WXDEBUG__

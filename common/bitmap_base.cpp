@@ -27,11 +27,6 @@
  */
 
 #include "fctsys.h"
-#include "gr_basic.h"
-#include "macros.h"
-#include "trigo.h"
-#include "common.h"
-#include "richio.h"
 #include "plotter.h"
 
 #include "bitmap_base.h"

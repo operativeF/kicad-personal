@@ -19,11 +19,8 @@
 
 #include <env_vars.h>
 
-#include <map>
 
-#include <common.h>
 
-#include <wx/utils.h>
 
 using STRING_MAP = std::map<wxString, wxString>;
 

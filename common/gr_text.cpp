@@ -30,13 +30,7 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <common.h>
 #include <plotter.h>
-#include <eda_text.h>               // EDA_TEXT_HJUSTIFY_T and EDA_TEXT_VJUSTIFY_T
-#include <trigo.h>
-#include <macros.h>
-#include <base_screen.h>
 #include <gr_text.h>
 
 #include <basic_gal.h>

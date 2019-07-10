@@ -25,7 +25,6 @@
 
 #include <fctsys.h>
 #include <dlist.h>
-#include <base_struct.h>
 
 // verifies conditions for setting a parent list for an element, i.e.
 // element either does not belong to any list or it already belongs to the same list

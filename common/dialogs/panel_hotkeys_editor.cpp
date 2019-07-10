@@ -22,17 +22,10 @@
  */
 
 #include <panel_hotkeys_editor.h>
-#include <kiway_player.h>
 #include <wx/srchctrl.h>
-#include <wx/panel.h>
-#include <wx/button.h>
-#include <wx/sizer.h>
-#include <hotkeys_basic.h>
 #include <widgets/button_row_panel.h>
 #include <widgets/ui_common.h>
 #include <tool/tool_manager.h>
-#include <tool/tool_action.h>
-#include <wx/tokenzr.h>
 #include <gestfich.h>
 
 static const wxSize default_dialog_size { 500, 350 };

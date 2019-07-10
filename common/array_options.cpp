@@ -23,7 +23,6 @@
 
 #include <array_options.h>
 
-#include <trigo.h>
 
 
 int ARRAY_GRID_OPTIONS::GetArraySize() const

@@ -18,9 +18,7 @@
  */
 
 #include <confirm.h>
-#include <wx/treebook.h>
 #include <wx/treectrl.h>
-#include <wx/grid.h>
 #include <wx/statline.h>
 
 #include <widgets/paged_dialog.h>

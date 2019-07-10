@@ -22,11 +22,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
  */
 #include <fctsys.h>
-#include <eda_base_frame.h>
 #include <dialog_helpers.h>
-#include <base_units.h>
-#include <macros.h>
-#include <common_enum.h>
 
 
 /********************************************************/

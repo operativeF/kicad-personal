@@ -22,11 +22,7 @@
  */
 
 #include <hotkey_store.h>
-#include <eda_base_frame.h>
 #include <tool/tool_manager.h>
-#include <tool/action_manager.h>
-#include <tool/tool_event.h>
-#include <tool/tool_action.h>
 
 
 class GESTURE_PSEUDO_ACTION : public TOOL_ACTION

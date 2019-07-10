@@ -25,12 +25,8 @@
 
 #include <tool/grid_menu.h>
 #include <id.h>
-#include <eda_draw_frame.h>
-#include <base_screen.h>
 #include <tool/actions.h>
-#include <bitmaps.h>
 
-#include <functional>
 using namespace std::placeholders;
 
 GRID_MENU::GRID_MENU( EDA_DRAW_FRAME* aParent ) :

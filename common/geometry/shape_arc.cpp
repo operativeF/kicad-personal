@@ -23,7 +23,6 @@
  */
 
 #include <algorithm>
-#include <vector>
 
 #include <geometry/geometry_utils.h>
 #include <geometry/shape_arc.h>

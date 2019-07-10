@@ -24,8 +24,6 @@
  */
 
 #include <cmath>
-#include <cstdlib>
-#include <climits>
 #include <math/math_util.h>
 
 template<>

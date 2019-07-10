@@ -24,10 +24,8 @@
 
 #include <lockfile.h>
 
-#include <wx/filename.h>
 #include <wx/snglinst.h>
 
-#include <common.h>
 
 std::unique_ptr<wxSingleInstanceChecker> LockFile( const wxString& aFileName )
 {

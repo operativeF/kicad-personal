@@ -25,17 +25,9 @@
 #include <bitmaps.h>
 #include <tool/actions.h>
 #include <tool/tool_manager.h>
-#include <eda_draw_frame.h>
-#include <class_draw_panel_gal.h>
 #include <view/view.h>
-#include <view/view_controls.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <base_screen.h>
 #include <tool/common_tools.h>
 #include <id.h>
-#include <project.h>
-#include <kiface_i.h>
-#include <dialog_configure_paths.h>
 
 void COMMON_TOOLS::Reset( RESET_REASON aReason )
 {

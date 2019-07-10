@@ -58,9 +58,6 @@
 #include <geometry/shape_poly_set.h>
 #include <geometry/convex_hull.h>
 
-#include <algorithm>
-#include <wx/wx.h>
-#include <trigo.h>
 
 
 typedef long long coord2_t;     // must be big enough to hold 2*max(|coordinate|)^2

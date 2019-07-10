@@ -19,8 +19,6 @@
  */
 
 #include <footprint_filter.h>
-#include <make_unique.h>
-#include <stdexcept>
 
 using FOOTPRINT_FILTER_IT = FOOTPRINT_FILTER::ITERATOR;
 

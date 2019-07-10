@@ -25,8 +25,6 @@
 #include <tool/tool_action.h>
 #include <tool/action_manager.h>
 
-#include <algorithm>
-#include <hotkeys_basic.h>
 
 TOOL_ACTION::TOOL_ACTION( const std::string& aName, TOOL_ACTION_SCOPE aScope,
                           int aDefaultHotKey, const std::string& aLegacyHotKeyName,

@@ -24,23 +24,16 @@
  */
 
 #include <wx/stdpaths.h>
-#include <wx/string.h>
 #include <wx/display.h>
-#include <dialog_shim.h>
-#include <eda_doc.h>
 #include <id.h>
 #include <kiface_i.h>
-#include <pgm_base.h>
 #include <trace_helpers.h>
 #include <panel_hotkeys_editor.h>
 #include <dialogs/panel_common_settings.h>
 #include <widgets/paged_dialog.h>
-#include <bitmaps.h>
-#include <tool/action_menu.h>
 #include <tool/common_control.h>
 #include <tool/tool_manager.h>
 #include <tool/action_manager.h>
-#include <menus_helpers.h>
 #include <tool/actions.h>
 
 

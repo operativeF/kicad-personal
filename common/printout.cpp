@@ -18,7 +18,6 @@
 
 #include <printout.h>
 #include <pcbplot.h>
-#include <wx/config.h>
 
 void PRINTOUT_SETTINGS::Save( wxConfigBase* aConfig )
 {

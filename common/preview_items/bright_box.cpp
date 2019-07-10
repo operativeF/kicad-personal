@@ -23,7 +23,6 @@
  */
 
 #include <preview_items/bright_box.h>
-#include <gal/graphics_abstraction_layer.h>
 
 using namespace KIGFX;
 

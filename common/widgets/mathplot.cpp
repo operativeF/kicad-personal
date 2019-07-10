@@ -33,16 +33,7 @@
 #endif
 
 #include <widgets/mathplot.h>
-#include <wx/bmpbuttn.h>
-#include <wx/module.h>
-#include <wx/msgdlg.h>
-#include <wx/image.h>
-#include <wx/tipwin.h>
 
-#include <cmath>
-#include <cstdio>   // used only for debug
-#include <ctime>    // used for representation of x axes involving date
-#include <set>
 
 // Memory leak debugging
 #ifdef _DEBUG

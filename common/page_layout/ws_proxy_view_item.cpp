@@ -23,13 +23,7 @@
  */
 
 #include <ws_proxy_view_item.h>
-#include <ws_draw_item.h>
 #include <ws_data_item.h>
-#include <gal/graphics_abstraction_layer.h>
-#include <painter.h>
-#include <layers_id_colors_and_visibility.h>
-#include <page_info.h>
-#include <view/view.h>
 #include <ws_painter.h>
 
 using namespace KIGFX;

@@ -51,11 +51,6 @@
 
 #include <fctsys.h>
 #include <gr_text.h>
-#include <eda_rect.h>
-#include <view/view.h>
-#include <ws_painter.h>
-#include <title_block.h>
-#include <ws_draw_item.h>
 #include <ws_data_model.h>
 
 using KIGFX::COLOR4D;

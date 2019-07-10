@@ -31,9 +31,6 @@
 
 
 #include "fctsys.h"
-#include "base_screen.h"
-#include <common_enum.h>
-#include "macros.h"
 #include "marker_base.h"
 #include <geometry/shape_line_chain.h>
 #include "dialog_display_info_HTML_base.h"

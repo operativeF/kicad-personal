@@ -23,10 +23,6 @@
  */
 
 #include <eda_pattern_match.h>
-#include <wx/log.h>
-#include <wx/tokenzr.h>
-#include <climits>
-#include <make_unique.h>
 
 bool EDA_PATTERN_MATCH_SUBSTR::SetPattern( const wxString& aPattern )
 {

@@ -26,15 +26,8 @@
 
 #include <fctsys.h>
 #include <gr_basic.h>
-#include <common.h>
-#include <trigo.h>
-#include <macros.h>
-#include <eda_rect.h>
-#include <base_screen.h>
 #include <bezier_curves.h>
 #include <math_for_graphics.h>
-#include <wx/graphics.h>
-#include <wx/tokenzr.h>
 #include <geometry/geometry_utils.h>
 
 static const bool GR_FILLED = true;

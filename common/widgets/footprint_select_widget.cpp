@@ -19,8 +19,6 @@
 
 #include <dialog_shim.h>
 #include <kiway.h>
-#include <kiway_player.h>
-#include <project.h>
 #include <widgets/footprint_choice.h>
 #include <widgets/footprint_select_widget.h>
 

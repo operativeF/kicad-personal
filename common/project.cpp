@@ -23,13 +23,7 @@
 
 #include <wx/stdpaths.h>
 
-#include <fctsys.h>
-#include <macros.h>
-#include <pgm_base.h>
 #include <project.h>
-#include <common.h>         // NAMELESS_PROJECT
-#include <confirm.h>
-#include <kicad_string.h>
 #include <config_params.h>
 #include <wildcards_and_files_ext.h>
 #include <fp_lib_table.h>

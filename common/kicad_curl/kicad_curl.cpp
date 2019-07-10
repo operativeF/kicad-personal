@@ -27,8 +27,6 @@
 // conflicts for some defines, at least on Windows
 #include <kicad_curl/kicad_curl.h>
 
-#include <mutex>
-#include <ki_exception.h>   // THROW_IO_ERROR
 
 
 

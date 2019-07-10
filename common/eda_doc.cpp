@@ -27,16 +27,10 @@
  */
 
 #include <fctsys.h>
-#include <pgm_base.h>
-#include <common.h>
-#include <confirm.h>
 #include <gestfich.h>
 
 #include <wx/mimetype.h>
-#include <wx/tokenzr.h>
-#include <wx/filename.h>
 #include <wx/uri.h>
-#include <macros.h>
 
 
 void PGM_BASE::ReadPdfBrowserInfos()

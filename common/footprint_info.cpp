@@ -29,19 +29,11 @@
  */
 
 #include <common.h>
-#include <fctsys.h>
 #include <footprint_info.h>
 #include <fp_lib_table.h>
 #include <html_messagebox.h>
-#include <io_mgr.h>
 #include <kiface_ids.h>
 #include <kiway.h>
-#include <lib_id.h>
-#include <macros.h>
-#include <pgm_base.h>
-#include <thread>
-#include <utility>
-#include <wildcards_and_files_ext.h>
 
 
 FOOTPRINT_INFO* FOOTPRINT_LIST::GetModuleInfo( const wxString& aLibNickname,

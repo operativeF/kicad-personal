@@ -22,8 +22,6 @@
  */
 
 #include <wx/tokenzr.h>
-#include <wx/dc.h>
-#include <wx/wx.h>
 #include "wx_grid.h"
 
 

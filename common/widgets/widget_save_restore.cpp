@@ -23,11 +23,6 @@
 
 #include <widgets/widget_save_restore.h>
 
-#include <wx/checkbox.h>
-#include <wx/choice.h>
-#include <wx/notebook.h>
-#include <wx/radiobox.h>
-#include <wx/textctrl.h>
 
 #include <widgets/unit_binder.h>
 

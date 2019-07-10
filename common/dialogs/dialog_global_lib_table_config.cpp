@@ -20,8 +20,6 @@
 
 #include "dialog_global_lib_table_config.h"
 
-#include <pgm_base.h>
-#include <search_stack.h>
 #include <systemdirsappend.h>
 
 #include <wx/stdpaths.h>

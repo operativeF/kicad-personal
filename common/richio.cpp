@@ -24,7 +24,6 @@
 
 
 #include <cstdarg>
-#include <config.h> // HAVE_FGETC_NOLOCK
 
 #include <richio.h>
 

@@ -14,7 +14,6 @@
 
 */
 #include <stdlib.h>
-#include <setjmp.h>
 #include <system/libcontext.h>
 
 #if defined(LIBCONTEXT_PLATFORM_windows_i386) && defined(LIBCONTEXT_COMPILER_gcc)

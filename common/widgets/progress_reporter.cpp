@@ -24,7 +24,6 @@
 
 #include <widgets/progress_reporter.h>
 #include <wx/evtloop.h>
-#include <thread>
 
 PROGRESS_REPORTER::PROGRESS_REPORTER( int aNumPhases ) :
     m_phase( 0 ),

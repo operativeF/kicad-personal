@@ -29,7 +29,6 @@
 
 #include <boost/property_tree/ptree.hpp>
 
-#include <cassert>
 #include <ptree.h>
 
 typedef PTREE::const_iterator           CITER;

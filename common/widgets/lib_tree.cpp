@@ -24,10 +24,6 @@
 
 #include "lib_tree.h"
 #include <wxdataviewctrl_helpers.h>
-#include <wx/artprov.h>
-#include <wx/sizer.h>
-#include <wx/statbmp.h>
-#include <wx/html/htmlwin.h>
 #include <tool/tool_interactive.h>
 #include <tool/tool_manager.h>
 

@@ -25,12 +25,7 @@
 
 
 #include <cstdarg>
-#include <cstdio>
-#include <cstdlib>         // bsearch()
-#include <cctype>
 
-#include <macros.h>
-#include <fctsys.h>
 #include <dsnlexer.h>
 
 

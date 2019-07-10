@@ -24,7 +24,6 @@
 
 
 #include <xnode.h>
-#include <macros.h>
 
 typedef wxXmlAttribute   XATTR;
 

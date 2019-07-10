@@ -26,12 +26,8 @@
 #include <preview_items/draw_context.h>
 #include <preview_items/preview_utils.h>
 
-#include <gal/graphics_abstraction_layer.h>
 #include <view/view.h>
-#include <pcb_painter.h>
 
-#include <common_enum.h>
-#include <base_units.h>
 
 using namespace KIGFX::PREVIEW;
 

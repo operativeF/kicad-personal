@@ -23,8 +23,6 @@
  */
 
 #include <bin_mod.h>
-#include <common.h>
-#include <pgm_base.h>
 #include <id.h>         // for ID_FILE1 and FILE_HISTORY_SIZE
 
 

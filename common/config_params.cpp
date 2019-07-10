@@ -24,18 +24,9 @@
  */
 
 #include <fctsys.h>
-#include <gr_basic.h>
-#include <pgm_base.h>
-#include <common.h>
-#include <kicad_string.h>
-#include <gestfich.h>
-#include <eda_base_frame.h>
 #include <config_params.h>
 
-#include <wx/apptrait.h>
-#include <wx/stdpaths.h>
 
-#include <wildcards_and_files_ext.h>
 
 
 void wxConfigLoadParams( wxConfigBase* aCfg,

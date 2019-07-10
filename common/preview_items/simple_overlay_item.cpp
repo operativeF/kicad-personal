@@ -23,7 +23,6 @@
 
 #include <preview_items/simple_overlay_item.h>
 
-#include <gal/graphics_abstraction_layer.h>
 #include <view/view.h>
 
 

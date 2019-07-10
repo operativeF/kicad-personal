@@ -25,8 +25,6 @@
 #include <tool/tool_event.h>
 #include <tool/tool_manager.h>
 
-#include <eda_draw_frame.h>
-#include <eda_base_frame.h>
 
 bool TOOL_BASE::IsToolActive() const
 {

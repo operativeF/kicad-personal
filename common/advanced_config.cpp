@@ -23,12 +23,8 @@
 
 #include <advanced_config.h>
 
-#include <common.h>
 #include <config_params.h>
 
-#include <wx/config.h>
-#include <wx/filename.h>
-#include <wx/log.h>
 
 /*
  * Flag to enable advanced config debugging

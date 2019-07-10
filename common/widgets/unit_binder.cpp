@@ -23,11 +23,6 @@
  */
 
 #include <wx/stattext.h>
-#include <wx/textentry.h>
-#include <limits>
-#include <base_units.h>
-#include <eda_draw_frame.h>
-#include <confirm.h>
 
 #include "widgets/unit_binder.h"
 

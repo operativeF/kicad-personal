@@ -23,17 +23,12 @@
  */
 
 #include <utf8.h>
-#include <ki_exception.h>
-#include <wx/strconv.h>
-#include <wx/buffer.h>
-#include <vector>
 
 /* THROW_IO_ERROR needs this, but it includes this file, so until some
     factoring of THROW_IO_ERROR into a separate header, defer and use the asserts.
 #include <richio.h>
 */
 
-#include <cassert>
 
 
 /*

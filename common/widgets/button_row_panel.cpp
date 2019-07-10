@@ -24,8 +24,6 @@
 #include <widgets/button_row_panel.h>
 #include <widgets/ui_common.h>
 
-#include <wx/button.h>
-#include <wx/sizer.h>
 
 
 BUTTON_ROW_PANEL::BUTTON_ROW_PANEL( wxWindow* aWindow,

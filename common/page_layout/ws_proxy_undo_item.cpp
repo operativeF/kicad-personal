@@ -46,7 +46,7 @@ WS_PROXY_UNDO_ITEM::WS_PROXY_UNDO_ITEM( const EDA_DRAW_FRAME* aFrame ) :
 
         for( size_t jj = 0; jj < dataItem->GetDrawItems().size(); ++jj )
         {
-            WS_DRAW_ITEM_BASE* drawItem = dataItem->GetDrawItems()[ jj ];
+            WS_DRAW_ITEM_BASE* drawItem = dataItem->GetDrawItems()[ jj ].get();
 
             if( drawItem->IsSelected() )
             {
@@ -81,7 +81,7 @@ void WS_PROXY_UNDO_ITEM::Restore( EDA_DRAW_FRAME* aFrame, KIGFX::VIEW* aView )
 
             if( ii == m_selectedDataItem && m_selectedDrawItem < (int)dataItem->GetDrawItems().size() )
             {
-                WS_DRAW_ITEM_BASE* drawItem = dataItem->GetDrawItems()[ m_selectedDrawItem ];
+                WS_DRAW_ITEM_BASE* drawItem = dataItem->GetDrawItems()[ m_selectedDrawItem ].get();
                 drawItem->SetSelected();
             }
         }

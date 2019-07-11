@@ -79,38 +79,40 @@ void WS_DATA_ITEM::SyncDrawItems( WS_DRAW_ITEM_LIST* aCollector, KIGFX::VIEW* aV
 
     for( size_t i = 0; i < m_drawItems.size(); ++i )
     {
-        item = m_drawItems[ i ];
-        itemFlags[ i ] = item->GetFlags();
+        item = m_drawItems[i].get();
+        itemFlags[i] = item->GetFlags();
 
         if( aCollector )
             aCollector->Remove( item );
 
         if( aView )
             aView->Remove( item );
-
-        delete item;
     }
 
     m_drawItems.clear();
 
     for( int j = 0; j < m_RepeatCount; j++ )
     {
-        if( j && ! IsInsidePage( j ) )
+        if( j && !IsInsidePage( j ) )
             continue;
 
-        if( m_type == WS_SEGMENT )
-            item = new WS_DRAW_ITEM_LINE( this, j, GetStartPosUi( j ), GetEndPosUi( j ), pensize );
-        else if( m_type == WS_RECT )
-            item = new WS_DRAW_ITEM_RECT( this, j, GetStartPosUi( j ), GetEndPosUi( j ), pensize );
+		std::unique_ptr<WS_DRAW_ITEM_BASE> new_item;
 
-        item->SetFlags( itemFlags[ j ] );
-        m_drawItems.push_back( item );
+        if( m_type == WS_SEGMENT )
+            new_item = std::make_unique<WS_DRAW_ITEM_LINE>( this, j, GetStartPosUi( j ), GetEndPosUi( j ), pensize );
+        else if( m_type == WS_RECT )
+            new_item = std::make_unique<WS_DRAW_ITEM_RECT>(
+                    this, j, GetStartPosUi( j ), GetEndPosUi( j ), pensize );
+
+        new_item->SetFlags( itemFlags[j] );
 
         if( aCollector )
-            aCollector->Append( item );
+            aCollector->Append( new_item.get() );
 
         if( aView )
-            aView->Add( item );
+            aView->Add( new_item.get() );
+
+		m_drawItems.push_back( std::move( new_item ) );
     }
 }
 
@@ -150,7 +152,7 @@ void WS_DATA_ITEM::MoveTo( DPOINT aPosition )
     MoveStartPointTo( aPosition );
     MoveEndPointTo( endpos );
 
-    for( WS_DRAW_ITEM_BASE* drawItem : m_drawItems )
+    for( auto& drawItem : m_drawItems )
     {
         drawItem->SetPosition( GetStartPosUi( drawItem->GetIndexInPeer() ) );
         drawItem->SetEnd( GetEndPosUi( drawItem->GetIndexInPeer() ) );
@@ -200,7 +202,7 @@ void WS_DATA_ITEM::MoveStartPointTo( DPOINT aPosition )
 void WS_DATA_ITEM::MoveStartPointToUi( wxPoint aPosition )
 {
     DPOINT pos_mm( aPosition.x / WS_DATA_MODEL::GetTheInstance().m_WSunits2Iu,
-                   aPosition.y / WS_DATA_MODEL::GetTheInstance().m_WSunits2Iu );
+            aPosition.y / WS_DATA_MODEL::GetTheInstance().m_WSunits2Iu );
 
     MoveStartPointTo( pos_mm );
 }
@@ -274,27 +276,27 @@ DPOINT WS_DATA_ITEM::GetStartPos( int ii ) const
 {
     WS_DATA_MODEL& model = WS_DATA_MODEL::GetTheInstance();
     DPOINT         pos( m_Pos.m_Pos.x + ( m_IncrementVector.x * ii ),
-                        m_Pos.m_Pos.y + ( m_IncrementVector.y * ii ) );
+            m_Pos.m_Pos.y + ( m_IncrementVector.y * ii ) );
 
     switch( m_Pos.m_Anchor )
     {
-        case RB_CORNER:      // right bottom corner
-            pos = model.m_RB_Corner - pos;
-            break;
+    case RB_CORNER: // right bottom corner
+        pos = model.m_RB_Corner - pos;
+        break;
 
-        case RT_CORNER:      // right top corner
-            pos.x = model.m_RB_Corner.x - pos.x;
-            pos.y = model.m_LT_Corner.y + pos.y;
-            break;
+    case RT_CORNER: // right top corner
+        pos.x = model.m_RB_Corner.x - pos.x;
+        pos.y = model.m_LT_Corner.y + pos.y;
+        break;
 
-        case LB_CORNER:      // left bottom corner
-            pos.x = model.m_LT_Corner.x + pos.x;
-            pos.y = model.m_RB_Corner.y - pos.y;
-            break;
+    case LB_CORNER: // left bottom corner
+        pos.x = model.m_LT_Corner.x + pos.x;
+        pos.y = model.m_RB_Corner.y - pos.y;
+        break;
 
-        case LT_CORNER:      // left top corner
-            pos = model.m_LT_Corner + pos;
-            break;
+    case LT_CORNER: // left top corner
+        pos = model.m_LT_Corner + pos;
+        break;
     }
 
     return pos;
@@ -311,25 +313,25 @@ wxPoint WS_DATA_ITEM::GetStartPosUi( int ii ) const
 DPOINT WS_DATA_ITEM::GetEndPos( int ii ) const
 {
     DPOINT pos( m_End.m_Pos.x + ( m_IncrementVector.x * ii ),
-                m_End.m_Pos.y + ( m_IncrementVector.y * ii ) );
+            m_End.m_Pos.y + ( m_IncrementVector.y * ii ) );
 
     switch( m_End.m_Anchor )
     {
-    case RB_CORNER:      // right bottom corner
+    case RB_CORNER: // right bottom corner
         pos = WS_DATA_MODEL::GetTheInstance().m_RB_Corner - pos;
         break;
 
-    case RT_CORNER:      // right top corner
+    case RT_CORNER: // right top corner
         pos.x = WS_DATA_MODEL::GetTheInstance().m_RB_Corner.x - pos.x;
         pos.y = WS_DATA_MODEL::GetTheInstance().m_LT_Corner.y + pos.y;
         break;
 
-    case LB_CORNER:      // left bottom corner
+    case LB_CORNER: // left bottom corner
         pos.x = WS_DATA_MODEL::GetTheInstance().m_LT_Corner.x + pos.x;
         pos.y = WS_DATA_MODEL::GetTheInstance().m_RB_Corner.y - pos.y;
         break;
 
-    case LT_CORNER:      // left top corner
+    case LT_CORNER: // left top corner
         pos = WS_DATA_MODEL::GetTheInstance().m_LT_Corner + pos;
         break;
     }
@@ -398,16 +400,14 @@ void WS_DATA_ITEM_POLYGONS::SyncDrawItems( WS_DRAW_ITEM_LIST* aCollector, KIGFX:
 
     for( size_t i = 0; i < m_drawItems.size(); ++i )
     {
-        item = m_drawItems[ i ];
-        itemFlags[ i ] = item->GetFlags();
+        item = m_drawItems[i].get();
+        itemFlags[i] = item->GetFlags();
 
         if( aCollector )
             aCollector->Remove( item );
 
         if( aView )
             aView->Remove( item );
-
-        delete item;
     }
 
     m_drawItems.clear();
@@ -417,13 +417,13 @@ void WS_DATA_ITEM_POLYGONS::SyncDrawItems( WS_DRAW_ITEM_LIST* aCollector, KIGFX:
         if( j && !IsInsidePage( j ) )
             continue;
 
-        int pensize = GetPenSizeUi();
-        auto poly_shape = new WS_DRAW_ITEM_POLYPOLYGONS( this, j, GetStartPosUi( j ), pensize );
-        poly_shape->SetFlags( itemFlags[ j ] );
-        m_drawItems.push_back( poly_shape );
+        int  pensize = GetPenSizeUi();
+        auto poly_shape = std::make_unique<WS_DRAW_ITEM_POLYPOLYGONS>( this, j, GetStartPosUi( j ), pensize );
+        poly_shape->SetFlags( itemFlags[j] );
 
         // Transfer all outlines (basic polygons)
         SHAPE_POLY_SET& polygons = poly_shape->GetPolygons();
+
         for( int kk = 0; kk < GetPolyCount(); kk++ )
         {
             // Create new outline
@@ -437,11 +437,13 @@ void WS_DATA_ITEM_POLYGONS::SyncDrawItems( WS_DRAW_ITEM_LIST* aCollector, KIGFX:
         }
 
         if( aCollector )
-            aCollector->Append( poly_shape );
+            aCollector->Append( poly_shape.get() );
 
         if( aView )
-            aView->Add( poly_shape );
-    }
+            aView->Add( poly_shape.get() );
+
+		m_drawItems.push_back( std::move( poly_shape ) );
+	}
 }
 
 
@@ -501,13 +503,13 @@ bool WS_DATA_ITEM_POLYGONS::IsInsidePage( int ii ) const
     WS_DATA_MODEL& model = WS_DATA_MODEL::GetTheInstance();
 
     DPOINT pos = GetStartPos( ii );
-    pos += m_minCoord;  // left top pos of bounding box
+    pos += m_minCoord; // left top pos of bounding box
 
     if( model.m_LT_Corner.x > pos.x || model.m_LT_Corner.y > pos.y )
         return false;
 
     pos = GetStartPos( ii );
-    pos += m_maxCoord;  // rignt bottom pos of bounding box
+    pos += m_maxCoord; // rignt bottom pos of bounding box
 
     if( model.m_RB_Corner.x < pos.x || model.m_RB_Corner.y < pos.y )
         return false;
@@ -520,7 +522,7 @@ wxPoint WS_DATA_ITEM_POLYGONS::GetCornerPositionUi( unsigned aIdx, int aRepeat )
 {
     DPOINT pos = GetCornerPosition( aIdx, aRepeat );
     pos = pos * WS_DATA_MODEL::GetTheInstance().m_WSunits2Iu;
-    return wxPoint( int(pos.x), int(pos.y) );
+    return wxPoint( int( pos.x ), int( pos.y ) );
 }
 
 
@@ -534,14 +536,14 @@ WS_DATA_ITEM_TEXT::WS_DATA_ITEM_TEXT( const wxString& aTextBase ) :
     m_Italic = false;
     m_Bold = false;
     m_Orient = 0.0;
-    m_LineWidth = 0.0;      // 0 means use default value
+    m_LineWidth = 0.0; // 0 means use default value
 }
 
 
 void WS_DATA_ITEM_TEXT::SyncDrawItems( WS_DRAW_ITEM_LIST* aCollector, KIGFX::VIEW* aView )
 {
-    int   pensize = GetPenSizeUi();
-    bool  multilines = false;
+    int  pensize = GetPenSizeUi();
+    bool multilines = false;
 
     if( WS_DATA_MODEL::GetTheInstance().m_EditMode )
         m_FullText = m_TextBase;
@@ -568,16 +570,14 @@ void WS_DATA_ITEM_TEXT::SyncDrawItems( WS_DRAW_ITEM_LIST* aCollector, KIGFX::VIE
 
     for( size_t i = 0; i < m_drawItems.size(); ++i )
     {
-        text = (WS_DRAW_ITEM_TEXT*) m_drawItems[ i ];
-        itemFlags[ i ] = text->GetFlags();
+        text = static_cast<WS_DRAW_ITEM_TEXT*>( m_drawItems[i].get() );
+        itemFlags[i] = text->GetFlags();
 
         if( aCollector )
             aCollector->Remove( text );
 
         if( aView )
             aView->Remove( text );
-
-        delete text;
     }
 
     m_drawItems.clear();
@@ -587,25 +587,26 @@ void WS_DATA_ITEM_TEXT::SyncDrawItems( WS_DRAW_ITEM_LIST* aCollector, KIGFX::VIE
         if( j > 0 && !IsInsidePage( j ) )
             continue;
 
-        text = new WS_DRAW_ITEM_TEXT( this, j, m_FullText, GetStartPosUi( j ), textsize, pensize,
+        auto new_text = std::make_unique<WS_DRAW_ITEM_TEXT>( this, j, m_FullText, GetStartPosUi( j ), textsize, pensize,
                                       m_Italic, m_Bold );
-        text->SetFlags( itemFlags[ j ] );
-        m_drawItems.push_back( text );
+        new_text->SetFlags( itemFlags[j] );
 
         if( aCollector )
-            aCollector->Append( text );
+            aCollector->Append( new_text.get() );
 
         if( aView )
-            aView->Add( text );
+            aView->Add( new_text.get() );
 
-        text->SetHorizJustify( m_Hjustify ) ;
-        text->SetVertJustify( m_Vjustify );
-        text->SetTextAngle( m_Orient * 10 );    // graphic text orient unit = 0.1 degree
-        text->SetMultilineAllowed( multilines );
+        new_text->SetHorizJustify( m_Hjustify );
+        new_text->SetVertJustify( m_Vjustify );
+        new_text->SetTextAngle( m_Orient * 10 ); // graphic text orient unit = 0.1 degree
+        new_text->SetMultilineAllowed( multilines );
+
+		m_drawItems.push_back( std::move( new_text ) );
 
         // Increment label for the next text (has no meaning for multiline texts)
         if( m_RepeatCount > 1 && !multilines )
-            IncrementLabel(( j + 1 ) * m_IncrementLabel );
+            IncrementLabel( ( j + 1 ) * m_IncrementLabel );
     }
 }
 
@@ -623,17 +624,17 @@ int WS_DATA_ITEM_TEXT::GetPenSizeUi()
 
 void WS_DATA_ITEM_TEXT::IncrementLabel( int aIncr )
 {
-    int last = m_TextBase.Len() -1;
+    int last = m_TextBase.Len() - 1;
 
     wxChar lbchar = m_TextBase[last];
     m_FullText = m_TextBase;
     m_FullText.RemoveLast();
 
-    if( lbchar >= '0' &&  lbchar <= '9' )
+    if( lbchar >= '0' && lbchar <= '9' )
         // A number is expected:
-        m_FullText << (int)( aIncr + lbchar - '0' );
+        m_FullText << (int) ( aIncr + lbchar - '0' );
     else
-        m_FullText << (wxChar) ( aIncr + lbchar );
+        m_FullText << ( wxChar )( aIncr + lbchar );
 }
 
 
@@ -657,7 +658,7 @@ bool WS_DATA_ITEM_TEXT::ReplaceAntiSlashSequence()
             if( m_FullText[ii] == '\\' )
             {
                 // a double \\ sequence is replaced by a single \ char
-                m_FullText.Remove(ii, 1);
+                m_FullText.Remove( ii, 1 );
                 ii--;
             }
             else if( m_FullText[ii] == 'n' )
@@ -665,7 +666,7 @@ bool WS_DATA_ITEM_TEXT::ReplaceAntiSlashSequence()
                 // Replace the "\n" sequence by a EOL char
                 multiline = true;
                 m_FullText[ii] = '\n';
-                m_FullText.Remove(ii-1, 1);
+                m_FullText.Remove( ii - 1, 1 );
                 ii--;
             }
         }
@@ -679,7 +680,7 @@ void WS_DATA_ITEM_TEXT::SetConstrainedTextSize()
 {
     m_ConstrainedTextSize = m_TextSize;
 
-    if( m_ConstrainedTextSize.x == 0  )
+    if( m_ConstrainedTextSize.x == 0 )
         m_ConstrainedTextSize.x = WS_DATA_MODEL::GetTheInstance().m_DefaultTextSize.x;
 
     if( m_ConstrainedTextSize.y == 0 )
@@ -692,26 +693,26 @@ void WS_DATA_ITEM_TEXT::SetConstrainedTextSize()
         // but this function uses integers
         // So, to avoid truncations with our unit in mm, use microns.
         wxSize size_micron;
-        #define FSCALE 1000.0
+#define FSCALE 1000.0
         int linewidth = 0;
         size_micron.x = KiROUND( m_ConstrainedTextSize.x * FSCALE );
         size_micron.y = KiROUND( m_ConstrainedTextSize.y * FSCALE );
         WS_DRAW_ITEM_TEXT dummy( WS_DRAW_ITEM_TEXT( this, 0, this->m_FullText, wxPoint( 0, 0 ),
-                                 size_micron, linewidth, m_Italic, m_Bold ) );
+                size_micron, linewidth, m_Italic, m_Bold ) );
         dummy.SetMultilineAllowed( true );
-        dummy.SetHorizJustify( m_Hjustify ) ;
+        dummy.SetHorizJustify( m_Hjustify );
         dummy.SetVertJustify( m_Vjustify );
         dummy.SetTextAngle( m_Orient * 10 );
 
         EDA_RECT rect = dummy.GetTextBox();
-        DSIZE size;
+        DSIZE    size;
         size.x = rect.GetWidth() / FSCALE;
         size.y = rect.GetHeight() / FSCALE;
 
         if( m_BoundingBoxSize.x && size.x > m_BoundingBoxSize.x )
             m_ConstrainedTextSize.x *= m_BoundingBoxSize.x / size.x;
 
-        if( m_BoundingBoxSize.y &&  size.y > m_BoundingBoxSize.y )
+        if( m_BoundingBoxSize.y && size.y > m_BoundingBoxSize.y )
             m_ConstrainedTextSize.y *= m_BoundingBoxSize.y / size.y;
     }
 }
@@ -724,16 +725,14 @@ void WS_DATA_ITEM_BITMAP::SyncDrawItems( WS_DRAW_ITEM_LIST* aCollector, KIGFX::V
 
     for( size_t i = 0; i < m_drawItems.size(); ++i )
     {
-        item = m_drawItems[ i ];
-        itemFlags[ i ] = item->GetFlags();
+        item = m_drawItems[i].get();
+        itemFlags[i] = item->GetFlags();
 
         if( aCollector )
             aCollector->Remove( item );
 
         if( aView )
             aView->Remove( item );
-
-        delete item;
     }
 
     m_drawItems.clear();
@@ -743,15 +742,16 @@ void WS_DATA_ITEM_BITMAP::SyncDrawItems( WS_DRAW_ITEM_LIST* aCollector, KIGFX::V
         if( j && !IsInsidePage( j ) )
             continue;
 
-        auto bitmap = new WS_DRAW_ITEM_BITMAP( this, j, GetStartPosUi( j ) );
-        bitmap->SetFlags( itemFlags[ j ] );
-        m_drawItems.push_back( bitmap );
+        auto bitmap = std::make_unique<WS_DRAW_ITEM_BITMAP>( this, j, GetStartPosUi( j ) );
+        bitmap->SetFlags( itemFlags[j] );
 
         if( aCollector )
-            aCollector->Append( bitmap );
+            aCollector->Append( bitmap.get() );
 
         if( aView )
-            aView->Add( bitmap );
+            aView->Add( bitmap.get() );
+
+        m_drawItems.push_back( std::move( bitmap ) );
     }
 }
 

@@ -207,10 +207,10 @@ EDA_ITEM* PL_SELECTION_TOOL::SelectPoint( const VECTOR2I& aWhere, bool* aSelecti
 
     for( WS_DATA_ITEM* dataItem : WS_DATA_MODEL::GetTheInstance().GetItems() )
     {
-        for( WS_DRAW_ITEM_BASE* drawItem : dataItem->GetDrawItems() )
+        for( auto& drawItem : dataItem->GetDrawItems() )
         {
             if( drawItem->HitTest( (wxPoint) aWhere, threshold ) )
-                collector.Append( drawItem );
+                collector.Append( drawItem.get() );
         }
     }
 
@@ -341,14 +341,14 @@ bool PL_SELECTION_TOOL::selectMultiple()
 
             for( WS_DATA_ITEM* dataItem : WS_DATA_MODEL::GetTheInstance().GetItems() )
             {
-                for( WS_DRAW_ITEM_BASE* item : dataItem->GetDrawItems() )
+                for( auto& item : dataItem->GetDrawItems() )
                 {
                     if( item->HitTest( selectionRect, windowSelection ) )
                     {
                         if( m_subtractive )
-                            unselect( item );
+                            unselect( item.get() );
                         else
-                            select( item );
+                            select( item.get() );
                     }
                 }
             }
@@ -482,10 +482,10 @@ void PL_SELECTION_TOOL::RebuildSelection()
 
     for( WS_DATA_ITEM* dataItem : WS_DATA_MODEL::GetTheInstance().GetItems() )
     {
-        for( WS_DRAW_ITEM_BASE* item : dataItem->GetDrawItems() )
+        for( auto& item : dataItem->GetDrawItems() )
         {
             if( item->IsSelected() )
-                select( item );
+                select( item.get() );
         }
     }
 }

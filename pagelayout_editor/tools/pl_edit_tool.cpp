@@ -248,9 +248,9 @@ void PL_EDIT_TOOL::moveItem( EDA_ITEM* aItem, VECTOR2I aDelta )
 
     dataItem->MoveToUi( dataItem->GetStartPosUi() + (wxPoint) aDelta );
 
-    for( WS_DRAW_ITEM_BASE* item : dataItem->GetDrawItems() )
+    for( auto& item : dataItem->GetDrawItems() )
     {
-        getView()->Update( item );
+        getView()->Update( item.get() );
         item->SetFlags( IS_MOVED );
     }
 }
@@ -304,15 +304,14 @@ int PL_EDIT_TOOL::DoDelete( const TOOL_EVENT& aEvent )
         WS_DATA_ITEM* dataItem = drawItem->GetPeer();
         WS_DATA_MODEL::GetTheInstance().Remove( dataItem );
 
-        for( WS_DRAW_ITEM_BASE* item : dataItem->GetDrawItems() )
+        for( auto& item : dataItem->GetDrawItems() )
         {
             // Note: repeat items won't be selected but must be removed & deleted
 
             if( item->IsSelected() )
-                m_selectionTool->RemoveItemFromSel( item );
+                m_selectionTool->RemoveItemFromSel( item.get() );
 
-            getView()->Remove( item );
-            delete item;
+            getView()->Remove( item.get() );
         }
 
         delete dataItem;
@@ -356,11 +355,11 @@ int PL_EDIT_TOOL::DeleteItemCursor( const TOOL_EVENT& aEvent )
 
         for( WS_DATA_ITEM* dataItem : WS_DATA_MODEL::GetTheInstance().GetItems() )
         {
-            for( WS_DRAW_ITEM_BASE* drawItem : dataItem->GetDrawItems() )
+            for( auto& drawItem : dataItem->GetDrawItems() )
             {
                 if( drawItem->HitTest( (wxPoint) aPos, threshold ) )
                 {
-                    item = drawItem;
+                    item = drawItem.get();
                     break;
                 }
             }

@@ -344,7 +344,7 @@ void DIALOG_INSPECTOR::onCellClicked( wxGridEvent& event )
     // Select this item in page layout editor, and update the properties panel:
     PL_SELECTION_TOOL*  selectionTool = m_editorFrame->GetToolManager()->GetTool<PL_SELECTION_TOOL>();
     selectionTool->ClearSelection();
-    EDA_ITEM* draw_item = item->GetDrawItems()[0];
+    EDA_ITEM* draw_item = item->GetDrawItems()[0].get();
     selectionTool->AddItemToSel( draw_item );
     m_editorFrame->GetCanvas()->Refresh();
     m_editorFrame->GetPropertiesFrame()->CopyPrmsFromItemToPanel( item );

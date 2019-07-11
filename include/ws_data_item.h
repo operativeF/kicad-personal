@@ -36,6 +36,8 @@
 #include <view/view.h>
 #include "ws_draw_item.h"
 
+#include <memory>
+
 class WS_DRAW_ITEM_TEXT;            // Forward declaration
 
 #define TB_DEFAULT_TEXTSIZE 1.5     // default worksheet text size in mm
@@ -105,7 +107,7 @@ protected:
     WS_ITEM_TYPE   m_type;
     PAGE_OPTION    m_pageOption;
 
-    std::vector<WS_DRAW_ITEM_BASE*> m_drawItems;
+    std::vector< std::unique_ptr<WS_DRAW_ITEM_BASE> > m_drawItems;
 
 public:
     wxString       m_Name;                  // a item name used in page layout
@@ -123,9 +125,9 @@ public:
 public:
     WS_DATA_ITEM( WS_ITEM_TYPE aType );
 
-    virtual ~WS_DATA_ITEM() {}
+    virtual ~WS_DATA_ITEM() {};
 
-    const std::vector<WS_DRAW_ITEM_BASE*>& GetDrawItems() const { return m_drawItems; }
+    const std::vector< std::unique_ptr<WS_DRAW_ITEM_BASE> >& GetDrawItems() const { return m_drawItems; }
 
     virtual void SyncDrawItems( WS_DRAW_ITEM_LIST* aCollector, KIGFX::VIEW* aView );
 

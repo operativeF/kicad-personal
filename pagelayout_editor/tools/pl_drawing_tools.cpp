@@ -129,7 +129,7 @@ int PL_DRAWING_TOOLS::PlaceItem( const TOOL_EVENT& aEvent )
 
                     m_toolMgr->RunAction( PL_ACTIONS::clearSelection, true );
 
-                    item = dataItem->GetDrawItems()[0];
+                    item = dataItem->GetDrawItems()[0].get();
                     item->SetFlags( IS_NEW | IS_MOVED );
                     m_selectionTool->AddItemToSel( item );
                 }
@@ -227,7 +227,7 @@ int PL_DRAWING_TOOLS::DrawShape( const TOOL_EVENT& aEvent )
                 WS_DATA_ITEM* dataItem = m_frame->AddPageLayoutItem( type );
                 dataItem->MoveToUi( (wxPoint) cursorPos );
 
-                item = dataItem->GetDrawItems()[0];
+                item = dataItem->GetDrawItems()[0].get();
                 item->SetFlags( IS_NEW );
                 m_selectionTool->AddItemToSel( item );
             }

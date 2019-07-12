@@ -359,6 +359,7 @@ target_link_libraries( eeschema_kiface
     wxWidgets::net
     wxWidgets::base
     wxWidgets::xml
+    wxWidgets::stc
     ${GDI_PLUS_LIBRARIES}
     )
 

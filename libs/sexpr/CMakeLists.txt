@@ -38,6 +38,8 @@ target_include_directories( sexpr PUBLIC
 
 # the s-exp parser has a dep on the wxFile methods
 target_link_libraries( sexpr
+    wxWidgets::core
+    wxWidgets::base
 )
 
 # TODO get deps from here out of common

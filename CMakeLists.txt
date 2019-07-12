@@ -172,7 +172,7 @@ set( CMAKE_VISIBILITY_INLINES_HIDDEN ON )
 set( CMAKE_POSITION_INDEPENDENT_CODE ON )
 
 # Global setting: Use C++14
-set(CMAKE_CXX_STANDARD 14)
+#set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Enable additional valgrind instrumentation for stack tracking in libcontext

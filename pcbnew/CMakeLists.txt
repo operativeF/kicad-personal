@@ -666,6 +666,7 @@ set( PCBNEW_KIFACE_LIBRARIES
     wxWidgets::aui
     wxWidgets::gl
     wxWidgets::html
+    wxWidgets::stc
     ${GITHUB_PLUGIN_LIBRARIES}
     ${GDI_PLUS_LIBRARIES}
     ${PYTHON_LIBRARIES}

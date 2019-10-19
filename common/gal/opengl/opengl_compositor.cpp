@@ -33,7 +33,6 @@
 
 #include <gal/color4d.h>
 
-#include <make_unique.h>
 #include <stdexcept>
 #include <cassert>
 

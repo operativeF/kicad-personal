@@ -32,7 +32,6 @@
 #include <gerber_file_image_list.h>
 
 #include <functional>
-#include <make_unique.h>
 using namespace std::placeholders;
 
 

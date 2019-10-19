@@ -32,7 +32,6 @@
 
 #include <class_board_item.h>
 
-#include <make_unique.h>
 
 namespace PNS {
 

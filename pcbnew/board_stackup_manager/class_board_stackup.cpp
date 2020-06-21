@@ -31,55 +31,48 @@
 
 BOARD_STACKUP_ITEM::BOARD_STACKUP_ITEM( BOARD_STACKUP_ITEM_TYPE aType )
 {
+    DIELECTRIC_PRMS item_prms;
+    m_DielectricPrmsList.emplace_back( item_prms );
     m_LayerId = UNDEFINED_LAYER;
     m_Type = aType;
-    m_Enabled = true;
-    m_DielectricLayerId = 0;
-    m_EpsilonR = 0;
-    m_LossTangent = 0.0;
-    m_ThicknessLocked = false;
+    SetDielectricLayerId( 1 );
+    SetEnabled( true );
 
     // Initialize parameters to a usual value for allowed types:
     switch( m_Type )
     {
     case BS_ITEM_TYPE_COPPER:
         m_TypeName = KEY_COPPER;
-        m_Thickness = GetCopperDefaultThickness();
+        SetThickness( GetCopperDefaultThickness() );
         break;
 
     case BS_ITEM_TYPE_DIELECTRIC:
         m_TypeName = KEY_CORE;      // or prepreg
-        m_Material = "FR4";         // or other dielectric name
-        m_DielectricLayerId = 1;
-        m_Thickness = 0;            // will be set later
-        m_LossTangent = 0.02;       // for FR4
-        m_EpsilonR = 4.5;           // for FR4
+        SetMaterial( "FR4" );       // or other dielectric name
+        SetLossTangent( 0.02 );     // for FR4
+        SetEpsilonR( 4.5 );         // for FR4
         break;
 
     case BS_ITEM_TYPE_SOLDERPASTE:
         m_TypeName = "solderpaste";
-        m_Thickness = 0.0;          // Not used
         break;
 
     case BS_ITEM_TYPE_SOLDERMASK:
         m_TypeName = "soldermask";
         m_Color = "Green";
-        m_Material = NotSpecifiedPrm(); // or other solder mask material name
-        m_Thickness = GetMaskDefaultThickness();
-        m_EpsilonR = DEFAULT_EPSILON_R_SOLDERMASK;
-        m_LossTangent = 0.0;
+        SetMaterial( NotSpecifiedPrm() ); // or other solder mask material name
+        SetThickness( GetMaskDefaultThickness() );
+        SetEpsilonR( DEFAULT_EPSILON_R_SOLDERMASK );
         break;
 
     case BS_ITEM_TYPE_SILKSCREEN:
         m_TypeName = "silkscreen";
         m_Color = NotSpecifiedPrm();
-        m_Material = NotSpecifiedPrm(); // or other silkscreen material name
-        m_EpsilonR = DEFAULT_EPSILON_R_SILKSCREEN;
-        m_Thickness = 0.0;          // to be specified
+        SetMaterial( NotSpecifiedPrm() ); // or other silkscreen material name
+        SetEpsilonR( DEFAULT_EPSILON_R_SILKSCREEN );
         break;
 
     case BS_ITEM_TYPE_UNDEFINED:
-        m_Thickness = 0.0;
         break;
     }
 }
@@ -88,18 +81,36 @@ BOARD_STACKUP_ITEM::BOARD_STACKUP_ITEM( BOARD_STACKUP_ITEM_TYPE aType )
 BOARD_STACKUP_ITEM::BOARD_STACKUP_ITEM( BOARD_STACKUP_ITEM& aOther )
 {
     m_LayerId = aOther.m_LayerId;
-    m_Type = aOther.m_Type;
-    m_Enabled = aOther.m_Enabled;
     m_DielectricLayerId = aOther.m_DielectricLayerId;
+    m_Type = aOther.m_Type;
+    m_enabled = aOther.m_enabled;
+    m_DielectricPrmsList = aOther.m_DielectricPrmsList;
     m_TypeName = aOther.m_TypeName;
     m_LayerName = aOther.m_LayerName;
-    m_Material = aOther.m_Material;
-    m_Color = aOther.m_Color;
-    m_Thickness = aOther.m_Thickness;
-    m_ThicknessLocked = aOther.m_ThicknessLocked;
-    m_EpsilonR = aOther.m_EpsilonR;
-    m_LossTangent = aOther.m_LossTangent;
+    m_Color = aOther.GetColor();
 }
+
+
+void BOARD_STACKUP_ITEM::AddDielectricPrms( int aDielectricPrmsIdx )
+{
+    // add a DIELECTRIC_PRMS item to m_DielectricPrmsList
+    DIELECTRIC_PRMS new_prms;
+
+    m_DielectricPrmsList.emplace( m_DielectricPrmsList.begin() + aDielectricPrmsIdx,
+                                  new_prms );
+}
+
+
+void BOARD_STACKUP_ITEM::RemoveDielectricPrms( int aDielectricPrmsIdx )
+{
+    // Remove a DIELECTRIC_PRMS item from m_DielectricPrmsList if possible
+
+    if( GetSublayersCount() < 2 || aDielectricPrmsIdx < 0 || aDielectricPrmsIdx >= GetSublayersCount() )
+        return;
+
+    m_DielectricPrmsList.erase( m_DielectricPrmsList.begin() + aDielectricPrmsIdx );
+}
+
 
 
 int BOARD_STACKUP_ITEM::GetCopperDefaultThickness()
@@ -115,33 +126,117 @@ int BOARD_STACKUP_ITEM::GetMaskDefaultThickness()
     return Millimeter2iu( 0.01 );
 }
 
-
-bool BOARD_STACKUP_ITEM::HasEpsilonRValue()
+// Getters:
+int BOARD_STACKUP_ITEM::GetThickness( int aDielectricSubLayer ) const
 {
-    return m_Type == BS_ITEM_TYPE_DIELECTRIC
-           || m_Type == BS_ITEM_TYPE_SOLDERMASK
-           //|| m_Type == BS_ITEM_TYPE_SILKSCREEN
-            ;
-};
+    wxASSERT( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() );
 
-
-bool BOARD_STACKUP_ITEM::HasLossTangentValue()
-{
-    return m_Type == BS_ITEM_TYPE_DIELECTRIC
-           || m_Type == BS_ITEM_TYPE_SOLDERMASK
-           //|| m_Type == BS_ITEM_TYPE_SILKSCREEN
-            ;
-};
-
-
-bool BOARD_STACKUP_ITEM::HasMaterialValue()
-{
-    // return true if the material is specified
-    return IsMaterialEditable() && IsPrmSpecified( m_Material );
+    return m_DielectricPrmsList[aDielectricSubLayer].m_Thickness;
 }
 
 
-bool BOARD_STACKUP_ITEM::IsMaterialEditable()
+double BOARD_STACKUP_ITEM::GetLossTangent( int aDielectricSubLayer ) const
+{
+    wxASSERT( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() );
+
+    return m_DielectricPrmsList[aDielectricSubLayer].m_LossTangent;
+}
+
+
+double BOARD_STACKUP_ITEM::GetEpsilonR( int aDielectricSubLayer ) const
+{
+    wxASSERT( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() );
+
+    return m_DielectricPrmsList[aDielectricSubLayer].m_EpsilonR;
+}
+
+
+bool BOARD_STACKUP_ITEM::IsThicknessLocked( int aDielectricSubLayer ) const
+{
+    wxASSERT( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() );
+
+    return m_DielectricPrmsList[aDielectricSubLayer].m_ThicknessLocked;
+}
+
+
+wxString BOARD_STACKUP_ITEM::GetMaterial( int aDielectricSubLayer ) const
+{
+    wxASSERT( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() );
+
+    return m_DielectricPrmsList[aDielectricSubLayer].m_Material;
+}
+
+
+// Setters:
+void BOARD_STACKUP_ITEM::SetThickness( int aThickness, int aDielectricSubLayer )
+{
+    wxASSERT( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() );
+
+    if( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() )
+        m_DielectricPrmsList[aDielectricSubLayer].m_Thickness = aThickness;
+}
+
+
+void BOARD_STACKUP_ITEM::SetLossTangent( double aTg, int aDielectricSubLayer )
+{
+    wxASSERT( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() );
+
+    if( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() )
+        m_DielectricPrmsList[aDielectricSubLayer].m_LossTangent = aTg;
+}
+
+
+void BOARD_STACKUP_ITEM::SetEpsilonR( double aEpsilon, int aDielectricSubLayer )
+{
+    wxASSERT( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() );
+
+    if( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() )
+        m_DielectricPrmsList[aDielectricSubLayer].m_EpsilonR = aEpsilon;
+}
+
+
+void BOARD_STACKUP_ITEM::SetThicknessLocked( bool aLocked, int aDielectricSubLayer )
+{
+    wxASSERT( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() );
+
+    if( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() )
+        m_DielectricPrmsList[aDielectricSubLayer].m_ThicknessLocked = aLocked;
+}
+
+
+void BOARD_STACKUP_ITEM::SetMaterial( const wxString& aName, int aDielectricSubLayer )
+{
+    wxASSERT( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() );
+
+    if( aDielectricSubLayer >= 0 && aDielectricSubLayer < GetSublayersCount() )
+        m_DielectricPrmsList[aDielectricSubLayer].m_Material = aName;
+}
+
+
+bool BOARD_STACKUP_ITEM::HasEpsilonRValue() const
+{
+    return m_Type == BS_ITEM_TYPE_DIELECTRIC
+           || m_Type == BS_ITEM_TYPE_SOLDERMASK
+           //|| m_Type == BS_ITEM_TYPE_SILKSCREEN
+            ;
+};
+
+
+bool BOARD_STACKUP_ITEM::HasLossTangentValue() const
+{
+    return m_Type == BS_ITEM_TYPE_DIELECTRIC
+           || m_Type == BS_ITEM_TYPE_SOLDERMASK;
+};
+
+
+bool BOARD_STACKUP_ITEM::HasMaterialValue( int aDielectricSubLayer ) const
+{
+    // return true if the material is specified
+    return IsMaterialEditable() && IsPrmSpecified( GetMaterial( aDielectricSubLayer ) );
+}
+
+
+bool BOARD_STACKUP_ITEM::IsMaterialEditable() const
 {
     // The material is editable only for dielectric
     return m_Type == BS_ITEM_TYPE_DIELECTRIC ||
@@ -150,13 +245,13 @@ bool BOARD_STACKUP_ITEM::IsMaterialEditable()
 }
 
 
-bool BOARD_STACKUP_ITEM::IsColorEditable()
+bool BOARD_STACKUP_ITEM::IsColorEditable() const
 {
     return m_Type == BS_ITEM_TYPE_SOLDERMASK || m_Type == BS_ITEM_TYPE_SILKSCREEN;
 }
 
 
-bool BOARD_STACKUP_ITEM::IsThicknessEditable()
+bool BOARD_STACKUP_ITEM::IsThicknessEditable() const
 {
     switch( m_Type )
     {
@@ -183,23 +278,32 @@ bool BOARD_STACKUP_ITEM::IsThicknessEditable()
 }
 
 
-wxString BOARD_STACKUP_ITEM::FormatEpsilonR()
+wxString BOARD_STACKUP_ITEM::FormatEpsilonR( int aDielectricSubLayer ) const
 {
     // return a wxString to print/display Epsilon R
     wxString txt;
-    txt.Printf( "%.1f", m_EpsilonR );
+    txt.Printf( "%.1f", GetEpsilonR( aDielectricSubLayer ) );
     return txt;
 }
 
 
-wxString BOARD_STACKUP_ITEM::FormatLossTangent()
+wxString BOARD_STACKUP_ITEM::FormatLossTangent( int aDielectricSubLayer ) const
 {
     // return a wxString to print/display Loss Tangent
     wxString txt;
-    txt.Printf( "%g", m_LossTangent );
+    txt.Printf( "%g", GetLossTangent( aDielectricSubLayer ) );
     return txt;
 }
 
+
+wxString BOARD_STACKUP_ITEM::FormatDielectricLayerName() const
+{
+    // return a wxString to print/display a dielectriv name
+    wxString lname;
+    lname.Printf( _( "Dielectric %d" ), GetDielectricLayerId() );
+
+    return lname;
+}
 
 
 BOARD_STACKUP::BOARD_STACKUP()
@@ -279,8 +383,8 @@ int BOARD_STACKUP::BuildBoardTicknessFromStackup() const
 
     for( auto item : m_list )
     {
-        if( item->IsThicknessEditable() && item->m_Enabled )
-            thickness += item->m_Thickness;
+        if( item->IsThicknessEditable() && item->IsEnabled() )
+            thickness += item->GetThickness();
     }
 
     return thickness;
@@ -294,17 +398,31 @@ bool BOARD_STACKUP::SynchronizeWithBoard( BOARD_DESIGN_SETTINGS* aSettings )
     BOARD_STACKUP stackup;
     stackup.BuildDefaultStackupList( aSettings );
 
-    // First test for removed layers:
-    for( BOARD_STACKUP_ITEM* old_item: m_list )
+    // First, find removed layers:
+    for( BOARD_STACKUP_ITEM* curr_item: m_list )
     {
         bool found = false;
 
         for( BOARD_STACKUP_ITEM* item: stackup.GetList() )
         {
-            if( item->m_LayerId == old_item->m_LayerId )
+            if( curr_item->GetBrdLayerId() != UNDEFINED_LAYER )
             {
-                found = true;
-                break;
+                if( item->GetBrdLayerId() == curr_item->GetBrdLayerId() )
+                {
+                    found = true;
+                    break;
+                }
+            }
+            else    // curr_item = dielectric layer
+            {
+                if( item->GetBrdLayerId() != UNDEFINED_LAYER )
+                    continue;
+
+                if( item->GetDielectricLayerId() == curr_item->GetDielectricLayerId() )
+                {
+                    found = true;
+                    break;
+                }
             }
         }
 
@@ -322,9 +440,9 @@ bool BOARD_STACKUP::SynchronizeWithBoard( BOARD_DESIGN_SETTINGS* aSettings )
         // Search for initial settings:
         for( BOARD_STACKUP_ITEM* initial_item: m_list )
         {
-            if( item->m_LayerId != UNDEFINED_LAYER )
+            if( item->GetBrdLayerId() != UNDEFINED_LAYER )
             {
-                if( item->m_LayerId == initial_item->m_LayerId )
+                if( item->GetBrdLayerId() == initial_item->GetBrdLayerId() )
                 {
                     *item = *initial_item;
                     found = true;
@@ -333,7 +451,11 @@ bool BOARD_STACKUP::SynchronizeWithBoard( BOARD_DESIGN_SETTINGS* aSettings )
             }
             else    // dielectric layer: see m_DielectricLayerId for identification
             {
-                if( item->m_DielectricLayerId == initial_item->m_DielectricLayerId )
+                // Compare dielectric layer with dielectric layer
+                if( initial_item->GetBrdLayerId() != UNDEFINED_LAYER )
+                    continue;
+
+                if( item->GetDielectricLayerId() == initial_item->GetDielectricLayerId() )
                 {
                     *item = *initial_item;
                     found = true;
@@ -343,7 +465,9 @@ bool BOARD_STACKUP::SynchronizeWithBoard( BOARD_DESIGN_SETTINGS* aSettings )
         }
 
         if( !found )
+        {
             change = true;
+        }
     }
 
     // Transfer other stackup settings from aSettings
@@ -393,24 +517,24 @@ void BOARD_STACKUP::BuildDefaultStackupList( BOARD_DESIGN_SETTINGS* aSettings,
     if( enabledLayer[F_SilkS] )
     {
         BOARD_STACKUP_ITEM* item = new BOARD_STACKUP_ITEM( BS_ITEM_TYPE_SILKSCREEN );
-        item->m_LayerId = F_SilkS;
-        item->m_TypeName = _HKI( "Top Silk Screen" );
+        item->SetBrdLayerId( F_SilkS );
+        item->SetTypeName( _HKI( "Top Silk Screen" ) );
         Add( item );
     }
 
     if( enabledLayer[F_Paste] )
     {
         BOARD_STACKUP_ITEM* item = new BOARD_STACKUP_ITEM( BS_ITEM_TYPE_SOLDERPASTE );
-        item->m_LayerId = F_Paste;
-        item->m_TypeName = _HKI( "Top Solder Paste" );
+        item->SetBrdLayerId( F_Paste );
+        item->SetTypeName( _HKI( "Top Solder Paste" ) );
         Add( item );
     }
 
     if( enabledLayer[F_Mask] )
     {
         BOARD_STACKUP_ITEM* item = new BOARD_STACKUP_ITEM( BS_ITEM_TYPE_SOLDERMASK );
-        item->m_LayerId = F_Mask;
-        item->m_TypeName = _HKI( "Top Solder Mask" );
+        item->SetBrdLayerId( F_Mask );
+        item->SetTypeName( _HKI( "Top Solder Mask" ) );
         Add( item );
     }
 
@@ -418,31 +542,31 @@ void BOARD_STACKUP::BuildDefaultStackupList( BOARD_DESIGN_SETTINGS* aSettings,
     for( int ii = 0; ii < copperLayerCount; ii++ )
     {
         BOARD_STACKUP_ITEM* item = new BOARD_STACKUP_ITEM( BS_ITEM_TYPE_COPPER );
-        item->m_LayerId = ( PCB_LAYER_ID )ii;
-        item->m_TypeName = KEY_COPPER;
+        item->SetBrdLayerId( ( PCB_LAYER_ID )ii );
+        item->SetTypeName( KEY_COPPER );
         Add( item );
 
         if( ii == copperLayerCount-1 )
         {
-            item->m_LayerId = B_Cu;
+            item->SetBrdLayerId( B_Cu );
             break;
         }
 
         // Add the dielectric layer:
         item = new BOARD_STACKUP_ITEM( BS_ITEM_TYPE_DIELECTRIC );
-        item->m_Thickness = diel_thickness;
-        item->m_DielectricLayerId = dielectric_idx + 1;
+        item->SetThickness( diel_thickness );
+        item->SetDielectricLayerId( dielectric_idx + 1 );
 
         // Display a dielectric default layer name:
         if( (dielectric_idx & 1) == 0 )
         {
-            item->m_TypeName = KEY_CORE;
-            item->m_Material = "FR4";
+            item->SetTypeName( KEY_CORE );
+            item->SetMaterial( "FR4" );
         }
         else
         {
-            item->m_TypeName = KEY_PREPREG;
-            item->m_Material = "FR4";
+            item->SetTypeName( KEY_PREPREG );
+            item->SetMaterial( "FR4" );
         }
 
         Add( item );
@@ -453,24 +577,24 @@ void BOARD_STACKUP::BuildDefaultStackupList( BOARD_DESIGN_SETTINGS* aSettings,
     if( enabledLayer[B_Mask] )
     {
         BOARD_STACKUP_ITEM* item = new BOARD_STACKUP_ITEM( BS_ITEM_TYPE_SOLDERMASK );
-        item->m_LayerId = B_Mask;
-        item->m_TypeName = _HKI( "Bottom Solder Mask" );
+        item->SetBrdLayerId( B_Mask );
+        item->SetTypeName( _HKI( "Bottom Solder Mask" ) );
         Add( item );
     }
 
     if( enabledLayer[B_Paste] )
     {
         BOARD_STACKUP_ITEM* item = new BOARD_STACKUP_ITEM( BS_ITEM_TYPE_SOLDERPASTE );
-        item->m_LayerId = B_Paste;
-        item->m_TypeName = _HKI( "Bottom Solder Paste" );
+        item->SetBrdLayerId( B_Paste );
+        item->SetTypeName( _HKI( "Bottom Solder Paste" ) );
         Add( item );
     }
 
     if( enabledLayer[B_SilkS] )
     {
         BOARD_STACKUP_ITEM* item = new BOARD_STACKUP_ITEM( BS_ITEM_TYPE_SILKSCREEN );
-        item->m_LayerId = B_SilkS;
-        item->m_TypeName = _HKI( "Bottom Silk Screen" );
+        item->SetBrdLayerId( B_SilkS );
+        item->SetTypeName( _HKI( "Bottom Silk Screen" ) );
         Add( item );
     }
 
@@ -505,41 +629,50 @@ void BOARD_STACKUP::FormatBoardStackup( OUTPUTFORMATTER* aFormatter,
     {
         wxString layer_name;
 
-        if( item->m_LayerId == UNDEFINED_LAYER )
+        if( item->GetBrdLayerId() == UNDEFINED_LAYER )
         {
-            layer_name.Printf( "dielectric %d", item->m_DielectricLayerId );
+            layer_name.Printf( "dielectric %d", item->GetDielectricLayerId() );
         }
         else
-            layer_name = aBoard->GetLayerName( item->m_LayerId );
+            layer_name = aBoard->GetLayerName( item->GetBrdLayerId() );
 
         aFormatter->Print( nest_level, "(layer %s (type %s)",
                            aFormatter->Quotew( layer_name ).c_str(),
-                           aFormatter->Quotew( item->m_TypeName ).c_str() );
+                           aFormatter->Quotew( item->GetTypeName() ).c_str() );
 
-        if( item->IsThicknessEditable() )
-        {
-            if( item->m_Type == BS_ITEM_TYPE_DIELECTRIC && item->m_ThicknessLocked )
-                aFormatter->Print( 0, " (thickness %s locked)",
-                                   FormatInternalUnits( (int)item->m_Thickness ).c_str() );
-            else
-                aFormatter->Print( 0, " (thickness %s)",
-                                   FormatInternalUnits( (int)item->m_Thickness ).c_str() );
-        }
-
-        if( item->HasMaterialValue() )
-            aFormatter->Print( 0, " (material %s)",
-                               aFormatter->Quotew( item->m_Material ).c_str() );
-
-        if( item->HasEpsilonRValue() && item->HasMaterialValue() )
-            aFormatter->Print( 0, " (epsilon_r %g)", item->m_EpsilonR );
-
-        if( item->HasLossTangentValue() && item->HasMaterialValue() )
-            aFormatter->Print( 0, " (loss_tangent %s)",
-                               Double2Str(item->m_LossTangent ).c_str() );
-
-        if( item->IsColorEditable() && IsPrmSpecified( item->m_Color ) )
+        if( item->IsColorEditable() && IsPrmSpecified( item->GetColor() ) )
             aFormatter->Print( 0, " (color %s)",
-                               aFormatter->Quotew( item->m_Color ).c_str() );
+                               aFormatter->Quotew( item->GetColor() ).c_str() );
+
+        for( int idx = 0; idx < item->GetSublayersCount(); idx++ )
+        {
+            if( idx )    // not for the main (first) layer.
+            {
+                aFormatter->Print( 0, "\n" );
+                aFormatter->Print( nest_level+1, "addsublayer" );
+            }
+
+            if( item->IsThicknessEditable() )
+            {
+                if( item->GetType() == BS_ITEM_TYPE_DIELECTRIC && item->IsThicknessLocked( idx ) )
+                    aFormatter->Print( 0, " (thickness %s locked)",
+                                       FormatInternalUnits( item->GetThickness( idx ) ).c_str() );
+                else
+                    aFormatter->Print( 0, " (thickness %s)",
+                                       FormatInternalUnits( item->GetThickness( idx ) ).c_str() );
+            }
+
+            if( item->HasMaterialValue( idx ) )
+                aFormatter->Print( 0, " (material %s)",
+                                   aFormatter->Quotew( item->GetMaterial( idx ) ).c_str() );
+
+            if( item->HasEpsilonRValue() && item->HasMaterialValue( idx ) )
+                aFormatter->Print( 0, " (epsilon_r %g)", item->GetEpsilonR( idx ) );
+
+            if( item->HasLossTangentValue() && item->HasMaterialValue( idx ) )
+                aFormatter->Print( 0, " (loss_tangent %s)",
+                                   Double2Str(item->GetLossTangent( idx ) ).c_str() );
+        }
 
         aFormatter->Print( 0, ")\n" );
     }

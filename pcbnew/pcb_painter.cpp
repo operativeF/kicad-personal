@@ -252,6 +252,29 @@ const COLOR4D& PCB_RENDER_SETTINGS::GetColor( const VIEW_ITEM* aItem, int aLayer
 
         if( item->Type() == PCB_MARKER_T )
             return m_layerColors[aLayer];
+
+        // For vias, some layers depend on other layers in high contrast mode
+        if( m_hiContrastEnabled && item->Type() == PCB_VIA_T &&
+                ( aLayer == LAYER_VIAS_HOLES   ||
+                  aLayer == LAYER_VIA_THROUGH  ||
+                  aLayer == LAYER_VIA_MICROVIA ||
+                  aLayer == LAYER_VIA_BBLIND ) )
+        {
+            const VIA*   via = static_cast<const VIA*>( item );
+            const BOARD* pcb = static_cast<const BOARD*>( item->GetParent() );
+            bool         viaActiveLayer = false;
+
+            for( auto activeLayer : m_activeLayers )
+            {
+                auto lay_id = static_cast<PCB_LAYER_ID>( activeLayer );
+                viaActiveLayer |= via->IsOnLayer( lay_id ) && pcb->IsLayerVisible( lay_id );
+            }
+
+            if( viaActiveLayer )
+                return m_layerColors[aLayer];
+            else
+                return m_hiContrastColor[aLayer];
+        }
     }
 
     // Single net highlight mode
@@ -529,61 +552,46 @@ void PCB_PAINTER::draw( const VIA* aVia, int aLayer )
         break;
     }
 
-    if( aVia->GetViaType() == VIA_BLIND_BURIED )
+    m_gal->SetIsFill( !sketchMode );
+    m_gal->SetIsStroke( sketchMode );
+
+    if( sketchMode )
     {
-        // Buried vias are drawn in a special way to indicate the top and bottom layers
+        // Outline mode
+        m_gal->SetLineWidth( m_pcbSettings.m_outlineWidth );
+        m_gal->SetStrokeColor( color );
+    }
+    else
+    {
+        // Filled mode
+        m_gal->SetFillColor( color );
+    }
+
+    if( aVia->GetViaType() == VIA_BLIND_BURIED && aLayer != LAYER_VIAS_HOLES )
+    {
+        // Outer circles of blind/buried vias are drawn in a special way to indicate the
+        // top and bottom layers
         PCB_LAYER_ID layerTop, layerBottom;
         aVia->LayerPair( &layerTop, &layerBottom );
 
-        if( aLayer == LAYER_VIAS_HOLES )
-        {                                                               // TODO outline mode
-            m_gal->SetIsFill( true );
-            m_gal->SetIsStroke( false );
-            m_gal->SetFillColor( color );
-            m_gal->DrawCircle( center, radius );
-        }
-        else
+        if( !sketchMode )
+            m_gal->SetLineWidth( ( aVia->GetWidth() - aVia->GetDrillValue() ) / 2.0 );
+
+        if( aLayer == layerTop )
+            m_gal->DrawArc( center, radius, 0.0, M_PI / 2.0 );
+
+        else if( aLayer == layerBottom )
+            m_gal->DrawArc( center, radius, M_PI, 3.0 * M_PI / 2.0 );
+
+        else if( aLayer == LAYER_VIA_BBLIND )
         {
-            double width = ( aVia->GetWidth() - aVia->GetDrillValue() ) / 2.0;
-
-            m_gal->SetLineWidth( width );
-            m_gal->SetIsFill( true );
-            m_gal->SetIsStroke( false );
-            m_gal->SetFillColor( color );
-
-            if( aLayer == layerTop )
-            {
-                m_gal->DrawArc( center, radius, 0.0, M_PI / 2.0 );
-            }
-            else if( aLayer == layerBottom )
-            {
-                m_gal->DrawArc( center, radius, M_PI, 3.0 * M_PI / 2.0 );
-            }
-            else if( aLayer == LAYER_VIA_BBLIND )
-            {
-                m_gal->DrawArc( center, radius, M_PI / 2.0, M_PI );
-                m_gal->DrawArc( center, radius, 3.0 * M_PI / 2.0, 2.0 * M_PI );
-            }
+            m_gal->DrawArc( center, radius, M_PI / 2.0, M_PI );
+            m_gal->DrawArc( center, radius, 3.0 * M_PI / 2.0, 2.0 * M_PI );
         }
     }
     else
     {
-        // Regular vias
-        m_gal->SetIsFill( !sketchMode );
-        m_gal->SetIsStroke( sketchMode );
-
-        if( sketchMode )
-        {
-            // Outline mode
-            m_gal->SetLineWidth( m_pcbSettings.m_outlineWidth );
-            m_gal->SetStrokeColor( color );
-        }
-        else
-        {
-            // Filled mode
-            m_gal->SetFillColor( color );
-        }
-
+        // Draw the outer circles of normal vias and the inner circles for all vias
         m_gal->DrawCircle( center, radius );
     }
 

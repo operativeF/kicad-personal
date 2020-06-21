@@ -81,9 +81,9 @@
 #include <autorouter/autoplacer_tool.h>
 #include <gestfich.h>
 #include <executable_names.h>
-#include <board_netlist_updater.h>
-#include <netlist_reader.h>
-#include <pcb_netlist.h>
+#include <netlist_reader/board_netlist_updater.h>
+#include <netlist_reader/netlist_reader.h>
+#include <netlist_reader/pcb_netlist.h>
 #include <wx/wupdlock.h>
 #include <dialog_drc.h>     // for DIALOG_DRC_WINDOW_NAME definition
 
@@ -990,6 +990,7 @@ void PCB_EDIT_FRAME::DoUpdatePCBFromNetlist( NETLIST& aNetlist, bool aUseTimesta
     updater.SetDeleteUnusedComponents( false );
     updater.SetReplaceFootprints( true );
     updater.SetDeleteSinglePadNets( false );
+    updater.SetWarnPadNoNetInNetlist( false );
     updater.UpdateNetlist( aNetlist );
 }
 

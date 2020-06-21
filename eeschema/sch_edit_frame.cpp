@@ -233,8 +233,6 @@ SCH_EDIT_FRAME::SCH_EDIT_FRAME( KIWAY* aKiway, wxWindow* aParent ):
     g_ConnectionGraph = new CONNECTION_GRAPH( this );
 
     m_showBorderAndTitleBlock = true;   // true to show sheet references
-    m_DefaultSchematicFileName = NAMELESS_PROJECT;
-    m_DefaultSchematicFileName += wxT( ".sch" );
     m_showAllPins = false;
     m_printMonochrome = true;
     m_printSheetReference = true;
@@ -242,6 +240,7 @@ SCH_EDIT_FRAME::SCH_EDIT_FRAME( KIWAY* aKiway, wxWindow* aParent ):
     m_undoItem = NULL;
     m_hasAutoSave = true;
     m_showIllegalSymbolLibDialog = true;
+    m_showSheetFileNameCaseSensitivityDlg = true;
     m_FrameSize = ConvertDialogToPixels( wxSize( 500, 350 ) );    // default in case of no prefs
     m_AboutTitle = "Eeschema";
 
@@ -435,7 +434,7 @@ void SCH_EDIT_FRAME::CreateScreens()
         SetScreen( g_RootSheet->GetScreen() );
     }
 
-    g_RootSheet->GetScreen()->SetFileName( m_DefaultSchematicFileName );
+    g_RootSheet->GetScreen()->SetFileName( wxEmptyString );
 
     g_CurrentSheet->clear();
     g_CurrentSheet->push_back( g_RootSheet );
@@ -577,41 +576,15 @@ void SCH_EDIT_FRAME::OnCloseWindow( wxCloseEvent& aEvent )
 
 wxString SCH_EDIT_FRAME::GetUniqueFilenameForCurrentSheet()
 {
-    wxFileName fn = GetScreen()->GetFileName();
+    // Filename is rootSheetName-sheetName-...-sheetName
+    // Note that we need to fetch the rootSheetName out of its filename, as the root SCH_SHEET's
+    // name is just a timestamp.
 
-    // Name is <root sheet filename>-<sheet path> and has no extension.
-    // However if filename is too long name is <sheet filename>-<sheet number>
+    wxFileName rootFn( g_CurrentSheet->at( 0 )->GetFileName() );
+    wxString   filename = rootFn.GetName();
 
-    #define FN_LEN_MAX 80   // A reasonable value for the short filename len
-
-    wxString filename = fn.GetName();
-    wxString sheetFullName =  g_CurrentSheet->PathHumanReadable();
-
-    if( sheetFullName == SCH_SHEET_PATH::GetRootPathName( false ) ||
-        sheetFullName == SCH_SHEET_PATH::GetRootPathName( true ) )
-    {
-        // For the root sheet, use root schematic file name.
-        sheetFullName.clear();
-    }
-    else
-    {
-        if( filename.Last() != '-' || filename.Last() != '_' )
-            filename += '-';
-
-        // Remove the first and last '/' of the path human readable
-        sheetFullName.RemoveLast();
-        sheetFullName.Remove( 0, 1 );
-        sheetFullName.Trim( true );
-        sheetFullName.Trim( false );
-
-        // Convert path human readable separator to '-'
-        sheetFullName.Replace( "/", "-" );
-    }
-
-    if( ( filename.Len() + sheetFullName.Len() ) < FN_LEN_MAX )
-        filename += sheetFullName;
-    else
-        filename << wxT( "-" ) << GetScreen()->m_ScreenNumber;
+    for( unsigned i = 1; i < g_CurrentSheet->size(); i++ )
+        filename += wxT( "-" ) + g_CurrentSheet->at( i )->GetName();
 
     return filename;
 }
@@ -1028,10 +1001,9 @@ void SCH_EDIT_FRAME::UpdateTitle()
 {
     wxString title;
 
-    if( GetScreen()->GetFileName() == m_DefaultSchematicFileName )
+    if( GetScreen()->GetFileName().IsEmpty() )
     {
-        title.Printf( _( "Eeschema" ) + wxT( " \u2014 %s" ),
-                      GetScreen()->GetFileName() );
+        title.Printf( _( "Eeschema" ) + wxT( " \u2014" ) + _( " [no file]" ) );
     }
     else
     {

@@ -136,6 +136,7 @@ TREE_PROJECT_FRAME::TREE_PROJECT_FRAME( KICAD_MANAGER_FRAME* parent ) :
 {
     m_Parent = parent;
     m_TreeProject = NULL;
+    m_isRenaming = false;
 
     m_watcher = NULL;
     Connect( wxEVT_FSWATCHER,
@@ -256,11 +257,8 @@ void TREE_PROJECT_FRAME::OnCreateNewDirectory( wxCommandEvent& event )
 
     wxString full_dirname = prj_dir + wxFileName::GetPathSeparator() + subdir;
 
-    if( wxMkdir( full_dirname ) )
-    {
-        // the new item will be added by the file watcher
-        // AddItemToTreeProject( subdir, root );
-    }
+    // Make the new item and let the file watcher add it to the tree
+    wxMkdir( full_dirname );
 }
 
 
@@ -292,17 +290,17 @@ wxString TREE_PROJECT_FRAME::GetFileExt( TreeFileType type )
 }
 
 
-bool TREE_PROJECT_FRAME::AddItemToTreeProject( const wxString& aName,
+wxTreeItemId TREE_PROJECT_FRAME::AddItemToTreeProject( const wxString& aName,
                                                wxTreeItemId& aRoot, bool aRecurse )
 {
-    wxTreeItemId    cellule;
-    TreeFileType    type = TREE_UNKNOWN;
-    wxFileName      fn( aName );
+    wxTreeItemId newItemId;
+    TreeFileType type = TREE_UNKNOWN;
+    wxFileName   fn( aName );
 
     // Files/dirs names starting by "." are not visible files under unices.
     // Skip them also under Windows
     if( fn.GetName().StartsWith( wxT( "." ) ) )
-        return false;
+        return newItemId;
 
     if( wxDirExists( aName ) )
     {
@@ -333,7 +331,7 @@ bool TREE_PROJECT_FRAME::AddItemToTreeProject( const wxString& aName,
         }
 
         if( !addFile )
-            return false;
+            return newItemId;
 
         // only show the schematic if it is a top level schematic.  Eeschema
         // cannot open a schematic and display it properly unless it starts
@@ -365,7 +363,7 @@ bool TREE_PROJECT_FRAME::AddItemToTreeProject( const wxString& aName,
                 fp = wxFopen( fullFileName, wxT( "rt" ) );
 
                 if( fp == NULL )
-                    return false;
+                    return newItemId;
 
                 addFile = false;
 
@@ -385,7 +383,7 @@ bool TREE_PROJECT_FRAME::AddItemToTreeProject( const wxString& aName,
                 fclose( fp );
 
                 if( !addFile )
-                    return false; // it is a non-top-level schematic
+                    return newItemId; // it is a non-top-level schematic
             }
         }
 
@@ -418,7 +416,7 @@ bool TREE_PROJECT_FRAME::AddItemToTreeProject( const wxString& aName,
         if( itemData )
         {
             if( itemData->GetFileName() == aName )
-                return true;    // well, we would have added it, but it is already here!
+                return itemData->GetId();    // well, we would have added it, but it is already here!
         }
 
         kid = m_TreeProject->GetNextChild( aRoot, cookie );
@@ -426,10 +424,10 @@ bool TREE_PROJECT_FRAME::AddItemToTreeProject( const wxString& aName,
 
     // Append the item (only appending the filename not the full path):
     wxString            file = wxFileNameFromPath( aName );
-    cellule = m_TreeProject->AppendItem( aRoot, file );
+    newItemId = m_TreeProject->AppendItem( aRoot, file );
     TREEPROJECT_ITEM*   data = new TREEPROJECT_ITEM( type, aName, m_TreeProject );
 
-    m_TreeProject->SetItemData( cellule, data );
+    m_TreeProject->SetItemData( newItemId, data );
     data->SetState( 0 );
 
     // Mark root files (files which have the same aName as the project)
@@ -449,7 +447,7 @@ bool TREE_PROJECT_FRAME::AddItemToTreeProject( const wxString& aName,
 
         if( dir.IsOpened() )    // protected dirs will not open properly.
         {
-            wxString        dir_filename;
+            wxString dir_filename;
 
             data->SetPopulated( true );
 
@@ -458,16 +456,16 @@ bool TREE_PROJECT_FRAME::AddItemToTreeProject( const wxString& aName,
                 do    // Add name in tree, but do not recurse
                 {
                     wxString path = aName + wxFileName::GetPathSeparator() + dir_filename;
-                    AddItemToTreeProject( path, cellule, false );
+                    AddItemToTreeProject( path, newItemId, false );
                 } while( dir.GetNext( &dir_filename ) );
             }
         }
 
         // Sort filenames by alphabetic order
-        m_TreeProject->SortChildren( cellule );
+        m_TreeProject->SortChildren( newItemId );
     }
 
-    return true;
+    return newItemId;
 }
 
 
@@ -699,8 +697,8 @@ void TREE_PROJECT_FRAME::OnRenameFile( wxCommandEvent& )
     if( buffer.IsEmpty() )
         return; // empty file name not allowed
 
-    if( tree_data->Rename( buffer, true ) )
-        m_TreeProject->SetItemText( curr_item, buffer );
+    tree_data->Rename( buffer, true );
+    m_isRenaming = true;
 }
 
 
@@ -820,7 +818,7 @@ wxTreeItemId TREE_PROJECT_FRAME::findSubdirTreeItem( const wxString& aSubDir )
                 subdirs_id.pop();
                 kid = m_TreeProject->GetFirstChild( root_id, cookie );
 
-                if( ! kid.IsOk() )
+                if( !kid.IsOk() )
                     continue;
             }
         }
@@ -877,7 +875,18 @@ void TREE_PROJECT_FRAME::OnFileSystemEvent( wxFileSystemWatcherEvent& event )
     switch( event.GetChangeType() )
     {
     case wxFSW_EVENT_CREATE:
-        AddItemToTreeProject( pathModified.GetFullPath(), root_id, false );
+        {
+            wxTreeItemId newitem = AddItemToTreeProject( pathModified.GetFullPath(), root_id, false );
+
+            // If we are in the process of renaming a file, select the new one
+            // This is needed for MSW and OSX, since we don't get RENAME events from them, just a
+            // pair of DELETE and CREATE events.
+            if( m_isRenaming && newitem.IsOk() )
+            {
+                m_TreeProject->SelectItem( newitem );
+                m_isRenaming = false;
+            }
+        }
         break;
 
     case wxFSW_EVENT_DELETE:
@@ -897,6 +906,7 @@ void TREE_PROJECT_FRAME::OnFileSystemEvent( wxFileSystemWatcherEvent& event )
     case wxFSW_EVENT_RENAME :
         {
             const wxFileName& newpath = event.GetNewPath();
+            wxString newdir = newpath.GetPath();
             wxString newfn = newpath.GetFullPath();
 
             while( kid.IsOk() )
@@ -912,7 +922,14 @@ void TREE_PROJECT_FRAME::OnFileSystemEvent( wxFileSystemWatcherEvent& event )
                 kid = m_TreeProject->GetNextChild( root_id, cookie );
             }
 
-            AddItemToTreeProject( newfn, root_id, false );
+            wxTreeItemId newroot_id = findSubdirTreeItem( newdir );
+            wxTreeItemId newitem = AddItemToTreeProject( newfn, newroot_id, false );
+
+            // If the item exists, select it
+            if( newitem.IsOk() )
+                m_TreeProject->SelectItem( newitem );
+
+            m_isRenaming = false;
         }
         break;
     }
